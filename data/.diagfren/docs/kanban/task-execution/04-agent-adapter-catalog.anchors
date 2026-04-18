@@ -1,0 +1,21 @@
+# anchor-text	code-ref	label
+claudeAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:616-721	claudeAdapter — Claude Code PTY adapter
+codexAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:744-817	codexAdapter — OpenAI Codex PTY adapter
+geminiAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:819-895	geminiAdapter — Gemini CLI PTY adapter
+opencodeAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:1124-1189	opencodeAdapter — OpenCode PTY adapter
+droidAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:1191-1271	droidAdapter — Factory Droid PTY adapter
+clineAdapter	repos/kanban/src/terminal/agent-session-adapters.ts:1273-1328	clineAdapter — Cline PTY adapter (CLI fallback)
+prepareAgentLaunch	repos/kanban/src/terminal/agent-session-adapters.ts:1339-1348	prepareAgentLaunch dispatch entry point
+ADAPTERS	repos/kanban/src/terminal/agent-session-adapters.ts:1330-1337	ADAPTERS record mapping agentId to adapter
+RUNTIME_AGENT_CATALOG	repos/kanban/src/core/agent-catalog.ts:12-61	RUNTIME_AGENT_CATALOG — all six agent definitions
+RUNTIME_LAUNCH_SUPPORTED_AGENT_IDS	repos/kanban/src/core/agent-catalog.ts:65-72	Launch-supported agent ID whitelist
+detectInstalledCommands	repos/kanban/src/terminal/agent-registry.ts:51-62	detectInstalledCommands — PATH binary detection
+resolveAgentCommand	repos/kanban/src/terminal/agent-registry.ts:82-99	resolveAgentCommand — resolve selected agent to launch command
+createHookRuntimeEnv	repos/kanban/src/terminal/hook-runtime-context.ts:17-22	createHookRuntimeEnv — injects KANBAN_HOOK_TASK_ID/WORKSPACE_ID
+buildHookCommand	repos/kanban/src/terminal/agent-session-adapters.ts:93-108	buildHookCommand — assembles kanban hooks ingest CLI string
+codexPromptDetector	repos/kanban/src/terminal/agent-session-adapters.ts:723-735	codexPromptDetector — detects Codex prompt-ready marker
+shouldInspectCodexOutputForTransition	repos/kanban/src/terminal/agent-session-adapters.ts:737-742	shouldInspectCodexOutputForTransition — gates output inspection
+runCodexWrapperSubcommand	repos/kanban/src/commands/hooks.ts:637-732	codex-wrapper — spawns real binary with JSONL log monitoring
+[→ pty-launch-pipeline]	docs/kanban/task-execution/02-pty-launch-pipeline.txt:1	Cross-link: PTY launch pipeline where adapters plug in
+[→ pty-session-internals]	docs/kanban/task-execution/03-pty-session-internals.txt:1	Cross-link: PTY session internals for trust detection and protocol
+[→ cline-architecture]	docs/kanban/cline-integration/05-cline-architecture.txt:1	Cross-link: Cline SDK architecture (non-PTY path)

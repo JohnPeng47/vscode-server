@@ -1,0 +1,17 @@
+# anchor-text	code-ref	label
+SessionEntry	repos/kanban/src/terminal/session-manager.ts:66-76	SessionEntry — per-task lifecycle container
+ActiveProcessState	repos/kanban/src/terminal/session-manager.ts:51-64	ActiveProcessState — live PTY process + adapter state
+TerminalSessionManager	repos/kanban/src/terminal/session-manager.ts:205-1040	TerminalSessionManager — owns all PTY session entries
+RestartableSessionRequest	repos/kanban/src/terminal/session-manager.ts:47-49	RestartableSessionRequest — saved request for auto-restart
+emitSummary	repos/kanban/src/terminal/session-manager.ts:1034-1039	emitSummary — broadcasts summary snapshot to summaryListeners
+reduceSessionTransition	repos/kanban/src/terminal/session-state-machine.ts:26-78	reduceSessionTransition — pure state machine reducer
+filterTerminalProtocolOutput	repos/kanban/src/terminal/terminal-protocol-filter.ts:54-174	filterTerminalProtocolOutput — byte-level ANSI filter on raw Buffer
+TerminalStateMirror	repos/kanban/src/terminal/terminal-state-mirror.ts:19-78	TerminalStateMirror — headless xterm.js for server-side state capture
+createTerminalWebSocketBridge	repos/kanban/src/terminal/ws-server.ts:127-587	createTerminalWebSocketBridge — 1 PTY to N viewer WS fanout
+TerminalViewerState	repos/kanban/src/terminal/ws-server.ts:51-60	TerminalViewerState — per-browser-tab IO/control socket pair
+shouldAutoRestart	repos/kanban/src/terminal/session-manager.ts:982-1000	shouldAutoRestart — throttle check for crash restart eligibility
+hasClaudeWorkspaceTrustPrompt	repos/kanban/src/terminal/claude-workspace-trust.ts:59-62	hasClaudeWorkspaceTrustPrompt — regex match for Claude trust prompt
+hasCodexWorkspaceTrustPrompt	repos/kanban/src/terminal/codex-workspace-trust.ts:58-65	hasCodexWorkspaceTrustPrompt — ordered token sequence detection
+[→ pty-launch-pipeline]	docs/kanban/task-execution/02-pty-launch-pipeline.txt:1	Cross-link: PTY spawn and agent adapter wiring
+[→ agent-adapter-catalog]	docs/kanban/task-execution/04-agent-adapter-catalog.txt:1	Cross-link: per-agent adapter configuration and hooks
+[→ state-hub-and-registry]	docs/kanban/state-and-streaming/09-state-hub-and-registry.txt:1	Cross-link: how summaries propagate to browser clients

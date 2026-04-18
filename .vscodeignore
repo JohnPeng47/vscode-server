@@ -1,0 +1,12 @@
+src/
+node_modules/
+tsconfig.json
+.vscodeignore
+.vscode-test.mjs
+.vscode-test/
+test-workspace/
+data/
+dist/
+start-server.sh
+out/test/
+**/*.map

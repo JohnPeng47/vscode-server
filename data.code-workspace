@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "data"
+		}
+	],
+	"settings": {
+		"files.exclude": {},
+		"search.exclude": {},
+		"explorer.excludeGitIgnore": false
+	}
+}

@@ -1,0 +1,108 @@
+Company: Simba Sleep
+Source URL: https://www.ada.cx/case-study/simba-sleep/
+Title: Ada AI Drives £600K+ Monthly Revenue at Simba
+
+================================================================================
+
+CASE STUDY: SIMBA SLEEP x ADA
+
+================================================================================
+
+OVERVIEW
+
+Simba Sleep grew from a start-up to a £130 million powerhouse in the competitive
+sleep technology industry. As a B Corp-certified mattress company, Simba faced
+the challenge of keeping customer experience personal and high-quality without
+ballooning support team headcount. They partnered with Ada, an AI customer
+experience platform, to deploy a generative AI agent and transform their
+customer service operations.
+
+Graham Paddon, Customer Experience Director at Simba Sleep, led the
+implementation.
+
+--------------------------------------------------------------------------------
+
+THE CHALLENGE
+
+Simba's 24-person customer service team handles all customer touchpoints,
+including web chat, email, and social community management. Customer service
+interactions were dominated by routine requests like order updates, delivery
+issues, and product questions. Sales conversations were being drowned out by
+admin, and scaling support -- especially to 24/7 coverage -- would have required
+doubling both cost and headcount.
+
+--------------------------------------------------------------------------------
+
+THE SOLUTION
+
+Simba deployed Ada's AI agent, which they lovingly named Luna. Rather than using
+Ada's earlier declarative (scripted) chatbot, Simba embraced the generative AI
+version.
+
+The transition was straightforward. As described by the Simba team: "It's
+basically a couple of clicks: point it to its brain, tell it this is your
+knowledge, finesse it with some guidance, and train it as you go."
+
+Simba conducted an A/B test between the declarative and generative versions of
+the AI agent. The generative AI agent outperformed in every metric --
+containment rate, automated resolution rate, and customer satisfaction.
+
+Luna undergoes weekly QA meetings alongside human agents, complete with
+scorecards assessing accuracy, tone, compliance, and customer satisfaction.
+Simba celebrates Luna in all dashboards, agent reports, and quality assurance
+programs, just like any other staff member.
+
+--------------------------------------------------------------------------------
+
+KEY METRICS AND RESULTS
+
+- £600,000+ in additional monthly revenue unlocked
+- Luna resolves an average of 1,000 conversations per week across channels
+- Equivalent workload of 8 full-time agents, without increasing headcount
+- 3 human agents redirected from routine support to sales follow-ups
+  (abandoned carts and sales callbacks)
+- 24/7 customer support coverage achieved without doubling costs or headcount
+- Generative AI outperformed declarative AI in every metric: containment rate,
+  automated resolution rate, and customer satisfaction
+
+--------------------------------------------------------------------------------
+
+STRATEGIC APPROACH
+
+Rather than treating AI deflection as a cost-cutting measure, Simba took a
+strategic approach to automation. Instead of simply aiming for the highest
+possible automated resolution rate, they focused on creating extraordinary
+experiences, leveraging the strengths of both automation and personal support to
+truly add value for customers and the business.
+
+By automating routine tasks with Ada, Simba gave human agents space to engage on
+higher-value topics. By shifting just 3 agents to focus on abandoned carts and
+sales callbacks, Simba's customer service team now generates approximately
+£600,000 per month in additional revenue. This approach maintained team culture
+while protecting workforce stability and driving measurable financial growth.
+
+--------------------------------------------------------------------------------
+
+MARKET EXPANSION
+
+When moving to new markets, Simba can make simple adjustments to Ada with Luna
+and one AI Manager providing full support for the first six months or even the
+first year. This dramatically reduces the cost and complexity of international
+expansion.
+
+--------------------------------------------------------------------------------
+
+WHAT'S NEXT
+
+Simba is already working on expanding Luna's proactive presence across the
+website, enhancing her ability to take action on customer requests, and
+continuing to evolve QA and knowledge management practices to keep service sharp.
+
+--------------------------------------------------------------------------------
+
+QUOTE
+
+"We enjoy celebrating Luna in all dashboards, agent reports and quality assurance
+programs, just like any other staff member! Couldn't have done it without Ada's
+help, support and pioneering AI tech."
+-- Graham Paddon, Customer Experience Director, Simba Sleep

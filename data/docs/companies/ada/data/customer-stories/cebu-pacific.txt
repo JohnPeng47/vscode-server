@@ -1,0 +1,98 @@
+Company: Cebu Pacific
+Source: https://www.ada.cx/case-study/cebu-pacific/
+================================================================================
+
+CEBU PACIFIC: REDEFINING TRAVEL CUSTOMER EXPERIENCE WITH ADA'S AI AGENTS
+
+About Cebu Pacific
+-------------------
+Cebu Pacific is the Philippines' largest airline by passenger volume, serving
+over 20 million passengers annually across 14 countries. The airline is focused
+on making travel accessible for all customers and is positioned as a leader in
+customer experience innovation in Southeast Asia.
+
+
+The Challenge
+-------------
+Cebu Pacific needed to support high volumes of travelers quickly while
+maintaining consistency. The risk of long wait times, uneven answers, and
+frustrated passengers during stressful travel moments was a persistent
+challenge. Their initial scripted chatbot, named Charlie, offered basic
+responses that lacked personalization, and maintaining it required heavy manual
+effort. Cebu Pacific needed a smarter, more scalable solution.
+
+
+The Solution: Partnership with Ada
+-----------------------------------
+Cebu Pacific partnered with Ada, a global leader in AI customer service, to
+transform Charlie from a scripted chatbot into a generative AI agent -- smarter,
+faster, and able to deliver more human-like support at scale. This made Cebu
+Pacific the first airline in Southeast Asia to fully integrate generative AI
+across its customer support channels.
+
+Charlie is now positioned as the first point of contact across the channels
+customers use most, instead of routing customers through clunky menus or making
+them wait in queues. The AI agent is deployed across Cebu Pacific's mobile app,
+Facebook Messenger, and the Cebu Pacific website, offering consistent support
+in multiple languages including English and Tagalog.
+
+With the move to generative AI, Charlie now pulls answers directly from Cebu
+Pacific's robust, real-time, centralized knowledge base, eliminating the need
+to hardcode flows or upload content manually. The AI agent delivers contextual
+responses, can link customers to relevant resources, and handles inquiries
+end-to-end whenever possible.
+
+Initial capabilities include handling common passenger inquiries such as flight
+bookings, itinerary changes, and travel documentation requirements, with
+around-the-clock real-time assistance. Features include personalized and
+contextually relevant interactions, seamless integration with existing Cebu
+Pacific systems, and accurate, timely updates on bookings and flight statuses.
+
+
+Key Metrics and Results
+-----------------------
+- 75% of customer interactions resolved autonomously
+- 50% increase in customer satisfaction (CSAT) scores
+- 34% increase in automated resolution rate
+- Less than 1-minute wait times for high-priority cases
+- Single-digit minute wait times for access to live agents on second-priority
+  issues
+- 24/7 real-time customer support across 11 languages
+
+
+Organizational Transformation
+-----------------------------
+Ada gave Cebu Pacific an operating model that taught them that it is not only
+the technology that will change, but also the organization and how they set
+themselves up to support the new technology.
+
+Customer Care teams hold daily stand-ups to review escalations, analyze
+intents, and fine-tune how the AI agent handles edge cases. The customer care
+and CX teams also meet weekly to collaborate on open items and review recent
+updates. When urgent issues arise, they immediately coach the AI agent or
+refine knowledge base articles, ensuring the team is always agile and the AI
+agent is always up to date.
+
+
+Quotes
+------
+Candice Iyog, Chief Marketing and Customer Experience Officer, Cebu Pacific:
+"Partnering with Ada allows us to set a new benchmark in customer service by
+leveraging AI to better serve our passengers."
+
+Candice Iyog also stated:
+"This milestone underlines our commitment to providing quick and seamless
+solutions to our customers while optimizing operations."
+
+Mike Gozzo, Chief Product and Technology Officer, Ada:
+"Through our partnership, we're empowering Cebu Pacific to scale their support
+across channels and markets."
+
+
+Future Direction
+----------------
+The next phase of Cebu Pacific's AI customer service strategy focuses on
+expanding to new channels, starting with email. The customer care team is
+actively working on applying Ada's AI agent to automate and accelerate email
+support. Other planned expansions include proactive notifications, expanded
+multilingual support, and personalized travel recommendations.

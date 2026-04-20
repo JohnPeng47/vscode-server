@@ -1,0 +1,149 @@
+Company: Photobox
+Source: https://www.ada.cx/case-study/photobox/
+
+================================================================================
+PHOTOBOX | CASE STUDY | ADA
+================================================================================
+
+Photobox uses Ada to scale up support for the holiday season and beyond
+
+KEY METRICS
+-----------
+- 15% reduction in operating costs in year 1
+- $732k saved in year 1
+- Multiple languages across 3 brands
+
+COMPANY OVERVIEW
+----------------
+Photobox helps customers turn memories into long-lasting artifacts by
+personalizing photobooks, mugs, canvasses, and more. Photobox Group is Europe's
+largest digital personalized printing business, with five brands including
+Photobox, Hofmann, and posterXXL. The business is headquartered in London and
+they ship worldwide.
+
+BFCM: THE GOOD, THE BAD, AND THE EXPENSIVE
+--------------------------------------------
+Black Friday Cyber Monday (affectionately known as BFCM) is both a blessing and
+a curse for ecommerce and retails brands. On one hand, these three months bring
+in the bulk of their annual revenue. On the other hand, from October to January,
+customer support teams are severely overwhelmed. Agents are inundated with the
+kind of low-touch repetitive inquiries that lower morale and job satisfaction --
+increasing turnover as a result. CX leaders often bring in seasonal agents who
+are expensive to hire, train and manage on a short-term basis.
+
+Photobox experiences this phenomenon every year. They make 70% of their revenue
+between October and December, and their support costs skyrocket. In preparation
+for the busy season, they grow their team from 100 to 340 agents to meet demand
+for customer support. And while the team triples in size to handle higher
+volumes, it comes at a steep cost to both their finances and to the customer
+experience.
+
+Seasonal staff can't ramp quickly enough to be as effective as permanent
+employees. This is painfully clear with pre-sale interactions in particular. It's
+easy for tenured staff who are familiar with the Photobox portfolio to make
+recommendations, answer technical product questions, or offer guided purchasing
+experiences for shoppers. But seasonal agents simply can not deliver the same
+level of support. CX varies depending on whether a customer is connected with a
+permanent or seasonal agent, negatively affecting pre-sale conversions as a
+result.
+
+So Photobox was not only spending more money, they were also leaving money on the
+table owing to poor service during the busiest (and most profitable) time of the
+year.
+
+Outside of BFCM and the holiday season, Photobox was generally understaffed.
+They lacked the resources to offer 24/7 support and scale to service to
+customers around the world in multiple languages.
+
+Photobox needed a conversational AI platform that:
+- Can scale up and down to match seasonal interaction volume spikes and dips
+- Is easy to build and maintain by non-technical teams
+- Integrates seamlessly with Zendesk to create email tickets and a warm handover
+  to live agents
+- Offers multilingual capabilities straight out of the box and with no need to
+  manually write translations for all languages
+
+Ada fit their needs like a glove.
+
+RESULTS AND BUSINESS IMPACT IN CUSTOMER SUPPORT
+------------------------------------------------
+Photobox deployed Ada on three brands in 2021 in 7 countries, offering 24/7
+support in English, Dutch, French, German, Italian, and Spanish. The bot was
+built to address the most common customer inquiries including "where is my
+order?" (WISMO), product recommendations, and return policies. In the first
+year, Photobox realized 650k GBP (approximately $732k USD) in savings.
+
+    "The difference with Ada is the usability and flexibility of the tool. We
+    don't need to recruit a technical resource to manage it. It just needs people
+    who understand the process and are close to the customer experience. And it's
+    quite easy to train the bot across multiple languages when we only have to
+    work in one."
+
+    -- Wayne Grimshawe, Group Director of Customer Care
+
+Now that Ada is available to customers on their favorite digital channels (mobile
+web and in-app), Photobox has seen a shift in their channel mix -- specifically,
+a reduction in phone support. And because Ada never sleeps, Photobox didn't need
+to hire additional headcount to operate during extended working hours. As a
+result, they've been able to resolve over hundreds of thousands of customer
+interactions that would normally have had to wait until business hours for a
+response -- and as we're all well-aware, if a business doesn't respond within 5
+minutes, you can kiss that cart goodbye.
+
+    "Ada has made us more available to our customers. Now we have the scale to
+    offer 24/7 support to customers across all of our markets -- both on the web
+    and in our mobile app."
+
+    -- Wayne Grimshawe, Group Director of Customer Care
+
+Based on reduction in contact volumes in 2021, Photobox will hire 70 fewer
+seasonal agents for the 2022 BFCM season (representing 15% of operating costs).
+These savings have been reinvested in product innovation to help Photobox remain
+the market leader in their space.
+
+What's more, since a higher percentage of support agents are now permanent,
+customers have a higher chance of speaking with a full-time support agent who is
+most familiar with Photobox products and services. Plus, tenured staff are
+benefitting from professional development -- they circulate the floor and help
+newer or temporary staff, which improves agent ramp and productivity.
+
+    "Together with the ability to cut system training by half and average
+    handling time by 7%, we now have core quality metrics that are enabling us to
+    really drive customer interactions and retention across our group. We also
+    now have a handle on what is truly happening to our customers and can use
+    that in our coaching to improve our agent capabilities."
+
+    -- Wayne Grimshawe, Group Director of Customer Care
+
+Ada has also helped reduce cart abandonment rates. Photobox knew that there was a
+lot of friction at checkout when customers saw the shipping costs, which could be
+expensive, especially if items are being printed and shipped from various
+locations. Photobox created a flow in Ada that breaks down the costs and helps
+customers understand them, building trust and driving conversion.
+
+Agents have been having a bigger impact on conversion too. With Ada handling the
+low-hanging fruit, agents have more time to focus on high value interactions that
+drive revenue, such as product recommendations, upsells, or cross-sells -- and
+Photobox now has a higher percentage of tenured support staff that can facilitate
+those conversations.
+
+Lower support costs, higher conversion, lower abandonment, and a better customer
+experience -- that's a big win for Photobox and their customers, too.
+
+LOOKING AHEAD
+-------------
+With Ada's help, Photobox is no longer worrying about putting out CX fires
+during BFCM and beyond. Instead, with a year of cost savings in the bank,
+they're focusing on ways to use automation that will elevate the experience for
+shoppers, all the way from first purchase to lifelong customer.
+
+They plan on using Ada to cross-reference expected delivery times in ShipUp with
+their own back office. This way, they can proactively inform customers of delays
+and offer them a concession to make them feel valued, driving loyalty and repeat
+purchase.
+
+    "Our partnership with Ada is really focused on outcomes. We're always talking
+    about our goals and what we're trying to achieve. I can count on our Ada team
+    to guide us how best we can use the platform to meet our goals."
+
+    -- Wayne Grimshawe, Group Director of Customer Care

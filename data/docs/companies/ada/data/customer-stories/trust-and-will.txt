@@ -1,0 +1,103 @@
+Company: Ada
+Source URL: https://www.ada.cx/case-study/trust-and-will/
+
+================================================================================
+Trust & Will Scales Customer Support with Their AI Agent
+================================================================================
+
+Company: Trust & Will
+Industry: Legal Tech / Estate Planning
+AI Agent Name: Will-E
+Key Metric: 70% automated resolution rate (achieved in less than a year)
+
+--------------------------------------------------------------------------------
+OVERVIEW
+--------------------------------------------------------------------------------
+
+Estate planning is an emotionally charged task where people must make deeply
+personal, life-defining decisions. For Trust & Will, providing clarity, empathy,
+and accuracy wasn't just important -- it was mission-critical.
+
+--------------------------------------------------------------------------------
+THE CHALLENGE
+--------------------------------------------------------------------------------
+
+Trust & Will's initial scripted chatbot offered basic support, but was not able
+to handle the nuanced situations that members contact their support team about
+every day. Many of their members struggled with the old bot, which had the
+classic looping experience and lacked the empathy required for the types of
+questions on members' minds.
+
+--------------------------------------------------------------------------------
+THE SOLUTION
+--------------------------------------------------------------------------------
+
+Trust & Will partnered with Ada to launch an AI agent they affectionately named
+Will-E. Unlike its predecessor, Will-E leverages generative AI and the best
+artificial intelligence models to provide scalable, automated resolutions that
+combine efficiency with the quality of human-like interactions.
+
+To ensure that generated responses are always safe, accurate, and relevant, the
+AI agent is designed to only pull information from company content. This is
+especially important in highly regulated industries such as legal tech.
+
+--------------------------------------------------------------------------------
+TRAINING AND CONTINUOUS IMPROVEMENT
+--------------------------------------------------------------------------------
+
+The Trust & Will support team treated Will-E like a new team member, dedicating
+significant time to its training and continuous improvement to refine responses
+and stay aligned with evolving customer needs.
+
+Coaching Will-E is like training a new employee -- but faster and more
+consistent. By aligning the AI agent with updated FAQs and real-time insights,
+they created a self-improving system that delivers personalized support to
+customers at scale.
+
+The team thoroughly audited and revamped their knowledge base, closing content
+gaps and collaborating closely with Ada experts to optimize performance. This
+iterative process allowed Trust & Will to identify knowledge gaps and make
+targeted improvements, ensuring Will-E stayed responsive and effective.
+
+--------------------------------------------------------------------------------
+RESULTS AND IMPACT
+--------------------------------------------------------------------------------
+
+Will-E's introduction marked a turning point for Trust & Will's service
+operations. By covering routine inquiries, Will-E empowered the team to focus
+on high-stakes, emotionally charged cases.
+
+In less than a year, Will-E has grown and maintained a steady 70% automated
+resolution rate. This has been a major factor in allowing Trust & Will to offer
+world-class support from a small but mighty in-house team.
+
+Will-E has been a game-changer, significantly reducing escalations and making a
+huge difference in improving the customer experience while lightening the team's
+workload.
+
+--------------------------------------------------------------------------------
+QUOTES
+--------------------------------------------------------------------------------
+
+Sophie Heller, Head of Member Support at Trust & Will:
+
+"Our live chat experience isn't just about automating tasks -- although that has
+been huge for my team -- but we also are able to deliver a conversational
+experience that maintains a high standard of trust and empathy for our members."
+
+"We've gone from firefighting to delivering white-glove service. Will-E doesn't
+just handle inquiries, it gives us the bandwidth to be there for our customers
+when they need us most."
+
+"Our metrics give a clear picture of how much value Will-E contributes to our
+support experience."
+
+"It's been a major factor in allowing us to offer world-class support from a
+small but mighty in-house team."
+
+--------------------------------------------------------------------------------
+LOOKING AHEAD
+--------------------------------------------------------------------------------
+
+With Will-E's success, Trust & Will is exploring new ways to scale their impact,
+with maintaining the 70% automated resolution rate remaining a priority.

@@ -1,0 +1,115 @@
+Company: Ada
+URL: https://www.ada.cx/case-study/monday-com/
+Type: Customer Case Study
+================================================================================
+
+monday.com Case Study | Ada
+
+How monday.com Deploys Ada's AI Agent Across Channels for Impactful Efficiency Gains
+
+--------------------------------------------------------------------------------
+
+COMPANY OVERVIEW
+
+monday.com is a work operating system where organizations of any size can create
+the tools and processes they need to manage every aspect of their work. By
+combining building blocks, like apps, automations, and integrations, teams can
+build or customize the workflows of their dreams.
+
+Tal Gulst, Bot Manager at monday.com, integrated a generative AI agent into
+their workflow.
+
+"It's conversational, and really understands the customer's issue."
+-- Tal Gulst, Bot Manager, monday.com
+
+--------------------------------------------------------------------------------
+
+THE CHALLENGE: SCRIPTED BOTS WERE INFLEXIBLE
+
+The team quickly found scripted bots to be inflexible and time-consuming for
+their support team to manage. Their chatbot approach was hard to maintain and
+needed constant manual updates.
+
+Before Ada launched the AI agent, monday.com's customer experience team managed
+chats, emails, and callbacks globally, with 76% of their conversation volume
+coming from the chat channel. They were looking for a dynamic solution to
+automatically resolve customer inquiries on chat.
+
+--------------------------------------------------------------------------------
+
+THE SOLUTION: ADA'S AI AGENT
+
+Just turning on the AI agent resulted in 40-45% containment. Since onboarding
+the AI agent, their containment rate has grown month over month, with
+overwhelmingly positive customer feedback. monday.com's highest volume channel
+was now proving to be their most successful.
+
+The AI agent's ability to perform actions on behalf of customers was a
+game-changer for the monday.com team. Tal connected the AI agent to monday.com's
+business systems and taught it how to solve complex customer problems -- just
+like a human agent.
+
+The AI agent solves many different complex problems for customers using actions,
+including:
+
+- Following up on failed charges
+- Generating receipts
+- Sending confirmation emails
+- Trial extensions ("if someone wants a trial extension, the AI Agent knows how
+  to do it")
+
+The AI Agent automatically resolves 50% of customer service tickets, which has
+reduced reliance on external support for ticket management and has allowed the
+team to tackle more strategic challenges.
+
+--------------------------------------------------------------------------------
+
+EXPANDING TO EMAIL
+
+When Ada offered monday.com access to an early access program (EAP) for email,
+they were excited to hop on board. Tal quickly found the action-oriented and
+malleable solution she had been looking for to increase efficiency on the email
+channel.
+
+Billing inquiries constitute almost 50% of all email inquiries. Billing is one
+of their biggest channels for emails because customers get emails about their
+receipts or upgrades and reply directly because they don't see it on the
+platform, and it's very intuitive for them to answer there.
+
+The billing use case was one of their biggest wins for the email channel.
+
+The resource savings with the AI agent on email have been substantial, with a
+notable reduction in human resources needed to cover their channels.
+
+--------------------------------------------------------------------------------
+
+KEY METRICS AND RESULTS
+
+- 76% of conversation volume was on chat (before AI agent)
+- 40-45% containment rate immediately upon turning on the AI agent
+- Containment rate has grown month over month since onboarding
+- 50% of customer service tickets automatically resolved by AI agent
+- ~50% of all email inquiries are billing-related (now handled by AI)
+- Overwhelmingly positive customer feedback
+
+--------------------------------------------------------------------------------
+
+CROSS-CHANNEL IMPACT
+
+Ada has had a huge impact on operational efficiency. Now, they have the same
+"brain" and logic powering both their email and chat channels. If they're
+building a flow to improve the customer experience with their chat channel,
+their customers reaching out via email can enjoy that same experience.
+
+"Ada is flexible. With Ada, we know the automated resolution will continue to
+improve as the AI agent learns and grows. There's significant flexibility in
+making changes and improvements. The responses and the accuracy are phenomenal."
+-- Tal Gulst, Bot Manager, monday.com
+
+--------------------------------------------------------------------------------
+
+ABOUT ADA
+
+Ada is an AI-powered customer service automation platform that helps companies
+resolve customer inquiries automatically across chat and email channels using
+AI agents.

@@ -1,0 +1,113 @@
+Company: Moka
+Source: https://www.ada.cx/case-study/moka/
+
+================================================================================
+MOKA | CASE STUDY
+================================================================================
+
+Key Metrics
+-----------
+- 75% customer engagement
+- 45% automated resolution rate
+- 95% query recognition
+- 5 weeks to launch
+
+================================================================================
+
+Ada empowers Moka to make strategic decisions about company growth
+
+Moka is a direct-to-consumer FinTech on a mission to empower Canadians to
+achieve their financial goals. Through automated investing, smart saving plans,
+and valuable rewards, Moka has made it possible for Canadian millennials to take
+control of their finances -- without needing in-depth financial knowledge or
+making big lifestyle changes.
+
+Experiencing Growing Pains
+--------------------------
+
+Since launching in 2017, the Moka app has been downloaded over 1M times, with
+thousands of 5-star reviews, and has helped its customers invest responsibly,
+reduce expenses, and accelerate debt repayment.
+
+To keep up with the rapid growth, this young brand needed to scale its customer
+support. They were already using some support functionalities that lived within
+their CRM ecosystem, but they didn't have robust features that offered great CX
+at scale.
+
+Cloe Tetreault-Tremblay, Moka's Head of Customer Success, had a decision to
+make: either scaling the support team at the same pace as their user base, or
+automating some part of their CX to free precious hours of work for support
+agents.
+
+Before Ada:
+- High volume of messages during billing periods
+- General inquiries taking up valuable support staff bandwidth
+
+An Automation-First Solution
+----------------------------
+
+Since Moka is founded on AI and data-driven principles, a partnership with Ada
+was written in the stars. In collaboration with their Automated Customer
+Experience (ACX) Consultant at Ada, Moka launched their conversational AI
+chatbot in 5 weeks.
+
+Moka positioned the chatbot at the top of the support funnel, offering both
+self-serve and routing options for visitors. They used APIs to automate Intercom
+ticket submission directly from within the bot, creating a better CX experience.
+They're also going to leverage the bot for segmentation and personalization as
+they move towards new markets.
+
+A few short months after launching their bot, they witnessed a 41% containment
+rate.
+
+  "Ada has freed some precious hours of our agents' time, who can now focus on
+   more complex cases and deliver the best support experience possible to our
+   users."
+   -- Cloe Tetreault-Tremblay, Head of Customer Success
+
+A Bot That Learns from the Best
+--------------------------------
+
+The Customer Success department is at the frontline of Moka, handling the
+onboarding of new users, general inquiries, bugs, account closures, and any
+other request that might arise throughout the customer journey. As Cloe puts it,
+"My team is the eyes, ears, and voice of our users."
+
+Leaning on this expertise, Ada's ACX Consultant worked closely with the Customer
+Success team to identify the most frequent and most valuable customer
+interactions, and built that into their chatbot. This wealth of knowledge
+combined with our conversational AI resulted in a 95% recognition rate, meaning
+the bot is successfully able to understand 95% of interactions, regardless of
+phrasing or typos.
+
+  "My team is the eyes, ears, and voice of our users."
+   -- Cloe Tetreault-Tremblay, Head of Customer Success
+
+Support That Scales Exponentially
+---------------------------------
+
+One of Moka's biggest challenges was that support agents were spending too much
+time answering general FAQs. Launching an automation-first CX strategy with Ada
+allowed Moka's customers to instantly self-serve 24/7. Despite the fact that
+ticket volumes continue to rise, and no new support agents have joined the team,
+the average number of tickets being handled by agents hasn't increased.
+
+At the same time, customer cases that needed more complex problem-solving were
+seamlessly escalated to a Moka live chat agent, including a chat transcript and
+relevant customer details. This has made the tickets easier to resolve since the
+bot has done the due diligence before the ticket gets handed off.
+
+As a result, over 41% of conversations are now fully contained within the bot,
+freeing up support agents and shortening wait times for high-value customers.
+
+Strategic Team Growth
+---------------------
+
+Now that the chatbot was supporting the CX team's workload, Cloe was in a
+position to rethink her team's growth, and make strategic decisions instead of
+urgent ones. The Customer Success team hired a new role for an agent in charge
+of monitoring their bot and improving its performance.
+
+With this role in place, Moka can ensure that they are constantly optimizing
+their CX strategy and offering their customers valuable brand interactions, no
+matter how quickly their business continues to grow.

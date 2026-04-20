@@ -1,0 +1,180 @@
+Company: Wave Financial
+Source: https://www.ada.cx/case-study/wave/
+
+============================================================
+CASE STUDY: Wave Financial saw 5x return on investment after
+only 12 months using Ada
+============================================================
+
+KEY METRICS
+-----------
+- 65% of interactions contained by Ada
+- 500+ million automated interactions
+- $1.2M estimated annual savings
+- 5x ROI
+
+OVERVIEW
+--------
+Wave Financial offers a suite of products and services for small business
+owners including accounting, invoicing, payments, and payroll. They aim to
+provide best-in-class assistance to their customers should they encounter an
+issue or need advice.
+
+
+A FLEXIBLE ACX SOLUTION TO HANDLE SEASONAL BRAND INTERACTION SPIKES
+-------------------------------------------------------------------
+Wave considers CX to be a crucial part of their business, and has a team of
+60+ associates -- over half of their staff -- focused on serving customers
+directly through support channels.
+
+During the first quarter of the calendar year, Wave's Customer Experience team
+ramps up for a mega spike in customer support volumes -- upwards of 200-300%.
+Leading the charge is the Senior Director of Customer Experience Dennis Woo and
+Manager of Customer Experience Insights Katie Larson.
+
+In the company's early days, the two prepared for the cyclical nature of SMB
+finance by pulling in employees from different departments to assist and agents
+working overtime (and given lieu time in return). It was "all hands on deck"
+and unfortunately, an unsustainable approach for the growing company.
+
+As Wave grows and matures, so too does their culture and their approach to CX.
+Responding to seasonal spikes -- with agents struggling to respond to inquiries
+in a timely manner -- became more difficult and the demand for higher standards
+for both the customer and employee experience became more urgent. Dennis and
+Katie needed a solution that could reduce wait times, negative customer
+interactions, and missed revenue opportunities.
+
+They had a couple options. Dennis and Katie could hire more support staff to
+handle the mounting volumes during the busy season, forcing them to invest more
+in hiring and training and finding a flexible solution for when support volumes
+curtail after the first quarter. Or, they could find a more efficient,
+automated approach to their CX that provides customers with immediate and
+reliable access and resolution, with an escalation path for the more complex,
+high-value inquiries.
+
+Wave needed a flexible solution to handle customer inquiry spikes during
+certain, more volatile times of year, but that also delivered meaningful ROI,
+given the seasonal nature of the business.
+
+They decided on an automation-first approach, and Ada's proven Automated CX
+(ACX) framework and no-code features checked every box. Given Wave's growth
+trajectory and unique needs, Ada was the perfect platform for ongoing success.
+
+    "In our busy period, we'd have an extremely difficult time adjusting to
+    volume and maintaining a reasonable service-level agreement (SLA). The
+    benefit of Ada is that we are able to have an agent on 24/7 for our most
+    common questions, freeing up our humans to engage with the customers we
+    care about the most. Without Ada, we'd need to make tough decisions about
+    taking longer to get back to certain customers."
+
+    -- Dennis Woo, Senior Director of Customer Experience
+
+
+SETUP DURING THE CRITICAL SEASON
+---------------------------------
+Katie and her team partnered with Ada's ACX Consultants to start implementing
+Wave's chatbot at the start of their busy season -- in January, 2020. There
+was some apprehension in kick-starting a project at the height of the first
+quarter, but she was not alone.
+
+Wave's Customer Experience team was already in full swing handling an influx of
+interactions, so Ada's ACX Consultants stepped up to help, working
+collaboratively with Katie and her team to build out the bot's foundation and
+automate the first essential flows.
+
+Wave's bot, Mave, launched in only three and a half weeks. The team was able to
+take advantage of the bot during their busy season and realize its value right
+away -- the bot was able to contain on average 70% of the interactions during
+their busy season right after launch.
+
+Along with the hands-on work, Ada's ACX Consultants advised Katie's team on CX
+and automation best practices and showed them how to make the most of their new
+platform. This partnership empowered the Wave team to become the brains behind
+making Mave's tone and voice consistent with Wave's brand and develop specific
+use cases that ladder up to the overall CX strategy -- leveraging Ada's
+capabilities and Wave's investment in conversational AI to strategically
+improve the Customer Experience team and techstack.
+
+    "Ada's Professional Services Consultants that have been assigned to our
+    account have been essential to helping us get the most out of Ada. With
+    their guidance, our team has been empowered to go beyond simply creating
+    content."
+
+    -- Katie Larson, Manager, Customer Experience Insights
+
+
+RESULTS THAT SPEAK FOR THEMSELVES
+----------------------------------
+Wave and Ada launched Mave during the busiest quarter of the year, and
+immediately saw reduced year-over-year support ticket creation -- 65% within
+the first month.
+
+Mave works 24/7, answering redundant FAQs such as basic information about
+products and features. As a result, the conversations that are left for Wave's
+agents are more complex and need a sophisticated human touch. Since the agents
+have been freed from mundane tasks, they could now invest their time helping
+customers with complicated inquiries or pressing concerns, and building
+valuable relationships with them through positive brand interactions.
+
+Wave has saved an estimated $1.20 million in inquiry deflections alone between
+March 2020 and March 2021 -- which is a 5x return on investment for Wave.
+
+
+PERSONALIZED SUPPORT
+--------------------
+Wave offers 3 account tiers: free, pay-per-use, and monthly. Each tier offers
+access to certain products and features, and customers in different tiers are
+entitled to different types of support. In order to create an effortless
+experience for their customers, Katie and her team are using Ada to
+intelligently route different customers, based on their account tier and
+region, to different levels of support and different teams.
+
+This way, Wave's customers don't need to know their tier or their support
+entitlement, and Wave's agents don't have to check those manually either. The
+bot takes care of the logic and simply sends customers to the right team and
+the right channel.
+
+Not only does this provide personalized CX from the start, it also ensures
+that Wave can be confident that each customer has the appropriate access to
+their brand, and that the experience meets their brand standards regardless of
+the customer tier.
+
+
+GROWING MAVE BEYOND SUPPORT
+----------------------------
+Now that the immediate needs of the support team have been met, Dennis and
+Katie are looking at other aspects of their CX where they can apply Ada's
+automation magic. They've created a new team within their Customer Experience
+department focused on building out new use cases and answer flows for Mave to
+continually make it smarter, more interactive, and more engaging.
+
+Dennis and Katie are also working on leveraging the chatbot beyond just
+support. Their sights are set on proactive marketing, contextual assistance,
+and sales automation.
+
+For example, Wave offers the ability to sign up for professional bookkeeping
+and accounting services. The marketing team plans to leverage Engage, Ada's
+marketing suite, to drive more leads, save time for agents, and increase
+conversion -- even capture sales without having to involve sales reps.
+
+They're also looking to embed Ada into specific workflows and screens in their
+applications such that they are able to provide proactive, contextual
+assistance to predict what help customers may need in the moment. Using Ada,
+the different teams across Wave including sales, marketing, and support can
+drive customer behaviour, helping them onboard or take other sticky actions
+that increase customer lifetime value.
+
+Ada has now become an extension of Wave's CX operations, acting as an
+interaction layer between the brand and its customers. As Wave's CX ambitions
+grow, Dennis, Katie, and other Customer Experience team members will be able to
+take better advantage of Ada's capabilities to find new interaction channels
+and new opportunities to engage with customers and prospects.
+
+    "The reason why we love partnering with Ada is that from a collaborative
+    perspective we work very well together. We share similar values and our
+    working styles are very complementary. Also from a strategic standpoint
+    with the growing number of customers we are fortunate to serve, Ada gives
+    us a unique opportunity to shape and influence the products and features
+    they are investing in to drive the most value for us."
+
+    -- Dennis Woo, Senior Director of Customer Experience

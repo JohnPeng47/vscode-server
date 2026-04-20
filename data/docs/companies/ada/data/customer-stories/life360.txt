@@ -1,0 +1,90 @@
+Company: Ada (ada.cx)
+Source: https://www.ada.cx/case-study/life360/
+Case Study: Life360
+
+================================================================================
+
+Life360 Increases Their Support Capacity 5x with Ada's AI Agent
+
+================================================================================
+
+COMPANY OVERVIEW
+
+Life360 is a location-sharing and family safety platform serving over 80 million
+users. As their user base expanded significantly, customer support demand
+increased proportionally, requiring a shift from manual, email-heavy operations
+to a more scalable, AI-first approach.
+
+--------------------------------------------------------------------------------
+
+THE CHALLENGE
+
+With millions of families relying on Life360's safety and location-sharing
+features, the demand for customer support was surging. The company needed a way
+to scale efficiently while ensuring fast, high-quality service.
+
+Before implementing Ada, Life360's support model was heavily reliant on email,
+with over 90% of inquiries handled through that channel. This led to long
+response times, increasing operational strain, and a growing backlog of
+unresolved tickets. Email was Life360's largest channel, carrying over 90% of
+their customer support volume, which often resulted in long wait times and
+delayed resolutions.
+
+--------------------------------------------------------------------------------
+
+THE SOLUTION
+
+Life360 partnered with Ada to launch Vida, an AI agent designed to automate
+routine inquiries, enhance efficiency, and deliver a more seamless customer
+experience. The deployment transitioned Life360 to an AI-first support approach,
+transforming customer interactions from transactional to conversational.
+
+Life360 trained Vida to recognize high-touch scenarios requiring human expertise.
+Sensitive cases -- such as crash detection scenarios -- are seamlessly escalated
+to human agents for empathetic handling, ensuring critical customer interactions
+receive appropriate personal attention.
+
+--------------------------------------------------------------------------------
+
+KEY METRICS AND RESULTS
+
+- 5x increase in overall customer support capacity
+- 70% automated resolution rate achieved immediately upon deployment
+- 400 FTE workload equivalent handled by Vida (the AI agent)
+- 3x faster response times compared to human agents
+- 150,000+ inquiries managed monthly by Vida
+- 30,000 inquiries handled monthly by human agents across all channels
+- 80 million users supported
+
+--------------------------------------------------------------------------------
+
+IMPACT AND OUTCOMES
+
+Today, 70% of inquiries are resolved without human intervention, freeing up
+agents to focus on more complex, high-value cases, while ensuring customers
+receive faster and more efficient support. Now, 70% of inquiries are resolved
+instantly within the chat channel, and support is no longer just a last resort --
+it is an extension of the Life360 experience that customers actively engage with.
+
+The implementation created 10x the volume that was expected, but the containment
+and automated resolution remains very high. The AI agent handles volume surges
+easily, so the agent-level increase was basically flat.
+
+Vida provides 24/7 support and answers very quickly, almost instantly. Handle
+times on the AI agent chats are much lower than live agent chats. The deployment
+achieved rapid ROI within months, with ongoing cost savings. Response times
+became nearly instantaneous, and the AI agent matches human agent performance
+while handling five times more volume.
+
+With Vida handling everyday inquiries, human agents now have more bandwidth to
+focus on strategic, high-value work, such as complex problem-solving and
+personalized customer care.
+
+--------------------------------------------------------------------------------
+
+QUOTE
+
+Justin Michaud, Director of Customer Care at Life360:
+
+"If I didn't have Ada, I'd have to 4x my agent team to support the conversion
+volume we currently have now."

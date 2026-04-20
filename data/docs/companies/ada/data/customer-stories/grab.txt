@@ -1,0 +1,69 @@
+Company: Grab
+Source: https://www.ada.cx/case-study/grab/
+
+================================================================================
+
+Grab | Case Study | Ada
+
+Find out how Grab enhanced CX with a multilingual automated Messenger experience
+
+================================================================================
+
+KEY METRICS
+
+- 90% decrease in ticket backlog
+- 3x higher containment rate
+- 23% operational cost savings
+- 6 markets served
+
+================================================================================
+
+Grab decreases customer service operational costs by 23% with Ada
+
+Founded in 2012, Grab began as a ride-hailing service in Malaysia, but has
+since evolved and is now a super-app company with a strong presence throughout
+Southeast Asia. With the Grab app, people can book transport, order takeaway
+from restaurants, have groceries delivered, hire home repair professionals and
+pay bills.
+
+THE CHALLENGE
+
+Grab was experiencing such a high volume of digital brand interactions that
+customer service agents were unable to address the requests in a timely manner,
+resulting in a backlog.
+
+To tackle this issue cost-effectively, ensure customers' questions were being
+addressed as quickly as possible, and maintain customer satisfaction, Grab
+decided the time was right to build and launch a scalable automated experience
+on Facebook Messenger.
+
+NO-CODE AUTOMATION WITH ADA
+
+Grab partnered with Ada to build its Facebook Messenger AI-powered digital
+assistant. Ada worked with the super-app company to create an automated FAQ
+based on the most common questions asked, set up a handover protocol that
+allowed for customers with more complex queries to be transferred seamlessly to
+a live agent, and integrate the Messenger experience into Grab's existing
+customer relationship management software.
+
+Grab then launched its new customer service experience powered by Ada in six
+countries across the region: Indonesia, Malaysia, the Philippines, Singapore,
+Thailand, and Vietnam.
+
+RESPONDING TO CUSTOMERS FASTER
+
+Grab's automated Facebook Messenger experience has become the preferred service
+option for its large customer base.
+
+The super-app brand will soon launch a Messenger-powered solution for its
+GrabFood service, and is working to upgrade its digital assistant by introducing
+detailed personas that align with the brand's voice and appeal to local
+populations.
+
+RESULTS
+
+With Ada in Messenger, Grab earned the following results:
+
+- 3x higher containment rate
+- 23% operational cost savings
+- 90% decrease in backlog

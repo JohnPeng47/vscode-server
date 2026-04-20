@@ -1,0 +1,33 @@
+Dear Whomever,
+
+I want to apply for a sales role at Tailscale. I don't have any sales experience, but I have worked in infosec for 3 years as a penetration tester and familiar with its product offerings and domain nuance. I think Tailscale has a genuine security edge over traditional VPN providers like OpenVPN and I would love for an opportunity to join your sales team.
+
+*Author's Note*:
+(If you're short on time, skip to the P.S. first)
+
+I found about Tailscale after a friend dragged me out to one of your technical demos with the promise of free beers. The beers were a lie, but I did end up learning alot about Tailscale. 
+
+In a previous life as a pentester, we would regularly do network security engagements where we would execute an attacker's playbook on an corporate network. During these (red team) excersises, one of the most prized findings are .ovpn client files. With these, we were able to laterally pivot into new network segments, opening up new targets for further attack/pivots. And exposed VPN credentials feature prominently in major breaches, with the most famous one being UnitedHealth, the biggest US healthcare breach in history.
+
+After reading up Tailscale/Wireguard's design, I realized that the security model of the traditional VPN solution was flawed in two ways that Tailscale's architecture inherently mitigates:
+
+1. Network vs. Device Based Access
+> Trad VPN: Network is set-up as a hub-and-spoke where a central OpenVPN server (concentrator?) acts as a TLS relay that grants you subnet level access, exposing every target on the subnet to potential exploitation  
+> Tailscale: Wireguard initiates a p2p transport tunnel so authentication is enforced by default at the device level, mitigating these network level attacks
+2. Identity as VPN Server vs. Identity per Device
+> Trad VPN: Another consequence of the hub-and-spoke is that for packet-level observability, the source of all VPN'd packets originate from the hub (VPN server)
+> Tailscale: In Tailscale, every packet is encrypted with a device level private key, encoding identity at the packet level.
+
+These are arguments that I can make to propsects in security orgs. Which I have *some* limited experience with. During the last 3 years, I cycled through several software product ideas, one of which was an pentesting agent. Ultimately, it was unsuccessful (I couldn't convince buyers that it provided more value than out-of-the-box Claude), but I did get some exposure to cybersecurity sales during the period. Look, I think you guys have a real edge here with Tailscale adopting a security-focused narrative. And I think I am your man to sell this to prospects.
+
+P.S: Well, it was an hour into writing this long-*** letter that I actually bothered to check with y'all actual messaging on Linkedin. During the initial research, I saw that you guys had put out a Zero Trust paper in July 2025 and just assumed that the enterprise sales pitch was coming from that angle. However after asking :
+
+From Claude:
+...
+"Your technical security framing actually aligns with a messaging angle Tailscale already tried and apparently moved away from. They went from "security is broken" → "we save you money and operational time." The Forrester TEI study is getting pushed much harder than the zero trust report ever was."
+... 
+
+Seems like I should have done the marketing research *first* rather than the *security* research ... sigh, something something, old dogs new tricks, something ... Still, I hope that I have at least demonstrated my technical bonafides. Clearly, I still have much to learn about sales. My desire to work at Tailscale as a SDR remains undiminished, even though I do feel a little foolish for leaning so heavily into the security aspect.
+
+Cheers,
+John

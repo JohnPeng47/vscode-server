@@ -1,0 +1,86 @@
+Company: Tilt
+Source: https://www.ada.cx/case-study/tilt/
+Type: Customer Case Study (Ada)
+
+================================================================================
+Tilt | Ada Case Study
+================================================================================
+
+Tilt Transformed CX with Ada, Reaching 84% Automated Resolutions, Faster
+Replies, and Smarter AI Support Across Channels
+
+--------------------------------------------------------------------------------
+Key Metrics
+--------------------------------------------------------------------------------
+
+- 84% automated resolution rate
+- 64% of email inquiries resolved by AI agent with no human intervention
+- Customer satisfaction (CSAT) increased by 8 points on average
+- CSAT increased by as much as 15 points in some cases
+- 100% of chat volume handled by AI agent
+
+--------------------------------------------------------------------------------
+The Challenge
+--------------------------------------------------------------------------------
+
+As Tilt's customer base grew, so did their support backlog. To scale without
+adding headcount, they partnered with Ada.
+
+--------------------------------------------------------------------------------
+Email: The First Channel
+--------------------------------------------------------------------------------
+
+Tilt deployed a generative AI agent to handle the rising volume of email
+inquiries, delivering faster, more accurate support without increasing strain on
+the team. While they expected the AI agent to help, the results surpassed
+expectations: 64% of email inquiries were resolved by the AI agent, with no
+human intervention required.
+
+--------------------------------------------------------------------------------
+Expansion to Chat
+--------------------------------------------------------------------------------
+
+Following the success of the email pilot program, Tilt extended their AI agent
+to chat. In chat, customers must be logged in, giving the AI agent access to
+richer, account-level context through various APIs. This unlocks the ability to
+handle higher-value inquiries and deliver more personalized service.
+
+--------------------------------------------------------------------------------
+Greeting API and Personalization
+--------------------------------------------------------------------------------
+
+Tilt's team developed a greeting API that pulls high-level user information at
+the start of the conversation, allowing the AI agent to dynamically filter which
+playbooks, processes, and knowledge to surface. This makes support more targeted
+and preemptive from the very first message.
+
+--------------------------------------------------------------------------------
+Coaching and Playbooks
+--------------------------------------------------------------------------------
+
+Performance improvements are attributed to Ada's Coaching and Playbooks
+features, which allow the AI agent to become more dynamic and responsive rather
+than follow a rigid, predefined flow. Since launching their AI agent, customer
+satisfaction has increased by 8 points on average -- and in some cases, by as
+much as 15.
+
+Tilt's AI agent has not only matched the accuracy of human agents but is now
+exceeding it in key areas.
+
+--------------------------------------------------------------------------------
+Impact and Results
+--------------------------------------------------------------------------------
+
+The AI agent now handles routine inquiries with speed and accuracy, freeing up
+Tilt's customer support team to focus on high-value interactions, building
+customer relationships, and providing insights that will inform important
+business decisions.
+
+Ada's AI agent currently handles 100% of Tilt's chat volume.
+
+--------------------------------------------------------------------------------
+Future Plans
+--------------------------------------------------------------------------------
+
+Tilt plans to further expand Ada's coverage to their voice channel, continuing
+to scale AI-powered support across all customer touchpoints.

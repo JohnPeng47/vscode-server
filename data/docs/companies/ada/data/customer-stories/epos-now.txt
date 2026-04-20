@@ -1,0 +1,123 @@
+Company: Epos Now
+Source: https://www.ada.cx/case-study/epos-now/
+Related: https://www.ada.cx/blog/embracing-ai-in-saas-customer-service-4-lessons-from-early-adopter-epos-now/
+
+================================================================================
+
+EPOS NOW CASE STUDY
+How Epos Now Saved 60,000+ Hours Monthly with Ada's AI Agent
+
+================================================================================
+
+ABOUT EPOS NOW
+
+Epos Now is a leading AI-driven point-of-sale (POS) and embedded finance platform.
+The company operates in 10 countries, including the US, and supports 80,000+ small
+and medium-sized business (SMB) locations. Epos Now empowers underserved merchants
+in retail and hospitality globally with cloud-based POS systems.
+
+================================================================================
+
+KEY METRICS
+
+- 60,000+ human labor hours saved per month
+- Up to 70% of support demand automated
+- 30% increase in CSAT (customer satisfaction) on messaging channels
+- 22-25% drop in overall call demand
+- 15% increase in CSAT on the voice channel (within weeks of voice launch)
+- 40% of all phone inquiries automatically resolved
+- 65% average automated resolution rate across channels
+
+================================================================================
+
+THE CHALLENGE
+
+Epos Now's customers often need guidance to identify which features of the platform
+will be most beneficial to their unique business operations. Customers were asking
+for detailed, multi-step guidance to run their businesses efficiently. They
+frequently bypassed existing long-form support documentation, preferring human
+interaction to navigate complex challenges instead.
+
+The primary challenges included managing a complex product with numerous features,
+serving a diverse customer base across multiple industries, and providing efficient
+support for business-critical functions like payment processing. Epos Now needed a
+solution that could offer personalized, instantaneous support while managing these
+complexities. As they scaled, the support challenges grew increasingly complex.
+
+================================================================================
+
+THE SOLUTION: SIDEKICK
+
+In August 2023, Epos Now took a bold step by implementing an AI agent to transform
+their customer service operations. They partnered with Ada to launch Sidekick, their
+AI agent, on messaging channels to handle complex inquiries in real time, delivering
+instant, seamless support.
+
+Sidekick leverages machine learning and Natural Language Processing (NLP) to provide
+24/7 customer support across Epos Now's website, mobile app, and point-of-sale
+systems through a conversational interface. The platform delivers quick, precise, and
+mindful responses to even the most complex inquiries while significantly reducing
+wait times.
+
+Epos Now later expanded Sidekick to voice support, where it now automatically
+resolves 40% of all phone inquiries.
+
+================================================================================
+
+IMPLEMENTATION APPROACH
+
+Epos Now conducted thorough testing before full implementation, running A/B tests
+comparing the AI agent's performance to that of human agents on real customer
+interactions.
+
+Instead of hiring additional resources or bringing in external AI experts, Epos Now
+elevated existing employees who were already adept at delivering excellent customer
+service. They identified team members who excelled at delivering great customer
+experiences and tasked them with training and managing the AI agent. Over time, the
+team specialized in monitoring AI conversations, refining customer workflows, and
+ensuring that Sidekick was continuously aligned with product updates.
+
+This shift allowed Epos Now to better serve customers while empowering their staff to
+take on higher-level responsibilities.
+
+================================================================================
+
+RESULTS
+
+Since its launch, Sidekick has delivered transformative results:
+
+Sidekick saved over 60,000 human labor hours each month in the year since launch,
+automated up to 70% of support demand, increased CSAT by 30%, and streamlined
+support processes across the organization.
+
+Within a few weeks of launch, customer satisfaction (CSAT) on chat interactions rose
+by 30%, and overall call demand dropped by 22% to 25% as more customers shifted to
+channels automated by their AI agent.
+
+With a 60% to 70% average automated resolution rate, Epos Now dramatically reduced
+the need for human intervention in routine queries.
+
+On the voice channel, within weeks of launching, Epos Now saw a 15% increase in
+CSAT, and Sidekick now automatically resolves 40% of all phone inquiries.
+
+Even when Sidekick cannot fully resolve a customer inquiry, it still reduces the
+overall effort required by human agents. Thanks to Sidekick's ability to understand
+the query from the start, much of the behind-the-scenes work -- like creating a
+case, documenting the interaction, and taking notes -- has already been done by the
+time the customer is handed off. When the inquiry reaches a human agent, everything
+is already captured and organized, leaving them to simply update the case with the
+resolution.
+
+================================================================================
+
+EXECUTIVE QUOTES
+
+Richard Nolan, Chief Operating Officer at Epos Now:
+"Through our strategic investment in advanced Machine Learning and NLP, we've created
+Sidekick to revolutionize customer connections and empower merchants with generative
+AI."
+
+Mike Murchison, CEO of Ada:
+"Epos Now, supporting 80,000+ SMB locations across 10 countries, demonstrates how
+Ada's AI management platform unlocks greater efficiency and customer satisfaction
+over time."

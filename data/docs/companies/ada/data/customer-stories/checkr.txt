@@ -1,0 +1,148 @@
+Company: Checkr
+Source: https://www.ada.cx/case-study/checkr/
+Retrieved: 2026-04-20
+
+================================================================================
+
+Checkr manages rapid growth with AI while preserving an outstanding customer experience
+
+================================================================================
+
+KEY METRICS
+
+- 162% improvement in CSAT scores after onboarding and coaching an AI agent, with 2x improvement in CSAT within 4 weeks of implementation
+- 150 FTE workload equivalent managed by their AI agent
+- 100,000+ customers worldwide
+
+================================================================================
+
+OVERVIEW
+
+As a leader in background checks and screening, Checkr has served millions with secure and transparent support processes. Facing rapid growth and complex support needs, Checkr partnered with Ada to scale efficiently while delivering high-quality service. With Ada, Checkr achieved a transformative boost in support efficiency, a better alignment with revenue-driving efforts, and improved customer satisfaction.
+
+
+SCALING CONVERSATION VOLUME ACROSS CHANNELS WHILE IMPROVING THE CUSTOMER EXPERIENCE
+
+Resolving inquiries from over 100,000+ clients hiring millions of candidates is no small feat, especially for a company in a highly regulated industry like Checkr. Their traditional support model wasn't equipped to handle the increased inquiry volume during peak hiring seasons, let alone unpredictable off-season spikes. "On support, we might typically need around 40 to 50 people, but during peak times, that number could double." said Eric Burdullis, SVP of Operations at Checkr.
+
+This challenge intensified when Checkr grew to over 100,000+ customers. Checkr's customer support team still needed to meet compliance standards, maintain rapid resolution times, manage multiple support channels, and keep satisfaction high -- at scale.
+
+The solution? Checkr turned to AI.
+
+Checkr's AI agent now automatically resolves 69% of all their support inquiries, dramatically reducing response times and improving the customer experience across chat and email -- without the need for additional headcount.
+
+    "Seasonality is a challenge many companies face, but having AI has made it easier to
+    adapt without overburdening our team. It's not about reducing costs -- it's about
+    maintaining a high standard of service during unpredictable surges."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+With Ada's omnichannel capabilities, Checkr was able to assign the same AI agent to their various support channels. This allowed them to offer the same instantaneous, cohesive, consistent customer experience on both chat and email.
+
+"At first, we were managing over 20 or 30 email addresses -- each tied to different customer needs," explained Burdullis. "We were pushing to consolidate these into a single chat channel. But with our AI agent, we realized we could rethink how we use email entirely, optimizing each channel with generative AI technology for a smarter, more efficient experience." The more inquiries they were able to automatically resolve, the more they increased their ROI.
+
+    "We flipped on generative AI for our customers in April last year. Compared to the
+    declarative bot, CSAT doubled. That's amazing, but we knew we could do better. Then
+    we started asking ourselves: How do we actually deliver great experiences? If this was
+    a team member, how do we treat it like a team member and ensure it can fully resolve
+    inquiries?"
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+In the back half of the year, Checkr did a few things that helped increase their AI agent's CSAT and create more seamless customer experiences:
+
+- Checkr gave their AI agent access to start resolving more complex customer issues.
+- Checkr integrated their AI agent with Salesforce so that it could pull unique data points on each customer.
+
+These changes enabled their AI agent to greet customers by name, understand the issue context, recognize whether they are a small or large customer, and give a personalized response. After those changes, Checkr's AI agent's CSAT jumped to 76%, a remarkable increase just 9 months after launch.
+
+    "If I turned off Ada tomorrow, I would need to double my support team. Of course, we
+    wouldn't be able to hire another 150 people overnight, so we'd have to find ways to
+    contain the volume. But that would mean a worse experience, forcing people through
+    help center articles and making them read a ton before they could even submit a case.
+    What Ada lets us do is remove those barriers and allow people to interact naturally,
+    without overloading our human agents."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+
+LAUNCHING AI CUSTOMER SERVICE IN A HIGHLY-REGULATED INDUSTRY
+
+Given the highly sensitive nature of Checkr's operations, compliance and security were non-negotiable priorities. To mitigate risk, Checkr launched their AI agent with a phased deployment, initially limiting its scope to non-compliance inquiries. The AI agent then underwent rigorous testing and certification, ensuring it would meet strict standards before it handled other inquiries.
+
+    "The hardest part of compliance-heavy responses is avoiding sounding robotic -- even
+    human agents struggle with that. To address this, we trained our AI agent on our
+    quality rubric, ensuring the AI agent could tailor responses within strict compliance
+    guardrails while still maintaining a natural, supportive tone. In addition, we had our
+    AI agent take the same FCRA compliance exam as our human agents. It passed, and we
+    plan to continue certifying it regularly."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+By holding their AI agent to the same standards as their human team, Checkr ensured that their automated responses were aligned with industry regulations while still delivering a seamless, customer-friendly experience.
+
+
+CREATING A CULTURE OF CONTINUOUS IMPROVEMENT WITH AI
+
+Checkr's AI agent didn't just resolve inquiries; it delivered actionable insights that helped them elevate the quality of customer support. By analyzing conversations and resolution rates, Checkr identified opportunities to refine support content and improve response accuracy.
+
+    "Each week, we review hundreds of conversations, focusing on our lowest-resolution
+    cases. This data highlights areas for AI improvement and sometimes reveals issues
+    within our content -- like conflicting articles that cause confusion. Addressing these
+    inconsistencies gives our AI agent better resources and helps deliver a more consistent
+    experience."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+Optimizing an AI agent is not a set-it-and-forget-it process. "It's a bit like a Penn and Teller show," Burdullis added, "behind the seamless results is a lot of preparation, planning, and effort to ensure success. Generative AI is powerful, but it requires investment and strategy to consistently produce high-quality outcomes."
+
+One key strategy was to redefine how Checkr measured success, shifting from traditional agent efficiency metrics to more meaningful, customer-centric indicators like first-time resolution, CSAT, and response times.
+
+    "Using AI insights, we realigned our customer service metrics to reflect
+    customer-centric outcomes, driving meaningful improvements across the board."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+
+INVESTING IN AI MANAGEMENT
+
+Checkr knew that hiring an AI agent was more than just implementing new software -- it required ongoing management and refinement to fully realize its transformative potential.
+
+To meet this demand, Checkr redefined the responsibilities of key team members to monitor the AI agent's performance and continuously improve customer experience as a result.
+
+Burdullis emphasized the importance of promoting from within, stating, "I think it's going to be exceptionally hard to find this talent externally, not dissimilar to how social media was ten years ago. It's like, you can hire that externally, but you're hiring people right out of college who don't know your brand and don't really understand customer service in the same way. The ability to refine and coach digital conversations is crucial. If someone asks me how to hire their first AI agent manager, I'd tell them it's about finding that rare blend of empathy and technical curiosity."
+
+    "I would highly recommend starting internally with your best agents, especially if
+    someone's a little bit more technologically inclined, and give them metrics to optimize
+    for. It creates a different level of buy-in with your internal team."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+Checkr created an environment of curious experimentation, encouraging the newly formed AI customer service team (which they refer to as their digital team) to dive in and figure things out. As Burdullis observed the impact that they were able to achieve, he prioritized investing and adding more specialized roles focused on elevating the quality of service.
+
+As Checkr's AI agent became more effective, high-performing members of the support team transitioned into conversation designer roles, optimizing AI responses rather than handling repetitive tickets. This allowed Checkr to keep pace with rapid customer growth without increasing headcount.
+
+    "Since onboarding an AI agent, we haven't needed to increase our support team, even
+    though our customer base has grown significantly."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+
+FINDING THE RIGHT PARTNER FOR SCALABLE SUPPORT
+
+When Checkr explored the role of AI in customer service, they noticed an interesting trend -- many companies were comfortable outsourcing to BPOs but were hesitant to embrace automation.
+
+    "When we did CCW in the fall, most people were curious about AI but hadn't flipped it
+    on. Meanwhile, nearly everyone in the room was using BPOs. So, the big question is:
+    Why do people trust a BPO but not AI?"
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+For companies already outsourcing a significant portion of their customer support, Burdullis challenged them to ask themselves two questions: are you getting consistency, and are you improving efficiency?
+
+    "In many ways, AI gives you more control than a BPO. My biggest advice? Find the right
+    partner. AI is complex -- you need a company that works with you to fine-tune it, solve
+    problems, and make sure it's doing what you actually need. For us, that's been Ada."
+    -- Eric Burdullis, SVP of Operations at Checkr
+
+By partnering with Ada, Checkr was able to scale support without sacrificing quality, ensuring greater consistency, efficiency, and cost savings -- all while maintaining a seamless customer experience.
+
+
+LOOKING TOWARDS THE FUTURE
+
+With Ada as a strategic partner, Checkr has built a scalable and efficient support model that seamlessly adapts to increasing demand and shifting customer expectations. Ada's AI technology has not only improved operational efficiency but also positioned Checkr for long-term growth, driving improvements across both chat and email support.
+
+Looking ahead, Checkr is preparing to expand its capabilities into voice-based support, integrating generative AI into IVR systems to further enhance the customer experience.
+
+"It's an exciting time," said Burdullis. "We're exploring how to leverage our AI agent across new channels to elevate the support experience as we scale. Ada has helped us lay the foundation for an agile, future-ready support model setting the stage for Checkr to continuously evolve and deliver exceptional service at scale."

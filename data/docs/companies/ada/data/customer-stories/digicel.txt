@@ -1,0 +1,84 @@
+Company: Digicel
+Source: https://www.ada.cx/case-study/digicel/
+
+================================================================================
+DIGICEL | CASE STUDY | ADA
+================================================================================
+
+How Digicel Repositioned as a Digital Operator with Ada's Conversational AI
+
+ABOUT DIGICEL
+
+Digicel is a leader in mobile phone networks and home entertainment for the
+Caribbean, Latin America, and South Pacific regions. The company had a mission
+to reposition itself as a true digital operator. To build a compelling digital
+service model, they knew they needed to gain efficiencies outside of their
+legacy CX systems and call centers.
+
+THE CHALLENGE
+
+90%+ of Digicel's support interactions were received via phone. At scale, this
+model could not support their efficiency goals. As the Caribbean's largest
+telco, Digicel had a responsibility to their customers to deliver the
+best-in-class communication experiences they demanded.
+
+Digicel needed a digital tool that would support the 5 local languages and the
+nuanced local requirements of the 30+ regional markets they were serving.
+
+THE SOLUTION
+
+After evaluating different vendors, Neil O'Hanlon, Director of CX at Digicel,
+and his team chose to partner with Ada to automate and scale their customer
+experience with industry-leading conversational AI.
+
+With Ada's implementation team, Digicel was able to meet all of their language
+and regional requirements by launching a single CX chatbot named Ruby. The
+solution is conversational in 5 languages their customers needed: Haitian
+Creole, Spanish, French, Dutch, and English.
+
+With Ada, Digicel could distinguish between 32 regions to ensure customers
+received relevant content such as pricing, plans, and top-ups.
+
+Digicel promoted their customer service options, actually encouraging valuable
+customer conversations with their CX chatbot, Ruby -- achieving contextual and
+personalized customer experiences that run 24/7.
+
+QUOTE
+
+Neil O'Hanlon, Director of CX at Digicel:
+
+  "We now have our single bot fronting 50 different departments across 32
+   different markets -- all with an instantaneous handover to a live agent."
+
+KEY METRICS AND RESULTS
+
+  - 135k engaged conversations per month
+  - $750k saved in service costs (2020)
+  - Increased chat volume without increasing headcount
+  - Live chat agents are more responsive than ever before -- 90% of chats
+    responded to in less than 10 seconds
+  - Consistent positive tNPS scores
+  - Strong containment rates
+  - Repeat usage from happy customers
+
+IMPACT
+
+The high recognition and containment rates seen with Ada's conversational AI
+meant Digicel could scale confidently and move away from reliance on costly
+phone-first support operations. By implementing conversational AI on their
+website, Digicel was able to divert 135k conversations per month away from
+call centers, saving $750k in service costs.
+
+Digicel successfully shifted from a phone-heavy support model (90%+ phone) to
+a balanced omnichannel approach, with their Ruby chatbot serving as a central
+component of their digital transformation across multiple languages and
+Caribbean, Latin American, and South Pacific markets.
+
+IMPLEMENTATION DETAILS
+
+  - Single bot serving 32 markets
+  - 5 languages: Haitian Creole, Spanish, French, Dutch, English
+  - 50 departments fronted by the bot
+  - Instantaneous handover to live agents
+  - 24/7 availability
+  - Region-specific content (pricing, plans, top-ups)

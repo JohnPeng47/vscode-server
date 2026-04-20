@@ -1,0 +1,230 @@
+Company: Ada (ada.cx)
+URL: https://www.ada.cx/case-study/loop-earplugs/
+
+================================================================================
+Loop Earplugs: Scaling Customer Support and Redefining Careers with AI
+================================================================================
+
+KEY METRICS
+-----------
+- 357% return on investment after launching an AI agent with Ada
+- 25 FTE workload equivalent managed by their AI agent
+- 80% CSAT
+- 194.52% improvement in first response time
+
+
+OVERVIEW
+--------
+Loop Earplugs is a global leader in hearing protection, designing stylish,
+high-fidelity earplugs that help customers enjoy music, travel, and everyday
+life without compromising on sound quality. As Loop grew, so did their customer
+support demands -- leading to long response times and overwhelming ticket
+backlogs.
+
+To keep up with their own standards for service, Loop turned to Ada's AI
+customer service platform, launching Aura, their AI agent, to automate
+resolutions and deliver a high quality customer experience that scales
+seamlessly.
+
+
+THE CHALLENGE OF RAPID GROWTH AND RISING SUPPORT DEMAND
+--------------------------------------------------------
+Loop Earplugs' explosive growth came with significant operational challenges.
+Their existing support model, reliant on a BPO team and a scripted chatbot,
+struggled to keep up with complex and high-volume customer inquiries. Although
+they were satisfied with the quality of their BPO, the Loop team found that
+scaling it was becoming time-consuming and resource-intensive, requiring constant
+training, hands-on oversight, and frequent hiring cycles to address turnover.
+
+During peak sales periods like Black Friday and into January, first response
+times stretched to five or six days, while unresolved ticket backlogs surged
+past 1,000. This bottleneck hindered the team's ability to provide timely
+service and forced them to continuously expand seasonal staffing.
+
+But Loop isn't a company that settles for workarounds. Innovation is embedded in
+their culture, and they knew they needed a transformative solution -- one that
+would fundamentally change how customer service operated rather than just patch
+existing inefficiencies. Instead of adding more manual processes, they looked
+toward automation to scale effectively, reduce dependency on outsourced agents,
+and deliver a seamless, omnichannel support experience.
+
+
+INTRODUCING AURA, LOOP'S GENERATIVE AI AGENT
+---------------------------------------------
+To tackle these challenges, Loop launched Aura, their AI agent built on Ada's AI
+customer service platform -- designed to work 24/7 with the efficiency and
+expertise of their top customer service employees.
+
+With Aura managing chat, email, and social DMs, Loop achieved a 357% return on
+investment, proving the efficiency and cost savings of automation. First response
+times, which previously stretched to 5-6 days during peak sales periods,
+improved by 194.52%, reducing delays to a maximum of 2 hours.
+
+But the impact wasn't just about speed -- Aura now handles the workload
+equivalent of 25 full-time employees, balancing out the need for costly seasonal
+hiring while ensuring customers get immediate, high-quality support.
+
+  "With automation, our job has changed. Instead of managing people, we manage a
+   system. We need different skills -- automation, conversation design, and
+   technical understanding -- but it's also incredibly rewarding because we see
+   immediate impact."
+   -- Milan Vanmarcke, Customer Happiness Manager
+
+Even as sales increased 400% over the past two years, Loop reduced human-agent
+ticket volume by 33%, proving that automation doesn't just keep up with
+demand -- it scales alongside it.
+
+  "Customer service used to be about answering questions. Now it's about managing
+   automation to create extraordinary experiences. And the best part? Customers
+   will actually prefer using automation. Faster, more accurate, more tailored
+   experiences -- this isn't just about efficiency. It's about a better way to
+   serve customers."
+   -- Milan Vanmarcke, Customer Happiness Manager
+
+With Aura, Loop completely transformed its customer service model, proving that
+automation is a competitive advantage that delivers real results.
+
+
+CREATING AI EXPERIENCES ECOMMERCE CUSTOMERS PREFER
+---------------------------------------------------
+Customers expect instant, frictionless resolutions without having to dig through
+FAQs or wait in long queues. Aura, Loop's AI agent, is designed to meet these
+demands, ensuring fast, accurate resolutions across multiple channels while
+eliminating inefficiencies that slow down traditional support models. Because of
+this, customers have a much better experience and get the help they need without
+human intervention.
+
+A key example of this is a request for an invoice. Aura can seamlessly retrieve
+invoice information for customers that need an instant response without making
+them rummage through their inboxes.
+
+  "We've unlocked automation we never thought possible, from order edits to
+   invoice retrieval. Customers don't want to search through FAQs or emails for
+   an invoice -- they just want to ask, 'Hey, give me my invoice.' Now, Ada
+   delivers it instantly within their account, making support seamless and
+   efficient. Reducing that effort -- not only for our team but for
+   customers -- is a massive win."
+   -- Toby Moors, Customer Happiness Specialist
+
+Another big pain point in ecommerce support is WISMO (Where Is My Order?)
+inquiries. Customers expect real-time tracking updates, but behind the scenes,
+agents often have to manually check multiple carrier websites to locate shipment
+details. This slows response times and creates confusion when updates from
+different shipping providers don't align.
+
+Loop is actively working toward a fully integrated WISMO experience, with Aura
+set to seamlessly pull tracking updates from multiple carriers and deliver them
+instantly -- without requiring manual intervention from agents.
+
+  "Tracking shipments across different carriers is time-consuming for agents and
+   frustrating for customers. Using different API calls, the reasoning model, and
+   everything Ada has to offer, we can really provide a good, tailored
+   experience. Before, our agents had to surf across different links, working
+   with both first-mile and last-mile shipping carriers, opening multiple tabs
+   just to find the right information. These touchpoints can be super confusing
+   for customers too. But with Ada, we'll be able to provide the right
+   information at the right time."
+   -- Toby Moors, Customer Happiness Specialist
+
+Once launched, Aura will automate real-time order tracking, eliminating manual
+lookups and ensuring customers get accurate, instant shipping updates across all
+channels.
+
+By automating inquiries, delivering instant resolutions, and optimizing WISMO
+tracking, Loop is setting a new standard for ecommerce support -- one that is
+faster, easier, and built for the way modern customers shop. As a result, their
+CSAT increased to 80%.
+
+
+WINNING INDUSTRY RECOGNITION
+-----------------------------
+Loop's automation-first approach has not only optimized operations but has also
+earned industry recognition. Their AI-driven transformation secured Aura second
+place for Best Bot of Belgium, an achievement that sets them apart from
+competitors still relying on scripted bots.
+
+  "We won second place for the Best Bot of Belgium. We came second to Brussels
+   Airport. They've been winning it for years, but we're working to take that
+   number one spot next year."
+   -- Milan Vanmarcke, Customer Happiness Manager
+
+This award reflects more than just efficiency gains. It highlights Loop's
+innovative culture, and their leadership in AI customer service, proving that
+their approach isn't just functional -- it's truly transformative, delivering an
+experience customers actually prefer.
+
+
+AUTOMATION AS A CAREER ACCELERATOR
+-----------------------------------
+For Loop's team, AI customer service hasn't just streamlined processes -- it has
+opened new career opportunities. What started as a traditional support role for
+Toby evolved into a chance to build and optimize automation-driven experiences.
+Instead of looking for a career outside of customer service, he was able to
+reinvent his role within Loop, proving that automation isn't a job replacer --
+it's a career accelerator.
+
+  "For me, it was always like, I'll stick around customer service for a little
+   while longer and then I'm going to look into something else. But when I had
+   the opportunity to jump into Ada, it really was an opportunity to reinvent my
+   job. I definitely feel inspired again. I'd already learned the ins and outs of
+   BPO management, so I was looking for my next challenge, and automation is such
+   a disruptor in the customer service space that it's given me the opportunity
+   to rewrite my own role."
+   -- Toby Moors, Customer Happiness Specialist
+
+Ada's intuitive platform made it easy for Loop's team to adopt automation, even
+for employees new to working with this technology. The Ada Academy provided
+structured training and support, helping the team transition into
+automation-first roles. "The Ada Academy is super nice," explained Moors. "The
+user experience is really easy to understand, especially for a newbie to
+automation. The platform itself is built in a way that makes it foolproof. You
+can tinker around without breaking things, which is always good."
+
+With Aura handling the majority of customer inquiries, Loop's team has been able
+to rethink their entire approach to customer service. Instead of human agents
+being the first point of contact, Aura resolves most cases, allowing agents to
+step in only when needed. "Automation is changing customer service," said Moors.
+"Instead of just answering tickets, we're rewriting the rules of how we handle
+customer interactions. We're shifting to an automation-first approach, where
+technology is the first responder, and humans step in when needed. It's not just
+about reducing tickets -- it's about improving the entire experience."
+
+Loop isn't just adapting to the future of customer service -- they're leading it.
+By embracing automation, they're proving that customer support can be both more
+efficient and more rewarding for the teams behind it.
+
+  "I sometimes feel overwhelmed by how quickly automation is changing our roles,
+   but I also know that if I want to be in customer service in five years, I need
+   to be at the cutting edge of it. It's not a nice-to-have anymore -- it's
+   necessary. Automation is changing customer expectations, and we have to change
+   with it."
+   -- Milan Vanmarcke, Customer Happiness Manager
+
+
+A TRUE STRATEGIC PARTNERSHIP
+----------------------------
+Loop didn't just implement Ada's platform -- they built a long-term partnership
+that goes beyond software. Ada isn't just a tool for automation; it's a
+collaborative partner helping Loop push boundaries in AI customer service and
+rethink how they engage with customers.
+
+From the start, Ada has worked closely with Loop to optimize automation,
+fine-tune AI interactions, and continuously evolve the customer experience. The
+collaboration isn't just about reducing ticket volume -- it's about strategically
+shaping the future of AI-powered support to create more intuitive, efficient, and
+human-like interactions.
+
+  "One thing I really want to highlight -- and Ada deserves to hear -- is the
+   collaboration between Ada and Loop. It's not just software we use. It's a
+   partnership. Ada supports us, listens to our ideas, and helps us think
+   strategically about the future of AI in customer service."
+   -- Toby Moors, Customer Happiness Specialist
+
+This ongoing collaboration ensures that Loop's AI agent, Aura, doesn't just keep
+up with customer expectations -- it stays ahead of them. By constantly refining
+automation flows, adapting AI to evolving customer needs, and testing new
+innovations, Loop and Ada are co-creating the next generation of customer service
+experiences.
+
+With Ada, Loop isn't just following the shift toward AI-powered support -- they're
+helping define what that future looks like.

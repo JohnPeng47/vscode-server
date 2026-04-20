@@ -1,0 +1,78 @@
+Company: Ada (ada.cx)
+URL: https://www.ada.cx/case-study/clickup/
+Subject: ClickUp Customer Story
+Retrieved: 2026-04-20
+Note: The source page (ada.cx) is behind Cloudflare protection and could not be
+      fetched directly. This content was assembled from multiple public sources
+      including Ada search snippets, LinkedIn posts, and related Ada blog
+      references. Some details may be incomplete.
+
+================================================================================
+
+CLICKUP ELEVATES THEIR CX EXPERIENCE WITH ADA'S AI AGENT
+
+================================================================================
+
+ABOUT CLICKUP
+-------------
+ClickUp is an all-in-one project management tool that integrates with platforms
+across a company's tech stack to consolidate workflows. As of the time of this
+case study, ClickUp's customer base had grown to 12 million users.
+
+THE CHALLENGE
+-------------
+ClickUp's customer base exploded to 12 million users, but their support
+couldn't keep up. Legacy email forms and basic chat slowed down resolution and
+left agents scrambling for context. The support team operated as generalists --
+each agent was a "jack-of-all-trades" with limited knowledge about a broad
+range of products and topics, rather than having deep expertise in any single
+area.
+
+THE SOLUTION
+------------
+ClickUp partnered with Ada to deploy an AI-powered customer service agent. By
+integrating Ada's AI agent with their Zendesk Help Center, ClickUp enables the
+AI agent to synthesize support content with real-time user data, delivering
+more accurate, personalized answers.
+
+ClickUp uses its generative AI chatbot to give customers access to instant
+product information and a seamless handoff to the right specialist when
+necessary. With the AI agent handling routine customer inquiries automatically,
+human support agents were freed to shift into specialized roles.
+
+THE RESULTS
+-----------
+Ada's AI Agent enabled ClickUp to achieve performance comparable to experienced
+human agents while introducing innovative problem-solving approaches, resulting
+in enhanced productivity and collaboration capabilities.
+
+Key outcomes:
+
+- AI manages routine customer inquiries automatically, eliminating the need for
+  human intervention to address new customer inquiries that come through when
+  the product is updated.
+
+- Human support agents shifted from generalists to specialized roles focused
+  on:
+    - Product adoption
+    - Churn reduction
+    - Collaboration with product teams
+    - Enhanced customer experience delivery
+    - Deepening product expertise
+    - Driving strategic initiatives
+
+- ClickUp adopted Automated Resolution Rate as a core KPI for their digital
+  support team, reported up to senior leadership because of the efficiencies
+  that Ada is driving through the business.
+
+- The AI Agent's seamless integration set new industry benchmarks for CX
+  excellence and served as a significant growth driver for ClickUp.
+
+- The support function scaled alongside business expansion without
+  proportional headcount increases.
+
+QUOTE
+-----
+"With the AI agent, we no longer have to rely on human intervention to address
+new customer inquiries that come through when we've updated our product."
+-- Allie Hurley, Head of Global Support, ClickUp

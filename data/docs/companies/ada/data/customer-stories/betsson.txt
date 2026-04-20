@@ -1,0 +1,127 @@
+Company: Betsson Group
+Source: https://www.ada.cx/case-study/betsson/
+Document type: Customer case study (Ada)
+
+================================================================================
+
+BETTING ON ADA: How Ada's Automation Elevated Betsson Group's Award-Winning CX
+
+================================================================================
+
+COMPANY OVERVIEW
+
+As a global leader in customer experience in the gaming industry, Betsson Group
+has been recognized as the Customer Service Operator of the Year for four
+consecutive years at the EGR Operator Awards. With more than five decades of
+experience and 600,000 active customers, Betsson Group is one of the world's
+largest gaming organizations, with plans to further this growth.
+
+--------------------------------------------------------------------------------
+
+BETSSON GROUP'S CX CHALLENGE
+
+Motivated by a vision 'to provide the best customer experience in the industry',
+Betsson Group knew it had to stay ahead of customer expectations by introducing
+an automated self-service solution. To better meet its global customers' needs,
+the business wanted a solution that would extend support hours to 24/7 while
+introducing personalized support available in every customer language.
+
+Customers needed the ability to:
+
+- Answer questions specific to deposit and withdrawal issues and concerns
+- Receive targeted promotions based on search behavior
+- Learn about Betsson Group's offerings and compare against competitors
+
+--------------------------------------------------------------------------------
+
+THE SOLUTION
+
+With a goal to strengthen its award-winning customer experience through digital
+transformation, Betsson Group chose Ada to scale automated support across its
+top two websites, Betsson and Betsafe.
+
+In less than a month, Betsson Group's customer service team used Ada's
+AI-powered platform to build and launch two chatbots ready to provide customers
+with 24/7 multilingual assistance.
+
+Connecting Ada with the company's back-end allows customers to use the chatbot
+to handle deposit and withdrawal questions, receive promotions, and learn about
+offerings.
+
+--------------------------------------------------------------------------------
+
+KEY METRICS AND RESULTS
+
+Before Ada:
+- 100% of all inquiries handled by agents
+- Agents overwhelmed during big games and peak seasons
+
+After Ada:
+- 45% of all chatbot inquiries resolved by Ada
+- Agents freed for high-value customer inquiries
+- 90%+ CSAT
+
+--------------------------------------------------------------------------------
+
+THE ADA DIFFERENCE
+
+Introducing AI-powered CX in Weeks
+
+Guided by Ada's ACX Consultants, members of Betsson Group's customer service
+team designed and launched two AI-powered chatbots in under a month. With
+minimal dependence on IT, the team designed the automated experience with
+engaging multimedia content, including videos, images, GIFs and links.
+
+Learning from the Customer Journey
+
+With thousands of inquiries automated each month, Betsson Group gains new data
+and insights that they can use to strengthen their chatbots' performance while
+improving platforms, offerings, and processes across their business.
+
+Enabling a Streamlined AI to Agent Handoff
+
+By connecting Ada with Betsson Group's existing live chat vendor, when a
+customer requests an agent, they're provided with a link that seamlessly
+escalates them from chatbot to live chat. To accelerate time to resolution, the
+agent is provided with the chatbot transcript so that they can pick up the
+conversation where the chatbot left off.
+
+Maintaining an Industry-Leading CX Reputation
+
+Despite initial fears that a chatbot may hinder the customer experience, the
+strength of Ada's automation has enabled Betsson Group to maintain its CSAT and
+industry-leading CX leadership, winning the '2019 Customer Service Operator of
+the Year' award by EGR (eGaming Review), for the fourth time in a row.
+
+Reaching International Audiences
+
+Leveraging Ada's Multilingual feature, Betsson Group creates and automates
+content in English, then instantly translates it to six languages, including:
+German, Finnish, Swedish, Norwegian, Danish and Spanish. This allows customers
+around the world to access automated self-service in the language of their
+choice.
+
+Launching Ada Across New Brands
+
+With thousands of inquiries automated each month, Betsson Group gains new data
+and insights that they can use to strengthen their chatbots' performance while
+improving platforms, offerings, and processes across their business.
+
+--------------------------------------------------------------------------------
+
+CUSTOMER QUOTES
+
+"We are constantly looking for new and innovative solutions to improve the
+customer experience and also assist our agents in their day to day work.
+Together with Ada we have been able to do both of these things, allowing us to
+be even more available and to provide faster resolution times. We are
+continuously finding new ways of using Ada to improve the service to our
+customers."
+
+-- Aleksej Ander, Operations Manager, Betsson Group
+
+"We're focused on creating the best possible experience for our customers, and
+that means the tools we use need to be powerful and flexible enough to match our
+vision."
+
+-- Jesper Svensson, CEO, Betsson Operations

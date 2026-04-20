@@ -1,0 +1,95 @@
+Company: IPSY
+Source: https://www.ada.cx/case-study/ipsy/
+Title: IPSY | Case Study | Ada
+
+================================================================================
+
+IPSY: Transforming Customer Experience with Ada's AI Platform
+
+About IPSY
+
+IPSY is one of the world's largest personalized beauty subscription companies,
+serving over 3.5 million subscribers. The company was formed through the merger
+of two leading beauty subscription brands -- IPSY and BoxyCharm -- which came
+together in late 2020. IPSY delivers highly personalized beauty experiences
+using advanced product innovation and machine learning technology.
+
+--------------------------------------------------------------------------------
+
+The Challenge
+
+When IPSY and BoxyCharm merged, they were using different AI support solutions
+to manage product, subscription, and delivery inquiries. The fragmented
+approach created inconsistencies in customer experience across the two brands.
+
+Prior to implementing Ada, BoxyCharm's customer service metrics were:
+
+  - Average first response time: ~29 hours
+  - Total average resolution time: 53 hours
+  - Customer satisfaction (CSAT) score: 58%
+
+IPSY members often had to wait multiple hours for a response, and the existing
+conversational AI solution was not delivering the results the team needed.
+
+--------------------------------------------------------------------------------
+
+The Solution
+
+BoxyCharm was the first to adopt Ada, launching their conversational AI bot
+("Boxybot") in June 2020. The focus was on providing fast and effective answers
+to FAQs, order inquiries, and a smooth handoff to live agent support. Ada's
+automation capabilities served customers' in-the-moment needs and enabled
+agents to do more impactful work with contextual handoffs from Boxybot. Ada
+also helped capture important details from customers before passing them to
+agents, reducing the volume of interactions that get handed off and enabling
+agents to resolve issues faster.
+
+Inspired by BoxyCharm's success with Ada and motivated to replicate their
+results, the IPSY team decided to replace their existing conversational AI
+solution with Ada. On May 26, IPSY launched "Glam Bot," integrating existing
+content from Kustomer to Ada and Kustomer ticketing on the IPSY Help Centre.
+
+The Glam Bot was launched in a record 12 days.
+
+Quote: "We launched [Glam Bot] in a record 12 days! [We] couldn't have asked
+for a better implementation and post-implementation process."
+
+IPSY now has fully-enabled bot management resources to manage both BoxyCharm's
+Boxybot and IPSY's Glam Bot in partnership with cross-functional stakeholders
+within the Care team. IPSY uses Ada to automate their top drivers for brand
+interactions that don't require agent support, freeing agents to focus on more
+complex use cases and ensuring their time is best utilized.
+
+--------------------------------------------------------------------------------
+
+Key Results
+
+Combining visionary leadership with Ada's ACX (AI Customer Experience)
+platform, IPSY achieved significant improvements across all key metrics:
+
+  - CSAT score increased from 58% to 76% (a 41% improvement)
+  - Average first response time reduced from ~29 hours to less than 2 hours
+  - Total average resolution time reduced from 53 hours to 19 hours
+  - Both CSAT and Automated Resolution rate increased
+  - 943% ROI on their generative AI investment
+  - Led the company's first successful AI implementation
+
+--------------------------------------------------------------------------------
+
+What's Next
+
+The potential to extend the value of their conversational AI is top of mind
+for Skidmore (VP of Customer Care). IPSY is in the process of building out
+retention workflows to support their subscription models and drive growth.
+
+Upcoming initiatives with Ada include:
+
+  - Implementing a new system to authenticate conversations and provide order
+    details and statuses for monthly subscriptions
+  - Instagram channel integration
+  - Custom validation on tracking numbers
+  - Expanding to additional social channels including Facebook and WhatsApp
+
+With Ada, IPSY can offer a more personalized approach and consistent brand
+presence across all brand interactions, with the opportunity to expand to
+social channels and continue scaling their automation-first strategy.

@@ -18,11 +18,13 @@ After reading up Tailscale/Wireguard's design, I realized that the security mode
 > Trad VPN: Another consequence of the hub-and-spoke is that for packet-level observability, the source of all VPN'd packets originate from the hub (VPN server)
 > Tailscale: In Tailscale, every packet is encrypted with a device level private key, encoding identity at the packet level.
 
-These are arguments that I can make to propsects in security orgs. Which I have *some* limited experience with. During the last 3 years, I cycled through several software product ideas, one of which was an pentesting agent. Ultimately, it was unsuccessful (I couldn't convince buyers that it provided more value than out-of-the-box Claude), but I did get some exposure to cybersecurity sales during the period. Look, I think you guys have a real edge here with Tailscale adopting a security-focused narrative. And I think I am your man to sell this to prospects.
+These are arguments that I can make to propsects in security orgs. Which I have *some* limited experience with. During the last 3 years, I cycled through several software product ideas, one of which was an pentesting agent. Ultimately, it was unsuccessful (I couldn't convince buyers that it provided more value than out-of-the-box Claude), but I did get some exposure to cybersecurity sales during the period. 
+
+Look, I think you guys have a real edge here with Tailscale adopting a security-focused narrative. And I think I am your man to sell this to prospects.
 
 P.S: Well, it was an hour into writing this long-*** letter that I actually bothered to check with y'all actual messaging on Linkedin. During the initial research, I saw that you guys had put out a Zero Trust paper in July 2025 and just assumed that the enterprise sales pitch was coming from that angle. However after asking :
 
-From Claude:
+From Claude (see [positioning research](linkedin/positioning.md)):
 ...
 "Your technical security framing actually aligns with a messaging angle Tailscale already tried and apparently moved away from. They went from "security is broken" → "we save you money and operational time." The Forrester TEI study is getting pushed much harder than the zero trust report ever was."
 ... 

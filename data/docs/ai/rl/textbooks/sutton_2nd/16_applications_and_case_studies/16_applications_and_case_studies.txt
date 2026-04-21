@@ -1,0 +1,1820 @@
+============================================================
+ Chapter 16 - Applications and Case Studies
+ (PDF pages 443-480)
+============================================================
+
+--- Page 443 ---
+
+Chapter 16
+Applications and Case Studies
+In this chapter we present a few case studies of reinforcement learning. Several of these
+are substantial applications of potential economic signiﬁcance. One, Samuel’s checkers
+player, is primarily of historical interest. Our presentations are intended to illustrate some
+of the trade-o↵s and issues that arise in real applications. For example, we emphasize how
+domain knowledge is incorporated into the formulation and solution of the problem. We
+also highlight the representation issues that are so often critical to successful applications.
+The algorithms used in some of these case studies are substantially more complex than
+those we have presented in the rest of the book. Applications of reinforcement learning
+are still far from routine and typically require as much art as science. Making applications
+easier and more straightforward is one of the goals of current research in reinforcement
+learning.
+16.1
+TD-Gammon
+One of the most impressive applications of reinforcement learning to date is that by
+Gerald Tesauro to the game of backgammon (Tesauro, 1992, 1994, 1995, 2002). Tesauro’s
+program, TD-Gammon, required little backgammon knowledge, yet learned to play
+extremely well, near the level of the world’s strongest grandmasters.
+The learning
+algorithm in TD-Gammon was a straightforward combination of the TD(λ) algorithm
+and nonlinear function approximation using a multilayer artiﬁcial neural network (ANN)
+trained by backpropagating TD errors.
+Backgammon is a major game in the sense that it is played throughout the world,
+with numerous tournaments and regular world championship matches. It is in part a
+game of chance, and it is a popular vehicle for waging signiﬁcant sums of money. There
+are probably more professional backgammon players than there are professional chess
+players. The game is played with 15 white and 15 black pieces on a board of 24 locations,
+called points. To the right on the next page is shown a typical position early in the game,
+seen from the perspective of the white player. White here has just rolled the dice and
+obtained a 5 and a 2. This means that he can move one of his pieces 5 steps and one
+
+
+--- Page 444 ---
+
+422
+Chapter 16: Applications and Case Studies
+white pieces move 
+   counterclockwise
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11 12
+18
+17 16
+15 14
+13
+19
+20
+21
+22
+23
+24
+    black pieces 
+move clockwise
+A backgammon position
+(possibly the same piece) 2 steps. For
+example, he could move two pieces from
+the 12 point, one to the 17 point, and
+one to the 14 point. White’s objective is
+to advance all of his pieces into the last
+quadrant (points 19–24) and then o↵
+the board. The ﬁrst player to remove
+all his pieces wins. One complication
+is that the pieces interact as they pass
+each other going in di↵erent directions.
+For example, if it were black’s move, he
+could use the dice roll of 2 to move a
+piece from the 24 point to the 22 point,
+“hitting” the white piece there. Pieces that have been hit are placed on the “bar” in the
+middle of the board (where we already see one previously hit black piece), from whence
+they reenter the race from the start. However, if there are two pieces on a point, then
+the opponent cannot move to that point; the pieces are protected from being hit. Thus,
+white cannot use his 5–2 dice roll to move either of his pieces on the 1 point, because
+their possible resulting points are occupied by groups of black pieces. Forming contiguous
+blocks of occupied points to block the opponent is one of the elementary strategies of the
+game.
+Backgammon involves several further complications, but the above description gives
+the basic idea. With 30 pieces and 24 possible locations (26, counting the bar and
+o↵-the-board) it should be clear that the number of possible backgammon positions is
+enormous, far more than the number of memory elements one could have in any physically
+realizable computer. The number of moves possible from each position is also large. For a
+typical dice roll there might be 20 di↵erent ways of playing. In considering future moves,
+such as the response of the opponent, one must consider the possible dice rolls as well.
+The result is that the game tree has an e↵ective branching factor of about 400. This is
+far too large to permit e↵ective use of the conventional heuristic search methods that
+have proved so e↵ective in games like chess and checkers.
+On the other hand, the game is a good match to the capabilities of TD learning
+methods. Although the game is highly stochastic, a complete description of the game’s
+state is available at all times. The game evolves over a sequence of moves and positions
+until ﬁnally ending in a win for one player or the other, ending the game. The outcome
+can be interpreted as a ﬁnal reward to be predicted. On the other hand, the theoretical
+results we have described so far cannot be usefully applied to this task. The number of
+states is so large that a lookup table cannot be used, and the opponent is a source of
+uncertainty and time variation.
+TD-Gammon used a nonlinear form of TD(λ). The estimated value, ˆv(s,w), of any
+state (board position) s was meant to estimate the probability of winning starting from
+state s. To achieve this, rewards were deﬁned as zero for all time steps except those
+on which the game is won. To implement the value function, TD-Gammon used a
+standard multilayer ANN, much like that shown to the right on the next page. (The real
+
+
+--- Page 445 ---
+
+16.1. TD-Gammon
+423
+Vt+1! Vt
+hidden unit
+backgammon position (198 input units)
+predicted probability
+of winning, Vt
+TD error,
+. . .
+. . .
+. . .
+. . .
+. . .
+. . .
+ˆv(St+1,w) −ˆv(St,w)
+TD error
+ˆv(St,w)
+hidden units
+(40-80)
+Figure 16.1: The TD-Gammon ANN
+network had two additional units in its
+ﬁnal layer to estimate the probability of
+each player’s winning in a special way
+called a “gammon” or “backgammon.”)
+The network consisted of a layer of input
+units, a layer of hidden units, and a ﬁnal
+output unit. The input to the network
+was a representation of a backgammon
+position, and the output was an estimate
+of the value of that position.
+In the ﬁrst version of TD-Gammon,
+TD-Gammon 0.0, backgammon posi-
+tions were represented to the network
+in a relatively direct way that involved
+little backgammon knowledge. It did,
+however, involve substantial knowledge of how ANNs work and how information is best
+presented to them. It is instructive to note the exact representation Tesauro chose. There
+were a total of 198 input units to the network. For each point on the backgammon board,
+four units indicated the number of white pieces on the point. If there were no white
+pieces, then all four units took on the value zero. If there was one piece, then the ﬁrst
+unit took on the value 1. This encoded the elementary concept of a “blot,” i.e., a piece
+that can be hit by the opponent. If there were two or more pieces, then the second unit
+was set to 1. This encoded the basic concept of a “made point” on which the opponent
+cannot land. If there were exactly three pieces on the point, then the third unit was set
+to 1. This encoded the basic concept of a “single spare,” i.e., an extra piece in addition
+to the two pieces that made the point. Finally, if there were more than three pieces, the
+fourth unit was set to a value proportionate to the number of additional pieces beyond
+three. Letting n denote the total number of pieces on the point, if n > 3, then the fourth
+unit took on the value (n−3)/2. This encoded a linear representation of “multiple spares”
+at the given point.
+With four units for white and four for black at each of the 24 points, that made a
+total of 192 units. Two additional units encoded the number of white and black pieces on
+the bar (each took the value n/2, where n is the number of pieces on the bar), and two
+more encoded the number of black and white pieces already successfully removed from
+the board (these took the value n/15, where n is the number of pieces already borne
+o↵). Finally, two units indicated in a binary fashion whether it was white’s or black’s
+turn to move. The general logic behind these choices should be clear. Basically, Tesauro
+tried to represent the position in a straightforward way, while keeping the number of
+units relatively small. He provided one unit for each conceptually distinct possibility that
+seemed likely to be relevant, and he scaled them to roughly the same range, in this case
+between 0 and 1.
+Given a representation of a backgammon position, the network computed its estimated
+value in the standard way. Corresponding to each connection from an input unit to a
+hidden unit was a real-valued weight. Signals from each input unit were multiplied by
+
+
+--- Page 446 ---
+
+424
+Chapter 16: Applications and Case Studies
+their corresponding weights and summed at the hidden unit. The output, h(j), of hidden
+unit j was a nonlinear sigmoid function of the weighted sum:
+h(j) = σ
+ X
+i
+wijxi
+!
+=
+1
+1 + e−P
+i wijxi ,
+where xi is the value of the ith input unit and wij is the weight of its connection to the
+jth hidden unit (all the weights in the network together make up the parameter vector w).
+The output of the sigmoid is always between 0 and 1, and has a natural interpretation as
+a probability based on a summation of evidence. The computation from hidden units
+to the output unit was entirely analogous. Each connection from a hidden unit to the
+output unit had a separate weight. The output unit formed the weighted sum and then
+passed it through the same sigmoid nonlinearity.
+TD-Gammon used the semi-gradient form of the TD(λ) algorithm described in Sec-
+tion 12.2, with the gradients computed by the error backpropagation algorithm (Rumel-
+hart, Hinton, and Williams, 1986). Recall that the general update rule for this case is
+wt+1 .= wt + ↵
+h
+Rt+1 + γˆv(St+1,wt) −ˆv(St,wt)
+i
+zt,
+(16.1)
+where wt is the vector of all modiﬁable parameters (in this case, the weights of the
+network) and zt is a vector of eligibility traces, one for each component of wt, updated by
+zt .= γλzt−1 + rˆv(St,wt),
+with z0 .= 0. The gradient in this equation can be computed eﬃciently by the backpropa-
+gation procedure. For the backgammon application, in which γ = 1 and the reward is
+always zero except upon winning, the TD error portion of the learning rule is usually
+just ˆv(St+1,w) −ˆv(St,w), as suggested in Figure 16.1.
+To apply the learning rule we need a source of backgammon games. Tesauro obtained
+an unending sequence of games by playing his learning backgammon player against itself.
+To choose its moves, TD-Gammon considered each of the 20 or so ways it could play
+its dice roll and the corresponding positions that would result. The resulting positions
+are afterstates as discussed in Section 6.8. The network was consulted to estimate each
+of their values. The move was then selected that would lead to the position with the
+highest estimated value. Continuing in this way, with TD-Gammon making the moves
+for both sides, it was possible to easily generate large numbers of backgammon games.
+Each game was treated as an episode, with the sequence of positions acting as the states,
+S0, S1, S2, . . .. Tesauro applied the nonlinear TD rule (16.1) fully incrementally, that is,
+after each individual move.
+The weights of the network were set initially to small random values. The initial
+evaluations were thus entirely arbitrary. Because the moves were selected on the basis
+of these evaluations, the initial moves were inevitably poor, and the initial games often
+lasted hundreds or thousands of moves before one side or the other won, almost by
+accident. After a few dozen games however, performance improved rapidly.
+After playing about 300,000 games against itself, TD-Gammon 0.0 as described above
+learned to play approximately as well as the best previous backgammon computer
+
+
+--- Page 447 ---
+
+16.1. TD-Gammon
+425
+programs. This was a striking result because all the previous high-performance computer
+programs had used extensive backgammon knowledge. For example, the reigning champion
+program at the time was, arguably, Neurogammon, another program written by Tesauro
+that used an ANN but not TD learning. Neurogammon’s network was trained on a
+large training corpus of exemplary moves provided by backgammon experts, and, in
+addition, started with a set of features specially crafted for backgammon. Neurogammon
+was a highly tuned, highly e↵ective backgammon program that decisively won the
+World Backgammon Olympiad in 1989.
+TD-Gammon 0.0, on the other hand, was
+constructed with essentially zero backgammon knowledge. That it was able to do as
+well as Neurogammon and all other approaches is striking testimony to the potential of
+self-play learning methods.
+The tournament success of TD-Gammon 0.0 with zero expert backgammon knowledge
+suggested an obvious modiﬁcation: add the specialized backgammon features but keep
+the self-play TD learning method. This produced TD-Gammon 1.0. TD-Gammon 1.0 was
+clearly substantially better than all previous backgammon programs and found serious
+competition only among human experts. Later versions of the program, TD-Gammon 2.0
+(40 hidden units) and TD-Gammon 2.1 (80 hidden units), were augmented with a selective
+two-ply search procedure. To select moves, these programs looked ahead not just to the
+positions that would immediately result, but also to the opponent’s possible dice rolls
+and moves. Assuming the opponent always took the move that appeared immediately
+best for him, the expected value of each candidate move was computed and the best
+was selected. To save computer time, the second ply of search was conducted only for
+candidate moves that were ranked highly after the ﬁrst ply, about four or ﬁve moves on
+average. Two-ply search a↵ected only the moves selected; the learning process proceeded
+exactly as before. The ﬁnal versions of the program, TD-Gammon 3.0 and 3.1, used 160
+hidden units and a selective three-ply search. TD-Gammon illustrates the combination
+of learned value functions and decision-time search as in heuristic search and MCTS
+methods. In follow-on work, Tesauro and Galperin (1997) explored trajectory sampling
+methods as an alternative to full-width search, which reduced the error rate of live play
+by large numerical factors (4x–6x) while keeping the think time reasonable at ⇠5–10
+seconds per move.
+During the 1990s, Tesauro was able to play his programs in a signiﬁcant number of
+games against world-class human players. A summary of the results is given in Table 16.1.
+Program
+Hidden
+Training
+Opponents
+Results
+Units
+Games
+TD-Gammon 0.0
+40
+300,000
+other programs
+tied for best
+TD-Gammon 1.0
+80
+300,000
+Robertie, Magriel, ...
+−13 pts / 51 games
+TD-Gammon 2.0
+40
+800,000
+various Grandmasters
+−7 pts / 38 games
+TD-Gammon 2.1
+80
+1,500,000
+Robertie
+−1 pt / 40 games
+TD-Gammon 3.0
+80
+1,500,000
+Kazaros
++6 pts / 20 games
+Table 16.1: Summary of TD-Gammon Results
+
+
+--- Page 448 ---
+
+426
+Chapter 16: Applications and Case Studies
+Based on these results and analyses by backgammon grandmasters (Robertie, 1992; see
+Tesauro, 1995), TD-Gammon 3.0 appeared to play at close to, or possibly better than,
+the playing strength of the best human players in the world. Tesauro reported in a
+subsequent article (Tesauro, 2002) the results of an extensive rollout analysis of the move
+decisions and doubling decisions of TD-Gammon relative to top human players. The
+conclusion was that TD-Gammon 3.1 had a “lopsided advantage” in piece-movement
+decisions, and a “slight edge” in doubling decisions, over top humans.
+TD-Gammon had a signiﬁcant impact on the way the best human players play the
+game. For example, it learned to play certain opening positions di↵erently than was
+the convention among the best human players. Based on TD-Gammon’s success and
+further analysis, the best human players now play these positions as TD-Gammon does
+(Tesauro, 1995). The impact on human play was greatly accelerated when several other
+self-teaching ANN backgammon programs inspired by TD-Gammon, such as Jellyﬁsh,
+Snowie, and GNUBackgammon, became widely available. These programs enabled wide
+dissemination of new knowledge generated by the ANNs, resulting in great improvements
+in the overall caliber of human tournament play (Tesauro, 2002).
+16.2
+Samuel’s Checkers Player
+An important precursor to Tesauro’s TD-Gammon was the seminal work of Arthur Samuel
+(1959, 1967) in constructing programs for learning to play checkers. Samuel was one of
+the ﬁrst to make e↵ective use of heuristic search methods and of what we would now call
+temporal-di↵erence learning. His checkers players are instructive case studies in addition
+to being of historical interest. We emphasize the relationship of Samuel’s methods to
+modern reinforcement learning methods and try to convey some of Samuel’s motivation
+for using them.
+Samuel ﬁrst wrote a checkers-playing program for the IBM 701 in 1952. His ﬁrst
+learning program was completed in 1955 and was demonstrated on television in 1956.
+Later versions of the program achieved good, though not expert, playing skill. Samuel
+was attracted to game-playing as a domain for studying machine learning because games
+are less complicated than problems “taken from life” while still allowing fruitful study of
+how heuristic procedures and learning can be used together. He chose to study checkers
+instead of chess because its relative simplicity made it possible to focus more strongly on
+learning.
+Samuel’s programs played by performing a lookahead search from each current position.
+They used what we now call heuristic search methods to determine how to expand the
+search tree and when to stop searching. The terminal board positions of each search were
+evaluated, or “scored,” by a value function, or “scoring polynomial,” using linear function
+approximation. In this and other respects Samuel’s work seems to have been inspired
+by the suggestions of Shannon (1950). In particular, Samuel’s program was based on
+Shannon’s minimax procedure to ﬁnd the best move from the current position. Working
+backward through the search tree from the scored terminal positions, each position was
+given the score of the position that would result from the best move, assuming that the
+machine would always try to maximize the score, while the opponent would always try to
+
+
+--- Page 449 ---
+
+16.2. Samuel’s Checkers Player
+427
+minimize it. Samuel called this the “backed-up score” of the position. When the minimax
+procedure reached the search tree’s root—the current position—it yielded the best move
+under the assumption that the opponent would be using the same evaluation criterion,
+shifted to its point of view. Some versions of Samuel’s programs used sophisticated search
+control methods analogous to what are known as “alpha-beta” cuto↵s (e.g., see Pearl,
+1984).
+Samuel used two main learning methods, the simplest of which he called rote learning.
+It consisted simply of saving a description of each board position encountered during play
+together with its backed-up value determined by the minimax procedure. The result was
+that if a position that had already been encountered were to occur again as a terminal
+position of a search tree, the depth of the search was e↵ectively ampliﬁed because this
+position’s stored value cached the results of one or more searches conducted earlier. One
+initial problem was that the program was not encouraged to move along the most direct
+path to a win. Samuel gave it a “a sense of direction” by decreasing a position’s value
+a small amount each time it was backed up a level (called a ply) during the minimax
+analysis. “If the program is now faced with a choice of board positions whose scores
+di↵er only by the ply number, it will automatically make the most advantageous choice,
+choosing a low-ply alternative if winning and a high-ply alternative if losing” (Samuel,
+1959, p. 80). Samuel found this discounting-like technique essential to successful learning.
+Rote learning produced slow but continual improvement that was most e↵ective for
+opening and endgame play. His program became a “better-than-average novice” after
+learning from many games against itself, a variety of human opponents, and from book
+games in a supervised learning mode.
+Rote learning and other aspects of Samuel’s work strongly suggest the essential idea
+of temporal-di↵erence learning—that the value of a state should equal the value of
+likely following states. Samuel came closest to this idea in his second learning method,
+his “learning by generalization” procedure for modifying the parameters of the value
+function. Samuel’s method was the same in concept as that used much later by Tesauro
+in TD-Gammon. He played his program many games against another version of itself and
+performed an update after each move. The idea of Samuel’s update is suggested by the
+backup diagram in Figure 16.2. Each open circle represents a position where the program
+moves next, an on-move position, and each solid circle represents a position where the
+opponent moves next. An update was made to the value of each on-move position after a
+move by each side, resulting in a second on-move position. The update was toward the
+minimax value of a search launched from the second on-move position. Thus, the overall
+e↵ect was that of a backing-up over one full move of real events and then a search over
+possible events, as suggested by Figure 16.2. Samuel’s actual algorithm was signiﬁcantly
+more complex than this for computational reasons, but this was the basic idea.
+Samuel did not include explicit rewards. Instead, he ﬁxed the weight of the most
+important feature, the piece advantage feature, which measured the number of pieces
+the program had relative to how many its opponent had, giving higher weight to kings,
+and including reﬁnements so that it was better to trade pieces when winning than when
+losing. Thus, the goal of Samuel’s program was to improve its piece advantage, which in
+checkers is highly correlated with winning.
+
+
+--- Page 450 ---
+
+428
+Chapter 16: Applications and Case Studies
+hypothetical events
+actual events
+backup
+Figure 16.2: The backup diagram for Samuel’s checkers player.
+However, Samuel’s learning method may have been missing an essential part of a sound
+temporal-di↵erence algorithm. Temporal-di↵erence learning can be viewed as a way of
+making a value function consistent with itself, and this we can clearly see in Samuel’s
+method. But also needed is a way of tying the value function to the true value of the
+states. We have enforced this via rewards and by discounting or giving a ﬁxed value to
+the terminal state. But Samuel’s method included no rewards and no special treatment of
+the terminal positions of games. As Samuel himself pointed out, his value function could
+have become consistent merely by giving a constant value to all positions. He hoped to
+discourage such solutions by giving his piece-advantage term a large, nonmodiﬁable weight.
+But although this may decrease the likelihood of ﬁnding useless evaluation functions,
+it does not prohibit them. For example, a constant function could still be attained by
+setting the modiﬁable weights so as to cancel the e↵ect of the nonmodiﬁable one.
+Because Samuel’s learning procedure was not constrained to ﬁnd useful evaluation
+functions, it should have been possible for it to become worse with experience. In fact,
+Samuel reported observing this during extensive self-play training sessions. To get the
+program improving again, Samuel had to intervene and set the weight with the largest
+absolute value back to zero. His interpretation was that this drastic intervention jarred
+the program out of local optima, but another possibility is that it jarred the program out
+of evaluation functions that were consistent but had little to do with winning or losing
+the game.
+Despite these potential problems, Samuel’s checkers player using the generalization
+learning method approached “better-than-average” play. Fairly good amateur opponents
+characterized it as “tricky but beatable” (Samuel, 1959). In contrast to the rote-learning
+version, this version was able to develop a good middle game but remained weak in
+opening and endgame play. This program also included an ability to search through sets of
+features to ﬁnd those that were most useful in forming the value function. A later version
+(Samuel, 1967) included reﬁnements in its search procedure, such as alpha-beta pruning,
+
+
+--- Page 451 ---
+
+16.3. Watson’s Daily-Double Wagering
+429
+extensive use of a supervised learning mode called “book learning,” and hierarchical
+lookup tables called signature tables (Griﬃth, 1966) to represent the value function
+instead of linear function approximation. This version learned to play much better than
+the 1959 program, though still not at a master level. Samuel’s checkers-playing program
+was widely recognized as a signiﬁcant achievement in artiﬁcial intelligence and machine
+learning.
+16.3
+Watson’s Daily-Double Wagering
+IBM Watson1 is the system developed by a team of IBM researchers to play the popular
+TV quiz show Jeopardy!.2 It gained fame in 2011 by winning ﬁrst prize in an exhibition
+match against human champions. Although the main technical achievement demonstrated
+by Watson was its ability to quickly and accurately answer natural language questions
+over broad areas of general knowledge, its winning Jeopardy! performance also relied on
+sophisticated decision-making strategies for critical parts of the game. Tesauro, Gondek,
+Lechner, Fan, and Prager (2012, 2013) adapted Tesauro’s TD-Gammon system described
+above to create the strategy used by Watson in “Daily-Double” (DD) wagering in its
+celebrated winning performance against human champions. These authors report that the
+e↵ectiveness of this wagering strategy went well beyond what human players are able to
+do in live game play, and that it, along with other advanced strategies, was an important
+contributor to Watson’s impressive winning performance. Here we focus only on DD
+wagering because it is the component of Watson that owes the most to reinforcement
+learning.
+Jeopardy! is played by three contestants who face a board showing 30 squares, each of
+which hides a clue and has a dollar value. The squares are arranged in six columns, each
+corresponding to a di↵erent category. A contestant selects a square, the host reads the
+square’s clue, and each contestant may choose to respond to the clue by sounding a buzzer
+(“buzzing in”). The ﬁrst contestant to buzz in gets to try responding to the clue. If this
+contestant’s response is correct, their score increases by the dollar value of the square; if
+their response is not correct, or if they do not respond within ﬁve seconds, their score
+decreases by that amount, and the other contestants get a chance to buzz in to respond
+to the same clue. One or two squares (depending on the game’s current round) are
+special DD squares. A contestant who selects one of these gets an exclusive opportunity
+to respond to the square’s clue and has to decide—before the clue is revealed—on how
+much to wager, or bet. The bet has to be greater than ﬁve dollars but not greater than
+the contestant’s current score. If the contestant responds correctly to the DD clue, their
+score increases by the bet amount; otherwise it decreases by the bet amount. At the end
+of each game is a “Final Jeopardy” (FJ) round in which each contestant writes down
+a sealed bet and then writes an answer after the clue is read. The contestant with the
+highest score after three rounds of play (where a round consists of revealing all 30 clues)
+is the winner. The game has many other details, but these are enough to appreciate
+1Registered trademark of IBM Corp.
+2Registered trademark of Jeopardy Productions Inc.
+
+
+--- Page 452 ---
+
+430
+Chapter 16: Applications and Case Studies
+the importance of DD wagering. Winning or losing often depends on a contestant’s DD
+wagering strategy.
+Whenever Watson selected a DD square, it chose its bet by comparing action values,
+ˆq(s, bet), that estimated the probability of a win from the current game state, s, for
+each round-dollar legal bet. Except for some risk-abatement measures described below,
+Watson selected the bet with the maximum action value. Action values were computed
+whenever a betting decision was needed by using two types of estimates that were learned
+before any live game play took place. The ﬁrst were estimated values of the afterstates
+(Section 6.8) that would result from selecting each legal bet. These estimates were obtained
+from a state-value function, ˆv(·,w), deﬁned by parameters w, that gave estimates of the
+probability of a win for Watson from any game state. The second estimates used to
+compute action values gave the “in-category DD conﬁdence,” pDD, which estimated the
+likelihood that Watson would respond correctly to the as-yet unrevealed DD clue.
+Tesauro et al. used the reinforcement learning approach of TD-Gammon described above
+to learn ˆv(·,w): a straightforward combination of nonlinear TD(λ) using a multilayer
+ANN with weights w trained by backpropagating TD errors during many simulated
+games. States were represented to the network by feature vectors speciﬁcally designed
+for Jeopardy!. Features included the current scores of the three players, how many DDs
+remained, the total dollar value of the remaining clues, and other information related to
+the amount of play left in the game. Unlike TD-Gammon, which learned by self-play,
+Watson’s ˆv was learned over millions of simulated games against carefully-crafted models
+of human players. In-category conﬁdence estimates were conditioned on the number of
+right responses r and wrong responses w that Watson gave in previously-played clues in
+the current category. The dependencies on (r, w) were estimated from Watson’s actual
+accuracies over many thousands of historical categories.
+With the previously learned value function ˆv and in-category DD conﬁdence pDD,
+Watson computed ˆq(s, bet) for each legal round-dollar bet as follows:
+ˆq(s, bet) = pDD ⇥ˆv(SW + bet,. . .) + (1 −pDD) ⇥ˆv(SW −bet,. . .),
+(16.2)
+where SW is Watson’s current score, and ˆv gives the estimated value for the game state
+after Watson’s response to the DD clue, which is either correct or incorrect. Computing
+an action value this way corresponds to the insight from Exercise 3.19 that an action
+value is the expected next state value given the action (except that here it is the expected
+next afterstate value because the full next state of the entire game depends on the next
+square selection).
+Tesauro et al. found that selecting bets by maximizing action values incurred “a
+frightening amount of risk,” meaning that if Watson’s response to the clue happened to
+be wrong, the loss could be disastrous for its chances of winning. To decrease the downside
+risk of a wrong answer, Tesauro et al. adjusted (16.2) by subtracting a small fraction of
+the standard deviation over Watson’s correct/incorrect afterstate evaluations. They
+further reduced risk by prohibiting bets that would cause the wrong-answer afterstate
+value to decrease below a certain limit. These measures slightly reduced Watson’s
+expectation of winning, but they signiﬁcantly reduced downside risk, not only in terms of
+average risk per DD bet, but even more so in extreme-risk scenarios where a risk-neutral
+Watson would bet most or all of its bankroll.
+
+
+--- Page 453 ---
+
+16.3. Watson’s Daily-Double Wagering
+431
+Why was the TD-Gammon method of self-play not used to learn the critical value
+function ˆv? Learning from self-play in Jeopardy! would not have worked very well
+because Watson was so di↵erent from any human contestant. Self-play would have led to
+exploration of state space regions that are not typical for play against human opponents,
+particularly human champions. In addition, unlike backgammon, Jeopardy! is a game
+of imperfect information because contestants do not have access to all the information
+inﬂuencing their opponents’ play. In particular, Jeopardy! contestants do not know how
+much conﬁdence their opponents have for responding to clues in the various categories.
+Self-play would have been something like playing poker with someone who is holding the
+same cards that you hold.
+As a result of these complications, much of the e↵ort in developing Watson’s DD-
+wagering strategy was devoted to creating good models of human opponents. The models
+did not address the natural language aspect of the game, but were instead stochastic
+process models of events that can occur during play. Statistics were extracted from an
+extensive fan-created archive of game information from the beginning of the show to the
+present day. The archive includes information such as the ordering of the clues, right and
+wrong contestant answers, DD locations, and DD and FJ bets for nearly 300,000 clues.
+Three models were constructed: an Average Contestant model (based on all the data), a
+Champion model (based on statistics from games with the 100 best players), and a Grand
+Champion model (based on statistics from games with the 10 best players). In addition
+to serving as opponents during learning, the models were used to assess the beneﬁts
+produced by the learned DD-wagering strategy. Watson’s win rate in simulation when it
+used a baseline heuristic DD-wagering strategy was 61%; when it used the learned values
+and a default conﬁdence value, its win rate increased to 64%; and with live in-category
+conﬁdence, it was 67%. Tesauro et al. regarded this as a signiﬁcant improvement, given
+that the DD wagering was needed only about 1.5 to 2 times in each game.
+Because Watson had only a few seconds to bet, as well as to select squares and decide
+whether or not to buzz in, the computation time needed to make these decisions was
+a critical factor. The ANN implementation of ˆv allowed DD bets to be made quickly
+enough to meet the time constraints of live play. However, once games could be simulated
+fast enough through improvements in the simulation software, near the end of a game
+it was feasible to estimate the value of bets by averaging over many Monte-Carlo trials
+in which the consequence of each bet was determined by simulating play to the game’s
+end. Selecting endgame DD bets in live play based on Monte-Carlo trials instead of the
+ANN signiﬁcantly improved Watson’s performance because errors in value estimates
+in endgames could seriously a↵ect its chances of winning. Making all the decisions via
+Monte-Carlo trials might have led to better wagering decisions, but this was simply
+impossible given the complexity of the game and the time constraints of live play.
+Although its ability to quickly and accurately answer natural language questions
+stands out as Watson’s major achievement, all of its sophisticated decision strategies
+contributed to its impressive defeat of human champions. According to Tesauro et al.
+(2012):
+... it is plainly evident that our strategy algorithms achieve a level of quanti-
+tative precision and real-time performance that exceeds human capabilities.
+
+
+--- Page 454 ---
+
+432
+Chapter 16: Applications and Case Studies
+This is particularly true in the cases of DD wagering and endgame buzzing,
+where humans simply cannot come close to matching the precise equity and
+conﬁdence estimates and complex decision calculations performed by Watson.
+16.4
+Optimizing Memory Control
+Most computers use dynamic random access memory (DRAM) as their main memory
+because of its low cost and high capacity. The job of a DRAM memory controller is to
+eﬃciently use the interface between the processor chip and an o↵-chip DRAM system
+to provide the high-bandwidth and low-latency data transfer necessary for high-speed
+program execution.
+A memory controller needs to deal with dynamically changing
+patterns of read/write requests while adhering to a large number of timing and resource
+constraints required by the hardware. This is a formidable scheduling problem, especially
+with modern processors with multiple cores sharing the same DRAM.
+˙Ipek, Mutlu, Mart´ınez, and Caruana (2008) (also Mart´ınez and ˙Ipek, 2009) designed
+a reinforcement learning memory controller and demonstrated that it can signiﬁcantly
+improve the speed of program execution over what was possible with conventional
+controllers at the time of their research. They were motivated by limitations of existing
+state-of-the-art controllers that used policies that did not take advantage of past scheduling
+experience and did not account for long-term consequences of scheduling decisions. ˙Ipek
+et al.’s project was carried out by means of simulation, but they designed the controller
+at the detailed level of the hardware needed to implement it—including the learning
+algorithm—directly on a processor chip.
+Accessing DRAM involves a number of steps that have to be done according to strict
+time constraints. DRAM systems consist of multiple DRAM chips, each containing
+multiple rectangular arrays of storage cells arranged in rows and columns. Each cell
+stores a bit as the charge on a capacitor. Because the charge decreases over time, each
+DRAM cell needs to be recharged—refreshed—every few milliseconds to prevent memory
+content from being lost. This need to refresh the cells is why DRAM is called “dynamic.”
+Each cell array has a row bu↵er that holds a row of bits that can be transferred into
+or out of one of the array’s rows. An activate command “opens a row,” which means
+moving the contents of the row whose address is indicated by the command into the
+row bu↵er. With a row open, the controller can issue read and write commands to the
+cell array. Each read command transfers a word (a short sequence of consecutive bits)
+in the row bu↵er to the external data bus, and each write command transfers a word
+in the external data bus to the row bu↵er. Before a di↵erent row can be opened, a
+precharge command must be issued which transfers the (possibly updated) data in the
+row bu↵er back into the addressed row of the cell array. After this, another activate
+command can open a new row to be accessed. Read and write commands are column
+commands because they sequentially transfer bits into or out of columns of the row bu↵er;
+multiple bits can be transferred without re-opening the row. Read and write commands
+to the currently-open row can be carried out more quickly than accessing a di↵erent row,
+which would involve additional row commands: precharge and activate; this is sometimes
+
+
+--- Page 455 ---
+
+16.4. Optimizing Memory Control
+433
+referred to as “row locality.” A memory controller maintains a memory transaction queue
+that stores memory-access requests from the processors sharing the memory system. The
+controller has to process requests by issuing commands to the memory system while
+adhering to a large number of timing constraints.
+A controller’s policy for scheduling access requests can have a large e↵ect on the
+performance of the memory system, such as the average latency with which requests
+can be satisﬁed and the throughput the system is capable of achieving. The simplest
+scheduling strategy handles access requests in the order in which they arrive by issuing
+all the commands required by the request before beginning to service the next one. But if
+the system is not ready for one of these commands, or executing a command would result
+in resources being underutilized (e.g., due to timing constraints arising from servicing
+that one command), it makes sense to begin servicing a newer request before ﬁnishing
+the older one. Policies can gain eﬃciency by reordering requests, for example, by giving
+priority to read requests over write requests, or by giving priority to read/write commands
+to already open rows. The policy called First-Ready, First-Come-First-Serve (FR-FCFS),
+gives priority to column commands (read and write) over row commands (activate and
+precharge), and in case of a tie gives priority to the oldest command. FR-FCFS was
+shown to outperform other scheduling policies in terms of average memory-access latency
+under conditions commonly encountered (Rixner, 2004).
+Figure 16.3 is a high-level view of ˙Ipek et al.’s reinforcement learning memory controller.
+They modeled the DRAM access process as an MDP whose states are the contents of the
+transaction queue and whose actions are commands to the DRAM system: precharge,
+activate, read, write, and NoOp. The reward signal is 1 whenever the action is read or
+write, and otherwise it is 0. State transitions were considered to be stochastic because
+the next state of the system not only depends on the scheduler’s command, but also on
+aspects of the system’s behavior that the scheduler cannot control, such as the workloads
+of the processor cores accessing the DRAM system.
+Figure 16.3: High-level view of the reinforcement learning DRAM controller. The scheduler is
+the reinforcement learning agent. Its environment is represented by features of the transaction
+queue, and its actions are commands to the DRAM system. ©2009 IEEE. Reprinted, with
+permission, from J. F. Mart´ınez and E. ˙Ipek, Dynamic multicore resource management: A
+machine learning approach, Micro, IEEE, 29(5), p. 12.
+
+
+--- Page 456 ---
+
+434
+Chapter 16: Applications and Case Studies
+Critical to this MDP are constraints on the actions available in each state. Recall from
+Chapter 3 that the set of available actions can depend on the state: At 2 A(St), where
+At is the action at time step t and A(St) is the set of actions available in state St. In
+this application, the integrity of the DRAM system was assured by not allowing actions
+that would violate timing or resource constraints. Although ˙Ipek et al. did not make it
+explicit, they e↵ectively accomplished this by pre-deﬁning the sets A(St) for all possible
+states St.
+These constraints explain why the MDP has a NoOp action and why the reward signal
+is 0 except when a read or write command is issued. NoOp is issued when it is the sole
+legal action in a state. To maximize utilization of the memory system, the controller’s
+task is to drive the system to states in which either a read or a write action can be
+selected: only these actions result in sending data over the external data bus, so it is only
+these that contribute to the throughput of the system. Although precharge and activate
+produce no immediate reward, the agent needs to select these actions to make it possible
+to later select the rewarded read and write actions.
+The scheduling agent used Sarsa (Section 6.4) to learn an action-value function. States
+were represented by six integer-valued features. To approximate the action-value function,
+the algorithm used linear function approximation implemented by tile coding with hashing
+(Section 9.5.4). The tile coding had 32 tilings, each storing 256 action values as 16-bit
+ﬁxed point numbers. Exploration was "-greedy with " = 0.05.
+State features included the number of read requests in the transaction queue, the
+number of write requests in the transaction queue, the number of write requests in the
+transaction queue waiting for their row to be opened, and the number of read requests in
+the transaction queue waiting for their row to be opened that are the oldest issued by
+their requesting processors. (The other features depended on how the DRAM interacts
+with cache memory, details we omit here.) The selection of the state features was based
+on ˙Ipek et al.’s understanding of factors that impact DRAM performance. For example,
+balancing the rate of servicing reads and writes based on how many of each are in the
+transaction queue can help avoid stalling the DRAM system’s interaction with cache
+memory. The authors in fact generated a relatively long list of potential features, and
+then pared them down to a handful using simulations guided by stepwise feature selection.
+An interesting aspect of this formulation of the scheduling problem as an MDP is
+that the features input to the tile coding for deﬁning the action-value function were
+di↵erent from the features used to specify the action-constraint sets A(St). Whereas the
+tile coding input was derived from the contents of the transaction queue, the constraint
+sets depended on a host of other features related to timing and resource constraints that
+had to be satisﬁed by the hardware implementation of the entire system. In this way, the
+action constraints ensured that the learning algorithm’s exploration could not endanger
+the integrity of the physical system, while learning was e↵ectively limited to a “safe”
+region of the much larger state space of the hardware implementation.
+Because an objective of this work was that the learning controller could be implemented
+on a chip so that learning could occur online while a computer is running, hardware
+implementation details were important considerations. The design included two ﬁve-stage
+pipelines to calculate and compare two action values at every processor clock cycle, and
+
+
+--- Page 457 ---
+
+16.4. Optimizing Memory Control
+435
+to update the appropriate action value. This included accessing the tile coding which
+was stored on-chip in static RAM. For the conﬁguration ˙Ipek et al. simulated, which was
+a 4GHz 4-core chip typical of high-end workstations at the time of their research, there
+were 10 processor cycles for every DRAM cycle. Considering the cycles needed to ﬁll
+the pipes, up to 12 actions could be evaluated in each DRAM cycle. ˙Ipek et al. found
+that the number of legal commands for any state was rarely greater than this, and that
+performance loss was negligible if enough time was not always available to consider all
+legal commands. These and other clever design details made it feasible to implement the
+complete controller and learning algorithm on a multi-processor chip.
+˙Ipek et al. evaluated their learning controller in simulation by comparing it with three
+other controllers: (1) the FR-FCFS controller mentioned above that produces the best
+on-average performance, (2) a conventional controller that processes each request in
+order, and (3) an unrealizable ideal controller, called the Optimistic controller, able
+to sustain 100% DRAM throughput if given enough demand by ignoring all timing
+and resource constraints, but otherwise modeling DRAM latency (as row bu↵er hits)
+and bandwidth. They simulated nine memory-intensive parallel workloads consisting of
+scientiﬁc and data-mining applications. Figure 16.4 shows the performance (the inverse
+of execution time normalized to the performance of FR-FCFS) of each controller for
+the nine applications, together with the geometric mean of their performances over the
+applications. The learning controller, labeled RL in the ﬁgure, improved over that of
+FR-FCFS by from 7% to 33% over the nine applications, with an average improvement of
+19%. Of course, no realizable controller can match the performance of Optimistic, which
+ignores all timing and resource constraints, but the learning controller’s performance
+closed the gap with Optimistic’s upper bound by an impressive 27%.
+Because the rationale for on-chip implementation of the learning algorithm was to
+allow the scheduling policy to adapt online to changing workloads, ˙Ipek et al. analyzed
+the impact of online learning compared to a previously-learned ﬁxed policy. They trained
+Figure 16.4: Performances of four controllers over a suite of 9 simulated benchmark applications.
+The controllers are: the simplest ‘in-order’ controller, FR-FCFS, the learning controller RL,
+and the unrealizable Optimistic controller which ignores all timing and resource constraints to
+provide a performance upper bound. Performance, normalized to that of FR-FCFS, is the inverse
+of execution time. At far right is the geometric mean of performances over the 9 benchmark
+applications for each controller. Controller RL comes closest to the ideal performance. ©2009
+IEEE. Reprinted, with permission, from J. F. Mart´ınez and E. ˙Ipek, Dynamic multicore resource
+management: A machine learning approach, Micro, IEEE, 29(5), p. 13.
+
+
+--- Page 458 ---
+
+436
+Chapter 16: Applications and Case Studies
+their controller with data from all nine benchmark applications and then held the resulting
+action values ﬁxed throughout the simulated execution of the applications. They found
+that the average performance of the controller that learned online was 8% better than
+that of the controller using the ﬁxed policy, leading them to conclude that online learning
+is an important feature of their approach.
+This learning memory controller was never committed to physical hardware because of
+the large cost of fabrication. Nevertheless, ˙Ipek et al. could convincingly argue on the basis
+of their simulation results that a memory controller that learns online via reinforcement
+learning has the potential to improve performance to levels that would otherwise require
+more complex and more expensive memory systems, while removing from human designers
+some of the burden required to manually design eﬃcient scheduling policies. Mukundan
+and Mart´ınez (2012) took this project forward by investigating learning controllers with
+additional actions, other performance criteria, and more complex reward functions derived
+using genetic algorithms. They considered additional performance criteria related to
+energy eﬃciency. The results of these studies surpassed the earlier results described
+above and signiﬁcantly surpassed the 2012 state-of-the-art for all of the performance
+criteria they considered. The approach is especially promising for developing sophisticated
+power-aware DRAM interfaces.
+16.5
+Human-level Video Game Play
+One of the greatest challenges in applying reinforcement learning to real-world problems
+is deciding how to represent and store value functions and/or policies. Unless the state
+set is ﬁnite and small enough to allow exhaustive representation by a lookup table—as in
+many of our illustrative examples—one must use a parameterized function approximation
+scheme. Whether linear or nonlinear, function approximation relies on features that
+have to be readily accessible to the learning system and able to convey the information
+necessary for skilled performance. Most successful applications of reinforcement learning
+owe much to sets of features carefully handcrafted based on human knowledge and
+intuition about the speciﬁc problem to be tackled.
+A team of researchers at Google DeepMind developed an impressive demonstration that
+a deep multi-layer ANN can automate the feature design process (Mnih et al., 2013, 2015).
+Multi-layer ANNs have been used for function approximation in reinforcement learning
+ever since the 1986 popularization of the backpropagation algorithm as a method for
+learning internal representations (Rumelhart, Hinton, and Williams, 1986; see Section 9.7).
+Striking results have been obtained by coupling reinforcement learning with backpropa-
+gation. The results obtained by Tesauro and colleagues with TD-Gammon and Watson
+discussed above are notable examples. These and other applications beneﬁted from the
+ability of multi-layer ANNs to learn task-relevant features. However, in all the examples
+of which we are aware, the most impressive demonstrations required the network’s input
+to be represented in terms of specialized features handcrafted for the given problem.
+This is vividly apparent in the TD-Gammon results. TD-Gammon 0.0, whose network
+input was essentially a “raw” representation of the backgammon board, meaning that it
+involved very little knowledge of backgammon, learned to play approximately as well as
+
+
+--- Page 459 ---
+
+16.5. Human-level Video Game Play
+437
+the best previous backgammon computer programs. Adding specialized backgammon
+features produced TD-Gammon 1.0 which was substantially better than all previous
+backgammon programs and competed well against human experts.
+Mnih et al. developed a reinforcement learning agent called deep Q-network (DQN)
+that combined Q-learning with a deep convolutional ANN, a many-layered, or deep,
+ANN specialized for processing spatial arrays of data such as images. We describe deep
+convolutional ANNs in Section 9.7. By the time of Mnih et al.’s work with DQN, deep
+ANNs, including deep convolutional ANNs, had produced impressive results in many
+applications, but they had not been widely used in reinforcement learning.
+Mnih et al. used DQN to show how a reinforcement learning agent can achieve a high
+level of performance on any of a collection of di↵erent problems without having to use
+di↵erent problem-speciﬁc feature sets. To demonstrate this, they let DQN learn to play
+49 di↵erent Atari 2600 video games by interacting with a game emulator. DQN learned a
+di↵erent policy for each of the 49 games (because the weights of its ANN were reset to
+random values before learning on each game), but it used the same raw input, network
+architecture, and parameter values (e.g., step size, discount rate, exploration parameters,
+and many more speciﬁc to the implementation) for all the games. DQN achieved levels
+of play at or beyond human level on a large fraction of these games. Although the games
+were alike in being played by watching streams of video images, they varied widely in other
+respects. Their actions had di↵erent e↵ects, they had di↵erent state-transition dynamics,
+and they needed di↵erent policies for learning high scores. The deep convolutional ANN
+learned to transform the raw input common to all the games into features specialized for
+representing the action values required for playing at the high level DQN achieved for
+most of the games.
+The Atari 2600 is a home video game console that was sold in various versions by Atari
+Inc. from 1977 to 1992. It introduced or popularized many arcade video games that are
+now considered classics, such as Pong, Breakout, Space Invaders, and Asteroids. Although
+much simpler than modern video games, Atari 2600 games are still entertaining and
+challenging for human players, and they have been attractive as testbeds for developing
+and evaluating reinforcement learning methods (Diuk, Cohen, Littman, 2008; Naddaf,
+2010; Cobo, Zang, Isbell, and Thomaz, 2011; Bellemare, Veness, and Bowling, 2013).
+Bellemare, Naddaf, Veness, and Bowling (2012) developed the publicly available Arcade
+Learning Environment (ALE) to encourage and simplify using Atari 2600 games to study
+learning and planning algorithms.
+These previous studies and the availability of ALE made the Atari 2600 game collection
+a good choice for Mnih et al.’s demonstration, which was also inﬂuenced by the impressive
+human-level performance that TD-Gammon was able to achieve in backgammon. DQN
+is similar to TD-Gammon in using a multi-layer ANN as the function approximation
+method for a semi-gradient form of a TD algorithm, with the gradients computed by
+the backpropagation algorithm. However, instead of using TD(λ) as TD-Gammon did,
+DQN used the semi-gradient form of Q-learning. TD-Gammon estimated the values of
+afterstates, which were easily obtained from the rules for making backgammon moves.
+To use the same algorithm for the Atari games would have required generating the next
+states for each possible action (which would not have been afterstates in that case).
+This could have been done by using the game emulator to run single-step simulations
+
+
+--- Page 460 ---
+
+438
+Chapter 16: Applications and Case Studies
+for all the possible actions (which ALE makes possible). Or a model of each game’s
+state-transition function could have been learned and used to predict next states (Oh,
+Guo, Lee, Lewis, and Singh, 2015). While these methods might have produced results
+comparable to DQN’s, they would have been more complicated to implement and would
+have signiﬁcantly increased the time needed for learning. Another motivation for using
+Q-learning was that DQN used the experience replay method, described below, which
+requires an o↵-policy algorithm. Being model-free and o↵-policy made Q-learning a
+natural choice.
+Before describing the details of DQN and how the experiments were conducted, we look
+at the skill levels DQN was able to achieve. Mnih et al. compared the scores of DQN with
+the scores of the best performing learning system in the literature at the time, the scores
+of a professional human games tester, and the scores of an agent that selected actions at
+random. The best system from the literature used linear function approximation with
+features designed using some knowledge about Atari 2600 games (Bellemare, Naddaf,
+Veness, and Bowling, 2013). DQN learned on each game by interacting with the game
+emulator for 50 million frames, which corresponds to about 38 days of experience with
+the game. At the start of learning on each game, the weights of DQN’s network were reset
+to random values. To evaluate DQN’s skill level after learning, its score was averaged
+over 30 sessions on each game, each lasting up to 5 minutes and beginning with a random
+initial game state. The professional human tester played using the same emulator (with
+the sound turned o↵to remove any possible advantage over DQN which did not process
+audio). After 2 hours of practice, the human played about 20 episodes of each game for up
+to 5 minutes each and was not allowed to take any break during this time. DQN learned
+to play better than the best previous reinforcement learning systems on all but 6 of the
+games, and played better than the human player on 22 of the games. By considering any
+performance that scored at or above 75% of the human score to be comparable to, or
+better than, human-level play, Mnih et al. concluded that the levels of play DQN learned
+reached or exceeded human level on 29 of the 46 games. See Mnih et al. (2015) for a
+more detailed account of these results.
+For an artiﬁcial learning system to achieve these levels of play would be impressive
+enough, but what makes these results remarkable—and what many at the time considered
+to be breakthrough results for artiﬁcial intelligence—is that the very same learning system
+achieved these levels of play on widely varying games without relying on any game-speciﬁc
+modiﬁcations.
+A human playing any of these 49 Atari games sees 210⇥160 pixel image frames with
+128 colors at 60Hz. In principle, exactly these images could have formed the raw input to
+DQN, but to reduce memory and processing requirements, Mnih et al. preprocessed each
+frame to produce an 84⇥84 array of luminance values. Because the full states of many
+of the Atari games are not completely observable from the image frames, Mnih et al.
+“stacked” the four most recent frames so that the inputs to the network had dimension
+84⇥84⇥4. This did not eliminate partial observability for all of the games, but it was
+helpful in making many of them more Markovian.
+An essential point here is that these preprocessing steps were exactly the same for all 46
+games. No game-speciﬁc prior knowledge was involved beyond the general understanding
+that it should still be possible to learn good policies with this reduced dimension and
+
+
+--- Page 461 ---
+
+16.5. Human-level Video Game Play
+439
+that stacking adjacent frames should help with the partial observability of some of the
+games. Because no game-speciﬁc prior knowledge beyond this minimal amount was used
+in preprocessing the image frames, we can think of the 84⇥84⇥4 input vectors as being
+“raw” input to DQN.
+The basic architecture of DQN is similar to the deep convolutional ANN illustrated in
+Figure 9.15 (though unlike that network, subsampling in DQN is treated as part of each
+convolutional layer, with feature maps consisting of units having only a selection of the
+possible receptive ﬁelds). DQN has three hidden convolutional layers, followed by one
+fully connected hidden layer, followed by the output layer. The three successive hidden
+convolutional layers of DQN produce 32 20⇥20 feature maps, 64 9⇥9 feature maps,
+and 64 7⇥7 feature maps. The activation function of the units of each feature map is a
+rectiﬁer nonlinearity (max(0, x)). The 3,136 (64⇥7⇥7) units in this third convolutional
+layer all connect to each of 512 units in the fully connected hidden layer, which then each
+connect to all 18 units in the output layer, one for each possible action in an Atari game.
+The activation levels of DQN’s output units were the estimated optimal action values
+of the corresponding state–action pairs, for the state represented by the network’s input.
+The assignment of output units to a game’s actions varied from game to game, and
+because the number of valid actions varied between 4 and 18 for the games, not all output
+units had functional roles in all of the games. It helps to think of the network as if it
+were 18 separate networks, one for estimating the optimal action value of each possible
+action. In reality, these networks shared their initial layers, but the output units learned
+to use the features extracted by these layers in di↵erent ways.
+DQN’s reward signal indicated how a games’s score changed from one time step to
+the next: +1 whenever it increased, −1 whenever it decreased, and 0 otherwise. This
+standardized the reward signal across the games and made a single step-size parameter
+work well for all the games despite their varying ranges of scores. DQN used an "-greedy
+policy, with " decreasing linearly over the ﬁrst million frames and remaining at a low
+value for the rest of the learning session. The values of the various other parameters,
+such as the learning step size, discount rate, and others speciﬁc to the implementation,
+were selected by performing informal searches to see which values worked best for a small
+selection of the games. These values were then held ﬁxed for all of the games.
+After DQN selected an action, the action was executed by the game emulator, which
+returned a reward and the next video frame. The frame was preprocessed and added
+to the four-frame stack that became the next input to the network. Skipping for the
+moment the changes to the basic Q-learning procedure made by Mnih et al., DQN used
+the following semi-gradient form of Q-learning to update the network’s weights:
+wt+1 = wt + ↵
+h
+Rt+1 + γ max
+a
+ˆq(St+1, a, wt) −ˆq(St, At, wt)
+i
+rˆq(St, At, wt), (16.3)
+where wt is the vector of the network’s weights, At is the action selected at time step t,
+and St and St+1 are respectively the preprocessed image stacks input to the network at
+time steps t and t + 1.
+The gradient in (16.3) was computed by backpropagation. Imagining again that there
+was a separate network for each action, for the update at time step t, backpropagation
+was applied only to the network corresponding to At. Mnih et al. took advantage of
+techniques shown to improve the basic backpropagation algorithm when applied to large
+
+
+--- Page 462 ---
+
+440
+Chapter 16: Applications and Case Studies
+networks. They used a mini-batch method that updated weights only after accumulating
+gradient information over a small batch of images (here after 32 images). This yielded
+smoother sample gradients compared to the usual procedure that updates weights after
+each action. They also used a gradient-ascent algorithm called RMSProp (Tieleman and
+Hinton, 2012) that accelerates learning by adjusting the step-size parameter for each
+weight based on a running average of the magnitudes of recent gradients for that weight.
+Mnih et al. modiﬁed the basic Q-learning procedure in three ways. First, they used
+a method called experience replay ﬁrst studied by Lin (1992). This method stores the
+agent’s experience at each time step in a replay memory that is accessed to perform the
+weight updates. It worked like this in DQN. After the game emulator executed action
+At in a state represented by the image stack St, and returned reward Rt+1 and image
+stack St+1, it added the tuple (St, At, Rt+1, St+1) to the replay memory. This memory
+accumulated experiences over many plays of the same game. At each time step multiple Q-
+learning updates—a mini-batch—were performed based on experiences sampled uniformly
+at random from the replay memory. Instead of St+1 becoming the new St for the next
+update as it would in the usual form of Q-learning, a new unconnected experience was
+drawn from the replay memory to supply data for the next update. Because Q-learning
+is an o↵-policy algorithm, it does not need to be applied along connected trajectories.
+Q-learning with experience replay provided several advantages over the usual form of
+Q-learning. The ability to use each stored experience for many updates allowed DQN to
+learn more eﬃciently from its experiences. Experience replay reduced the variance of the
+updates because successive updates were not correlated with one another as they would
+be with standard Q-learning. And by removing the dependence of successive experiences
+on the current weights, experience replay eliminated one source of instability.
+Mnih et al. modiﬁed standard Q-learning in a second way to improve its stability. As
+in other methods that bootstrap, the target for a Q-learning update depends on the
+current action-value function estimate. When a parameterized function approximation
+method is used to represent action values, the target is a function of the same parameters
+that are being updated.
+For example, the target in the update given by (16.3) is
+γ maxa ˆq(St+1, a, wt). Its dependence on wt complicates the process compared to the
+simpler supervised-learning situation in which the targets do not depend on the parameters
+being updated. As discussed in Chapter 11 this can lead to oscillations and/or divergence.
+To address this problem Mnih et al. used a technique that brought Q-learning closer
+to the simpler supervised-learning case while still allowing it to bootstrap. Whenever
+a certain number, C, of updates had been done to the weights w of the action-value
+network, they inserted the network’s current weights into another network and held
+these duplicate weights ﬁxed for the next C updates of w. The outputs of this duplicate
+network over the next C updates of w were used as the Q-learning targets. Letting ˜q
+denote the output of this duplicate network, then instead of (16.3) the update rule was:
+wt+1 = wt + ↵
+h
+Rt+1 + γ max
+a
+˜q(St+1, a, wt) −ˆq(St, At, wt)
+i
+rˆq(St, At, wt).
+A ﬁnal modiﬁcation of standard Q-learning was also found to improve stability. They
+clipped the error term Rt+1 + γ maxa ˜q(St+1, a, wt) −ˆq(St, At, wt) so that it remained in
+the interval [−1, 1].
+
+
+--- Page 463 ---
+
+16.6. Mastering the Game of Go
+441
+Mnih et al. conducted a large number of learning runs on 5 of the games to gain
+insight into the e↵ect that various of DQN’s design features had on its performance.
+They ran DQN with the four combinations of experience replay and the duplicate
+target network being included or not included. Although the results varied from game
+to game, each of these features alone signiﬁcantly improved performance, and very
+dramatically improved performance when used together. Mnih et al. also studied the role
+played by the deep convolutional ANN in DQN’s learning ability by comparing the deep
+convolutional version of DQN with a version having a network of just one linear layer, both
+receiving the same stacked preprocessed video frames. Here, the improvement of the deep
+convolutional version over the linear version was particularly striking across all 5 of the test
+games.
+Creating artiﬁcial agents that excel over a diverse collection of challenging tasks has
+been an enduring goal of artiﬁcial intelligence. The promise of machine learning as
+a means for achieving this has been frustrated by the need to craft problem-speciﬁc
+representations. DeepMind’s DQN stands as a major step forward by demonstrating
+that a single agent can learn problem-speciﬁc features enabling it to acquire human-
+competitive skills over a range of tasks. This demonstration did not produce one agent
+that simultaneously excelled at all the tasks (because learning occurred separately for
+each task), but it showed that deep learning can reduce, and possibly eliminate, the need
+for problem-speciﬁc design and tuning. As Mnih et al. point out, however, DQN is not
+a complete solution to the problem of task-independent learning. Although the skills
+needed to excel on the Atari games were markedly diverse, all the games were played by
+observing video images, which made a deep convolutional ANN a natural choice for this
+collection of tasks. In addition, DQN’s performance on some of the Atari 2600 games
+fell considerably short of human skill levels on these games. The games most diﬃcult
+for DQN—especially Montezuma’s Revenge on which DQN learned to perform about as
+well as the random player—require deep planning beyond what DQN was designed to
+do. Further, learning control skills through extensive practice, like DQN learned how to
+play the Atari games, is just one of the types of learning humans routinely accomplish.
+Despite these limitations, DQN advanced the state-of-the-art in machine learning by
+impressively demonstrating the promise of combining reinforcement learning with modern
+methods of deep learning.
+16.6
+Mastering the Game of Go
+The ancient Chinese game of Go has challenged artiﬁcial intelligence researchers for many
+decades. Methods that achieve human-level skill, or even superhuman-level skill, in other
+games have not been successful in producing strong Go programs. Thanks to a very
+active community of Go programmers and international competitions, the level of Go
+program play has improved signiﬁcantly over the years. Until recently, however, no Go
+program had been able to play anywhere near the level of a human Go master.
+A team at DeepMind (Silver et al., 2016) developed the program AlphaGo that broke
+this barrier by combining deep ANNs (Section 9.7), supervised learning, Monte Carlo
+
+
+--- Page 464 ---
+
+442
+Chapter 16: Applications and Case Studies
+tree search (MCTS, Section 8.11), and reinforcement learning. By the time of Silver et
+al.’s 2016 publication, AlphaGo had been shown to be decisively stronger than other Go
+programs, and it had defeated the European Go champion Fan Hui 5 games to 0. These
+were the ﬁrst victories of a Go program over a professional human Go player without
+handicap in full Go games. Shortly thereafter, a similar version of AlphaGo won stunning
+victories over the 18-time world champion Lee Sedol, winning 4 out of a 5 games in
+a challenge match, making worldwide headline news. Artiﬁcial intelligence researchers
+thought that it would be many more years, perhaps decades, before a program reached
+this level of play.
+Here we describe AlphaGo and a successor program called AlphaGo Zero (Silver et al.
+2017a). Where in addition to reinforcement learning, AlphaGo relied on supervised learn-
+ing from a large database of expert human moves, AlphaGo Zero used only reinforcement
+learning and no human data or guidance beyond the basic rules of the game (hence the
+Zero in its name). We ﬁrst describe AlphaGo in some detail in order to highlight the
+relative simplicity of AlphaGo Zero, which is both higher-performing and more of a pure
+reinforcement learning program.
+In many ways, both AlphaGo and AlphaGo Zero are descendants of Tesauro’s TD-
+Gammon (Section 16.1), itself a descendant of Samuel’s checkers player (Section 16.2).
+All these programs included reinforcement learning over simulated games of self-play.
+AlphaGo and AlphaGo Zero also built upon the progress made by DeepMind on playing
+Atari games with the program DQN (Section 16.5) that used deep convolutional ANNs
+to approximate optimal value functions.
+A Go board conﬁguration
+Go is a game between two players who alter-
+nately place black and white ‘stones’ on unoccu-
+pied intersections, or ‘points,’ on a board with
+a grid of 19 horizontal and 19 vertical lines to
+produce positions like that shown to the right.
+The game’s goal is to capture an area of the
+board larger than that captured by the oppo-
+nent. Stones are captured according to simple
+rules. A player’s stones are captured if they
+are completely surrounded by the other player’s
+stones, meaning that there is no horizontally
+or vertically adjacent point that is unoccupied.
+For example, the left panel of Figure 16.5 (on
+the next page) shows three white stones with
+an unoccupied adjacent point (labeled X). If
+black were to place a stone on X, then the three
+white stones would be captured and taken o↵
+the board (middle panel). However, if white were to place a stone on point X ﬁrst, then
+the possibility of this capture would be blocked (right panel). Other rules are needed to
+prevent inﬁnite capturing/recapturing loops. The game ends when neither player wishes
+to place another stone. These rules are simple, but they produce a very complex game
+that has had wide appeal for thousands of years.
+
+
+--- Page 465 ---
+
+16.6. Mastering the Game of Go
+443
+X
+Figure 16.5: Go capturing rule. Left: the three white stones are not surrounded because point
+X is unoccupied. Middle: if black places a stone on X, the three white stones are captured and
+removed from the board. Right: if white places a stone on point X ﬁrst, the capture is blocked.
+Methods that produce strong play for other games, such as chess, have not worked as
+well for Go. The search space for Go is signiﬁcantly larger than that of chess because
+Go has a larger number of legal moves per position than chess (⇡250 versus ⇡35) and
+Go games tend to involve more moves than chess games (⇡150 versus ⇡80). But the
+size of the search space is not the major factor that makes Go so diﬃcult. Exhaustive
+search is infeasible for both chess and Go, and Go on smaller boards (e.g., 9 ⇥9) has
+proven to be exceedingly diﬃcult as well. Experts agree that the major stumbling block
+to creating stronger-than-amateur Go programs is the diﬃculty of deﬁning an adequate
+position evaluation function. A good evaluation function allows search to be truncated at
+a feasible depth by providing relatively easy-to-compute predictions of what deeper search
+would likely yield. According to M¨uller (2002): “No simple yet reasonable evaluation
+function will ever be found for Go.” A major step forward was the introduction of MCTS
+to Go programs. The strongest programs at the time of AlphaGo’s development all
+included MCTS, but master-level skill remained elusive.
+Recall from Section 8.11 that MCTS is a decision-time planning procedure that does
+not attempt to learn and store a global evaluation function. Like a rollout algorithm
+(Section 8.10), it runs many Monte Carlo simulations of entire episodes (here, entire
+Go games) to select each action (here, each Go move: where to place a stone or to
+resign). Unlike a simple rollout algorithm, however, MCTS is an iterative procedure that
+incrementally extends a search tree whose root node represents the current environment
+state.
+As illustrated in Figure 8.10, each iteration traverses the tree by simulating
+actions guided by statistics associated with the tree’s edges. In its basic version, when
+a simulation reaches a leaf node of the search tree, MCTS expands the tree by adding
+some, or all, of the leaf node’s children to the tree. From the leaf node, or one of its
+newly added child nodes, a rollout is executed: a simulation that typically proceeds all
+the way to a terminal state, with actions selected by a rollout policy. When the rollout
+completes, the statistics associated with the search tree’s edges that were traversed in
+this iteration are updated by backing up the return produced by the rollout. MCTS
+continues this process, starting each time at the search tree’s root at the current state, for
+as many iterations as possible given the time constraints. Then, ﬁnally, an action from
+the root node (which still represents the current environment state) is selected according
+to statistics accumulated in the root node’s outgoing edges. This is the action the agent
+takes. After the environment transitions to its next state, MCTS is executed again with
+the root node set to represent the new current state. The search tree at the start of this
+next execution might be just this new root node, or it might include descendants of this
+node left over from MCTS’s previous execution. The remainder of the tree is discarded.
+
+
+--- Page 466 ---
+
+444
+Chapter 16: Applications and Case Studies
+16.6.1
+AlphaGo
+The main innovation that made AlphaGo such a strong player is that it selected moves by
+a novel version of MCTS that was guided by both a policy and a value function learned
+by reinforcement learning with function approximation provided by deep convolutional
+ANNs. Another key feature is that instead of reinforcement learning starting from random
+network weights, it started from weights that were the result of previous supervised
+learning from a large collection of human expert moves.
+The DeepMind team called AlphaGo’s modiﬁcation of basic MCTS “asynchronous
+policy and value MCTS,” or APV-MCTS. It selected actions via basic MCTS as described
+above but with some twists in how it extended its search tree and how it evaluated action
+edges. In contrast to basic MCTS, which expands its current search tree by using stored
+action values to select an unexplored edge from a leaf node, APV-MCTS, as implemented
+in AlphaGo, expanded its tree by choosing an edge according to probabilities supplied by
+a 13-layer deep convolutional ANN, called the SL-policy network, trained previously by
+supervised learning to predict moves contained in a database of nearly 30 million human
+expert moves.
+Then, also in contrast to basic MCTS, which evaluates the newly-added state node
+solely by the return of a rollout initiated from it, APV-MCTS evaluated the node in two
+ways: by this return of the rollout, but also by a value function, v✓, learned previously by
+a reinforcement learning method. If s was the newly-added node, its value became
+v(s) = (1 −⌘)v✓(s) + ⌘G,
+(16.4)
+where G was the return of the rollout and ⌘controlled the mixing of the values resulting
+from these two evaluation methods. In AlphaGo, these values were supplied by the
+value network, another 13-layer deep convolutional ANN that was trained as we describe
+below to output estimated values of board positions. APV-MCTS’s rollouts in AlphaGo
+were simulated games with both players using a fast rollout policy provided by a simple
+linear network, also trained by supervised learning before play. Throughout its execution,
+APV-MCTS kept track of how many simulations passed through each edge of the search
+tree, and when its execution completed, the most-visited edge from the root node was
+selected as the action to take, here the move AlphaGo actually made in a game.
+The value network had the same structure as the deep convolutional SL policy network
+except that it had a single output unit that gave estimated values of game positions
+instead of the SL policy network’s probability distributions over legal actions. Ideally,
+the value network would output optimal state values, and it might have been possible to
+approximate the optimal value function along the lines of TD-Gammon described above:
+self-play with nonlinear TD(λ) coupled to a deep convolutional ANN. But the DeepMind
+team took a di↵erent approach that held more promise for a game as complex as Go.
+They divided the process of training the value network into two stages. In the ﬁrst stage,
+they created the best policy they could by using reinforcement learning to train an RL
+policy network. This was a deep convolutional ANN with the same structure as the SL
+policy network. It was initialized with the ﬁnal weights of the SL policy network that
+were learned via supervised learning, and then policy-gradient reinforcement learning was
+used to improve upon the SL policy. In the second stage of training the value network,
+
+
+--- Page 467 ---
+
+16.6. Mastering the Game of Go
+445
+the team used Monte Carlo policy evaluation on data obtained from a large number of
+simulated self-play games with moves selected by the RL policy network.
+Figure 16.6 illustrates the networks used by AlphaGo and the steps taken to train them
+in what the DeepMind team called the “AlphaGo pipeline.” All these networks were
+trained before any live game play took place, and their weights remained ﬁxed throughout
+live play.
+Regression
+Classiﬁcation
+Classiﬁcation
+Self Play
+Policy gradient
+Human expert positions
+Self-play positions
+Rollout Policy         SL policy network                       RL policy Network          Value Network
+Policy gradient
+Supervised Learning
+MC Policy Evaluation
+Self Play
+Supervised Learning
+]
+]
+Networks
+Data
+Figure 16.6: AlphaGo pipeline. Adapted with permission from Macmillan Publishers Ltd:
+Nature, vol. 529(7587), p. 485, ©2016.
+Here is some more detail about AlphaGo’s ANNs and their training. The identically-
+structured SL and RL policy networks were similar to DQN’s deep convolutional network
+described in Section 16.5 for playing Atari games, except that they had 13 convolutional
+layers with the ﬁnal layer consisting of a soft-max unit for each point on the 19 ⇥19
+Go board. The networks’ input was a 19 ⇥19 ⇥48 image stack in which each point
+on the Go board was represented by the values of 48 binary or integer-valued features.
+For example, for each point, one feature indicated if the point was occupied by one of
+AlphaGo’s stones, one of its opponent’s stones, or was unoccupied, thus providing the
+“raw” representation of the board conﬁguration. Other features were based on the rules
+of Go, such as the number of adjacent points that were empty, the number of opponent
+stones that would be captured by placing a stone there, the number of turns since a stone
+was placed there, and other features that the design team considered to be important.
+Training the SL policy network took approximately 3 weeks using a distributed
+implementation of stochastic gradient ascent on 50 processors. The network achieved 57%
+accuracy, where the best accuracy achieved by other groups at the time of publication
+was 44.4%. Training the RL policy network was done by policy gradient reinforcement
+learning over simulated games between the RL policy network’s current policy and
+opponents using policies randomly selected from policies produced by earlier iterations
+of the learning algorithm. Playing against a randomly selected collection of opponents
+
+
+--- Page 468 ---
+
+446
+Chapter 16: Applications and Case Studies
+prevented overﬁtting to the current policy. The reward signal was +1 if the current
+policy won, −1 if it lost, and zero otherwise. These games directly pitted the two policies
+against one another without involving MCTS. By simulating many games in parallel on
+50 processors, the DeepMind team trained the RL policy network on a million games
+in a single day. In testing the ﬁnal RL policy, they found that it won more than 80%
+of games played against the SL policy, and it won 85% of games played against a Go
+program using MCTS that simulated 100,000 games per move.
+The value network, whose structure was similar to that of the SL and RL policy
+networks except for its single output unit, received the same input as the SL and RL
+policy networks with the exception that there was an additional binary feature giving
+the current color to play. Monte Carlo policy evaluation was used to train the network
+from data obtained from a large number of self-play games played using the RL policy.
+To avoid overﬁtting and instability due to the strong correlations between positions
+encountered in self-play, the DeepMind team constructed a data set of 30 million positions
+each chosen randomly from a unique self-play game. Then training was done using 50
+million mini-batches each of 32 positions drawn from this data set. Training took one
+week on 50 GPUs.
+The rollout policy was learned prior to play by a simple linear network trained by
+supervised learning from a corpus of 8 million human moves. The rollout policy network
+had to output actions quickly while still being reasonably accurate. In principle, the SL
+or RL policy networks could have been used in the rollouts, but the forward propagation
+through these deep networks took too much time for either of them to be used in rollout
+simulations, a great many of which had to be carried out for each move decision during
+live play. For this reason, the rollout policy network was less complex than the other
+policy networks, and its input features could be computed more quickly than the features
+used for the policy networks. The rollout policy network allowed approximately 1,000
+complete game simulations per second to be run on each of the processing threads that
+AlphaGo used.
+One may wonder why the SL policy was used instead of the better RL policy to select
+actions in the expansion phase of APV-MCTS. These policies took the same amount of
+time to compute because they used the same network architecture. The team actually
+found that AlphaGo played better against human opponents when APV-MCTS used as
+the SL policy instead of the RL policy. They conjectured that the reason for this was
+that the latter was tuned to respond to optimal moves rather than to the broader set
+of moves characteristic of human play. Interestingly, the situation was reversed for the
+value function used by APV-MCTS. They found that when APV-MCTS used the value
+function derived from the RL policy, it performed better than if it used the value function
+derived from the SL policy.
+Several methods worked together to produce AlphaGo’s impressive playing skill. The
+DeepMind team evaluated di↵erent versions of AlphaGo in order to assess the contributions
+made by these various components. The parameter ⌘in (16.4) controlled the mixing
+of game state evaluations produced by the value network and by rollouts. With ⌘= 0,
+AlphaGo used just the value network without rollouts, and with ⌘= 1, evaluation
+relied just on rollouts. They found that AlphaGo using just the value network played
+
+
+--- Page 469 ---
+
+16.6. Mastering the Game of Go
+447
+better than the rollout-only AlphaGo, and in fact played better than the strongest of all
+other Go programs existing at the time. The best play resulted from setting ⌘= 0.5,
+indicating that combining the value network with rollouts was particularly important
+to AlphaGo’s success. These evaluation methods complemented one another: the value
+network evaluated the high-performance RL policy that was too slow to be used in live
+play, while rollouts using the weaker but much faster rollout policy were able to add
+precision to the value network’s evaluations for speciﬁc states that occurred during games.
+Overall, AlphaGo’s remarkable success fueled a new round of enthusiasm for the promise
+of artiﬁcial intelligence, speciﬁcally for systems combining reinforcement learning with
+deep ANNs, to address problems in other challenging domains.
+16.6.2
+AlphaGo Zero
+Building upon the experience with AlphaGo, a DeepMind team developed AlphaGo Zero
+(Silver et al. 2017a). In contrast to AlphaGo, this program used no human data or
+guidance beyond the basic rules of the game (hence the Zero in its name). It learned
+exclusively from self-play reinforcement learning, with input giving just “raw” descriptions
+of the placements of stones on the Go board. AlphaGo Zero implemented a form of
+policy iteration (Section 4.3), interleaving policy evaluation with policy improvement.
+Figure 16.7 is an overview of AlphaGo Zero’s algorithm. A signiﬁcant di↵erence between
+AlphaGo Zero and AlphaGo is that AlphaGo Zero used MCTS to select moves throughout
+self-play reinforcement learning, whereas AlphaGo used MCTS for live play after—but not
+during—learning. Other di↵erences besides not using any human data or human-crafted
+features are that AlphaGo Zero used only one deep convolutional ANN and used a simpler
+version of MCTS.
+AlphaGo Zero’s MCTS was simpler than the version used by AlphaGo in that it did
+not include rollouts of complete games, and therefore did not need a rollout policy. Each
+iteration of AlphaGo Zero’s MCTS ran a simulation that ended at a leaf node of the
+current search tree instead of at the terminal position of a complete game simulation.
+But as in AlphaGo, each iteration of MCTS in AlphaGo Zero was guided by the output of
+a deep convolutional network, labeled f✓in Figure 16.7, where ✓is the network’s weight
+vector. The input to the network, whose architecture we describe below, consisted of raw
+representations of board positions, and its output had two parts: a scalar value, v, an
+estimate of the probability that the current player will win from from the current board
+position, and a vector, p, of move probabilities, one for each possible stone placement on
+the current board, plus the pass, or resign, move.
+Instead of selecting self-play actions according to the probabilities p, however, AlphaGo
+Zero used these probabilities, together with the network’s value output, to direct each
+execution of MCTS, which returned new move probabilities, shown in Figure 16.7 as the
+policies ⇡i. These policies beneﬁtted from the many simulations that MCTS conducted
+each time it executed. The result was that the policy actually followed by AlphaGo
+Zero was an improvement over the policy given by the network’s outputs p. Silver et al.
+(2017a) wrote that “MCTS may therefore be viewed as a powerful policy improvement
+operator.”
+
+
+--- Page 470 ---
+
+448
+Chapter 16: Applications and Case Studies
+Figure 16.7: AlphaGo Zero self-play reinforcement learning. a) The program played many
+games against itself, one shown here as a sequence of board positions si, i = 1, 2, . . . , T, with
+moves ai, i = 1, 2, . . . , T, and winner z. Each move ai was determined by action probabilities ⇡i
+returned by MCTS executed from root node si and guided by a deep convolutional network,
+here labeled f✓, with latest weights ✓. Shown here for just one position s but repeated for all
+si, the network’s inputs were raw representations of board positions si (together with several
+past positions, though not shown here), and its outputs were vectors p of move probabilities
+that guided MCTS’s forward searches, and scalar values v that estimated the probability of the
+current player winning from each position si. b) Deep convolutional network training. Training
+examples were randomly sampled steps from recent self-play games. Weights ✓were updated
+to move the policy vector p toward the probabilities ⇡returned by MCTS, and to include the
+winners z in the estimated win probability v. Reprinted from draft of Silver et al. (2017a) with
+permission of the authors and DeepMind.
+Here is more detail about AlphaGo Zero’s ANN and how it was trained. The network
+took as input a 19 ⇥19 ⇥17 image stack consisting of 17 binary feature planes. The ﬁrst
+8 feature planes were raw representations of the positions of the current player’s stones in
+the current and seven past board conﬁgurations: a feature value was 1 if a player’s stone
+was on the corresponding point, and was 0 otherwise. The next 8 feature planes similarly
+coded the positions of the opponent’s stones. A ﬁnal input feature plane had a constant
+value indicating the color of the current play: 1 for black; 0 for white. Because repetition
+is not allowed in Go and one player is given some number of “compensation points” for
+not getting the ﬁrst move, the current board position is not a Markov state of Go. This
+is why features describing past board positions and the color feature were needed.
+The network was “two-headed,” meaning that after a number of initial layers, the
+network split into two separate “heads” of additional layers that separately fed into two
+sets of output units. In this case, one head fed 362 output units producing 192 + 1 move
+
+
+--- Page 471 ---
+
+16.6. Mastering the Game of Go
+449
+probabilities p, one for each possible stone placement plus pass; the other head fed just
+one output unit producing the scalar v, an estimate of the probability that the current
+player will win from the current board position. The network before the split consisted of
+41 convolutional layers, each followed by batch normalization, and with skip connections
+added to implement residual learning by pairs of layers (see Section 9.7). Overall, move
+probabilities and values were computed by 43 and 44 layers respectively.
+Starting with random weights, the network was trained by stochastic gradient descent
+(with momentum, regularization, and step-size parameter decreasing as training continues)
+using batches of examples sampled uniformly at random from all the steps of the most
+recent 500,000 games of self-play with the current best policy. Extra noise was added
+to the network’s output p to encourage exploration of all possible moves. At periodic
+checkpoints during training, which Silver et al. (2017a) chose to be at every 1,000 training
+steps, the policy output by the ANN with the latest weights was evaluated by simulating
+400 games (using MCTS with 1,600 iterations to select each move) against the current
+best policy. If the new policy won (by a margin set to reduce noise in the outcome), then
+it became the best policy to be used in subsequent self-play. The network’s weights were
+updated to make the network’s policy output p more closely match the policy returned
+by MCTS, and to make its value output, v, more closely match the probability that the
+current best policy wins from the board position represented by the network’s input.
+The DeepMind team trained AlphaGo Zero over 4.9 million games of self-play, which
+took about 3 days. Each move of each game was selected by running MCTS for 1,600
+iterations, taking approximately 0.4 second per move. Network weights were updated over
+700,000 batches each consisting of 2,048 board conﬁgurations. They then ran tournaments
+with the trained AlphaGo Zero playing against the version of AlphaGo that defeated Fan
+Hui by 5 games to 0, and against the version that defeated Lee Sedol by 4 games to 1.
+They used the Elo rating system to evaluate the relative performances of the programs.
+The di↵erence between two Elo ratings is meant to predict the outcome of games between
+the players. The Elo ratings of AlphaGo Zero, the version of AlphaGo that played against
+Fan Hui, and the version that played against Lee Sedol were respectively 4,308, 3,144,
+and 3,739. The gaps in these Elo ratings translate into predictions that AlphaGo Zero
+would defeat these other programs with probabilities very close to one. In a match of 100
+games between AlphaGo Zero, trained as described, and the exact version of AlphaGo
+that defeated Lee Sedol held under the same conditions that were used in that match,
+AlphaGo Zero defeated AlphaGo in all 100 games.
+The DeepMind team also compared AlphaGo Zero with a program using an ANN with
+the same architecture but trained by supervised learning to predict human moves in a
+data set containing nearly 30 million positions from 160,000 games. They found that the
+supervised-learning player initially played better than AlphaGo Zero, and was better at
+predicting human expert moves, but played less well after AlphaGo Zero was trained for
+a day. This suggested that AlphaGo Zero had discovered a strategy for playing that was
+di↵erent from how humans play. In fact, AlphaGo Zero discovered, and came to prefer,
+some novel variations of classical move sequences.
+Final tests of AlphaGo Zero’s algorithm were conducted with a version having a larger
+ANN and trained over 29 million self-play games, which took about 40 days, again starting
+
+
+--- Page 472 ---
+
+450
+Chapter 16: Applications and Case Studies
+with random weights. This version achieved an Elo rating of 5,185. The team pitted
+this version of AlphaGo Zero against a program called AlphaGo Master, the strongest
+program at the time, that was identical to AlphaGo Zero but, like AlphaGo, used human
+data and features. AlphaGo Master’s Elo rating was 4,858, and it had defeated the
+strongest human professional players 60 to 0 in online games. In a 100 game match,
+AlphaGo Zero with the larger network and more extensive learning defeated AlphaGo
+Master 89 games to 11, thus providing a convincing demonstration of the problem-solving
+power of AlphaGo Zero’s algorithm.
+AlphaGo Zero soundly demonstrated that superhuman performance can be achieved
+by pure reinforcement learning, augmented by a simple version of MCTS, and deep ANNs
+with very minimal knowledge of the domain and no reliance on human data or guidance.
+We will surely see systems inspired by the DeepMind accomplishments of both AlphaGo
+and AlphaGo Zero applied to challenging problems in other domains.
+Recently, yet a better program, AlphaZero, was described by Silver et al. (2017b) that
+does not even incorporate knowledge of Go. AlphaZero is a general reinforcement learning
+algorithm that improves over the world’s hitherto best programs in the diverse games of
+Go, chess, and shogi.
+16.7
+Personalized Web Services
+Personalizing web services such as the delivery of news articles or advertisements is one
+approach to increasing users’ satisfaction with a website or to increase the yield of a
+marketing campaign. A policy can recommend content considered to be the best for each
+particular user based on a proﬁle of that user’s interests and preferences inferred from
+their history of online activity. This is a natural domain for machine learning, and in
+particular, for reinforcement learning. A reinforcement learning system can improve a
+recommendation policy by making adjustments in response to user feedback. One way
+to obtain user feedback is by means of website satisfaction surveys, but for acquiring
+feedback in real time it is common to monitor user clicks as indicators of interest in a
+link.
+A method long used in marketing called A/B testing is a simple type of reinforcement
+learning used to decide which of two versions, A or B, of a website users prefer. Because
+it is non-associative, like a two-armed bandit problem, this approach does not personalize
+content delivery. Adding context consisting of features describing individual users and
+the content to be delivered allows personalizing service. This has been formalized as a
+contextual bandit problem (or an associative reinforcement learning problem, Section 2.9)
+with the objective of maximizing the total number of user clicks. Li, Chu, Langford, and
+Schapire (2010) applied a contextual bandit algorithm to the problem of personalizing
+the Yahoo! Front Page Today webpage (one of the most visited pages on the internet at
+the time of their research) by selecting the news story to feature. Their objective was to
+maximize the click-through rate (CTR), which is the ratio of the total number of clicks
+all users make on a webpage to the total number of visits to the page. Their contextual
+bandit algorithm improved over a standard non-associative bandit algorithm by 12.5%.
+Theocharous, Thomas, and Ghavamzadeh (2015) argued that better results are possible
+
+
+--- Page 473 ---
+
+16.7. Personalized Web Services
+451
+by formulating personalized recommendation as a Markov decision problem (MDP) with
+the objective of maximizing the total number of clicks users make over repeated visits to
+a website. Policies derived from the contextual bandit formulation are greedy in the sense
+that they do not take long-term e↵ects of actions into account. These policies e↵ectively
+treat each visit to a website as if it were made by a new visitor uniformly sampled from
+the population of the website’s visitors. By not using the fact that many users repeatedly
+visit the same websites, greedy policies do not take advantage of possibilities provided by
+long-term interactions with individual users.
+As an example of how a marketing strategy might take advantage of long-term user
+interaction, Theocharous et al. contrasted a greedy policy with a longer-term policy for
+displaying ads for buying a product, say a car. The ad displayed by the greedy policy
+might o↵er a discount if the user buys the car immediately. A user either takes the o↵er
+or leaves the website, and if they ever return to the site, they would likely see the same
+o↵er. A longer-term policy, on the other hand, can transition the user “down a sales
+funnel” before presenting the ﬁnal deal. It might start by describing the availability of
+favorable ﬁnancing terms, then praise an excellent service department, and then, on the
+next visit, o↵er the ﬁnal discount. This type of policy can result in more clicks by a user
+over repeated visits to the site, and if the policy is suitably designed, more eventual sales.
+Working at Adobe Systems Incorporated, Theocharous et al. conducted experiments
+to see if policies designed to maximize clicks over the long term could in fact improve
+over short-term greedy policies. The Adobe Marketing Cloud, a set of tools that many
+companies use to run digital marketing campaigns, provides infrastructure for automating
+user-targeted advertising and fund-raising campaigns. Actually deploying novel policies
+using these tools entails signiﬁcant risk because a new policy may end up performing
+poorly. For this reason, the research team needed to assess what a policy’s performance
+would be if it were to be actually deployed, but to do so on the basis of data collected
+under the execution of other policies. A critical aspect of this research, then, was o↵-policy
+evaluation. Further, the team wanted to do this with high conﬁdence to reduce the
+risk of deploying a new policy. Although high conﬁdence o↵-policy evaluation was a
+central component of this research (see also Thomas, 2015; Thomas, Theocharous, and
+Ghavamzadeh, 2015), here we focus only on the algorithms and their results.
+Theocharous et al. compared the results of two algorithms for learning ad recommen-
+dation policies. The ﬁrst algorithm, which they called greedy optimization, had the goal
+of maximizing only the probability of immediate clicks. As in the standard contextual
+bandit formulation, this algorithm did not take the long-term e↵ects of recommendations
+into account. The other algorithm, a reinforcement learning algorithm based on an MDP
+formulation, aimed at improving the number of clicks users made over multiple visits to
+a website. They called this latter algorithm life-time value (LTV) optimization. Both
+algorithms faced challenging problems because the reward signal in this domain is very
+sparse because users usually do not click on ads, and user clicking is very random so that
+returns have high variance.
+Data sets from the banking industry were used for training and testing these algorithms.
+The data sets consisted of many complete trajectories of customer interaction with a
+bank’s website that showed each customer one out of a collection of possible o↵ers. If
+
+
+--- Page 474 ---
+
+452
+Chapter 16: Applications and Case Studies
+a customer clicked, the reward was 1, and otherwise it was 0. One data set contained
+approximately 200,000 interactions from a month of a bank’s campaign that randomly
+o↵ered one of 7 o↵ers. The other data set from another bank’s campaign contained
+4,000,000 interactions involving 12 possible o↵ers. All interactions included customer
+features such as the time since the customer’s last visit to the website, the number of their
+visits so far, the last time the customer clicked, geographic location, one of a collection of
+interests, and features giving demographic information.
+Greedy optimization was based on a mapping estimating the probability of a click
+as a function of user features. The mapping was learned via supervised learning from
+one of the data sets by means of a random forest (RF) algorithm (Breiman, 2001). RF
+algorithms have been widely used for large-scale applications in industry because they are
+e↵ective predictive tools that tend not to overﬁt and are relatively insensitive to outliers
+and noise. Theocharous et al. then used the mapping to deﬁne an "-greedy policy that
+selected with probability 1-" the o↵er predicted by the RF algorithm to have the highest
+probability of producing a click, and otherwise selected from the other o↵ers uniformly at
+random.
+LTV optimization used a batch-mode reinforcement learning algorithm called ﬁtted
+Q iteration (FQI). It is a variant of ﬁtted value iteration (Gordon, 1999) adapted to
+Q-learning. Batch mode means that the entire data set for learning is available from
+the start, as opposed to the online mode of the algorithms we focus on in this book in
+which data are acquired sequentially while the learning algorithm executes. Batch-mode
+reinforcement learning algorithms are sometimes necessary when online learning is not
+practical, and they can use any batch-mode supervised learning regression algorithm,
+including algorithms known to scale well to high-dimensional spaces. The convergence of
+FQI depends on properties of the function approximation algorithm (Gordon, 1999). For
+their application to LTV optimization, Theocharous et al. used the same RF algorithm
+they used for the greedy optimization approach. Because in this case FQI convergence
+is not monotonic, Theocharous et al. kept track of the best FQI policy by o↵-policy
+evaluation using a validation training set. The ﬁnal policy for testing the LTV approach
+was the "-greedy policy based on the best policy produced by FQI with the initial
+action-value function set to the mapping produced by the RF for the greedy optimization
+approach.
+To measure the performance of the policies produced by the greedy and LTV approaches,
+Theocharous et al. used the CTR metric and a metric they called the LTV metric. These
+metrics are similar, except that the LTV metric critically distinguishes between individual
+website visitors:
+CTR = Total # of Clicks
+Total # of Visits ,
+LTV = Total # of Clicks
+Total # of Visitors.
+Figure 16.8 illustrates how these metrics di↵er. Each circle represents a user visit to
+the site; black circles are visits at which the user clicks. Each row represents visits by
+a particular user. By not distinguishing between visitors, the CTR for these sequences
+is 0.35, whereas the LTV is 1.5. Because LTV is larger than CTR to the extent that
+
+
+--- Page 475 ---
+
+16.8. Thermal Soaring
+453
+individual users revisit the site, it is an indicator of how successful a policy is in encouraging
+users to engage in extended interactions with the site.
+Figure 16.8: Click through rate (CTR) versus life-time value (LTV). Each circle represents
+a user visit; black circles are visits at which the user clicks. Adapted from Theocharous et
+al. (2015).
+Testing the policies produced by the greedy and LTV approaches was done using
+a high conﬁdence o↵-policy evaluation method on a test data set consisting of real-
+world interactions with a bank website served by a random policy. As expected, results
+showed that greedy optimization performed best as measured by the CTR metric, while
+LTV optimization performed best as measured by the LTV metric.
+Furthermore—
+although we have omitted its details—the high conﬁdence o↵-policy evaluation method
+provided probabilistic guarantees that the LTV optimization method would, with high
+probability, produce policies that improve upon policies currently deployed. Assured by
+these probabilistic guarantees, Adobe announced in 2016 that the new LTV algorithm
+would be a standard component of the Adobe Marketing Cloud so that a retailer could
+issue a sequence of o↵ers following a policy likely to yield higher return than a policy
+that is insensitive to long-term results.
+16.8
+Thermal Soaring
+Birds and gliders take advantage of upward air currents—thermals—to gain altitude in
+order to maintain ﬂight while expending little, or no, energy. Thermal soaring, as this
+behavior is called, is a complex skill requiring responding to subtle environmental cues
+to increase altitude by exploiting a rising column of air for as long as possible. Reddy,
+Celani, Sejnowski, and Vergassola (2016) used reinforcement learning to investigate
+thermal soaring policies that are e↵ective in the strong atmospheric turbulence usually
+accompanying rising air currents. Their primary goal was to provide insight into the
+cues birds sense and how they use them to achieve their impressive thermal soaring
+performance, but the results also contribute to technology relevant to autonomous gliders.
+Reinforcement learning had previously been applied to the problem of navigating eﬃciently
+to the vicinity of a thermal updraft (Woodbury, Dunn, and Valasek, 2014) but not to the
+more challenging problem of soaring within the turbulence of the updraft itself.
+Reddy et al. modeled the soaring problem as a continuing MDP with discounting.
+The agent interacted with a detailed model of a glider ﬂying in turbulent air. They
+
+
+--- Page 476 ---
+
+454
+Chapter 16: Applications and Case Studies
+devoted signiﬁcant e↵ort toward making the model generate realistic thermal soaring
+conditions, including investigating several di↵erent approaches to atmospheric modeling.
+For the learning experiments, air ﬂow in a three-dimensional box with one kilometer
+sides, one of which was at ground level, was modeled by a sophisticated physics-based
+set of partial di↵erential equations involving air velocity, temperature, and pressure.
+Introducing small random perturbations into the numerical simulation caused the model
+to produce analogs of thermal updrafts and accompanying turbulence (Figure 16.9 Left)
+Glider ﬂight was modeled by aerodynamic equations involving velocity, lift, drag, and
+other factors governing powerless ﬂight of a ﬁxed-wing aircraft. Maneuvering the glider
+involved changing its angle of attack (the angle between the glider’s wing and the direction
+of air ﬂow) and its bank angle (Figure 16.9 Right).
+A
+z
+y
+Lift L
+z
+x
+Lift L
+Drag D
+velocity direction
+wing direction
+bank angle
+glide angle
+angle of attack
+↵
+Figure 16.9:
+Thermal soaring model: Left: snapshot of the vertical velocity ﬁeld of the
+simulated cube of air: in red (blue) is a region of large upward (downward) ﬂow. Right: diagram
+of powerless ﬂight showing bank angle µ and angle of attack ↵. Adapted with permission From
+PNAS vol. 113(22), p. E4879, 2016, Reddy, Celani, Sejnowski, and Vergassola, Learning to Soar
+in Turbulent Environments.
+The interface between the agent and the environment required deﬁning the agent’s
+actions, the state information the agent receives from the environment, and the reward
+signal. By experimenting with various possibilities, Reddy et al. decided that three actions
+each for the angle of attack and the bank angle were enough for their purposes: increment
+or decrement the current bank angle and angle of attack by 5◦and 2.5◦, respectively, or
+leave them unchanged. This resulted in 32 possible actions. The bank angle was bounded
+to remain between −15◦and +15◦.
+Because a goal of their study was to try to determine what minimal set of sensory
+cues are necessary for e↵ective soaring, both to shed light on the cues birds might use for
+soaring and to minimize the sensing complexity required for automated glider soaring,
+the authors tried various sets of signals as input to the reinforcement learning agent.
+They started by using state aggregation (Section 9.3) of a four-dimensional state space
+with dimensions giving local vertical wind speed, local vertical wind acceleration, torque
+depending on the di↵erence between the vertical wind velocities at the left and right wing
+tips, and the local temperature. Each dimension was discretized into three bins: positive
+
+
+--- Page 477 ---
+
+16.8. Thermal Soaring
+455
+high, negative high, and small. Results, described below, showed that only two of these
+dimensions were critical for e↵ective soaring behavior.
+The overall objective of thermal soaring is to gain as much altitude as possible from
+each rising column of air. Reddy et al. tried a straightforward reward signal that rewarded
+the agent at the end of each episode based on the altitude gained over the episode, a
+large negative reward signal if the glider touched the ground, and zero otherwise. They
+found that learning was not successful with this reward signal for episodes of realistic
+duration and that eligibility traces did not help. By experimenting with various reward
+signals, they found that learning was best with a reward signal that at each time step
+linearly combined the vertical wind velocity and vertical wind acceleration observed on
+the previous time step.
+Learning was by one-step Sarsa, with actions selected according to a soft-max dis-
+tribution based on normalized action values. Speciﬁcally, the action probabilities were
+computed according to (13.2) with action preferences:
+h(s, a, ✓) =
+ˆq(s, a, ✓) −minb ˆq(s, b, ✓)
+⌧
+#
+maxb ˆq(s, b, ✓) −minb ˆq(s, b, ✓)
+$,
+where ✓is a parameter vector with one component for each action and aggregated group
+of states, and ˆq(s, a, ✓) merely returned the component corresponding to s, a in the usual
+way for state aggregation methods. The above equation forms the action preferences
+by normalizing the approximate action values to the interval [0, 1] then dividing by ⌧, a
+positive “temperature parameter.”3 As ⌧increases, the probability of selecting an action
+becomes less dependent on its preference; as ⌧decreases toward zero, the probability of
+selecting the most highly-preferred action approaches one, making the policy approach
+the greedy policy. The temperature parameter ⌧was initialized to 2.0 and incrementally
+decreased to 0.2 during learning. Action preferences were computed from the current
+estimates of the action values: the action with the maximum estimated action value was
+given preference 1/⌧, the action with the minimum estimated action value was given
+preference 0, and the preferences of the other actions were scaled between these extremes.
+The step-size and discount-rate parameters were ﬁxed at 0.1 and 0.98 respectively.
+Each learning episode took place with the agent controlling simulated ﬂight in an
+independently generated period of simulated turbulent air currents. Each episode lasted
+2.5 minutes simulated with a 1 second time step. Learning e↵ectively converged after a
+few hundred episodes. The left panel of Figure 16.10 shows a sample trajectory before
+learning where the agent selects actions randomly. Starting at the top of the volume
+shown, the glider’s trajectory is in the direction indicated by the arrow and quickly loses
+altitude. Figure 16.10’s right panel is a trajectory after learning. The glider starts at the
+same place (here appearing at the bottom of the volume) and gains altitude by spiraling
+within the rising column of air. Although Reddy et al. found that performance varied
+widely over di↵erent simulated periods of air ﬂow, the number of times the glider touched
+the ground consistently decreased to nearly zero as learning progressed.
+After experimenting with di↵erent sets of features available to the learning agent, it
+turned out that the combination of just vertical wind acceleration and torques worked
+3Reddy et al. described this slightly di↵erently, but our version is equivalent to theirs.
+
+
+--- Page 478 ---
+
+456
+Chapter 16: Applications and Case Studies
+Figure 16.10:
+Sample thermal soaring trajectories, with arrows showing the direction of
+ﬂight from the same starting point (note that the altitude scales are shifted). Left: before
+learning: the agent selects actions randomly and the glider descends. Right: after learning:
+the glider gains altitude by following a spiral trajectory. Adapted with permission from PNAS
+vol. 113(22), p. E4879, 2016, Reddy, Celani, Sejnowski, and Vergassola, Learning to Soar in
+Turbulent Environments.
+best. The authors conjectured that because these features give information about the
+gradient of vertical wind velocity in two di↵erent directions, they allow the controller to
+select between turning by changing the bank angle or continuing along the same course
+by leaving the bank angle alone. This allows the glider to stay within a rising column of
+air. Vertical wind velocity is indicative of the strength of the thermal but does not help
+in staying within the ﬂow. They found that sensitivity to temperature was of little help.
+They also found that controlling the angle of attack is not helpful in staying within a
+particular thermal, being useful instead for traveling between thermals when covering
+large distances, as in cross-country gliding and bird migration.
+Due to the fact that soaring in di↵erent levels of turbulence requires di↵erent policies,
+training was done in conditions ranging from weak to strong turbulence. In strong
+turbulence the rapidly changing wind and glider velocities allowed less time for the
+controller to react. This reduced the amount of control possible compared to what
+was possible for maneuvering when ﬂuctuations were weak. Reddy et al. examined the
+policies Sarsa learned under these di↵erent conditions. Common to policies learned in all
+regimes were these features: when sensing negative wind acceleration, bank sharply in the
+direction of the wing with the higher lift; when sensing large positive wind acceleration
+and no torque, do nothing. However, di↵erent levels of turbulence led to policy di↵erences.
+Policies learned in strong turbulence were more conservative in that they preferred small
+bank angles, whereas in weak turbulence, the best action was to turn as much as possible
+by banking sharply. Systematic study of the bank angles preferred by the policies learned
+under the di↵erent conditions led the authors to suggest that by detecting when vertical
+
+
+--- Page 479 ---
+
+16.8. Thermal Soaring
+457
+wind acceleration crosses a certain threshold the controller can adjust its policy to cope
+with di↵erent turbulence regimes.
+Reddy et al. also conducted experiments to investigate the e↵ect of the discount-rate
+parameter γ on the performance of the learned policies. They found that the altitude
+gained in an episode increased as γ increased, reaching a maximum for γ = .99, suggesting
+that e↵ective thermal soaring requires taking into account long-term e↵ects of control
+decisions.
+This computational study of thermal soaring illustrates how reinforcement learning
+can further progress toward di↵erent kinds of objectives.
+Learning policies having
+access to di↵erent sets of environmental cues and control actions contributes to both
+the engineering objective of designing autonomous gliders and the scientiﬁc objective of
+improving understanding of the soaring skills of birds. In both cases, hypotheses resulting
+from the learning experiments can be tested in the ﬁeld by instrumenting real gliders4
+and by comparing predictions with observed bird soaring behavior.
+4This work has recently been applied to real gliders. See Reddy, Wong-Ng, Celani, Sejnowski, and
+Vergassola, “Glider soaring via reinforcement learning in the ﬁeld.” Nature 562:236–239, 2018.
+

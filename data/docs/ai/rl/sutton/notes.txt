@@ -1,0 +1,5 @@
+Bandit Problems:
+- the only information being modeled is a "history of past rewards" / action-reward interactions
+- q*(a) = E[R_t | A_t = a] — the true expected reward for action a, unknown to the agent
+- Q_t(a) — the agent's estimate of q*(a) at time step t, built from observed rewards
+- The goal is to get Q_t(a) → q*(a) over time while maximizing total reward

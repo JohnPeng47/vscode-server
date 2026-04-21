@@ -1,0 +1,1370 @@
+============================================================
+ Chapter 6 - Temporal-Difference Learning
+ (PDF pages 141-162)
+============================================================
+
+--- Page 141 ---
+
+Chapter 6
+Temporal-Di↵erence Learning
+If one had to identify one idea as central and novel to reinforcement learning, it would
+undoubtedly be temporal-di↵erence (TD) learning. TD learning is a combination of
+Monte Carlo ideas and dynamic programming (DP) ideas. Like Monte Carlo methods,
+TD methods can learn directly from raw experience without a model of the environment’s
+dynamics.
+Like DP, TD methods update estimates based in part on other learned
+estimates, without waiting for a ﬁnal outcome (they bootstrap). The relationship between
+TD, DP, and Monte Carlo methods is a recurring theme in the theory of reinforcement
+learning; this chapter is the beginning of our exploration of it. Before we are done, we
+will see that these ideas and methods blend into each other and can be combined in many
+ways. In particular, in Chapter 7 we introduce n-step algorithms, which provide a bridge
+from TD to Monte Carlo methods, and in Chapter 12 we introduce the TD(λ) algorithm,
+which seamlessly uniﬁes them.
+As usual, we start by focusing on the policy evaluation or prediction problem, the
+problem of estimating the value function v⇡for a given policy ⇡. For the control problem
+(ﬁnding an optimal policy), DP, TD, and Monte Carlo methods all use some variation of
+generalized policy iteration (GPI). The di↵erences in the methods are primarily di↵erences
+in their approaches to the prediction problem.
+6.1
+TD Prediction
+Both TD and Monte Carlo methods use experience to solve the prediction problem. Given
+some experience following a policy ⇡, both methods update their estimate V of v⇡for
+the nonterminal states St occurring in that experience. Roughly speaking, Monte Carlo
+methods wait until the return following the visit is known, then use that return as a
+target for V (St). A simple every-visit Monte Carlo method suitable for nonstationary
+environments is
+V (St)  V (St) + ↵
+h
+Gt −V (St)
+i
+,
+(6.1)
+
+
+--- Page 142 ---
+
+120
+Chapter 6: Temporal-Di↵erence Learning
+where Gt is the actual return following time t, and ↵is a constant step-size parameter (c.f.,
+Equation 2.4). Let us call this method constant-↵MC. Whereas Monte Carlo methods
+must wait until the end of the episode to determine the increment to V (St) (only then is
+Gt known), TD methods need to wait only until the next time step. At time t + 1 they
+immediately form a target and make a useful update using the observed reward Rt+1 and
+the estimate V (St+1). The simplest TD method makes the update
+V (St)  V (St) + ↵
+h
+Rt+1 + γV (St+1) −V (St)
+i
+(6.2)
+immediately on transition to St+1 and receiving Rt+1. In e↵ect, the target for the Monte
+Carlo update is Gt, whereas the target for the TD update is Rt+1 + γV (St+1). This TD
+method is called TD(0), or one-step TD, because it is a special case of the TD(λ) and
+n-step TD methods developed in Chapter 12 and Chapter 7. The box below speciﬁes
+TD(0) completely in procedural form.
+Tabular TD(0) for estimating v⇡
+Input: the policy ⇡to be evaluated
+Algorithm parameter: step size ↵2 (0, 1]
+Initialize V (s), for all s 2 S+, arbitrarily except that V (terminal) = 0
+Loop for each episode:
+Initialize S
+Loop for each step of episode:
+A  action given by ⇡for S
+Take action A, observe R, S0
+V (S)  V (S) + ↵
+⇥
+R + γV (S0) −V (S)
+⇤
+S  S0
+until S is terminal
+Because TD(0) bases its update in part on an existing estimate, we say that it is a
+bootstrapping method, like DP. We know from Chapter 3 that
+v⇡(s) .= E⇡[Gt | St =s]
+(6.3)
+= E⇡[Rt+1 + γGt+1 | St =s]
+(from (3.9))
+= E⇡[Rt+1 + γv⇡(St+1) | St =s] .
+(6.4)
+Roughly speaking, Monte Carlo methods use an estimate of (6.3) as a target, whereas
+DP methods use an estimate of (6.4) as a target. The Monte Carlo target is an estimate
+because the expected value in (6.3) is not known; a sample return is used in place of the
+real expected return. The DP target is an estimate not because of the expected values,
+which are assumed to be completely provided by a model of the environment, but because
+v⇡(St+1) is not known and the current estimate, V (St+1), is used instead. The TD target
+is an estimate for both reasons: it samples the expected values in (6.4) and it uses the
+current estimate V instead of the true v⇡. Thus, TD methods combine the sampling of
+
+
+--- Page 143 ---
+
+6.1. TD Prediction
+121
+Monte Carlo with the bootstrapping of DP. As we shall see, with care and imagination
+this can take us a long way toward obtaining the advantages of both Monte Carlo and
+DP methods.
+TD(0)
+Shown to the right is the backup diagram for tabular TD(0). The value
+estimate for the state node at the top of the backup diagram is updated on
+the basis of the one sample transition from it to the immediately following
+state. We refer to TD and Monte Carlo updates as sample updates because
+they involve looking ahead to a sample successor state (or state–action pair),
+using the value of the successor and the reward along the way to compute a
+backed-up value, and then updating the value of the original state (or state–
+action pair) accordingly. Sample updates di↵er from the expected updates
+of DP methods in that they are based on a single sample successor rather than on a
+complete distribution of all possible successors.
+Finally, note that the quantity in brackets in the TD(0) update is a sort of error,
+measuring the di↵erence between the estimated value of St and the better estimate
+Rt+1 + γV (St+1). This quantity, called the TD error, arises in various forms throughout
+reinforcement learning:
+δt .= Rt+1 + γV (St+1) −V (St).
+(6.5)
+Notice that the TD error at each time is the error in the estimate made at that time.
+Because the TD error depends on the next state and next reward, it is not actually
+available until one time step later. That is, δt is the error in V (St), available at time
+t + 1. Also note that if the array V does not change during the episode (as it does not in
+Monte Carlo methods), then the Monte Carlo error can be written as a sum of TD errors:
+Gt −V (St) = Rt+1 + γGt+1 −V (St) + γV (St+1) −γV (St+1)
+(from (3.9))
+= δt + γ
+#
+Gt+1 −V (St+1)
+$
+= δt + γδt+1 + γ2#
+Gt+2 −V (St+2)
+$
+= δt + γδt+1 + γ2δt+2 + · · · + γT −t−1δT −1 + γT −t#
+GT −V (ST )
+$
+= δt + γδt+1 + γ2δt+2 + · · · + γT −t−1δT −1 + γT −t#
+0 −0
+$
+=
+T −1
+X
+k=t
+γk−tδk.
+(6.6)
+This identity is not exact if V is updated during the episode (as it is in TD(0)), but if the
+step size is small then it may still hold approximately. Generalizations of this identity
+play an important role in the theory and algorithms of temporal-di↵erence learning.
+Exercise 6.1 If V changes during the episode, then (6.6) only holds approximately; what
+would the di↵erence be between the two sides? Let Vt denote the array of state values
+used at time t in the TD error (6.5) and in the TD update (6.2). Redo the derivation
+above to determine the additional amount that must be added to the sum of TD errors
+in order to equal the Monte Carlo error.
+⇤
+
+
+--- Page 144 ---
+
+122
+Chapter 6: Temporal-Di↵erence Learning
+Example 6.1: Driving Home Each day as you drive home from work, you try to
+predict how long it will take to get home. When you leave your oﬃce, you note the time,
+the day of week, the weather, and anything else that might be relevant. Say on this
+Friday you are leaving at exactly 6 o’clock, and you estimate that it will take 30 minutes
+to get home. As you reach your car it is 6:05, and you notice it is starting to rain. Traﬃc
+is often slower in the rain, so you reestimate that it will take 35 minutes from then, or a
+total of 40 minutes. Fifteen minutes later you have completed the highway portion of
+your journey in good time. As you exit onto a secondary road you cut your estimate of
+total travel time to 35 minutes. Unfortunately, at this point you get stuck behind a slow
+truck, and the road is too narrow to pass. You end up having to follow the truck until
+you turn onto the side street where you live at 6:40. Three minutes later you are home.
+The sequence of states, times, and predictions is thus as follows:
+Elapsed Time
+Predicted
+Predicted
+State
+(minutes)
+Time to Go
+Total Time
+leaving oﬃce, friday at 6
+0
+30
+30
+reach car, raining
+5
+35
+40
+exiting highway
+20
+15
+35
+2ndary road, behind truck
+30
+10
+40
+entering home street
+40
+3
+43
+arrive home
+43
+0
+43
+The rewards in this example are the elapsed times on each leg of the journey.1 We are
+not discounting (γ = 1), and thus the return for each state is the actual time to go from
+that state. The value of each state is the expected time to go. The second column of
+numbers gives the current estimated value for each state encountered.
+A simple way to view the operation of Monte Carlo methods is to plot the predicted
+total time (the last column) over the sequence, as in Figure 6.1 (left). The red arrows
+show the changes in predictions recommended by the constant-↵MC method (6.1), for
+↵= 1. These are exactly the errors between the estimated value (predicted time to go)
+in each state and the actual return (actual time to go). For example, when you exited
+the highway you thought it would take only 15 minutes more to get home, but in fact it
+took 23 minutes. Equation 6.1 applies at this point and determines an increment in the
+estimate of time to go after exiting the highway. The error, Gt −V (St), at this time is
+eight minutes. Suppose the step-size parameter, ↵, is 1/2. Then the predicted time to go
+after exiting the highway would be revised upward by four minutes as a result of this
+experience. This is probably too large a change in this case; the truck was probably just
+an unlucky break. In any event, the change can only be made o↵-line, that is, after you
+have reached home. Only at this point do you know any of the actual returns.
+Is it necessary to wait until the ﬁnal outcome is known before learning can begin?
+Suppose on another day you again estimate when leaving your oﬃce that it will take 30
+minutes to drive home, but then you become stuck in a massive traﬃc jam. Twenty-ﬁve
+minutes after leaving the oﬃce you are still bumper-to-bumper on the highway. You now
+1If this were a control problem with the objective of minimizing travel time, then we would of course
+make the rewards the negative of the elapsed time. But because we are concerned here only with
+prediction (policy evaluation), we can keep things simple by using positive numbers.
+
+
+--- Page 145 ---
+
+6.1. TD Prediction
+123
+road
+30
+35
+40
+45
+Predicted
+total
+travel
+time
+leaving
+office
+exiting
+highway
+2ndary
+home
+arrive
+Situation
+actual outcome
+reach
+car
+street
+home
+actual
+outcome
+Situation
+30
+35
+40
+45
+road
+leaving
+office
+exiting
+highway
+2ndary
+home
+arrive
+reach
+car
+street
+home
+Figure 6.1: Changes recommended in the driving home example by Monte Carlo methods (left)
+and TD methods (right).
+estimate that it will take another 25 minutes to get home, for a total of 50 minutes. As
+you wait in traﬃc, you already know that your initial estimate of 30 minutes was too
+optimistic. Must you wait until you get home before increasing your estimate for the
+initial state? According to the Monte Carlo approach you must, because you don’t yet
+know the true return.
+According to a TD approach, on the other hand, you would learn immediately, shifting
+your initial estimate from 30 minutes toward 50. In fact, each estimate would be shifted
+toward the estimate that immediately follows it. Returning to our ﬁrst day of driving,
+Figure 6.1 (right) shows the changes in the predictions recommended by the TD rule
+(6.2) (these are the changes made by the rule if ↵= 1). Each error is proportional to the
+change over time of the prediction, that is, to the temporal di↵erences in predictions.
+Besides giving you something to do while waiting in traﬃc, there are several computa-
+tional reasons why it is advantageous to learn based on your current predictions rather
+than waiting until termination when you know the actual return. We brieﬂy discuss some
+of these in the next section.
+Exercise 6.2 This is an exercise to help develop your intuition about why TD methods
+are often more eﬃcient than Monte Carlo methods. Consider the driving home example
+and how it is addressed by TD and Monte Carlo methods. Can you imagine a scenario
+in which a TD update would be better on average than a Monte Carlo update? Give
+an example scenario—a description of past experience and a current state—in which
+you would expect the TD update to be better. Here’s a hint: Suppose you have lots
+of experience driving home from work. Then you move to a new building and a new
+parking lot (but you still enter the highway at the same place). Now you are starting
+to learn predictions for the new building. Can you see why TD updates are likely to be
+much better, at least initially, in this case? Might the same sort of thing happen in the
+original scenario?
+⇤
+
+
+--- Page 146 ---
+
+124
+Chapter 6: Temporal-Di↵erence Learning
+6.2
+Advantages of TD Prediction Methods
+TD methods update their estimates based in part on other estimates. They learn a
+guess from a guess—they bootstrap. Is this a good thing to do? What advantages do
+TD methods have over Monte Carlo and DP methods? Developing and answering such
+questions will take the rest of this book and more. In this section we brieﬂy anticipate
+some of the answers.
+Obviously, TD methods have an advantage over DP methods in that they do not
+require a model of the environment, of its reward and next-state probability distributions.
+The next most obvious advantage of TD methods over Monte Carlo methods is that
+they are naturally implemented in an online, fully incremental fashion. With Monte
+Carlo methods one must wait until the end of an episode, because only then is the return
+known, whereas with TD methods one need wait only one time step. Surprisingly often
+this turns out to be a critical consideration. Some applications have very long episodes, so
+that delaying all learning until the end of the episode is too slow. Other applications are
+continuing tasks and have no episodes at all. Finally, as we noted in the previous chapter,
+some Monte Carlo methods must ignore or discount episodes on which experimental
+actions are taken, which can greatly slow learning. TD methods are much less susceptible
+to these problems because they learn from each transition regardless of what subsequent
+actions are taken.
+But are TD methods sound? Certainly it is convenient to learn one guess from the
+next, without waiting for an actual outcome, but can we still guarantee convergence
+to the correct answer? Happily, the answer is yes. For any ﬁxed policy ⇡, TD(0) has
+been proved to converge to v⇡, in the mean for a constant step-size parameter if it is
+suﬃciently small, and with probability 1 if the step-size parameter decreases according to
+the usual stochastic approximation conditions (2.7). Most convergence proofs apply only
+to the table-based case of the algorithm presented above (6.2), but some also apply to
+the case of general linear function approximation. These results are discussed in a more
+general setting in Section 9.4.
+If both TD and Monte Carlo methods converge asymptotically to the correct predictions,
+then a natural next question is “Which gets there ﬁrst?” In other words, which method
+learns faster? Which makes the more eﬃcient use of limited data? At the current time
+this is an open question in the sense that no one has been able to prove mathematically
+that one method converges faster than the other. In fact, it is not even clear what is the
+most appropriate formal way to phrase this question! In practice, however, TD methods
+have usually been found to converge faster than constant-↵MC methods on stochastic
+tasks, as illustrated in Example 6.2.
+
+
+--- Page 147 ---
+
+6.2. Advantages of TD Prediction Methods
+125
+Example 6.2
+Random Walk
+In this example we empirically compare the prediction abilities of TD(0) and
+constant-↵MC when applied to the following Markov reward process:
+A
+B
+C
+D
+E
+1
+0
+0
+0
+0
+0
+start
+A Markov reward process, or MRP, is a Markov decision process without actions.
+We will often use MRPs when focusing on the prediction problem, in which there is
+no need to distinguish the dynamics due to the environment from those due to the
+agent. In this MRP, all episodes start in the center state, C, then proceed either left
+or right by one state on each step, with equal probability. Episodes terminate either
+on the extreme left or the extreme right. When an episode terminates on the right,
+a reward of +1 occurs; all other rewards are zero. For example, a typical episode
+might consist of the following state-and-reward sequence: C, 0, B, 0, C, 0, D, 0, E, 1.
+Because this task is undiscounted, the true value of each state is the probability of
+terminating on the right if starting from that state. Thus, the true value of the
+center state is v⇡(C) = 0.5. The true values of all the states, A through E, are
+1
+6, 2
+6, 3
+6, 4
+6, and 5
+6.
+0.8
+0
+0.2
+0.4
+0.6
+A
+B
+C
+D
+E
+0
+10
+1
+100
+State
+True 
+values
+Estimated
+value
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0
+25
+50
+75
+100
+Walks / Episodes
+TD
+MC
+_
+_
+_
+_
+_
+_
+_
+Empirical RMS error, 
+averaged over states
+The left graph above shows the values learned after various numbers of episodes on
+a single run of TD(0). The estimates after 100 episodes are about as close as they
+ever come to the true values—with a constant step-size parameter (↵= 0.1 in this
+example), the values ﬂuctuate indeﬁnitely in response to the outcomes of the most
+recent episodes. The right graph shows learning curves for the two methods for
+various values of ↵. The performance measure shown is the root mean square (RMS)
+error between the value function learned and the true value function, averaged over
+the ﬁve states, then averaged over 100 runs. In all cases the approximate value
+function was initialized to the intermediate value V (s) = 0.5, for all s. The TD
+method was consistently better than the MC method on this task.
+
+
+--- Page 148 ---
+
+126
+Chapter 6: Temporal-Di↵erence Learning
+Exercise 6.3 From the results shown in the left graph of the random walk example it
+appears that the ﬁrst episode results in a change in only V (A). What does this tell you
+about what happened on the ﬁrst episode? Why was only the estimate for this one state
+changed? By exactly how much was it changed?
+⇤
+Exercise 6.4 The speciﬁc results shown in the right graph of the random walk example
+are dependent on the value of the step-size parameter, ↵. Do you think the conclusions
+about which algorithm is better would be a↵ected if a wider range of ↵values were used?
+Is there a di↵erent, ﬁxed value of ↵at which either algorithm would have performed
+signiﬁcantly better than shown? Why or why not?
+⇤
+⇤Exercise 6.5 In the right graph of the random walk example, the RMS error of the
+TD method seems to go down and then up again, particularly at high ↵’s. What could
+have caused this? Do you think this always occurs, or might it be a function of how the
+approximate value function was initialized?
+⇤
+Exercise 6.6 In Example 6.2 we stated that the true values for the random walk example
+are 1
+6, 2
+6, 3
+6, 4
+6, and 5
+6, for states A through E. Describe at least two di↵erent ways that
+these could have been computed. Which would you guess we actually used? Why?
+⇤
+6.3
+Optimality of TD(0)
+Suppose there is available only a ﬁnite amount of experience, say 10 episodes or 100
+time steps. In this case, a common approach with incremental learning methods is to
+present the experience repeatedly until the method converges upon an answer. Given an
+approximate value function, V , the increments speciﬁed by (6.1) or (6.2) are computed
+for every time step t at which a nonterminal state is visited, but the value function is
+changed only once, by the sum of all the increments. Then all the available experience is
+processed again with the new value function to produce a new overall increment, and so
+on, until the value function converges. We call this batch updating because updates are
+made only after processing each complete batch of training data.
+Under batch updating, TD(0) converges deterministically to a single answer independent
+of the step-size parameter, ↵, as long as ↵is chosen to be suﬃciently small. The constant-
+↵MC method also converges deterministically under the same conditions, but to a
+di↵erent answer. Understanding these two answers will help us understand the di↵erence
+between the two methods. Under normal updating the methods do not move all the way
+to their respective batch answers, but in some sense they take steps in these directions.
+Before trying to understand the two answers in general, for all possible tasks, we ﬁrst
+look at a few examples.
+Example 6.3: Random walk under batch updating Batch-updating versions of
+TD(0) and constant-↵MC were applied as follows to the random walk prediction example
+(Example 6.2). After each new episode, all episodes seen so far were treated as a batch.
+They were repeatedly presented to the algorithm, either TD(0) or constant-↵MC, with
+↵suﬃciently small that the value function converged. The resulting value function was
+then compared with v⇡, and the average root mean square error across the ﬁve states
+(and across 100 independent repetitions of the whole experiment) was plotted to obtain
+
+
+--- Page 149 ---
+
+6.3. Optimality of TD(0)
+127
+the learning curves shown in Figure 6.2. Note that the batch TD method was consistently
+better than the batch Monte Carlo method.
+.0
+.05
+.1
+.15
+.2
+.25
+0
+25
+50
+75
+100
+TD
+MC
+BATCH TRAINING
+Walks / Episodes
+RMS error,
+averaged
+over states
+Figure 6.2: Performance of TD(0) and constant-↵
+MC under batch training on the random walk task.
+Under batch training, constant-↵
+MC converges to values, V (s), that
+are sample averages of the actual re-
+turns experienced after visiting each
+state s. These are optimal estimates
+in the sense that they minimize the
+mean square error from the actual
+returns in the training set. In this
+sense it is surprising that the batch
+TD method was able to perform
+better according to the root mean
+square error measure shown in the
+ﬁgure to the right. How is it that
+batch TD was able to perform better
+than this optimal method? The an-
+swer is that the Monte Carlo method
+is optimal only in a limited way, and
+that TD is optimal in a way that is more relevant to predicting returns.
+Example 6.4: You are the Predictor
+Place yourself now in the role of the predictor
+of returns for an unknown Markov reward process. Suppose you observe the following
+eight episodes:
+A, 0, B, 0
+B, 1
+B, 1
+B, 1
+B, 1
+B, 1
+B, 1
+B, 0
+This means that the ﬁrst episode started in state A, transitioned to B with a reward of
+0, and then terminated from B with a reward of 0. The other seven episodes were even
+shorter, starting from B and terminating immediately. Given this batch of data, what
+would you say are the optimal predictions, the best values for the estimates V (A) and
+V (B)? Everyone would probably agree that the optimal value for V (B) is 3
+4, because six
+out of the eight times in state B the process terminated immediately with a return of 1,
+and the other two times in B the process terminated immediately with a return of 0.
+But what is the optimal value for the estimate V (A) given this data? Here there are
+A
+B
+r = 1
+100%
+75%
+25%
+r = 0
+r = 0
+two reasonable answers. One is to observe that 100% of the
+times the process was in state A it traversed immediately to
+B (with a reward of 0); and because we have already decided
+that B has value 3
+4, therefore A must have value 3
+4 as well.
+One way of viewing this answer is that it is based on ﬁrst
+modeling the Markov process, in this case as shown to the
+right, and then computing the correct estimates given the
+model, which indeed in this case gives V (A) = 3
+4. This is
+also the answer that batch TD(0) gives.
+
+
+--- Page 150 ---
+
+128
+Chapter 6: Temporal-Di↵erence Learning
+The other reasonable answer is simply to observe that we have seen A once and the
+return that followed it was 0; we therefore estimate V (A) as 0. This is the answer that
+batch Monte Carlo methods give. Notice that it is also the answer that gives minimum
+squared error on the training data. In fact, it gives zero error on the data. But still we
+expect the ﬁrst answer to be better. If the process is Markov, we expect that the ﬁrst
+answer will produce lower error on future data, even though the Monte Carlo answer is
+better on the existing data.
+Example 6.4 illustrates a general di↵erence between the estimates found by batch
+TD(0) and batch Monte Carlo methods. Batch Monte Carlo methods always ﬁnd the
+estimates that minimize mean square error on the training set, whereas batch TD(0)
+always ﬁnds the estimates that would be exactly correct for the maximum-likelihood
+model of the Markov process. In general, the maximum-likelihood estimate of a parameter
+is the parameter value whose probability of generating the data is greatest. In this case,
+the maximum-likelihood estimate is the model of the Markov process formed in the
+obvious way from the observed episodes: the estimated transition probability from i to j
+is the fraction of observed transitions from i that went to j, and the associated expected
+reward is the average of the rewards observed on those transitions. Given this model,
+we can compute the estimate of the value function that would be exactly correct if the
+model were exactly correct. This is called the certainty-equivalence estimate because it
+is equivalent to assuming that the estimate of the underlying process was known with
+certainty rather than being approximated. In general, batch TD(0) converges to the
+certainty-equivalence estimate.
+This helps explain why TD methods converge more quickly than Monte Carlo methods.
+In batch form, TD(0) is faster than Monte Carlo methods because it computes the
+true certainty-equivalence estimate. This explains the advantage of TD(0) shown in the
+batch results on the random walk task (Figure 6.2). The relationship to the certainty-
+equivalence estimate may also explain in part the speed advantage of nonbatch TD(0)
+(e.g., Example 6.2, page 125, right graph). Although the nonbatch methods do not achieve
+either the certainty-equivalence or the minimum squared error estimates, they can be
+understood as moving roughly in these directions. Nonbatch TD(0) may be faster than
+constant-↵MC because it is moving toward a better estimate, even though it is not
+getting all the way there. At the current time nothing more deﬁnite can be said about
+the relative eﬃciency of online TD and Monte Carlo methods.
+Finally, it is worth noting that although the certainty-equivalence estimate is in some
+sense an optimal solution, it is almost never feasible to compute it directly. If n = |S| is
+the number of states, then just forming the maximum-likelihood estimate of the process
+may require on the order of n2 memory, and computing the corresponding value function
+requires on the order of n3 computational steps if done conventionally. In these terms it
+is indeed striking that TD methods can approximate the same solution using memory
+no more than order n and repeated computations over the training set. On tasks with
+large state spaces, TD methods may be the only feasible way of approximating the
+certainty-equivalence solution.
+⇤Exercise 6.7 Design an o↵-policy version of the TD(0) update that can be used with
+arbitrary target policy ⇡and covering behavior policy b, using at each step t the importance
+sampling ratio ⇢t:t (5.3).
+⇤
+
+
+--- Page 151 ---
+
+6.4. Sarsa: On-policy TD Control
+129
+6.4
+Sarsa: On-policy TD Control
+We turn now to the use of TD prediction methods for the control problem. As usual, we
+follow the pattern of generalized policy iteration (GPI), only this time using TD methods
+for the evaluation or prediction part. As with Monte Carlo methods, we face the need to
+trade o↵exploration and exploitation, and again approaches fall into two main classes:
+on-policy and o↵-policy. In this section we present an on-policy TD control method.
+The ﬁrst step is to learn an action-value function rather than a state-value function.
+In particular, for an on-policy method we must estimate q⇡(s, a) for the current behavior
+policy ⇡and for all states s and actions a. This can be done using essentially the same TD
+method described above for learning v⇡. Recall that an episode consists of an alternating
+sequence of states and state–action pairs:
+At
+Rt+1
+St
+At+1
+Rt+2
+St+1
+At+2
+Rt+3
+St+2
+At+3
+St+3
+. . .
+. . .
+In the previous section we considered transitions from state to state and learned the
+values of states. Now we consider transitions from state–action pair to state–action pair,
+and learn the values of state–action pairs. Formally these cases are identical: they are
+both Markov chains with a reward process. The theorems assuring the convergence of
+state values under TD(0) also apply to the corresponding algorithm for action values:
+Q(St, At)  Q(St, At) + ↵
+h
+Rt+1 + γQ(St+1, At+1) −Q(St, At)
+i
+.
+(6.7)
+Sarsa
+This update is done after every transition from a nonterminal state St. If
+St+1 is terminal, then Q(St+1, At+1) is deﬁned as zero. This rule uses every
+element of the quintuple of events, (St, At, Rt+1, St+1, At+1), that make up a
+transition from one state–action pair to the next. This quintuple gives rise to
+the name Sarsa for the algorithm. The backup diagram for Sarsa is as shown
+to the right.
+It is straightforward to design an on-policy control algorithm based on the Sarsa
+prediction method. As in all on-policy methods, we continually estimate q⇡for the
+behavior policy ⇡, and at the same time change ⇡toward greediness with respect to q⇡.
+The general form of the Sarsa control algorithm is given in the box on the next page.
+The convergence properties of the Sarsa algorithm depend on the nature of the policy’s
+dependence on Q. For example, one could use "-greedy or "-soft policies. Sarsa converges
+with probability 1 to an optimal policy and action-value function, under the usual
+conditions on the step sizes (2.7), as long as all state–action pairs are visited an inﬁnite
+number of times and the policy converges in the limit to the greedy policy (which can be
+arranged, for example, with "-greedy policies by setting " = 1/t).
+Exercise 6.8 Show that an action-value version of (6.6) holds for the action-value form
+of the TD error δt = Rt+1 + γQ(St+1, At+1) −Q(St, At), again assuming that the values
+don’t change from step to step.
+⇤
+
+
+--- Page 152 ---
+
+130
+Chapter 6: Temporal-Di↵erence Learning
+Sarsa (on-policy TD control) for estimating Q ⇡q⇤
+Algorithm parameters: step size ↵2 (0, 1], small " > 0
+Initialize Q(s, a), for all s 2 S+, a 2 A(s), arbitrarily except that Q(terminal, ·) = 0
+Loop for each episode:
+Initialize S
+Choose A from S using policy derived from Q (e.g., "-greedy)
+Loop for each step of episode:
+Take action A, observe R, S0
+Choose A0 from S0 using policy derived from Q (e.g., "-greedy)
+Q(S, A)  Q(S, A) + ↵
+⇥
+R + γQ(S0, A0) −Q(S, A)
+⇤
+S  S0; A  A0;
+until S is terminal
+Example 6.5: Windy Gridworld Shown inset below is a standard gridworld, with
+start and goal states, but with one di↵erence: there is a crosswind running upward
+through the middle of the grid. The actions are the standard four—up, down, right,
+and left—but in the middle region the resultant next states are shifted upward by a
+“wind,” the strength of which varies from column to column. The strength of the wind
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+0
+50
+100
+150
+170
+Time steps
+S
+G
+0
+0
+0
+0
+1
+1
+1
+1
+2
+2
+Actions
+Episodes
+is given below each column, in num-
+ber of cells shifted upward. For ex-
+ample, if you are one cell to the
+right of the goal, then the action
+left takes you to the cell just above
+the goal. This is an undiscounted
+episodic task, with constant rewards
+of −1 until the goal state is reached.
+The graph to the right shows the
+results of applying "-greedy Sarsa to
+this task, with " = 0.1, ↵= 0.5,
+and the initial values Q(s, a) = 0
+for all s, a. The increasing slope of
+the graph shows that the goal was
+reached more quickly over time. By
+8000 time steps, the greedy policy was long since optimal (a trajectory from it is shown
+inset); continued "-greedy exploration kept the average episode length at about 17 steps,
+two more than the minimum of 15. Note that Monte Carlo methods cannot easily be
+used here because termination is not guaranteed for all policies. If a policy was ever
+found that caused the agent to stay in the same state, then the next episode would
+never end. Online learning methods such as Sarsa do not have this problem because they
+quickly learn during the episode that such policies are poor, and switch to something
+else.
+
+
+--- Page 153 ---
+
+6.5. Q-learning: O↵-policy TD Control
+131
+Exercise 6.9: Windy Gridworld with King’s Moves (programming)
+Re-solve the windy
+gridworld assuming eight possible actions, including the diagonal moves, rather than four.
+How much better can you do with the extra actions? Can you do even better by including
+a ninth action that causes no movement at all other than that caused by the wind?
+⇤
+Exercise 6.10: Stochastic Wind (programming) Re-solve the windy gridworld task with
+King’s moves, assuming that the e↵ect of the wind, if there is any, is stochastic, sometimes
+varying by 1 from the mean values given for each column. That is, a third of the time
+you move exactly according to these values, as in the previous exercise, but also a third
+of the time you move one cell above that, and another third of the time you move one
+cell below that. For example, if you are one cell to the right of the goal and you move
+left, then one-third of the time you move one cell above the goal, one-third of the time
+you move two cells above the goal, and one-third of the time you move to the goal.
+⇤
+6.5
+Q-learning: O↵-policy TD Control
+One of the early breakthroughs in reinforcement learning was the development of an
+o↵-policy TD control algorithm known as Q-learning (Watkins, 1989), deﬁned by
+Q(St, At)  Q(St, At) + ↵
+h
+Rt+1 + γ max
+a
+Q(St+1, a) −Q(St, At)
+i
+.
+(6.8)
+In this case, the learned action-value function, Q, directly approximates q⇤, the optimal
+action-value function, independent of the policy being followed.
+This dramatically
+simpliﬁes the analysis of the algorithm and enabled early convergence proofs. The policy
+still has an e↵ect in that it determines which state–action pairs are visited and updated.
+However, all that is required for correct convergence is that all pairs continue to be
+updated. As we observed in Chapter 5, this is a minimal requirement in the sense that
+any method guaranteed to ﬁnd optimal behavior in the general case must require it.
+Under this assumption and a variant of the usual stochastic approximation conditions on
+the sequence of step-size parameters, Q has been shown to converge with probability 1 to
+q⇤. The Q-learning algorithm is shown below in procedural form.
+Q-learning (o↵-policy TD control) for estimating ⇡⇡⇡⇤
+Algorithm parameters: step size ↵2 (0, 1], small " > 0
+Initialize Q(s, a), for all s 2 S+, a 2 A(s), arbitrarily except that Q(terminal, ·) = 0
+Loop for each episode:
+Initialize S
+Loop for each step of episode:
+Choose A from S using policy derived from Q (e.g., "-greedy)
+Take action A, observe R, S0
+Q(S, A)  Q(S, A) + ↵
+⇥
+R + γ maxa Q(S0, a) −Q(S, A)
+⇤
+S  S0
+until S is terminal
+
+
+--- Page 154 ---
+
+132
+Chapter 6: Temporal-Di↵erence Learning
+What is the backup diagram for Q-learning? The rule (6.8) updates a state–action
+pair, so the top node, the root of the update, must be a small, ﬁlled action node. The
+update is also from action nodes, maximizing over all those actions possible in the next
+state. Thus the bottom nodes of the backup diagram should be all these action nodes.
+Finally, remember that we indicate taking the maximum of these “next action” nodes
+with an arc across them (Figure 3.4-right). Can you guess now what the diagram is? If
+so, please do make a guess before turning to the answer in Figure 6.4 on page 134.
+Example 6.6: Cli↵Walking
+This gridworld example compares Sarsa and Q-learning,
+highlighting the di↵erence between on-policy (Sarsa) and o↵-policy (Q-learning) methods.
+S
+G
+  
+T h e  C l i f f
+ 
+R
+R = -1
+Safer path
+Optimal path
+R = -100
+Sarsa
+Q-learning
+Sum of 
+rewards
+during
+episode
+Episodes
+-25
+-50
+-75
+-100
+0
+100
+200
+300
+400
+500
+Consider the gridworld shown to the
+right.
+This is a standard undis-
+counted, episodic task, with start
+and goal states, and the usual ac-
+tions causing movement up, down,
+right, and left. Reward is −1 on all
+transitions except those into the re-
+gion marked “The Cli↵.” Stepping
+into this region incurs a reward of
+−100 and sends the agent instantly
+back to the start.
+The graph to the right shows the
+performance of the Sarsa and Q-
+learning methods with "-greedy ac-
+tion selection, " = 0.1.
+After an
+initial transient, Q-learning learns
+values for the optimal policy, that
+which travels right along the edge
+of the cli↵. Unfortunately, this re-
+sults in its occasionally falling o↵
+the cli↵because of the "-greedy ac-
+tion selection. Sarsa, on the other
+hand, takes the action selection into
+account and learns the longer but
+safer path through the upper part
+of the grid. Although Q-learning ac-
+tually learns the values of the opti-
+mal policy, its online performance
+is worse than that of Sarsa, which
+learns the roundabout policy. Of course, if " were gradually reduced, then both methods
+would asymptotically converge to the optimal policy.
+Exercise 6.11 Why is Q-learning considered an o↵-policy control method?
+⇤
+Exercise 6.12 Suppose action selection is greedy. Is Q-learning then exactly the same
+algorithm as Sarsa? Will they make exactly the same action selections and weight
+updates?
+⇤
+
+
+--- Page 155 ---
+
+6.6. Expected Sarsa
+133
+6.6
+Expected Sarsa
+Consider the learning algorithm that is just like Q-learning except that instead of the
+maximum over next state–action pairs it uses the expected value, taking into account
+how likely each action is under the current policy. That is, consider the algorithm with
+the update rule
+Q(St, At)  Q(St, At) + ↵
+h
+Rt+1 + γE⇡[Q(St+1, At+1) | St+1] −Q(St, At)
+i
+= Q(St, At) + ↵
+h
+Rt+1 + γ
+X
+a
+⇡(a|St+1)Q(St+1, a) −Q(St, At)
+i
+,
+(6.9)
+but that otherwise follows the schema of Q-learning. Given the next state, St+1, this
+algorithm moves deterministically in the same direction as Sarsa moves in expectation,
+and accordingly it is called Expected Sarsa. Its backup diagram is shown on the right in
+Figure 6.4.
+Expected Sarsa is more complex computationally than Sarsa but, in return, it eliminates
+the variance due to the random selection of At+1. Given the same amount of experience
+we might expect it to perform slightly better than Sarsa, and indeed it generally does.
+Figure 6.3 shows summary results on the cli↵-walking task with Expected Sarsa compared
+to Sarsa and Q-learning. Expected Sarsa retains the signiﬁcant advantage of Sarsa over
+Q-learning on this problem. In addition, Expected Sarsa shows a signiﬁcant improvement
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+−160
+−140
+−120
+−100
+−80
+−60
+−40
+−20
+0
+ 
+ 
+n = 100, Sarsa
+n = 100, Q−learning
+n = 100, Expected Sarsa
+n = 1E5, Sarsa
+n = 1E5, Q−learning
+n = 1E5, Expected Sarsa
+Expected Sarsa
+Sarsa
+Q-learning
+Asymptotic Performance
+Interim Performance
+Q-learning
+Sum of rewards
+per episode
+↵
+1
+0.1
+0.2
+0.4
+0.6
+0.8
+0.3
+0.5
+0.7
+0.9
+0
+-40
+-80
+-120
+Figure 6.3: Interim and asymptotic performance of TD control methods on the cli↵-walking
+task as a function of ↵. All algorithms used an "-greedy policy with " = 0.1. Asymptotic
+performance is an average over 100,000 episodes whereas interim performance is an average
+over the ﬁrst 100 episodes. These data are averages of over 50,000 and 10 runs for the interim
+and asymptotic cases respectively. The solid circles mark the best interim performance of each
+method. Adapted from van Seijen et al. (2009).
+
+
+--- Page 156 ---
+
+134
+Chapter 6: Temporal-Di↵erence Learning
+Q-learning
+Expected Sarsa
+Figure 6.4: The backup diagrams for Q-learning and Expected Sarsa.
+over Sarsa over a wide range of values for the step-size parameter ↵. In cli↵walking
+the state transitions are all deterministic and all randomness comes from the policy. In
+such cases, Expected Sarsa can safely set ↵= 1 without su↵ering any degradation of
+asymptotic performance, whereas Sarsa can only perform well in the long run at a small
+value of ↵, at which short-term performance is poor. In this and other examples there is
+a consistent empirical advantage of Expected Sarsa over Sarsa.
+In these cli↵walking results Expected Sarsa was used on-policy, but in general it
+might use a policy di↵erent from the target policy ⇡to generate behavior, in which case
+it becomes an o↵-policy algorithm. For example, suppose ⇡is the greedy policy while
+behavior is more exploratory; then Expected Sarsa is exactly Q-learning. In this sense
+Expected Sarsa subsumes and generalizes Q-learning while reliably improving over Sarsa.
+Except for the small additional computational cost, Expected Sarsa may completely
+dominate both of the other more-well-known TD control algorithms.
+6.7
+Maximization Bias and Double Learning
+All the control algorithms that we have discussed so far involve maximization in the
+construction of their target policies. For example, in Q-learning the target policy is
+the greedy policy given the current action values, which is deﬁned with a max, and in
+Sarsa the policy is often "-greedy, which also involves a maximization operation. In these
+algorithms, a maximum over estimated values is used implicitly as an estimate of the
+maximum value, which can lead to a signiﬁcant positive bias. To see why, consider a
+single state s where there are many actions a whose true values, q(s, a), are all zero but
+whose estimated values, Q(s, a), are uncertain and thus distributed some above and some
+below zero. The maximum of the true values is zero, but the maximum of the estimates
+is positive, a positive bias. We call this maximization bias.
+Example 6.7:
+Maximization Bias Example
+The small MDP shown inset in
+Figure 6.5 provides a simple example of how maximization bias can harm the performance
+of TD control algorithms. The MDP has two non-terminal states A and B. Episodes
+always start in A with a choice between two actions, left and right. The right action
+transitions immediately to the terminal state with a reward and return of zero. The
+left action transitions to B, also with a reward of zero, from which there are many
+possible actions all of which cause immediate termination with a reward drawn from a
+normal distribution with mean −0.1 and variance 1.0. Thus, the expected return for
+any trajectory starting with left is −0.1, and thus taking left in state A is always a
+
+
+--- Page 157 ---
+
+6.7. Maximization Bias and Double Learning
+135
+B
+A
+right
+left
+0
+. . .
+N(−0.1, 1)
+0
+Q-learning
+Double
+Q-learning
+Episodes
+100
+1
+200
+300
+% left
+actions
+from A
+100%
+75%
+50%
+25%
+5%
+0
+optimal
+Figure 6.5: Comparison of Q-learning and Double Q-learning on a simple episodic MDP (shown
+inset). Q-learning initially learns to take the left action much more often than the right action,
+and always takes it signiﬁcantly more often than the 5% minimum probability enforced by
+"-greedy action selection with " = 0.1. In contrast, Double Q-learning is essentially una↵ected by
+maximization bias. These data are averaged over 10,000 runs. The initial action-value estimates
+were zero. Any ties in "-greedy action selection were broken randomly.
+mistake. Nevertheless, our control methods may favor left because of maximization bias
+making B appear to have a positive value. Figure 6.5 shows that Q-learning with "-greedy
+action selection initially learns to strongly favor the left action on this example. Even at
+asymptote, Q-learning takes the left action about 5% more often than is optimal at our
+parameter settings (" = 0.1, ↵= 0.1, and γ = 1).
+Are there algorithms that avoid maximization bias? To start, consider a bandit case in
+which we have noisy estimates of the value of each of many actions, obtained as sample
+averages of the rewards received on all the plays with each action. As we discussed above,
+there will be a positive maximization bias if we use the maximum of the estimates as
+an estimate of the maximum of the true values. One way to view the problem is that
+it is due to using the same samples (plays) both to determine the maximizing action
+and to estimate its value. Suppose we divided the plays in two sets and used them to
+learn two independent estimates, call them Q1(a) and Q2(a), each an estimate of the
+true value q(a), for all a 2 A. We could then use one estimate, say Q1, to determine
+the maximizing action A⇤= argmaxa Q1(a), and the other, Q2, to provide the estimate
+of its value, Q2(A⇤) = Q2(argmaxa Q1(a)). This estimate will then be unbiased in the
+sense that E[Q2(A⇤)] = q(A⇤). We can also repeat the process with the role of the two
+estimates reversed to yield a second unbiased estimate Q1(argmaxa Q2(a)). This is the
+idea of double learning. Note that although we learn two estimates, only one estimate is
+updated on each play; double learning doubles the memory requirements, but does not
+increase the amount of computation per step.
+The idea of double learning extends naturally to algorithms for full MDPs. For example,
+the double learning algorithm analogous to Q-learning, called Double Q-learning, divides
+the time steps in two, perhaps by ﬂipping a coin on each step. If the coin comes up heads,
+the update is
+
+
+--- Page 158 ---
+
+136
+Chapter 6: Temporal-Di↵erence Learning
+Q1(St, At)  Q1(St, At)+↵
+h
+Rt+1+γQ2
+#
+St+1, argmax
+a
+Q1(St+1, a)
+$
+−Q1(St, At)
+i
+. (6.10)
+If the coin comes up tails, then the same update is done with Q1 and Q2 switched,
+so that Q2 is updated. The two approximate value functions are treated completely
+symmetrically. The behavior policy can use both action-value estimates. For example, an
+"-greedy policy for Double Q-learning could be based on the average (or sum) of the two
+action-value estimates. A complete algorithm for Double Q-learning is given in the box
+below. This is the algorithm used to produce the results in Figure 6.5. In that example,
+double learning seems to eliminate the harm caused by maximization bias. Of course
+there are also double versions of Sarsa and Expected Sarsa.
+Double Q-learning, for estimating Q1 ⇡Q2 ⇡q⇤
+Algorithm parameters: step size ↵2 (0, 1], small " > 0
+Initialize Q1(s, a) and Q2(s, a), for all s 2 S+, a 2 A(s), such that Q(terminal, ·) = 0
+Loop for each episode:
+Initialize S
+Loop for each step of episode:
+Choose A from S using the policy "-greedy in Q1 + Q2
+Take action A, observe R, S0
+With 0.5 probabilility:
+Q1(S, A)  Q1(S, A) + ↵
+⇣
+R + γQ2
+#
+S0, argmaxa Q1(S0, a)
+$
+−Q1(S, A)
+⌘
+else:
+Q2(S, A)  Q2(S, A) + ↵
+⇣
+R + γQ1
+#
+S0, argmaxa Q2(S0, a)
+$
+−Q2(S, A)
+⌘
+S  S0
+until S is terminal
+⇤Exercise 6.13
+What are the update equations for Double Expected Sarsa with an
+"-greedy target policy?
+⇤
+6.8
+Games, Afterstates, and Other Special Cases
+In this book we try to present a uniform approach to a wide class of tasks, but of
+course there are always exceptional tasks that are better treated in a specialized way. For
+example, our general approach involves learning an action-value function, but in Chapter 1
+we presented a TD method for learning to play tic-tac-toe that learned something much
+more like a state-value function. If we look closely at that example, it becomes apparent
+that the function learned there is neither an action-value function nor a state-value
+function in the usual sense. A conventional state-value function evaluates states in which
+the agent has the option of selecting an action, but the state-value function used in
+
+
+--- Page 159 ---
+
+6.8. Games, Afterstates, and Other Special Cases
+137
+tic-tac-toe evaluates board positions after the agent has made its move. Let us call these
+afterstates, and value functions over these, afterstate value functions. Afterstates are
+useful when we have knowledge of an initial part of the environment’s dynamics but not
+necessarily of the full dynamics. For example, in games we typically know the immediate
+e↵ects of our moves. We know for each possible chess move what the resulting position
+will be, but not how our opponent will reply. Afterstate value functions are a natural
+way to take advantage of this kind of knowledge and thereby produce a more eﬃcient
+learning method.
+The reason it is more eﬃcient to design algorithms in terms of afterstates is ap-
+parent from the tic-tac-toe example. A conventional action-value function would map
+from positions and moves to an estimate of the value.
+But many position—move
+pairs produce the same resulting position, as in the example below: In such cases the
+X
+O X
+X
+O
++
+X
+O
++
+X
+X
+position–move pairs are di↵er-
+ent but produce the same “af-
+terposition,” and thus must have
+the same value. A conventional
+action-value function would have
+to separately assess both pairs,
+whereas an afterstate value func-
+tion would immediately assess
+both equally. Any learning about
+the position–move pair on the left
+would immediately transfer to the
+pair on the right.
+Afterstates arise in many tasks,
+not just games. For example, in
+queuing tasks there are actions
+such as assigning customers to servers, rejecting customers, or discarding information. In
+such cases the actions are in fact deﬁned in terms of their immediate e↵ects, which are
+completely known.
+It is impossible to describe all the possible kinds of specialized problems and corre-
+sponding specialized learning algorithms. However, the principles developed in this book
+should apply widely. For example, afterstate methods are still aptly described in terms
+of generalized policy iteration, with a policy and (afterstate) value function interacting in
+essentially the same way. In many cases one will still face the choice between on-policy
+and o↵-policy methods for managing the need for persistent exploration.
+Exercise 6.14
+Describe how the task of Jack’s Car Rental (Example 4.2) could be
+reformulated in terms of afterstates. Why, in terms of this speciﬁc task, would such a
+reformulation be likely to speed convergence?
+⇤
+
+
+--- Page 160 ---
+
+138
+Chapter 6: Temporal-Di↵erence Learning
+6.9
+Summary
+In this chapter we introduced a new kind of learning method, temporal-di↵erence (TD)
+learning, and showed how it can be applied to the reinforcement learning problem. As
+usual, we divided the overall problem into a prediction problem and a control problem.
+TD methods are alternatives to Monte Carlo methods for solving the prediction problem.
+In both cases, the extension to the control problem is via the idea of generalized policy
+iteration (GPI) that we abstracted from dynamic programming. This is the idea that
+approximate policy and value functions should interact in such a way that they both
+move toward their optimal values.
+One of the two processes making up GPI drives the value function to accurately predict
+returns for the current policy; this is the prediction problem. The other process drives
+the policy to improve locally (e.g., to be "-greedy) with respect to the current value
+function. When the ﬁrst process is based on experience, a complication arises concerning
+maintaining suﬃcient exploration. We can classify TD control methods according to
+whether they deal with this complication by using an on-policy or o↵-policy approach.
+Sarsa is an on-policy method, and Q-learning is an o↵-policy method. Expected Sarsa
+is also an o↵-policy method as we present it here. There is a third way in which TD
+methods can be extended to control which we did not include in this chapter, called
+actor–critic methods. These methods are covered in full in Chapter 13.
+The methods presented in this chapter are today the most widely used reinforcement
+learning methods. This is probably due to their great simplicity: they can be applied
+online, with a minimal amount of computation, to experience generated from interaction
+with an environment; they can be expressed nearly completely by single equations that
+can be implemented with small computer programs. In the next few chapters we extend
+these algorithms, making them slightly more complicated and signiﬁcantly more powerful.
+All the new algorithms will retain the essence of those introduced here: they will be able
+to process experience online, with relatively little computation, and they will be driven
+by TD errors. The special cases of TD methods introduced in the present chapter should
+rightly be called one-step, tabular, model-free TD methods. In the next two chapters we
+extend them to n-step forms (a link to Monte Carlo methods) and forms that include
+a model of the environment (a link to planning and dynamic programming). Then, in
+the second part of the book we extend them to various forms of function approximation
+rather than tables (a link to deep learning and artiﬁcial neural networks).
+Finally, in this chapter we have discussed TD methods entirely within the context of
+reinforcement learning problems, but TD methods are actually more general than this.
+They are general methods for learning to make long-term predictions about dynamical
+systems. For example, TD methods may be relevant to predicting ﬁnancial data, life
+spans, election outcomes, weather patterns, animal behavior, demands on power stations,
+or customer purchases. It was only when TD methods were analyzed as pure prediction
+methods, independent of their use in reinforcement learning, that their theoretical
+properties ﬁrst came to be well understood. Even so, these other potential applications
+of TD learning methods have not yet been extensively explored.
+
+
+--- Page 161 ---
+
+6.9. Summary
+139
+Bibliographical and Historical Remarks
+As we outlined in Chapter 1, the idea of TD learning has its early roots in animal learning
+psychology and artiﬁcial intelligence, most notably the work of Samuel (1959) and Klopf
+(1972). Samuel’s work is described as a case study in Section 16.2. Also related to TD
+learning are Holland’s (1975, 1976) early ideas about consistency among value predictions.
+These inﬂuenced one of the authors (Barto), who was a graduate student from 1970 to
+1975 at the University of Michigan, where Holland was teaching. Holland’s ideas led to
+a number of TD-related systems, including the work of Booker (1982) and the bucket
+brigade of Holland (1986), which is related to Sarsa as discussed below.
+6.1–2
+Most of the speciﬁc material from these sections is from Sutton (1988), includ-
+ing the TD(0) algorithm, the random walk example, and the term “temporal-
+di↵erence learning.” The characterization of the relationship to dynamic pro-
+gramming and Monte Carlo methods was inﬂuenced by Watkins (1989), Werbos
+(1987), and others. The use of backup diagrams was new to the ﬁrst edition of
+this book.
+Tabular TD(0) was proved to converge in the mean by Sutton (1988) and with
+probability 1 by Dayan (1992), based on the work of Watkins and Dayan (1992).
+These results were extended and strengthened by Jaakkola, Jordan, and Singh
+(1994) and Tsitsiklis (1994) by using extensions of the powerful existing theory
+of stochastic approximation. Other extensions and generalizations are covered in
+later chapters.
+6.3
+The optimality of the TD algorithm under batch training was established by
+Sutton (1988). Illuminating this result is Barnard’s (1993) derivation of the TD
+algorithm as a combination of one step of an incremental method for learning a
+model of the Markov chain and one step of a method for computing predictions
+from the model. The term certainty equivalence is from the adaptive control
+literature (e.g., Goodwin and Sin, 1984).
+6.4
+The Sarsa algorithm was introduced by Rummery and Niranjan (1994). They
+explored it in conjunction with artiﬁcial neural networks and called it “Modiﬁed
+Connectionist Q-learning”. The name “Sarsa” was introduced by Sutton (1996).
+The convergence of one-step tabular Sarsa (the form treated in this chapter) has
+been proved by Singh, Jaakkola, Littman, and Szepesv´ari (2000). The “windy
+gridworld” example was suggested by Tom Kalt.
+Holland’s (1986) bucket brigade idea evolved into an algorithm closely related to
+Sarsa. The original idea of the bucket brigade involved chains of rules triggering
+each other; it focused on passing credit back from the current rule to the rules
+that triggered it. Over time, the bucket brigade came to be more like TD learning
+in passing credit back to any temporally preceding rule, not just to the ones
+that triggered the current rule. The modern form of the bucket brigade, when
+simpliﬁed in various natural ways, is nearly identical to one-step Sarsa, as detailed
+by Wilson (1994).
+
+
+--- Page 162 ---
+
+140
+Chapter 6: Temporal-Di↵erence Learning
+6.5
+Q-learning was introduced by Watkins (1989), whose outline of a convergence
+proof was made rigorous by Watkins and Dayan (1992). More general convergence
+results were proved by Jaakkola, Jordan, and Singh (1994) and Tsitsiklis (1994).
+6.6
+The Expected Sarsa algorithm was introduced by George John (1994), who
+called it “Q-learning” and stressed its advantages over Q-learning as an o↵-policy
+algorithm.
+John’s work was not known to us when we presented Expected
+Sarsa in the ﬁrst edition of this book as an exercise, or to van Seijen, van
+Hasselt, Whiteson, and Weiring (2009) when they established Expected Sarsa’s
+convergence properties and conditions under which it will outperform regular
+Sarsa and Q-learning. Our Figure 6.3 is adapted from their results. Van Seijen
+et al. deﬁned “Expected Sarsa” to be an on-policy method exclusively (as we
+did in the ﬁrst edition), whereas now we use this name for the general algorithm
+in which the target and behavior policies may di↵er. The general o↵-policy
+view of Expected Sarsa was noted by van Hasselt (2011), who called it “General
+Q-learning.”
+6.7
+Maximization bias and double learning were introduced and extensively investi-
+gated by van Hasselt (2010, 2011). The example MDP in Figure 6.5 was adapted
+from that in his Figure 4.1 (van Hasselt, 2011).
+6.8
+The notion of an afterstate is the same as that of a “post-decision state” (Van
+Roy, Bertsekas, Lee, and Tsitsiklis, 1997; Powell, 2011).
+

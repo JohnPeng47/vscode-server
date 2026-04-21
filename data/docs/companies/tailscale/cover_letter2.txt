@@ -1,0 +1,20 @@
+Dear Hiring Team,
+I want to apply for a sales role at Tailscale. I don't have formal sales experience, but I spent three years as a penetration tester, and that background is why I'm writing.
+
+On red team engagements, one of the most prized findings was an .ovpn client file. With it, we could laterally pivot into new network segments and open up new targets for further attack. Exposed VPN credentials feature prominently in major breaches — the UnitedHealth incident, the biggest US healthcare breach in history, being the most visible example. I've lived on the attacker's side of that problem for three years.
+
+When a friend dragged me to a Tailscale demo with the promise of free beers (the beers were a lie), I read up on the Tailscale/WireGuard design and realized that the security model of the traditional VPN solution was flawed in two ways that Tailscale's architecture inherently mitigates:
+
+1. Network vs. Device Based Access
+> Trad VPN: Network is set-up as a hub-and-spoke where a central OpenVPN server (concentrator?) acts as a TLS relay that grants you subnet level access, exposing every target on the subnet to potential exploitation
+> Tailscale: Wireguard initiates a p2p transport tunnel so authentication is enforced by default at the device level, mitigating these network level attacks
+2. Identity as VPN Server vs. Identity per Device
+> Trad VPN: Another consequence of the hub-and-spoke is that for packet-level observability, the source of all VPN'd packets originate from the hub (VPN server)
+> Tailscale: In Tailscale, every packet is encrypted with a device level private key, encoding identity at the packet level.
+
+I know Tailscale's current enterprise pitch leads with operational savings and the Forrester TEI numbers rather than the security story, and that's probably the right call. But when security questions do come up in a cycle, I think I can add value there — I've spent three years on the other side of those conversations and know how security teams actually evaluate this class of tool.
+
+I'll be direct about where I'm light: three years of trying to sell my own security products taught me how security buyers actually evaluate tools, and why "technically better" rarely closes on its own.
+
+Cheers,
+John Peng

@@ -1,0 +1,17 @@
+Lab: Broken brute-force protection, multiple credentials per request
+Status: SOLVED
+
+Vulnerability: The POST /login endpoint accepts JSON-formatted credentials and does not
+validate that the "password" field is a string. When an array of passwords is provided,
+the server iterates over each element and authenticates if any match. This bypasses
+per-request brute-force protection since all candidate passwords are tested in a single
+HTTP request.
+
+Exploit:
+1. Sent POST /login with body: {"username": "carlos", "password": [<100 candidate passwords>]}
+2. Server returned 302 redirect to /my-account?id=carlos
+3. Followed redirect with session cookie to access Carlos's account page
+4. Lab marked as solved
+
+Key finding: No rate limiting or lockout is triggered because only one request is made.
+The server-side flaw is accepting and iterating over an array type for the password field.

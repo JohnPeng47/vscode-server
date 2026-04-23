@@ -1,0 +1,24 @@
+Lab: Reflected XSS with event handlers and href attributes blocked (EXPERT)
+Status: SOLVED
+
+## Approach
+
+1. Explored the target homepage - found a search form reflecting input at /?search=
+2. Systematically probed HTML tags to find whitelisted ones:
+   - Allowed: a, svg, animate, image, title, text, circle, rect, line
+   - Blocked: img, body, iframe, script, div, span, and most others
+3. Confirmed all event handlers (onclick, onmouseover, onfocus, etc.) are blocked
+4. Confirmed static href attributes are blocked
+
+## Exploit
+
+The key insight is that while static `href` attributes are blocked by the WAF, the SVG `<animate>` element can dynamically set attribute values via animation. By targeting `attributeName=href` with `values=javascript:alert(1)`, we can set the href of an `<a>` element to a javascript: URI without using a static href attribute.
+
+Final payload:
+```
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a></svg>
+```
+
+Delivered via: GET /?search=<url-encoded payload>
+
+When the simulated user clicks the "Click me" text, the animated href triggers `alert(1)`, solving the lab.

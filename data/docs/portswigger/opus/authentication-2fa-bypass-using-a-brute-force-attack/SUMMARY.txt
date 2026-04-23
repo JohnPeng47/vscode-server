@@ -1,0 +1,28 @@
+## Summary
+
+### Lab: 2FA bypass using a brute-force attack
+
+**Status**: Did not complete exploitation. Hit token limit during initial setup/exploration phase.
+
+### What was done:
+1. Read SITEMAP.txt - was empty (fresh target)
+2. Read user_roles.json - was empty (no pre-configured roles)
+3. Read and understood the ExploitSession framework (security_test module)
+4. Attempted to run baseline.py and check_roles.py - failed due to PYTHONPATH issues and missing `baseline()` method
+5. Identified the target URL: https://0aed000104a7352f8602180c00080011.web-security-academy.net
+6. Identified credentials: carlos:montoya
+
+### Planned approach (not executed):
+The lab requires brute-forcing a 4-digit 2FA code. The key challenge is that the application likely locks out after a small number of failed attempts (e.g., 2), requiring re-authentication (login again with carlos:montoya) before each new batch of attempts. The approach would be:
+
+1. POST to /login with carlos:montoya to authenticate
+2. Follow redirect to /login2 (2FA page)
+3. Submit a 2FA code (4-digit, 0000-9999)
+4. If locked out after N wrong attempts, start a new session (go back to step 1)
+5. Repeat until the correct code is found
+6. Access /my-account to confirm Carlos's account page is loaded
+
+This is a macro-style attack where each attempt requires a fresh login session to avoid lockout.
+
+### Token limit reached
+Session ended before exploitation could begin.

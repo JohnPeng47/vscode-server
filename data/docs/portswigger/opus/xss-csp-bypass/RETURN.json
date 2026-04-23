@@ -1,0 +1,17 @@
+{
+    "status": "SUCCESS",
+    "solved": true,
+    "steps": [
+        "Explored the target homepage and identified the search parameter reflects user input",
+        "Identified the Content-Security-Policy header with report-uri directive containing a controllable token parameter",
+        "Crafted CSP bypass by injecting ;script-src-elem 'unsafe-inline' into the token parameter",
+        "Combined the CSP bypass with a reflected <script>alert(1)</script> payload in the search parameter",
+        "Verified lab solved by confirming 'Congratulations' text on the homepage"
+    ],
+    "evidence": [
+        "CSP after injection: default-src 'self'; object-src 'none';script-src 'self'; style-src 'self'; report-uri /csp-report?token=;script-src-elem 'unsafe-inline'",
+        "Script tag reflected in response body: <script>alert(1)</script>",
+        "Homepage contains 'Congratulations' text confirming lab is solved"
+    ],
+    "comments": "The CSP bypass leverages Chrome's script-src-elem directive which takes precedence over script-src for inline script elements. By injecting this directive via the controllable token parameter in report-uri, the inline script execution restriction is bypassed."
+}

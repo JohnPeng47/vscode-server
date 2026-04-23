@@ -1,0 +1,23 @@
+{
+  "agent_type": "pentest",
+  "agent_id": "chunk_0",
+  "actions": [
+    {
+      "action": "full_session",
+      "model": "claude-code",
+      "input_tokens": 360,
+      "output_tokens": 5335,
+      "cache_read_tokens": 1038012,
+      "cache_write_tokens": 267146,
+      "cost_usd": 0.0,
+      "timestamp": ""
+    }
+  ],
+  "totals": {
+    "input_tokens": 360,
+    "output_tokens": 5335,
+    "cache_read_tokens": 1038012,
+    "cache_write_tokens": 267146,
+    "cost_usd": 0.0
+  }
+}

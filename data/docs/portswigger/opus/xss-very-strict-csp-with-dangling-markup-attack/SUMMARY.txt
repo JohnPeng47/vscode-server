@@ -1,0 +1,45 @@
+Lab: Reflected XSS protected by very strict CSP, with dangling markup attack
+Status: SOLVED
+
+## Vulnerability Summary
+The /my-account page reflects the `email` URL parameter inside an HTML input
+value attribute without encoding. Combined with a strict CSP that lacks a
+`form-action` directive, this allows form-based attacks.
+
+## CSP Analysis
+  default-src 'self'; object-src 'none'; style-src 'self';
+  script-src 'self'; img-src 'self'; base-uri 'none';
+
+Key gap: No `form-action` directive. form-action does NOT fall back to
+default-src, so form submissions are unrestricted.
+
+## Attack Details
+Instead of the traditional two-phase dangling markup approach (exfiltrate
+token, then use it), a single-phase attack was used:
+
+Injection payload: hacker@evil-user.net"><button>Click me</button>
+
+This payload:
+1. Sets the email input value to "hacker@evil-user.net"
+2. Closes the input tag
+3. Adds a "Click me" button inside the existing change-email form
+4. The form already contains the victim's valid CSRF token as a hidden input
+
+When the victim clicks "Click me", the existing form submits a POST to
+/my-account/change-email with email=hacker@evil-user.net and the victim's
+real CSRF token — changing the victim's email.
+
+## Exploit Delivery
+- Stored a 302 redirect on the exploit server pointing to:
+  TARGET/my-account?email=hacker%40evil-user.net%22%3E%3Cbutton%3EClick%20me%3C/button%3E
+- Delivered to victim via exploit server's DELIVER_TO_VICTIM action
+- Lab solved within 5 seconds of delivery
+
+## Key Debugging Issues
+1. Exploit server path handling: victim requests /exploit/ (with trailing slash)
+2. DELIVER_TO_VICTIM also stores content: must include correct headers/body
+   in the deliver call, otherwise it overwrites the stored redirect with
+   empty/default content
+3. Initial attempts with token exfiltration via textarea/form GET failed
+   due to Chrome's dangling markup protections blocking URLs containing <
+   characters

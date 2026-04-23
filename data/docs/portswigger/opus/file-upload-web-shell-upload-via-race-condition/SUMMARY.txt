@@ -1,0 +1,33 @@
+Lab: Web shell upload via race condition
+Status: SOLVED
+
+Target: https://0a9200bf049dd3cf816d7fd800fd003c.web-security-academy.net
+
+## Summary
+
+Successfully exploited a race condition in the file upload validation to upload and execute
+a PHP web shell, exfiltrating the contents of /home/carlos/secret.
+
+## Approach
+
+1. **Recon**: Logged in as wiener:peter, discovered avatar upload form at /my-account/avatar
+2. **Exploit Strategy**: The server saves uploaded files before validating them, creating a
+   TOCTOU (time-of-check-time-of-use) race condition window
+3. **Attack**: Uploaded a PHP shell (<?php echo file_get_contents("/home/carlos/secret"); ?>)
+   while simultaneously sending concurrent GET requests to /files/avatars/exploit.php
+4. **Result**: One of 5 reader threads successfully fetched and executed the PHP shell before
+   the server could validate and delete it
+
+## Key Findings
+
+- Upload endpoint: POST /my-account/avatar
+- File location: /files/avatars/<filename>
+- Race window: Between file save and validation/deletion
+- The upload returned 403 (file rejected) but the shell was already executed
+- Secret: 5J3LGXGximclOzA00NZCI87M1lVb95CP
+- Submission confirmed: {"correct":true}
+
+## Scripts Created
+
+- explore.py: Initial application reconnaissance and login
+- exploit_race.py: Race condition exploit with concurrent upload + fetch threads

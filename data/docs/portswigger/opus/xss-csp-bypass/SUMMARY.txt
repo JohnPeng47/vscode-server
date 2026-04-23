@@ -1,0 +1,27 @@
+XSS CSP Bypass Lab — Summary
+=============================
+
+Target: https://0aa00020031b1ad98066038a0072005a.web-security-academy.net
+Lab: Reflected XSS protected by CSP, with CSP bypass
+Status: SOLVED
+
+Findings
+--------
+1. The application reflects user input from the `search` query parameter into the HTML response.
+2. A Content-Security-Policy header is present:
+     default-src 'self'; object-src 'none';script-src 'self'; style-src 'self'; report-uri /csp-report?token=
+3. The `token` parameter in the `report-uri` directive is directly controllable via the URL query string `&token=`.
+4. By injecting `;script-src-elem 'unsafe-inline'` into the token parameter, a new CSP directive is appended that overrides `script-src` for inline script elements (Chrome-specific behavior).
+
+Exploit
+-------
+URL: /?search=<script>alert(1)</script>&token=;script-src-elem 'unsafe-inline'
+
+This causes the CSP to become:
+  default-src 'self'; object-src 'none';script-src 'self'; style-src 'self'; report-uri /csp-report?token=;script-src-elem 'unsafe-inline'
+
+The `script-src-elem 'unsafe-inline'` directive takes precedence over `script-src` for <script> elements in Chrome, allowing the reflected XSS payload to execute.
+
+Result: Lab confirmed solved (Congratulations page displayed).
+
+Note: TOKEN LIMIT was reached during session, so exploration was abbreviated. The exploit was identified and confirmed successfully.

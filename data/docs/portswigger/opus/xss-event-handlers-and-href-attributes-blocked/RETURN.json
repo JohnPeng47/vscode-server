@@ -1,0 +1,15 @@
+{
+    "solved": true,
+    "steps": [
+        "Explored the target application at the root URL, found a search form at /?search=",
+        "Probed HTML tags to identify which are whitelisted: svg, a, animate, text, image, title, circle, rect, line",
+        "Confirmed all event handlers (onclick, onmouseover, etc.) are blocked",
+        "Confirmed href attributes are blocked on static elements",
+        "Discovered that <animate attributeName=href values=javascript:alert(1)> bypasses the href block by dynamically setting href via SVG animation",
+        "Crafted payload: <svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a></svg>",
+        "Delivered payload via search parameter and clicked the SVG text element in browser",
+        "Alert triggered, lab solved"
+    ],
+    "evidence": "Browser confirmed 'is-solved' class in page HTML after clicking the SVG animate XSS vector. Subsequent HTTP GET to homepage confirmed 'is-solved' status.",
+    "comments": "The WAF blocks event handlers and href attributes on static HTML, but the SVG <animate> element can dynamically set the href attribute on an <a> element to a javascript: URI, bypassing the filter. When the user clicks the animated link, the javascript: URI executes alert(1)."
+}

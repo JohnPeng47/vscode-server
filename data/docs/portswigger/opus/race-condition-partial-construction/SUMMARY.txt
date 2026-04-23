@@ -1,0 +1,44 @@
+## Summary - Partial Construction Race Condition Lab
+
+### Target
+https://0afb007e04c50bd484b1a958004400e7.web-security-academy.net
+
+### Vulnerability Analysis
+This is a "Partial Construction Race Condition" in the user registration flow.
+
+**Discovered endpoints:**
+- POST /register - User registration (fields: csrf, username, email, password)
+- POST /confirm?token=<value> - Email confirmation endpoint
+- /admin - Admin panel (401 unauthorized)
+- /my-account - User account page (redirects to /login)
+- /resources/static/users.js - JS that builds registration form dynamically
+
+**Key JS insight (users.js - confirmEmail function):**
+The confirmation form POSTs to `/confirm?token=<value>` where token comes from URL params.
+
+**Race condition theory:**
+1. Server creates user record with NULL confirmation token
+2. Server generates random token and updates the record
+3. During the tiny window between steps 1-2, POST /confirm?token= (empty) can match NULL token in DB
+
+**Confirm endpoint behavior:**
+- POST /confirm?token= → 403 "Forbidden" (empty token doesn't match any real token)
+- POST /confirm (no token) → 400 "Missing parameter: token"
+
+### Exploitation Attempts
+1. **Threaded race (v1)** - Registration returned 400 because CSRF token was tied to session cookie not shared with spawned httpx clients
+2. **Threaded race (v2)** - Fixed session/cookie sharing. Attempted barrier-synchronized threading with register + confirm flood
+3. **Single-packet attack (planned)** - Raw TLS socket approach: send all-but-last-byte on multiple connections, then release final bytes simultaneously for precise timing
+
+### What Was Not Completed
+- The race exploit did not succeed within the token limit
+- The single-packet attack approach was coded but not fully executed
+- Did not achieve account confirmation, login, or deletion of carlos
+
+### Next Steps (if continued)
+- Use the single-packet attack (raw socket) approach for tighter timing
+- Try HTTP/2 single-packet attack for even better synchronization
+- Consider varying the number of confirm requests and timing offsets
+- Try different race window alignments (confirm before register, etc.)
+
+### TOKEN LIMIT reached - session ended prematurely

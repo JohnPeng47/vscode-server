@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "solved": true,
+    "steps": [
+        "Explored the target application: discovered /my-account page with email change form, strict CSP (default-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'), and exploit server at exploit-0a0b00d703bb0df480511680014e00ae.exploit-server.net",
+        "Identified injection point: the 'email' URL parameter is reflected unencoded in the <input value=\"\"> attribute on /my-account",
+        "Confirmed HTML injection works: angle brackets and quotes are NOT encoded in the reflection",
+        "Identified CSP bypass: no form-action directive, so form submissions to any origin are unrestricted. Also, the existing change-email form submits to same-origin /my-account/change-email",
+        "Crafted injection payload: hacker@evil-user.net\"><button>Click me</button> — this sets the email input value to the target email and adds a clickable button within the existing form",
+        "The existing form already contains the victim's valid CSRF token as a hidden input, so no token exfiltration needed",
+        "Stored a 302 redirect on the exploit server pointing to the injection URL: /my-account?email=hacker%40evil-user.net%22%3E%3Cbutton%3EClick%20me%3C/button%3E",
+        "Fixed critical bug: the DELIVER_TO_VICTIM action also stores content, so the redirect headers must be included in the deliver call to avoid overwriting",
+        "Delivered exploit to victim — victim followed 302 redirect, saw 'Click me' button, clicked it, which submitted the change-email form with email=hacker@evil-user.net and the victim's CSRF token",
+        "Lab solved: victim's email changed to hacker@evil-user.net"
+    ],
+    "evidence": "Lab status changed to 'is-solved' after delivering the exploit. The exploit server logs show the victim followed the 302 redirect to the target page. The 302 redirect at /exploit returned status 302 with Location header pointing to the injection URL. Lab solved within 5 seconds of delivery.",
+    "comments": "The attack bypasses the strict CSP by not requiring any script execution or external resource loading. Instead, it leverages the missing form-action CSP directive and injects directly into the existing change-email form. The victim's own CSRF token (already present in the form) is used to authorize the email change. This is a dangling markup variant that doesn't exfiltrate data — it directly performs the action by manipulating the existing form."
+}

@@ -1,0 +1,41 @@
+## Summary: Reflected XSS with AngularJS Sandbox Escape Without Strings
+
+### Target
+https://0a72005b04345e0c8346c4c4008400a5.web-security-academy.net
+
+### Findings
+
+1. **Application Structure**: Blog application using AngularJS 1.4.4 with `ng-app=labApp` on the body element.
+
+2. **Reflection Point**: The `search` GET parameter is reflected inside a `<script>` tag:
+   ```js
+   $scope.query[key] = 'SEARCH_VALUE';
+   $scope.value = $parse(key)($scope.query);
+   ```
+   The value is then displayed via `{{value}}` in an AngularJS template.
+
+3. **Encoding**: Single quotes (`'`) are encoded as `&apos;`, angle brackets as `&lt;`/`&gt;`.
+   Since this is inside a `<script>` tag, HTML entities are NOT decoded by the browser,
+   so we cannot break out of the JS string or close the script tag.
+
+4. **Identified Payload**: The known AngularJS sandbox escape payload for this lab:
+   ```
+   ?search=1&toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41)=1
+   ```
+   This works by:
+   - Using `toString()` to create strings without quotes
+   - Overwriting `String.prototype.charAt` with `[].join` to break the sandbox
+   - Using `orderBy` filter to evaluate expressions
+   - Using `String.fromCharCode(120,61,97,108,101,114,116,40,49,41)` to generate `x=alert(1)`
+
+### Blockers
+- **Browser required**: This is a CLIENT-SIDE XSS that requires a browser to execute AngularJS.
+  The httpx HTTP client cannot evaluate JavaScript/AngularJS expressions.
+- **Browser bridge unavailable**: The Chrome WebSocket bridge was not connected,
+  preventing browser-based payload delivery.
+
+### Status: NOT SOLVED
+The vulnerability was identified and the payload was crafted, but could not be delivered
+without a browser to execute the AngularJS code.
+
+### TOKEN LIMIT reached - session ended early

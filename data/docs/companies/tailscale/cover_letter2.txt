@@ -1,4 +1,5 @@
 Dear Hiring Team,
+
 I want to apply for a sales role at Tailscale. I don't have formal sales experience, but I spent three years as a penetration tester, and that background is why I'm writing.
 
 On red team engagements, one of the most prized findings was an .ovpn client file. With it, we could laterally pivot into new network segments and open up new targets for further attack. Exposed VPN credentials feature prominently in major breaches — the UnitedHealth incident, the biggest US healthcare breach in history, being the most visible example. I've lived on the attacker's side of that problem for three years.

@@ -1,0 +1,19 @@
+# 1D hover with battery drain
+motor_model: averaged_electrical
+reward_fn: hover_alive
+dt: 0.001
+policy_freq: 100.0
+max_episode_time: 30.0
+z_target: 1.0
+z_max: 5.0
+vz_max: 10.0
+mass: 0.8
+n_motors: 4
+crash_penalty: -10.0
+
+battery:
+  n_cells: 4
+  capacity_ah: 1.3
+  internal_r: 0.02
+  v_full: 4.2
+  v_empty: 3.3

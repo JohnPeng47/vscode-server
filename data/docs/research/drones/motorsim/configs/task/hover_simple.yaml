@@ -1,0 +1,13 @@
+# Simple 1D hover — no battery drain
+motor_model: averaged_electrical
+reward_fn: hover_alive
+dt: 0.001
+policy_freq: 100.0
+max_episode_time: 10.0
+z_target: 1.0
+z_max: 5.0
+vz_max: 10.0
+mass: 0.8
+n_motors: 4
+crash_penalty: -10.0
+enable_battery_drain: false

@@ -1,0 +1,15 @@
+# T-Motor F60 Pro V (2207 2550KV) — estimated from specs
+# Used on 5" racing quads, similar to Swift's platform
+#
+# TWR check: 4 * k_f * omega_max^2 / (mass * g)
+#   = 4 * 7.5e-7 * 2500^2 / (0.8 * 9.81) = 2.39
+
+R: 0.065            # winding resistance [Ω]
+L: 10.0e-6          # winding inductance [H] (estimated, needs measurement)
+K_e: 0.00374        # back-EMF constant [V·s/rad] (from 2550 KV)
+K_t: 0.00374        # torque constant [N·m/A] (= K_e for ideal BLDC)
+J: 1.5e-5           # rotor + prop inertia [kg·m²]
+k_f: 7.5e-7         # thrust coefficient [N·s²/rad²]
+k_tau: 1.2e-8       # drag torque coefficient [N·m·s²/rad²] (k_tau/k_f ≈ 0.016)
+omega_max: 2500.0    # max rotor speed [rad/s] (~23900 RPM)
+f_pwm: 24000.0       # BLHeli32 default PWM frequency [Hz]

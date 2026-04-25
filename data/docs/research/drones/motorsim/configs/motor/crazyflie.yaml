@@ -1,0 +1,13 @@
+# Crazyflie 2.1 — from literature (Molchanov 2019, SimpleFlight)
+# Note: Crazyflie uses brushed DC motors, not BLDC.
+# The averaged model still applies (DC motor is the degenerate case).
+
+R: 3.4               # winding resistance [Ω] (brushed coreless)
+L: 50.0e-6           # winding inductance [H] (estimated for coreless)
+K_e: 0.0022           # back-EMF constant [V·s/rad]
+K_t: 0.0022           # torque constant [N·m/A]
+J: 3.0e-7            # rotor + prop inertia [kg·m²] (tiny props)
+k_f: 3.16e-10        # thrust coefficient [N·s²/rad²]
+k_tau: 7.94e-12       # drag torque coefficient [N·m·s²/rad²]
+omega_max: 2500.0     # max rotor speed [rad/s]
+f_pwm: 65535.0        # Crazyflie PWM frequency [Hz]

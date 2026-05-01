@@ -289,8 +289,8 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 }
 
 /**
- * When a diagram .txt file changes, remove any anchors whose text
- * no longer appears in the diagram block.
+ * When a diagram file changes, remove any anchors whose text
+ * no longer appears anywhere in the document.
  */
 async function pruneStaleAnchors(diagramUri: vscode.Uri): Promise<void> {
 	const anchorsUri = resolveAnchorsUri(diagramUri);
@@ -300,38 +300,22 @@ async function pruneStaleAnchors(diagramUri: vscode.Uri): Promise<void> {
 	const anchors = await loadAnchors(diagramUri);
 	if (anchors.length === 0) return;
 
-	// Read the diagram file content
-	let diagramText: string;
+	// Read the file content
+	let documentText: string;
 	try {
 		const bytes = await vscode.workspace.fs.readFile(diagramUri);
-		diagramText = Buffer.from(bytes).toString("utf-8");
+		documentText = Buffer.from(bytes).toString("utf-8");
 	} catch {
 		return;
 	}
 
-	const diagramContent = extractDiagramContent(diagramText);
-
-	// Diagram block removed entirely — delete the sidecar
-	if (!diagramContent) {
-		try {
-			await vscode.workspace.fs.delete(anchorsUri);
-		} catch {
-			// Already gone
-		}
-		await refreshAnchors(diagramUri);
-		return;
-	}
-
-	// Keep only anchors whose text still appears in the diagram
-	const kept = anchors.filter((a) => diagramContent.includes(a.text));
+	// Keep anchors whose text still appears anywhere in the document
+	const kept = anchors.filter((a) => documentText.includes(a.text));
 
 	if (kept.length === anchors.length) return; // Nothing to prune
 
-	// Write back survivors (may be empty — that's fine, sidecar stays)
 	const content = serializeAnchors(kept);
 	await vscode.workspace.fs.writeFile(anchorsUri, Buffer.from(content, "utf-8"));
-
-	// Refresh cache for this document
 	await refreshAnchors(diagramUri);
 }
 

@@ -1,7 +1,7 @@
 import * as child_process from "child_process";
 import * as util from "util";
 import * as vscode from "vscode";
-import { getSidecarPath, loadAnchors } from "./anchors";
+import { DIAGRAM_EXTENSIONS, getSidecarPath, loadAnchors } from "./anchors";
 
 const execFile = util.promisify(child_process.execFile);
 
@@ -43,7 +43,7 @@ async function installSkill(prompt: string): Promise<void> {
 
 	const skillContent = `---
 name: diagfren
-description: Use when generating or updating ASCII diagrams in this repo. Produces a diagram .txt file wrapped in \`\`\`diagram fences plus a .diagfren/ sidecar .anchors file that maps diagram text to code references for ctrl+click navigation.
+description: Use when generating or updating ASCII diagrams in this repo. Produces a diagram .txt or .md file wrapped in \`\`\`diagram fences plus a .diagfren/ sidecar .anchors file that maps diagram text to code references for ctrl+click navigation.
 ---
 
 ${prompt}
@@ -90,15 +90,26 @@ async function findDiagrams(): Promise<DiagramInfo[]> {
 
 		const relative = vscode.workspace.asRelativePath(anchorsFile, false);
 		const sidecarPrefix = new RegExp(`^${sidecar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/`);
-		const diagramRelative = relative.replace(sidecarPrefix, "").replace(/\.anchors$/, ".txt");
-		const diagramUri = vscode.Uri.joinPath(workspaceFolders[0].uri, diagramRelative);
+		const baseRelative = relative.replace(sidecarPrefix, "").replace(/\.anchors$/, "");
+
+		// Try each diagram extension to find the source file
+		let diagramRelative: string | null = null;
+		let diagramUri: vscode.Uri | null = null;
+		for (const ext of DIAGRAM_EXTENSIONS) {
+			const candidate = baseRelative + ext;
+			const candidateUri = vscode.Uri.joinPath(workspaceFolders[0].uri, candidate);
+			try {
+				await vscode.workspace.fs.stat(candidateUri);
+				diagramRelative = candidate;
+				diagramUri = candidateUri;
+				break;
+			} catch {
+				// Try next extension
+			}
+		}
 
 		// Skip orphaned sidecars whose source diagram no longer exists
-		try {
-			await vscode.workspace.fs.stat(diagramUri);
-		} catch {
-			continue;
-		}
+		if (!diagramRelative || !diagramUri) continue;
 
 		const anchors = await loadAnchors(diagramUri);
 		const commitsAgo = cwd ? await getCommitsAgo(cwd, diagramRelative) : null;
@@ -196,7 +207,7 @@ function renderStatusPage(diagrams: DiagramInfo[], prompt: string, skillInstalle
 	const total = diagrams.length;
 	const totalAnchors = diagrams.reduce((sum, d) => sum + d.anchorCount, 0);
 
-	const commitsAgoTooltip = "Number of git commits since this diagram's .txt file was last modified. 0 means the most recent commit touched it; higher numbers suggest the diagram may be getting out of sync with the underlying code.";
+	const commitsAgoTooltip = "Number of git commits since this diagram file was last modified. 0 means the most recent commit touched it; higher numbers suggest the diagram may be getting out of sync with the underlying code.";
 
 	return `<!DOCTYPE html>
 <html>

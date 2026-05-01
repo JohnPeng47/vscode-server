@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { getAnchors, onDidChangeAnchors } from "./anchor-cache";
-import { type Anchor, findDiagramBlockRange } from "./anchors";
+import { type Anchor } from "./anchors";
 
 interface DiagramDocumentLink extends vscode.DocumentLink {
 	anchor: Anchor;
@@ -18,15 +18,10 @@ export class DiagramLinkProvider implements vscode.DocumentLinkProvider {
 		const anchors = await getAnchors(document.uri);
 		if (anchors.length === 0) return [];
 
-		const text = document.getText();
-		const blockRange = findDiagramBlockRange(text);
-		if (!blockRange) return [];
-
-		const [blockStart, blockEnd] = blockRange;
 		const links: DiagramDocumentLink[] = [];
 
 		for (const anchor of anchors) {
-			const occurrences = findAnchorOccurrences(document, anchor, blockStart, blockEnd);
+			const occurrences = findAnchorOccurrences(document, anchor);
 			for (const range of occurrences) {
 				const link = new vscode.DocumentLink(range) as DiagramDocumentLink;
 				link.tooltip = `${anchor.label} — ${anchor.filePath}:${anchor.startLine}`;
@@ -91,17 +86,15 @@ export async function openAnchorInSplit(anchor: Anchor): Promise<void> {
 	editor.revealRange(range, vscode.TextEditorRevealType.InCenter);
 }
 
-/** Find all occurrences of an anchor's text within the diagram block lines. */
+/** Find all occurrences of an anchor's text anywhere in the document. */
 function findAnchorOccurrences(
 	document: vscode.TextDocument,
 	anchor: Anchor,
-	blockStart: number,
-	blockEnd: number,
 ): vscode.Range[] {
 	const ranges: vscode.Range[] = [];
 	const searchText = anchor.text;
 
-	for (let lineNum = blockStart; lineNum <= blockEnd; lineNum++) {
+	for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
 		const line = document.lineAt(lineNum);
 		let startIndex = 0;
 		while (true) {

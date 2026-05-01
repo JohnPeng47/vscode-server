@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { hasCachedAnchors, getCachedAnchors, refreshAnchors } from "./anchor-cache";
-import { findDiagramBlockRange } from "./anchors";
+import { isDiagramLanguage } from "./anchors";
 
 /**
  * Register a clipboard intercept that appends code-refs to copied diagram text.
@@ -11,7 +11,7 @@ import { findDiagramBlockRange } from "./anchors";
 export function registerCopyProvider(context: vscode.ExtensionContext): void {
 	// Track whether the active file has anchors
 	async function updateContext(editor: vscode.TextEditor | undefined) {
-		if (!editor || editor.document.languageId !== "plaintext") {
+		if (!editor || !isDiagramLanguage(editor.document.languageId)) {
 			vscode.commands.executeCommand("setContext", "diagfren.hasAnchors", false);
 			return;
 		}
@@ -90,17 +90,6 @@ export function registerCopyProvider(context: vscode.ExtensionContext): void {
 			// Compute the overall selection span across all cursors
 			const sorted = selections.slice().sort((a, b) => a.start.compareTo(b.start));
 
-			const text = document.getText();
-			const blockRange = findDiagramBlockRange(text);
-
-			// If selection isn't in the diagram block, plain copy
-			const overallStart = sorted[0]!.start;
-			const overallEnd = sorted[sorted.length - 1]!.end;
-			if (!blockRange || overallEnd.line < blockRange[0] || overallStart.line > blockRange[1]) {
-				await vscode.env.clipboard.writeText(selectedText);
-				return;
-			}
-
 			const anchors = getCachedAnchors(document.uri);
 			if (anchors.length === 0) {
 				await vscode.env.clipboard.writeText(selectedText);
@@ -111,9 +100,7 @@ export function registerCopyProvider(context: vscode.ExtensionContext): void {
 			// Use per-selection text (not full lines) so column/box selections
 			// only match anchors visible inside the selected columns.
 			const matchedRefs = new Map<string, string>();
-			const selectedFragments = sorted
-				.filter((sel) => sel.start.line >= blockRange[0] && sel.end.line <= blockRange[1])
-				.map((sel) => document.getText(sel));
+			const selectedFragments = sorted.map((sel) => document.getText(sel));
 
 			for (const anchor of anchors) {
 				if (selectedFragments.some((fragment) => fragment.includes(anchor.text))) {

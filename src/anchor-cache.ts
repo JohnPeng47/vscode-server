@@ -1,6 +1,6 @@
 import * as path from "path";
 import * as vscode from "vscode";
-import { type Anchor, extractDiagramContent, findDiagramBlockRange, getSidecarPath, loadAnchors, parseAnchorsContent, resolveAnchorsUri, serializeAnchors } from "./anchors";
+import { type Anchor, DIAGRAM_EXTENSIONS, extractDiagramContent, findDiagramBlockRange, getSidecarPath, isDiagramFile, isDiagramLanguage, loadAnchors, parseAnchorsContent, resolveAnchorsUri, serializeAnchors } from "./anchors";
 
 /**
  * Cache of parsed anchors per document URI, loaded from `.diagfren/` sidecar files.
@@ -55,7 +55,7 @@ export function hasCachedAnchors(documentUri: vscode.Uri): boolean {
 export function registerAnchorCache(context: vscode.ExtensionContext): void {
 	// Load on activation for currently open editors
 	for (const editor of vscode.window.visibleTextEditors) {
-		if (editor.document.languageId === "plaintext") {
+		if (isDiagramLanguage(editor.document.languageId)) {
 			refreshAnchors(editor.document.uri);
 		}
 	}
@@ -71,7 +71,7 @@ export function registerAnchorCache(context: vscode.ExtensionContext): void {
 			}
 		}),
 		vscode.workspace.onDidOpenTextDocument((doc) => {
-			if (doc.languageId === "plaintext") {
+			if (isDiagramLanguage(doc.languageId)) {
 				refreshAnchors(doc.uri);
 			}
 		}),
@@ -95,28 +95,33 @@ export function registerAnchorCache(context: vscode.ExtensionContext): void {
 		}),
 	);
 
-	// Watch diagram .txt files for changes and deletion
-	const txtWatcher = vscode.workspace.createFileSystemWatcher("**/*.txt");
-	context.subscriptions.push(
-		txtWatcher,
-		txtWatcher.onDidChange((changedUri) => pruneStaleAnchors(changedUri)),
-		txtWatcher.onDidDelete(async (deletedUri) => {
-			const anchorsUri = resolveAnchorsUri(deletedUri);
-			if (!anchorsUri) return;
+	// Watch diagram files (.txt and .md) for changes and deletion
+	const diagramWatchers = [
+		vscode.workspace.createFileSystemWatcher("**/*.txt"),
+		vscode.workspace.createFileSystemWatcher("**/*.md"),
+	];
+	for (const watcher of diagramWatchers) {
+		context.subscriptions.push(
+			watcher,
+			watcher.onDidChange((changedUri) => pruneStaleAnchors(changedUri)),
+			watcher.onDidDelete(async (deletedUri) => {
+				const anchorsUri = resolveAnchorsUri(deletedUri);
+				if (!anchorsUri) return;
 
-			try {
-				await vscode.workspace.fs.delete(anchorsUri);
-			} catch {
-				// Sidecar didn't exist — nothing to clean up
-			}
+				try {
+					await vscode.workspace.fs.delete(anchorsUri);
+				} catch {
+					// Sidecar didn't exist — nothing to clean up
+				}
 
-			// Evict from cache
-			const key = deletedUri.toString();
-			if (cache.delete(key)) {
-				onDidChangeAnchors.fire();
-			}
-		}),
-	);
+				// Evict from cache
+				const key = deletedUri.toString();
+				if (cache.delete(key)) {
+					onDidChangeAnchors.fire();
+				}
+			}),
+		);
+	}
 }
 
 /**
@@ -152,13 +157,23 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 	for (const anchorsFile of anchorsFiles) {
 		const relative = vscode.workspace.asRelativePath(anchorsFile, false);
 		const sidecarPrefix = new RegExp(`^${sidecar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/`);
-		const diagramRelative = relative.replace(sidecarPrefix, "").replace(/\.anchors$/, ".txt");
-		const diagramUri = vscode.Uri.joinPath(root, diagramRelative);
+		const baseRelative = relative.replace(sidecarPrefix, "").replace(/\.anchors$/, "");
 
-		try {
-			await vscode.workspace.fs.stat(diagramUri);
-			// Source exists — not orphaned
-		} catch {
+		// Try each diagram extension to find the source file
+		let found = false;
+		for (const ext of DIAGRAM_EXTENSIONS) {
+			const diagramRelative = baseRelative + ext;
+			const diagramUri = vscode.Uri.joinPath(root, diagramRelative);
+			try {
+				await vscode.workspace.fs.stat(diagramUri);
+				found = true;
+				break;
+			} catch {
+				// Try next extension
+			}
+		}
+
+		if (!found) {
 			// Parse anchor texts for identity matching
 			let anchorTexts: string[] = [];
 			try {
@@ -171,8 +186,8 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 
 			orphans.push({
 				anchorsFile,
-				oldDiagramRelative: diagramRelative,
-				basename: path.basename(diagramRelative, ".txt"),
+				oldDiagramRelative: baseRelative + ".txt", // Use .txt as canonical for matching
+				basename: path.basename(baseRelative),
 				anchorTexts,
 			});
 		}
@@ -180,8 +195,12 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 
 	if (orphans.length === 0) return;
 
-	// Find all .txt files with a ```diagram block that DON'T have a sidecar
-	const allTxtFiles = await vscode.workspace.findFiles("**/*.txt", `{**/node_modules/**,${sidecar}/**}`, 1000);
+	// Find all diagram files (.txt and .md) with a ```diagram block that DON'T have a sidecar
+	const excludePattern = `{**/node_modules/**,${sidecar}/**}`;
+	const allDiagramFiles = (await Promise.all(
+		DIAGRAM_EXTENSIONS.map(ext => vscode.workspace.findFiles(`**/*${ext}`, excludePattern, 1000))
+	)).flat();
+
 	interface CandidateInfo {
 		uri: vscode.Uri;
 		relative: string;
@@ -190,10 +209,10 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 	}
 
 	const candidates: CandidateInfo[] = [];
-	for (const txtFile of allTxtFiles) {
-		const relative = vscode.workspace.asRelativePath(txtFile, false);
+	for (const diagramFile of allDiagramFiles) {
+		const relative = vscode.workspace.asRelativePath(diagramFile, false);
 		// Skip if it already has a sidecar
-		const sidecarUri = resolveAnchorsUri(txtFile);
+		const sidecarUri = resolveAnchorsUri(diagramFile);
 		if (sidecarUri) {
 			try {
 				await vscode.workspace.fs.stat(sidecarUri);
@@ -205,14 +224,15 @@ export async function pruneOrphanedSidecars(): Promise<void> {
 
 		// Check if it has a diagram block
 		try {
-			const bytes = await vscode.workspace.fs.readFile(txtFile);
+			const bytes = await vscode.workspace.fs.readFile(diagramFile);
 			const text = Buffer.from(bytes).toString("utf-8");
 			const content = extractDiagramContent(text);
 			if (content) {
+				const ext = DIAGRAM_EXTENSIONS.find(e => relative.endsWith(e)) ?? ".txt";
 				candidates.push({
-					uri: txtFile,
+					uri: diagramFile,
 					relative,
-					basename: path.basename(relative, ".txt"),
+					basename: path.basename(relative, ext),
 					diagramContent: content,
 				});
 			}
@@ -329,7 +349,7 @@ async function handleFileRenamed(oldUri: vscode.Uri, newUri: vscode.Uri): Promis
 	const oldRelative = vscode.workspace.asRelativePath(oldUri, false);
 	const newRelative = vscode.workspace.asRelativePath(newUri, false);
 
-	if (oldRelative.endsWith(".txt")) {
+	if (isDiagramFile(oldRelative)) {
 		// Single file rename → move one sidecar
 		const oldAnchorsUri = resolveAnchorsUri(oldUri);
 		const newAnchorsUri = resolveAnchorsUri(newUri);
@@ -371,11 +391,13 @@ async function handleFileRenamed(oldUri: vscode.Uri, newUri: vscode.Uri): Promis
 				}
 			}
 
-			// Evict old cache entry
+			// Evict old cache entries for all possible diagram extensions
 			const sidecarPrefixRe = new RegExp(`^${sidecar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/`);
-			const oldTxtRelative = anchorsRelative.replace(sidecarPrefixRe, "").replace(/\.anchors$/, ".txt");
-			const oldTxtUri = vscode.Uri.joinPath(root, oldTxtRelative);
-			cache.delete(oldTxtUri.toString());
+			const baseRelative = anchorsRelative.replace(sidecarPrefixRe, "").replace(/\.anchors$/, "");
+			for (const ext of DIAGRAM_EXTENSIONS) {
+				const oldDiagramUri = vscode.Uri.joinPath(root, baseRelative + ext);
+				cache.delete(oldDiagramUri.toString());
+			}
 		}
 	}
 
@@ -427,7 +449,7 @@ async function updateCodeRefsInAllSidecars(oldPath: string, newPath: string): Pr
 
 function refreshAllVisible(): void {
 	for (const editor of vscode.window.visibleTextEditors) {
-		if (editor.document.languageId === "plaintext") {
+		if (isDiagramLanguage(editor.document.languageId)) {
 			refreshAnchors(editor.document.uri);
 		}
 	}

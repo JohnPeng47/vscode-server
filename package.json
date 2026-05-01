@@ -38,6 +38,18 @@
       {
         "command": "diagfren.debugCopy",
         "title": "diagfren: Debug Copy"
+      },
+      {
+        "command": "diagfren.createLink",
+        "title": "diagfren: Link Selection to Code"
+      },
+      {
+        "command": "diagfren.confirmLink",
+        "title": "diagfren: Confirm Link at Cursor"
+      },
+      {
+        "command": "diagfren.cancelLink",
+        "title": "diagfren: Cancel Link Creation"
       }
     ],
     "keybindings": [
@@ -45,7 +57,23 @@
         "command": "diagfren.copyWithRefs",
         "key": "ctrl+c",
         "mac": "cmd+c",
-        "when": "editorTextFocus && editorLangId == plaintext && editorHasSelection && diagfren.hasAnchors"
+        "when": "editorTextFocus && editorHasSelection && diagfren.hasAnchors && editorLangId =~ /^(plaintext|markdown)$/"
+      },
+      {
+        "command": "diagfren.createLink",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+alt+l",
+        "when": "editorTextFocus && editorHasSelection && editorLangId =~ /^(plaintext|markdown)$/"
+      },
+      {
+        "command": "diagfren.confirmLink",
+        "key": "alt+enter",
+        "when": "diagfren.selectLinkMode && editorTextFocus"
+      },
+      {
+        "command": "diagfren.cancelLink",
+        "key": "escape",
+        "when": "diagfren.selectLinkMode"
       }
     ]
   },

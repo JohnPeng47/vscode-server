@@ -5,6 +5,19 @@ export function getSidecarPath(): string {
 	return vscode.workspace.getConfiguration("diagfren").get<string>("sidecarPath") || ".diagfren";
 }
 
+/** File extensions that can contain ```diagram blocks. */
+export const DIAGRAM_EXTENSIONS = [".txt", ".md"];
+
+/** Check whether a file path has a diagram-capable extension. */
+export function isDiagramFile(filePath: string): boolean {
+	return DIAGRAM_EXTENSIONS.some(ext => filePath.endsWith(ext));
+}
+
+/** Check whether a VS Code languageId corresponds to a diagram-capable file type. */
+export function isDiagramLanguage(languageId: string): boolean {
+	return languageId === "plaintext" || languageId === "markdown";
+}
+
 /** A parsed anchor mapping visible diagram text to a code reference. */
 export interface Anchor {
 	/** The exact visible string in the diagram. */
@@ -30,8 +43,8 @@ export function resolveAnchorsUri(documentUri: vscode.Uri): vscode.Uri | null {
 	if (!workspaceFolders?.[0]) return null;
 
 	const relativePath = vscode.workspace.asRelativePath(documentUri, false);
-	// Replace .txt extension with .anchors
-	const anchorsRelative = relativePath.replace(/\.txt$/, ".anchors");
+	// Replace diagram extension (.txt or .md) with .anchors
+	const anchorsRelative = relativePath.replace(/\.(txt|md)$/, ".anchors");
 	return vscode.Uri.joinPath(workspaceFolders[0].uri, getSidecarPath(), anchorsRelative);
 }
 

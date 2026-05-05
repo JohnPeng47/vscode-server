@@ -1,0 +1,14 @@
+# anchor-text                          code-ref                                                                                              label
+rotor_group.forward(cmds)               data/docs/research/drones/simulations/omnidrones/omni_drones/actuators/rotor_group.py:54-66             OmniDrones motor model — throttle smoothing + thrust computation
+apply_forces_and_torques_at_pos()       data/docs/research/drones/simulations/omnidrones/omni_drones/robots/drone/multirotor.py:273             OmniDrones force application to IsaacGym rigid bodies
+_pre_sim_step()                         data/docs/research/drones/simulations/omnidrones/omni_drones/robots/drone/multirotor.py:240             OmniDrones pre-physics action processing
+_post_sim_step()                        data/docs/research/drones/simulations/omnidrones/omni_drones/robots/drone/multirotor.py:280             OmniDrones post-physics state reading
+isaac_env.py:264-273                    data/docs/research/drones/simulations/omnidrones/omni_drones/envs/isaac_env.py:264-273                  OmniDrones substep loop — same tensordict re-applied each substep
+isaac_env.py:232-241                    data/docs/research/drones/simulations/simpleflight/omni_drones/envs/isaac_env.py:232-241                SimpleFlight stepping — pre_sim_step outside substep loop (hardcoded 1)
+hovering.py:217-250                     data/docs/research/drones/simulations/airgym/airgym/envs/base/hovering.py:217-250                       AirGym CPU round-trip: .cpu().numpy() → PID → torch.tensor()
+quadrotor_dynamics.py:208-214           data/docs/research/drones/simulations/quad-swarm-rl/gym_art/quadrotor_multi/quadrotor_dynamics.py:208-214  QuadSwarm step() calling step1() twice with same thrust_cmds
+quad_race_env.py:420                    data/docs/research/drones/simulations/optimal-quad-control/quad_race_env.py:420                          optimal-quad-control single forward Euler step
+BaseAviary.py:343-372                   data/docs/research/drones/simulations/gym-pybullet-drones/gym_pybullet_drones/envs/BaseAviary.py:343-372  gym-pybullet-drones _advance_simulation with held RPMs
+quadrotor_dynamics_advanced.py:176      data/docs/research/drones/simulations/grad-nav/envs/assets/quadrotor_dynamics_advanced.py:176             GRaD-Nav action held constant across 10 substeps
+quadrotor_dynamics_advanced.py          data/docs/research/drones/simulations/grad-nav/envs/assets/quadrotor_dynamics_advanced.py:60-180          GRaD-Nav differentiable rigid-body dynamics (PD ctrl + drag + quat integration)
+rlPx4Controller                         data/docs/research/drones/simulations/airgym/airgym/envs/base/hovering.py:44-123                        AirGym PX4-style PID cascade (CPU-only library dependency)

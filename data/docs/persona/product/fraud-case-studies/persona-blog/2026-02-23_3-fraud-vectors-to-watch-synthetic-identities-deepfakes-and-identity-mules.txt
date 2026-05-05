@@ -1,0 +1,43 @@
+2026-02-23 | 3 Fraud Vectors to Watch: Synthetic Identities, Deepfakes, and Identity Mules
+
+URL: https://withpersona.com/blog/3-fraud-vectors-to-watch-synthetic-identities-deepfakes-and-identity-mules
+
+ blog GenAI helps make convincing synthetic identities and deepfakes. As fraud fighters get better at catching those, fraudsters are turning to identity mules. Fraud  Published February 23, 2026Last updated February 25, 20263 fraud vectors to watch: synthetic identities, deepfakes, and identity mulesFraudsters use GenAI to make convincing synthetic identities and deepfakes. When that doesn't work, they recruit identity mules to take selfies. Louis DeNicola     4 min 
+  .keytakeaway-swiper .swiper-slide-next {
+    opacity: 0.2;
+  }
+  Key takeaways    Fraudsters use GenAI to make convincing synthetic identities and deepfakes. As fraud fighters get more skilled at catching GenAI-fueled attacks, fraudsters are turning to identity mules.   Identity mules are willing accomplices who lend aspects of their identity, like their ID or face, to help the fraudster’s scheme. Some fraudsters also combine tactics to create synthetic identity mules.   Fraud fighters need to be aware of the latest attack vectors and update their strategies. One approach that works well is to use link analysis to identify similarities and connections between accounts.      Blog3 fraud vectors to watch: synthetic identities, deepfakes, and identity mulesCopy link
+
+Link copied!
+ Audiences around the world may be captivated by dramatic stories of con men like the Tinder Swindler. But this type of fraud is the exception rather than the rule. Most criminals go to great lengths to stay hidden and minimize the risk of getting caught.Sometimes, though, a criminal needs to show their face — or at least, a face — to pass identity checks. Fraudsters regularly use GenAI to make synthetic identities and deepfakes at scale, which is why fraud fighters have invested in identifying and stopping those attacks. In response, bad actors are trying a new tactic. They pay real people to complete an identity verification on their behalf. Synthetic identities vs deepfakes vs identity mules Bad actors regularly use different tools and tactics to disguise their true identities during Know Your Customer (KYC), Know Your Business (KYB), and other identity verification processes. These include synthetic identities, deepfakes, and identity mules.We’ll go through these identity manipulations, look at the ways they can overlap, and explore why identity mules are becoming more popular even though they are a comparatively “low-tech” option.What is a synthetic identity?Fraudsters make synthetic identities by combining personal information from two or more people or by combining real and fake personal information. For instance, a fraudster might open a bank account using a real Social Security number with a fake name, date of birth, and the fraudster’s email address.Fraud fighters at banks, insurance companies, and financial institutions used to encounter the most synthetic identity fraud. But that’s changed now that criminals can use GenAI to create synthetic identities. No matter which industry you work in, your systems need to keep an eye out for them. 
+   
+      Guide
+      17 top signals for fighting ATOs, synthetic IDs, and deepfakes
+   
+   
+      Get the guide
+      
+         
+            
+         
+      
+   
+What are deepfakes?A deepfake also manipulates something about a real person. In this case, a fraudster uses AI to create an image, audio clip, or video of the person. We classify deepfakes in different ways. For example, a face swap is when one person’s face or characteristics are swapped onto someone else's. Digital avatars, in contrast, are GenAI versions of people without physical alterations. Some people also call AI-generated faces deepfakes, but we tend to classify them as synthetic faces or face morphs.Fraudsters use deepfakes to convince systems and people that there’s a real person involved in a process, such as a selfie verification. Or, to impersonate a victim and use their identity. This isn’t a new threat. One of the first reported successful deepfake fraud attacks was in 2019, when someone sent €220,000 (~$243,000) to a criminal using a deepfake of his boss’s voice. Since then, it’s gotten easier for fraudsters with little technical ability to create realistic deepfakes.What are identity mules?When a fraudster uses a synthetic identity or a deepfake, they’re often stealing or creating an identity. By contrast, an identity mule is someone who willingly helps the fraudster by sharing aspects of their identity, such as their face or ID. Often, a fraudster will pay an identity mule to go through a selfie and government ID verification process on the fraudster’s behalf. Other times, fraudsters pay for images or videos of the identity mule that they can later inject into onboarding or verification flows. Identity mules might not realize they’re helping out with something illegal. They also might turn a blind eye due to economic hardship or think they’re participating in legitimate work. These images were generated with AI to represent the types of selfies we see when a fraud ring uses identity mules. Often, you’ll see people taking selfies in the same location. Sometimes, you might even see the suspected fraud ring leader in the background. 
+   
+      Blog
+      Read more about identity mules and how to detect them
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+How do the three types of identity fraud overlap?Fraud fighters need to understand the differences between synthetic identities, deepfakes, and identity mules to combat each fraud vector. But fraudsters don’t distinguish the way defenders do. Fraudsters often use different types of identity fraud depending on the scheme, and they’ll try combinations to see what works best. For example:Synthetic identities look more convincing with a deepfake photo or video.An identity mule might become the basis for deepfakes.An identity mule might be asked to use fake identification documents to create a synthetic identity. Fraudsters are goal-oriented, but the goal isn’t to create the most technically impressive trick. They want to extract value and maximize ROI. And they’ll use any kind of identity fraud, separately or in combination, to achieve that. Why is identity muling becoming a bigger problem? Online fraud is an ever-evolving arms race. Fraudsters found an edge with GenAI, which makes it easier to create convincing fake selfies and documents at scale. But fraud fighters developed new detection methods and risk signals, and expanded powerful tools, like link analysis, to automatically detect GenAI and synthetic fraud.Fraudsters are responding, logically, with a more old-school approach. When a real person submits a selfie and genuine identification information, liveness checks, database verifications, AI detection, and other risk signals won’t ring any alarm bells. Although paying identity mules isn’t as cheap as generating a deepfake, fraudsters may find the approach offers a bigger ROI against certain targets.    Now, fraud fighters have to respond by finding ways to detect identity mules and fraud rings without blocking legitimate users. What this means for fraud fighters todaySynthetic identity fraud and deepfake attacks aren’t going anywhere, and fraud fighters need to continue investing in defenses against them. At the same time, identity muling is a growing threat, particularly for financial institutions and marketplaces that offer high-value products and services. If you want to learn more about identity muling and how to fight this fraud vector, read our deep dive on identity muling. 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Louis DeNicolaLouis DeNicola is a content marketing manager at Persona who focuses on fraud and identity. You can often find him at the climbing gym, in the kitchen (cooking or snacking), or relaxing with his wife and cat in West Oakland.Table of contentsSynthetic identities vs deepfakes vs identity mules How do the three types of identity fraud overlap?Why is identity muling becoming a bigger problem? What this means for fraud fighters todayContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

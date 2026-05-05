@@ -1,0 +1,13 @@
+# anchor-text                                          code-ref                                                                            label
+skew_numpy                                              data/docs/research/drones/interception/learning/plan.txt:32                       plan §2 — skew(ω) is the matrix form of the cross product
+skew_casadi                                             data/docs/research/drones/interception/learning/plan.txt:32                       plan §2 — skew(ω) (CasADi mirror)
+quad_dynamics_numpy                                     data/docs/research/drones/interception/learning/plan.txt:21-32                    plan §2 — Newton-Euler rigid-body equations
+quad_dynamics_casadi                                    data/docs/research/drones/interception/learning/plan.txt:21-32                    plan §2 — Newton-Euler (CasADi version, used inside the NLP)
+allocate_rotor_thrusts                                  data/docs/research/drones/interception/learning/plan.txt:45                       plan §3 — pinv of the 4×4 mixer
+ctbr_command_to_rotor_thrusts                           data/docs/research/drones/interception/learning/plan2.txt:240-270                 plan2 §7 — the original "invert_lag()" cartoon (now superseded by BodyRateController)
+integrate_rk4                                           data/docs/research/drones/interception/learning/plan.txt:90-96                    plan §5 — f_discrete used by the NLP and the simulator
+(desired_body_rates - body_rates) / tau_attitude        data/docs/research/drones/interception/learning/plan.txt:79                       plan §4 — the lag equation ω̇ = (ω_des − ω) / τ_attitude
+tau_attitude                                            data/docs/research/drones/interception/learning/plan.txt:75-82                    plan §4 — first-order body-rate lag time constant
+motor_time_constant                                     data/docs/research/drones/interception/learning/plan.txt:26                       plan §2 — motor lag ḟ = (f_cmd − f) / τ_motor
+mode == "ctbr"                                          data/docs/research/drones/interception/learning/plan.txt:75-82                    plan §4 — CTBR layer of the control hierarchy
+mode == "srt"                                           data/docs/research/drones/interception/learning/plan.txt:73                       plan §4 — SRT layer of the control hierarchy

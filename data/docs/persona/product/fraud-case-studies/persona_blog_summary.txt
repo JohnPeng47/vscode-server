@@ -1,0 +1,135 @@
+  Phase 1: Foundation (2024 H1)
+
+  "We are an identity verification platform"
+  - Core KYC/KYB content: kyb-credit-unions, kyc-best-practices-for-global-compliance, understanding-kyc-process-steps
+  - Age verification fundamentals (alcohol, gaming, social media)
+  - Compliance frameworks (UK ECCTA, CA AB 488, eIDAS)
+  - Generic vertical content (universities, marketplaces, fintech)
+
+  Phase 2: GenAI Fraud Pivot (2024 H2)
+
+  "We stop AI-powered fraud" — the big narrative shift
+  - May 2024: First GenAI-fraud titles appear
+  - Sept 2024: Persona Graph launched (7-things-learned-building-persona-graph)
+  - Nov 2024: Document AI launched, multi-layered defense ("AI vs AI")
+  - Oct 2024: Gartner MQ positioning — earning analyst credibility
+  - Workforce starts entering the vocabulary (workplace-identity-proofing, employment-identity-verification)
+
+  Phase 3: Deepfakes + Workforce Expansion (2025 H1)
+
+  "Beyond customers — we verify everyone"
+  - Jan 2025: Face spoof defense (detect-more-ai-based-face-spoofs, protect-business-against-ai-based-face-spoofs)
+  - Jan 2025: Mastercard partnership (automate-identity-verification-enhance-security-customize-flows-persona-mastercard-identity)
+  - Feb 2025: First dedicated workforce IDV post (workforce-identity-verification-use-cases)
+  - May 2025: Candidate fraud emerges as a new vertical (candidate-fraud-rise-persona-help)
+  - Apr 2025: Series D (series-d) — they're scaling
+  - Apr–May 2025: Risk signals as a sophistication move (fraud-signals, 3-key-risk-signals)
+
+  Phase 4: Network + Maturity (2025 H2)
+
+  "We're the leader, and we connect identities"
+  - Jul–Sept 2025: International expansion (Brazil, Korea, Australia, Ireland)
+  - Sept 2025: Forrester Wave Leader + 2025 Gartner MQ Leader (the "we won the analyst war")
+  - Oct 2025: FedRAMP Moderate — government / enterprise positioning
+  - Oct 2025: Persona Connect launches (building-the-rails-for-collaborative-identity-with-connect) — network effect play
+  - Trust signals + false positive reduction → UX/maturity narrative
+  - Nov 2025: "Continuous workforce identity assurance" — moving from one-time to ongoing verification
+
+  Phase 5: Agents + Synthetic Identity (2026 H1)
+
+  Two bold new bets, plus privacy positioning
+  - Jan 2026: Identity muling introduced as a new fraud category (what-is-identity-muling)
+  - Jan 2026: Agentic commerce / Know Your Agent (KYA) — entirely new vertical (safe-agentic-commerce-starts-with-kya-and-dynamic-idv)
+  - Feb 2026: Synthetic identity front and center (7-ways-synthetic-identity-fraud-is-changing-in-2026)
+  - Mar 2026: Candidate Verification spun out as its own product (introducing-candidate-verification-solution-by-persona)
+  - Apr 2026: Relay launches (introducing-relay) — privacy-preserving counter-positioning
+  - Apr 2026: Atlas launches (introducing-atlas-global-age-regulation-tracker) — regulatory-intelligence as a free tool, owning the category
+  - Apr 2026: Three KYA-related posts in a single week — major commit
+
+  The narrative arc in one line per year
+
+  ┌─────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │  Year   │                                                         Story                                                          │
+  ├─────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2024    │ "We do KYC/KYB" → "We stop GenAI fraud"                                                                                │
+  ├─────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2025 H1 │ "We verify customers AND your workforce"                                                                               │
+  ├─────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2025 H2 │ "We're the recognized leader, and now we connect identities"                                                           │
+  ├─────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2026    │ "We verify the AI agents acting on people's behalf, catch synthetic/mule identities, and own the regulatory landscape" │
+  └─────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  Strategic moves visible in the titles
+
+  1. Vertical expansion: customers → employees → candidates → AI agents
+  2. Product expansion: single inquiry → graph → connect (network) → relay (privacy) → atlas (intelligence)
+  3. Threat ladder: stolen identities → GenAI fraud → deepfakes → synthetic identities → identity mules → AI agents
+  4. Trust building: KYB content → analyst recognition (Gartner/Forrester) → FedRAMP → "we lead the category"
+  5. Platform play: from "we verify identity" to "we own the rails for identity across the ecosystem"
+
+  Most striking inflection point: late 2025 → early 2026. They went from being an IDV vendor to launching three category-defining products
+  (Connect, Relay, Atlas) plus opening an entirely new market (agentic identity) in about 6 months.
+
+✻ Baked for 1m 7s
+
+❯ When has fraud played a part in their narrative? Just recently or always?
+
+● Fraud has been central from day one of the data I have. Let me trace it:
+
+  2024 — Fraud is already a primary narrative
+
+  The very first month I have (May 2024) already includes:
+  - 2024-05-22 | prevent-student-aid-fraud
+  - 2024-05-24 | fighting-generative-ai-fraud
+  - 2024-05-24 | university-account-recovery (account takeover)
+  - 2024-06-11 | fighting-genai-id-fraud
+  - 2024-06-13 | stop-online-marketplace-referral-fraud
+
+  By Aug-Sept 2024 it's a steady drumbeat:
+  - 2024-08-22 | account-takeover-fraud-recovery
+  - 2024-08-28 | gartner-companion-ai-deepfake
+  - 2024-09-05 | 3-trends-synthetic-id-fraud-webinar-recap
+  - 2024-09-17 | fraud-prevention-strategies
+  - 2024-09-27 | business-impersonation-kyb-webinar-recap
+
+  Q4 2024:
+  - 2024-10-23 | 3-ways-fight-chargeback-fraud
+  - 2024-10-23 | refund-fraud-what-it-is
+  - 2024-11-01 | ai-vs-ai-fighting-genai-fraud-multi-layered-approach
+
+  What HAS changed is the type of fraud they emphasize
+
+  It's a moving target — Persona's fraud narrative tracks the threat landscape:
+
+  ┌─────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │   Era   │                                                    Dominant fraud framing                                                     │
+  ├─────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2024 H1 │ Generic identity fraud, account takeover, marketplace referral fraud, student aid fraud — operational/transactional fraud     │
+  ├─────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2024 H2 │ GenAI fraud explodes as the headline threat. Deepfakes, AI document forgery, synthetic identities. "AI vs AI" framing emerges │
+  ├─────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2025 H1 │ Face spoofs and deepfakes specifically. Business impersonation. KYB fraud as its own subcategory                              │
+  ├─────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2025 H2 │ Stacking weak signals, false positive reduction — "fraud sophistication is the table stakes, now we help you tune precision"  │
+  ├─────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2026    │ Synthetic identities + identity muling + fake job applicants + AI agent fraud — entirely new vectors                          │
+  └─────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  What's interesting about the trajectory
+
+  1. Fraud was never absent — Persona has always positioned around fraud, not just compliance. KYC/KYB content sits next to fraud content even
+  in May 2024.
+  2. The villain keeps mutating:
+    - 2024: "humans committing fraud with stolen IDs"
+    - 2024 H2 → 2025: "humans using GenAI to commit fraud"
+    - 2026: "humans creating synthetic identities at scale, AI agents acting on their behalf, mules laundering through real accounts"
+  3. Recent posts are more sophisticated fraud, not more fraud. The 2026 posts
+  (why-traditional-fraud-detection-tools-struggle-to-catch-identity-mules, 7-ways-synthetic-identity-fraud-is-changing-in-2026) are positioning
+  Persona as the answer to fraud vectors that legacy tools can't handle. That's a shift from "we do fraud" to "we do the hardest fraud."
+  4. Fraud and compliance are intertwined throughout — many compliance posts (KYB, AML, watchlist screening) are positioned as fraud-prevention
+  tools, not pure regulatory checkbox content.
+
+  So short answer: fraud has been a co-equal narrative thread alongside compliance/IDV for the entire 2-year window. What changed recently is
+  the frontier of fraud Persona claims to handle — synthetic identities, mules, and agent-based fraud, which they're framing as problems
+  traditional tools can't solve.

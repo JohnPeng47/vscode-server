@@ -1,0 +1,879 @@
+[00:00] good morning everyone at least I think
+[00:02] it
+[00:03] is I'm going to talk about the identity
+[00:06] theft or your identity or how to create
+[00:10] an
+[00:12] identity and this is based on a uh
+[00:15] research project I done so my disclaimer
+[00:17] is don't ever try to do anything like
+[00:19] this yourself I have no responsibilities
+[00:21] for possibly do what I'm trying to show
+[00:24] as methods identity thieves are using to
+[00:28] steal identities and create identities
+[00:31] and uh my research is based basically on
+[00:34] creating identity with a stolen Identity
+[00:37] or with your identity depends how
+[00:39] Anonymous identity you would like to
+[00:43] create I mean I guess everybody in here
+[00:46] has a cell phone right and you know
+[00:49] pretty much when you register for a cell
+[00:52] phone you had to give your social
+[00:54] security number I mean how many entities
+[00:57] have collected your social security
+[00:59] number up there are you guys using
+[01:02] accounting services I mean accountants
+[01:04] are not really expert in computer
+[01:07] security I mean I've seen many
+[01:09] accountants kind of having a free for
+[01:12] wireless network in their
+[01:14] office you know and guess what
+[01:16] everybody's Social Security numbers in
+[01:18] the database credit card numbers I mean
+[01:23] you can have a field day in in office
+[01:25] like that and there really not many
+[01:26] regulations regulating small accounting
+[01:29] offices
+[01:30] of the data they
+[01:32] collect and you know they just go buy
+[01:34] the business
+[01:35] and and do the accounting but they know
+[01:37] nothing about security so it's very
+[01:40] interesting
+[01:43] actually I'm going to try to keep this
+[01:45] talk kind of high level I'm not going to
+[01:48] get very technical with
+[01:50] it um I mean I'll be happy to answer
+[01:53] questions afterwards I don't know
+[01:55] exactly how long it's going to take I
+[01:56] got 50 minutes to do this presentation
+[01:58] and this is the first time I'm doing it
+[01:59] so so I may rush through with through
+[02:01] slids and and uh basically feel it out
+[02:05] how it goes I probably half of you guys
+[02:08] will probably sleep today anyway so
+[02:10] after a lot of partying last night like
+[02:12] me I regretfully standing up here today
+[02:18] actually okay this is kind of an
+[02:20] overview what I will talk
+[02:22] about and uh what identities are
+[02:26] important to you I mean what is an
+[02:29] identity really what is your identity if
+[02:32] you really sit back and think what
+[02:34] identity is is it just a number that you
+[02:36] have is it you something you have
+[02:41] something you are something you
+[02:43] know I mean something you are
+[02:46] fingerprints looks Biometrics anything
+[02:48] like that something you have the
+[02:50] passport driver
+[02:52] license I guess something you know will
+[02:55] we your social security
+[02:56] number and which the US government is
+[02:59] very trying to keep a close guard on so
+[03:02] nobody can copy it because you can do a
+[03:04] lot of damage after somebody taking your
+[03:07] social security number Social Security
+[03:09] number is not necessarily very difficult
+[03:11] to to get either I'm going to show you
+[03:14] that later on in this
+[03:15] talk I mean why does somebody want an
+[03:18] alternative
+[03:20] identity I mean
+[03:23] probably the biggest reasons for it is
+[03:26] identity thefts through financial gain I
+[03:28] mean you seen all the
+[03:30] wonderful emails you get today about
+[03:32] fishing and stuff like that you know
+[03:34] that's type of identity theft
+[03:37] scam and surprisingly people still fall
+[03:40] for it but it
+[03:42] happens uh the other one will probably
+[03:44] be somebody trying to steal someone's
+[03:46] identity just be able to work
+[03:48] here I mean immigrants that can't get a
+[03:51] green card something like
+[03:53] that or Revenge I mean can you imagine
+[03:56] somebody stealing your social security
+[03:58] number and then apply for death
+[04:01] certificate turn you iness deceased
+[04:04] believe me it's a lot harder to become
+[04:06] alive after you
+[04:09] died but you can it's a very good way
+[04:11] you get revenge on somebody it takes
+[04:14] quite a while for the person to come
+[04:15] live
+[04:18] again the
+[04:21] methods are going to talk Pro kind of in
+[04:24] depth about creating and stealing more
+[04:28] inheriting is kind of an interest way
+[04:30] and um you can see that sometimes in
+[04:33] small magazines or not magazines but one
+[04:35] of those free papers distributions that
+[04:39] uh wanted a terminal ill person wonder
+[04:42] for wonderful Business Partnership
+[04:44] called this number y yada yada and what
+[04:46] it is is somebody basically looking for
+[04:48] somebody's terminally ill to sell his or
+[04:52] her identity to that person the person's
+[04:54] going to die has nothing to gain out of
+[04:56] it and the key is for that person not to
+[04:59] turn in the death certificate if you can
+[05:01] manage that person can manage dying
+[05:03] basically and you take over that social
+[05:05] security number you have a new identity
+[05:08] that's
+[05:08] inheritance this these things are
+[05:10] getting a lot harder after September 11
+[05:12] natur naturally but uh you know these
+[05:14] are methods being used I mean the old
+[05:17] methods for identity thefts out there
+[05:19] are getting new identities by roaming
+[05:21] around
+[05:22] graveyards and going through birth
+[05:25] records of babies to died and taking
+[05:27] identities that way they don't really
+[05:28] work at all I mean these these are a lot
+[05:31] of scam artists are going to say out
+[05:33] they're trying to sell books and stuff
+[05:34] like that and show methods are very old
+[05:36] that work maybe 20 years ago or
+[05:40] something okay stealing
+[05:45] identities probably the Holy Grail of
+[05:47] the stealing identity will be your
+[05:49] Social Security I mean this the first
+[05:50] thing somebody would get to get
+[05:54] access to other
+[05:56] identifications like a driver license
+[05:58] like the certificates diplomas etc etc
+[06:03] etc and it's not as hard as you think to
+[06:06] get somebody's social security number
+[06:08] and I'm going to show you
+[06:10] methods identity thieves will use to get
+[06:15] your Social Security
+[06:17] number um starting out you want if you
+[06:20] Identity Thief if try if Identity Thief
+[06:23] is trying to steal an identity they will
+[06:26] hopefully try to find somebody that
+[06:28] looks a little much like the thief
+[06:30] itself I mean you cannot really if you
+[06:33] say a large black afro woman and you are
+[06:38] like a 19-year-old male white male that
+[06:40] wouldn't quite pass for an identity so
+[06:43] you kind of pick somebody in the same
+[06:45] gender age looks everything that that
+[06:48] may be a little bit difficult but after
+[06:50] you found somebody you can basically use
+[06:54] mailbox camping which is basically you
+[06:57] camp at somebody's address and and
+[06:59] collect the mails do some dumpster
+[07:01] diving type and what you're trying to do
+[07:04] is get as much information about the
+[07:06] person as you possibly can get like
+[07:09] banking
+[07:11] accounts phone
+[07:14] bills I mean all kinds of stuff uh free
+[07:17] credit card
+[07:18] applications I mean most people work
+[07:21] during the day some people most whatever
+[07:24] they don't work out the house I mean
+[07:25] they work somewhere else the mail comes
+[07:28] in a mailbox
+[07:30] during the day and nobody watches your
+[07:33] mailbox a lot of people lives in
+[07:35] apartments lives in neighborhoods that
+[07:38] had like a big Central mailbox pile
+[07:41] sitting there and you can get the mail
+[07:43] from there some have locks but you know
+[07:45] you you be the lock on here look how
+[07:47] easy to pick a lock I mean you can pick
+[07:49] and lock two three seconds especially
+[07:51] one of these locks is not very hard to
+[07:53] pick and uh you know you watch the
+[07:55] mailbox for several days you may get a
+[07:58] credit card application and and you may
+[08:01] get a bill or something like that and it
+[08:03] would generally show the four last
+[08:05] digits of your Social Security
+[08:07] number you may think that you know no
+[08:10] it's no big deal four less digits is no
+[08:12] big deal my social security number
+[08:13] actually it's a very big deal it's the
+[08:16] only
+[08:17] unique numbers in your social security
+[08:19] numbers the last four
+[08:25] digits if you
+[08:27] look at the card or resource security
+[08:29] that's a card but if you look at your
+[08:31] source security number the fourth last
+[08:34] digit is the unique number the three
+[08:36] first digits tells me where you register
+[08:41] your social security number basically if
+[08:43] I know when you are
+[08:45] born most likely I can I can figure out
+[08:48] your first three digits in your social
+[08:50] security number I already have or the
+[08:53] Identity Thief already have your last
+[08:55] four digits now the Identity Thief has
+[08:59] you let first three digits only the two
+[09:02] middle digits are missing and they are
+[09:05] called the group number and the group
+[09:07] number goes in
+[09:08] sequence and um basically the odd
+[09:10] numbers 0 to 9 are the first number
+[09:12] being
+[09:13] assigned and then the even numbers 10 to
+[09:16] 96 then even numbers 2 to 98 and after
+[09:20] that all numbers 11 to 99 being
+[09:23] assigned so you can pretty much
+[09:26] enumerate it and the highest group
+[09:28] number is a published number by Social
+[09:31] Security so you can know from each
+[09:34] region which is the highest assigned
+[09:36] group number so it's not you necessarily
+[09:40] not having 99 guesses to guess the
+[09:42] social security number of somebody it's
+[09:45] lot less than
+[09:46] that and some states are larger they
+[09:49] will have several areas like Georgia is
+[09:54] like
+[09:55] 259 260 I think or something like that
+[09:58] you can look at the list whatever it is
+[10:00] which state you're from and you can you
+[10:02] can see pretty much would Jive what you
+[10:04] register your social security number
+[10:05] [Music]
+[10:08] at after you have the three first digits
+[10:11] and four last digits it's very easy to
+[10:13] write a little script program or
+[10:14] something
+[10:15] and verify the social security number
+[10:17] there's Services out there that you can
+[10:18] actually verify a social security number
+[10:21] against the name that's for tax
+[10:25] reasons because you need to know you're
+[10:27] not hiring an illegal alien so you need
+[10:29] verify this a genuine taxpayer you have
+[10:32] hired at you you can use a Social
+[10:35] Security Site to do that at however it's
+[10:38] a difficult process to register yourself
+[10:40] as an employer but it can be done there
+[10:43] are other servic out here this is just
+[10:44] some internet site I found out there
+[10:46] that does that and it needs some you
+[10:50] know minimal information about it it
+[10:52] takes a little script that uh basically
+[10:55] brute forces the three the number the
+[10:58] two that the two-digit number the area
+[11:00] number in there and you will have a soci
+[11:03] Social Security number from this person
+[11:06] only knowing the last four
+[11:08] digits not very difficult is
+[11:13] it okay there are other ways to get
+[11:15] Social Security numbers some them even
+[11:17] easier than that you can use social
+[11:20] engineering I mean I think most of you
+[11:23] guys have at least sometimes gotten a
+[11:25] call from your bank if you sit in the
+[11:28] mailbox you collect in a credit card
+[11:31] statement okay I got I know which bank
+[11:33] you're using I
+[11:35] know what's your transaction was last
+[11:38] month that comes in on a monthly basis I
+[11:40] may not
+[11:41] know the rest of it but I just called
+[11:43] you and said hey I'm from bank so and
+[11:46] such and I want to verify few few
+[11:50] transaction happened to your credit card
+[11:51] in the last couple of days but to be
+[11:53] able to speak to you I need to know your
+[11:56] mother's made a name so of course of
+[11:59] course the person says my mother's name
+[12:00] the name is y y Yoda and then I need to
+[12:03] know the last digits of your Social
+[12:04] Security number and the person gives
+[12:06] away last year to Social Security number
+[12:07] you can ask three four other questions
+[12:09] if you want to depending how much
+[12:10] information you want from that person
+[12:12] but just Bel little social engineering
+[12:14] you will have the person's Vital
+[12:17] Information just from a simple phone
+[12:18] call so if a bank calls you and ask you
+[12:22] for what transaction should be done
+[12:24] don't give out the information have call
+[12:27] back to bank yourself and then ask what
+[12:31] happened to my transactions it's very
+[12:33] common mistake and it's a very easy way
+[12:35] to social engineer yourself to a social
+[12:36] secur number in this way so yes keep in
+[12:39] mind on
+[12:40] that um there are actually many internet
+[12:43] sites out there many of them are being I
+[12:47] think they're getting shut down or
+[12:49] something because they be less and less
+[12:50] of them after September 11th but these
+[12:52] are some samples I've seen and they
+[12:55] basically will find a social security
+[12:57] number for for you they they say they
+[13:01] require some legitimate reason why you
+[13:05] should get somebody's social security
+[13:07] number or something like that you can
+[13:09] also make something up and they they
+[13:11] charge you like 50 bucks or something
+[13:13] like that and and you know you can use
+[13:15] an in Anonymous internet Identity or
+[13:18] some ways to get it and guess what you
+[13:20] will get that person social security
+[13:22] number through a
+[13:24] service and uh I mean it's very
+[13:26] interesting I mean I'm sure most of you
+[13:27] guys have heard of was ser
+[13:29] or I mean some of these things out there
+[13:32] it's kind of interesting actually but I
+[13:34] have noticed that these sites are
+[13:37] decreasing but it's a it's a very high
+[13:40] interest in finding individuals this
+[13:47] way okay
+[13:50] now we got your Social Security number
+[13:52] or the identity theft Thief got your
+[13:55] Social Security number after you got the
+[13:57] number you need couple more means of
+[14:02] identifications uh probably next step in
+[14:04] the chain for a thief to obtain
+[14:07] identities to get the driver
+[14:10] license it's probably not a very good
+[14:12] idea for a person to go in to the local
+[14:15] DMV office where the real owner or
+[14:19] Social Security person is and register
+[14:21] that name because many times that
+[14:24] person's picture is on file or something
+[14:27] like that so it's probably not a good
+[14:29] you have you may have a lot of questions
+[14:31] to answer why you're not looking exactly
+[14:33] the same as the
+[14:34] pitcher so it's not really the best I
+[14:38] mean you know some people make fake
+[14:40] driver licenses and it was a case I read
+[14:43] on some websites a while ago there was
+[14:45] some guy gentleman some guy in Iran or
+[14:47] something that created a fake identity
+[14:50] using Brad Pit's
+[14:52] picture I don't think you should use
+[14:54] Brad Pit's picture I don't think you
+[14:55] should she'll steal any famous person's
+[14:58] identity that's quite difficult and uh
+[15:01] but you
+[15:02] know a lot of people are not very
+[15:04] careful what they're doing but getting a
+[15:07] driver license is not necessarily very
+[15:08] difficult I mean the services out there
+[15:11] there will not be in United States you
+[15:12] don't find them there because they they
+[15:13] are shut down here as they're coming up
+[15:15] they're really crappy or or they've been
+[15:18] shut down very
+[15:20] fast uh there are several services in
+[15:24] Europe or in Asia available and this
+[15:27] again this is just some service
+[15:29] I found on the web and um actually I had
+[15:32] somebody tell me about it I didn't just
+[15:34] find this one but the they make driver
+[15:36] licenses with the barcode working in the
+[15:38] back so you basically can run it through
+[15:41] Barcode Scanner and it looks completely
+[15:43] genuine like it's a genuine license
+[15:46] however I would not try to give this
+[15:47] license to an officer you not sure how
+[15:50] good it really is but uh they are
+[15:52] Services out there I mean that does
+[15:55] produce realistic looking licenses they
+[15:58] call novelty licenses and they're
+[16:01] just supposed to be used as practical
+[16:04] jokes I guess or something like that I
+[16:06] don't know but they're
+[16:08] available they're scary how simple it is
+[16:11] to get typically a license like this
+[16:12] cost between $100 and $200 for a good
+[16:16] license
+[16:18] um a lot of times you probably get stift
+[16:23] one or two times before you get a
+[16:25] license that really is very very good I
+[16:27] mean is be to be expected I mean most
+[16:29] people that get one of these license may
+[16:31] not be an identity thief it could be
+[16:32] some teenager just want to get into a
+[16:34] bar or something I mean uh if it looks
+[16:37] real
+[16:39] enough after you get the license fake
+[16:42] driver license they identity the would
+[16:43] try to get the next type of identity
+[16:47] which would be the birth certificates so
+[16:48] probably one of the easiest ones to
+[16:50] get H it's not easy to counterfeit a
+[16:53] birth certificate because it's like an
+[16:55] embossing on it and all kinds of stuff
+[16:57] but it's very easy to apply for one one
+[16:59] and again to apply for birth
+[17:01] certificates depends from state to state
+[17:03] some states they only send the birth
+[17:05] certificates to the person where the
+[17:07] person is registered at at that
+[17:09] address but if you do mailbox camping or
+[17:12] something who cares you watching the
+[17:13] mailbox you know when the mail man is
+[17:14] coming in you can just take the mail
+[17:16] away from their
+[17:17] address if uh some states don't require
+[17:20] that or you can even use services to do
+[17:23] this thing and here's one of these
+[17:25] services and all they require from you
+[17:27] is a copy a driver license well Sero
+[17:30] copy a fake driver license but loss is
+[17:33] that I mean it's very easy and they
+[17:34] they're very hard to prove that's a fake
+[17:36] driver license since it's a copy
+[17:38] anyway so you get a genuine looking what
+[17:42] gen you actually get a genuine birth
+[17:45] certificate and now the Identity Thief
+[17:47] has pretty much all the means to become
+[17:51] you or whoever identity this
+[17:55] person is trying to become
+[18:00] there are other means of identities out
+[18:03] there I mean the degrees and
+[18:04] certificates H you can get fake
+[18:08] degrees you can get something called
+[18:11] life experience
+[18:13] degrees this one I really
+[18:15] like Rockville
+[18:18] University they are endorsed
+[18:21] and and uh proven a genuine car a
+[18:25] genuine educational ination by two
+[18:27] bodies
+[18:29] if you go and check those body sites the
+[18:31] the both of these bodies that uh endorse
+[18:34] this University it's kind of f funny how
+[18:37] the web interface look exactly the
+[18:41] same you know it's really interesting g
+[18:45] wow life experience degree is a degree
+[18:50] that you can basically you prove that
+[18:52] you have worked in the field for so many
+[18:55] years and what I mean by proving you're
+[18:56] right by three statements I've been a
+[18:58] neurosurgeons
+[19:00] for well whatever neurosurgeons for
+[19:03] whatever and and done so and such and
+[19:06] then you send him 600 bucks and you get
+[19:08] a PhD
+[19:09] in in
+[19:12] neurosurgery well you know I kind of
+[19:14] took the liberty to you Google this
+[19:17] University you'd be surprised how many
+[19:18] people that are graduates from this
+[19:21] entity I kind of want to send them an
+[19:23] email said Gee fancy you got all these
+[19:27] degrees but that it's it can be done uh
+[19:31] in some states they can really track you
+[19:32] down but in many cases you can get by
+[19:34] with this thing it's a real it's a real
+[19:36] degree it's kind of scary actually I
+[19:38] mean $600 for a PhD that's a hell lot
+[19:40] better than go six years in college and
+[19:43] pay like
+[19:47] $200,000 you don't know anything but
+[19:49] that's beside a point you can still do
+[19:51] do neural surgery when you're done
+[19:53] right okay after this the next thing
+[19:56] brings up the next chapter on this thing
+[19:57] this is actually the the when stuff is
+[19:59] starting to get really
+[20:01] interesting and it has to do with your
+[20:04] passport I mean how many people in here
+[20:06] have a
+[20:08] passport wow that's a lot you see I
+[20:12] spoken a local Bingo par back there was
+[20:14] only like two people had one but
+[20:16] generally if you go in an area that's
+[20:18] very
+[20:19] rural people not traveling you find
+[20:22] maybe 20% of the people will have
+[20:25] passports I mean I assume this is a very
+[20:27] International audience in here you find
+[20:29] a lot of people with passports and
+[20:30] seriously if
+[20:32] you want to protect your identity get
+[20:35] yourself a
+[20:36] passport because if you don't have a
+[20:39] passport somebody can get the passport
+[20:41] in your
+[20:42] name it's very easy because that's the
+[20:44] only passport exists that's why it's so
+[20:46] hard to get a driver license because
+[20:49] just about everyone has a driver license
+[20:52] but very few people have a
+[20:56] passport so something to think about but
+[20:58] it doesn't cost much to get one and
+[21:00] they're valid for like 10 years or
+[21:03] something but that's what it that's the
+[21:05] method for somebody to create an
+[21:08] identity is by stealing identity and
+[21:10] then use passport to create one which I
+[21:14] will show how this how the Identity
+[21:16] Thief go by to do this in a second right
+[21:19] here and that is the second part of this
+[21:23] presentation right here and oh I'm doing
+[21:25] pretty good in Tai wise too cool okay
+[21:28] the passports they has benefits or I get
+[21:30] a second passport has benefits and has
+[21:33] disadvantages so you need to be aware of
+[21:35] both I mean something very common with
+[21:39] passports which the United States is
+[21:41] trying to shut down on is the pass call
+[21:43] Passport
+[21:44] traveler is individuals traveling on
+[21:47] different passport trying to be
+[21:49] anonymous a lot of times for business or
+[21:52] tax evasion that's typically what it's
+[21:54] been used
+[21:55] for basically those are individuals have
+[21:58] several nationalities in several
+[22:00] countries most of the time they travel
+[22:02] under the proper identity but under
+[22:04] different passport however some of these
+[22:07] individual have different names on
+[22:09] different passport which makes them
+[22:11] makes them nearly truly
+[22:15] Anonymous uh which the second part is
+[22:17] being anonymous the other one is called
+[22:19] safe travel I mean uh being
+[22:23] American can be kind of difficult when
+[22:25] you travel today I mean they been
+[22:27] incident you seen in the paper done in
+[22:29] baling stuff they finding all the
+[22:30] American tourists and shoot them all I
+[22:33] mean that's not a good thing so there a
+[22:35] lot of Americans wanting to be able to
+[22:37] travel under different passports just to
+[22:40] protect them themselves especially if we
+[22:42] travel to a countries that don't like
+[22:46] Americans by the way I am American too
+[22:48] and if even if I a Swedish
+[22:52] accent okay that's the second copy of
+[22:54] that
+[22:56] slide all right the easiest way to get a
+[22:58] passport is use something called a
+[23:00] camouflage
+[23:01] passport a camouflage passport is a type
+[23:04] of passport from a country that existed
+[23:07] but do not exist anymore like
+[23:10] sensiar new Grenada rudia what have you
+[23:15] these passport looks real feels real
+[23:17] they're real in every aspect and you can
+[23:20] buy them from any Services uh they cost
+[23:22] between $400 and
+[23:24] $700 and basically why people use them
+[23:27] is to be anonymous they will not use
+[23:29] these passports to go through customs or
+[23:32] passport controls they are trained to
+[23:34] filter these type of passports out but
+[23:37] for opening bank
+[23:39] accounts getting driver license even you
+[23:42] can get driver license for them uh you
+[23:44] know similar similar things like that
+[23:46] getting into bars I guess if you're
+[23:49] under
+[23:50] 21 and other things like
+[23:53] that uh the other option is to actually
+[23:55] create an identity I mean
+[23:58] to to get real foreign passport I mean
+[24:01] sorry and there are countries you can
+[24:04] buy passports or you can buy citizenship
+[24:08] I mean every country has some kind of
+[24:09] price for being a citizen and there some
+[24:13] examples I have is Argentina s kits
+[24:16] Bahamas and many others I mean you
+[24:19] probably don't want to pick a country in
+[24:22] a third world country in central Africa
+[24:24] that may not be a good idea but there
+[24:27] are some some very good countries out
+[24:29] there you can pick and top of the list
+[24:30] would be an EU country or something like
+[24:32] that because that would give you Visa
+[24:34] less travel to Y about any country in
+[24:36] the world if you pick some Central
+[24:39] African country you probably can only
+[24:40] care with travel within that country and
+[24:43] nowhere else so it may not be a good
+[24:45] idea or this is like a Russian passport
+[24:47] right here guess you can't travel far
+[24:49] with that
+[24:52] either if you buy a passport at the
+[24:55] country um
+[24:58] typically what I've been I kind of did
+[25:00] some research but the price to buy if
+[25:03] you use a service goes anywhere on the
+[25:06] low end from 20,000 to $50,000 I mean
+[25:09] it's not cheap but that would get you a
+[25:11] passport by purchasing
+[25:13] it um on the low end will be something
+[25:16] like $5,000 on the high end it will be
+[25:20] like hundreds $100,000 $250,000 but if
+[25:23] you think about it you can actually buy
+[25:24] yourself a new nationalities may not be
+[25:26] a bad idea especially if if you load it
+[25:29] like everybody here is so it's a great
+[25:32] way to get do taxes with right but
+[25:35] that's for the kind of people that will
+[25:38] apply for passports and these things you
+[25:40] had to watch like the governments local
+[25:41] governments the local government said oh
+[25:43] yeah we take these passport today then
+[25:45] they have a Revolt or something and
+[25:47] suddenly you're not a citizen anymore so
+[25:49] that $100,000 you just spent or just
+[25:51] went out of the window but things to
+[25:53] watch
+[25:55] for this is this slide here shows shows
+[25:57] you a um such a service this these guys
+[26:01] been around for a very long time
+[26:03] um you know it's kind of interesting
+[26:05] read them what they else to sell they
+[26:07] sell overse banking accounts they all
+[26:09] kinds of stuff they do also camouflage
+[26:11] passports stuff like that
+[26:14] um and again not cheap but very just
+[26:17] very interesting reading there are other
+[26:19] ways to do it too the
+[26:21] exceptions if you don't mind to join the
+[26:24] French Foreign Legion for 3 years or 5
+[26:26] years you become French
+[26:29] I mean it's just on couple years of your
+[26:31] life right but you are guaranteed French
+[26:33] citizenship after you survive the French
+[26:38] Legion if you have Irish ancestry you
+[26:42] can apply for a passport Irish
+[26:45] passport that's a very interesting
+[26:48] loophole actually a lot of people have
+[26:51] Irish ancestry here in the United States
+[26:53] so that you can actually get an Irish
+[26:55] passport without spending $20,000
+[26:58] if you have a Jewish you can become an
+[27:01] Israeli citizen I don't anybody want to
+[27:02] be that today
+[27:04] but you
+[27:06] can they accept any Jews if you want to
+[27:09] be a monk for a part of your life there
+[27:13] is some order I think it was e in
+[27:14] Austria and Italy they would accept you
+[27:17] and you can get citizenship in one of
+[27:19] those
+[27:20] countries so there are many exceptions
+[27:23] out there and this are only a few
+[27:25] samples of how you can get
+[27:28] get Italian citizenship by Blood by
+[27:31] Blood okay yeah very very interesting
+[27:34] isn't it but what I'm getting at with
+[27:38] this thing is
+[27:40] that if you actually stole somebody's
+[27:43] identity if somebody stole someone
+[27:45] entity that had Irish An ancestry guess
+[27:47] what you can go to Ireland apply for
+[27:50] passport on that person's name the
+[27:51] person will never have an idea has a
+[27:53] passport to begin with you got got this
+[27:55] pass you got this residents in Ireland
+[27:59] and Irish passport then you change your
+[28:00] name to whatever Mr
+[28:05] Shamrock well now you have a new name in
+[28:07] Ireland and a new citizenship you are
+[28:09] completely
+[28:11] Anonymous the only the only way you
+[28:14] probably possibly get caught if this
+[28:15] individual that you that somebody stole
+[28:18] identity from finds out that has a
+[28:20] passport already or something like that
+[28:22] it may be complications but the chances
+[28:24] they going to trace it back to Ireland
+[28:25] is very very small that not much
+[28:28] Communications between countries
+[28:30] internationally some countries
+[28:32] communicates more with United States
+[28:33] than other
+[28:35] countries so you can again with this new
+[28:37] identity you can use your imagination
+[28:39] you can travel back to United States on
+[28:40] a different passport different name get
+[28:42] a different soci security number and
+[28:44] hence you created a different
+[28:46] identity after this speech this will
+[28:49] probably not be possible
+[28:50] anymore and that's one of the reasons
+[28:52] I'm doing
+[28:53] it but I found it very interesting that
+[28:56] it's it's possible to do it another very
+[28:58] interesting way that's commonly used
+[29:00] after you travel the
+[29:02] country you see that in also in magazine
+[29:05] sometimes like you can marry somebody in
+[29:08] a country and you making a business
+[29:10] agreement I want to marry you for this
+[29:12] time to obtain
+[29:14] citizenship you find that in United
+[29:16] States it's very hard in United
+[29:18] States to be married to somebody to get
+[29:22] they're very suspicious here for doing
+[29:25] that and but you will Mar American
+[29:27] citizen you marry somebody here for 2
+[29:30] years you can get a green card after
+[29:31] that that's how it works but you know
+[29:33] it's becoming
+[29:35] increasingly increasi difficult to do
+[29:37] that because a lot of people are us
+[29:39] utilizing it as a business proposal so
+[29:42] they pay a guy 10 grand or girl whatever
+[29:45] and uh you know use it as a business
+[29:47] then you get divorced after two years
+[29:48] and you have a green card after you have
+[29:50] a green card you can get citizenship
+[29:52] after 5
+[29:54] years and um that's kind of how it works
+[29:58] it's very interesting and like I said
+[29:59] this is only like a research is it
+[30:01] possible to get an honest identity in
+[30:03] United States and the answer is at this
+[30:06] point as of 2 minutes ago
+[30:10] yes and um you know it's it's
+[30:14] interesting that's uh pretty much my
+[30:16] presentations today if you have any
+[30:21] [Applause]
+[30:26] questions
+[30:28] [Applause]
+[30:34] I I
+[30:40] guess based on your research other than
+[30:44] getting a a passport if you're already
+[30:47] legal what do you recommend to protect
+[30:49] your identity or what additional steps
+[30:52] there are a lot of steps to protect your
+[30:53] identity I mean first of all get
+[30:55] yourself a passport because
+[30:57] that's very important uh simple
+[31:02] stuff very very simple stuff when you
+[31:05] apply for your banking account or
+[31:07] something don't give me your mother's M
+[31:09] name your mother's M name could be Brun
+[31:12] hildo or something like that I mean that
+[31:14] way that's a good way to protect never
+[31:16] give information
+[31:20] [Music]
+[31:22] away some banks that's correct but they
+[31:25] ask for it but and uh by default
+[31:29] right then that's exactly what you
+[31:31] should do uh don't ever give information
+[31:35] voluntarily shred your information at
+[31:38] home buy a cross Shredder not a strip
+[31:41] shredder next question hi I'm Irish
+[31:44] Italian so I've got double jeffardy on
+[31:46] this thing uh I already have a US
+[31:48] passport what's the legality of having
+[31:50] an Irish and an Italian passport at the
+[31:52] same time well if don't travel with them
+[31:56] at the same time if you get C and the
+[31:57] Customs who have a lot of explaining to
+[31:59] do but you can legally actually keep a
+[32:02] US passport with another nation's
+[32:05] passport it's up to Ireland I'm not sure
+[32:06] what their legalities in Ireland are or
+[32:09] Italy or something like that so but the
+[32:12] my advice is never travel on two
+[32:14] passports if they search a luggage and
+[32:15] find two passport it's like a red flag
+[32:17] coming up instantaneously okay so just
+[32:19] get it keep it put it away and that's it
+[32:21] exactly okay
+[32:23] thanks um I've done some research on it
+[32:26] and for IR citizenship cuz I'm of Irish
+[32:28] ancestry your parent or grandparent has
+[32:30] to be born in Ireland not not like a
+[32:33] nationalized Irish citizen uh to get
+[32:35] that otherwise you have to go through
+[32:37] the the regular process to to move there
+[32:39] to get it um and then additionally I
+[32:41] also have Canadian citizenship I was
+[32:43] born in America but grew up in Canada so
+[32:45] I have Canadian citizenship and um you
+[32:48] actually can carry two passports with
+[32:50] you uh was up until about 86 I think the
+[32:54] uh they said I traveled to Ireland came
+[32:55] back um
+[32:57] I thought the same thing that you
+[32:58] shouldn't have two passports with you so
+[33:00] I didn't bring my American passport and
+[33:01] I almost didn't get back into America I
+[33:03] was traveling on my Canadian passport it
+[33:05] was like 2 days after the Gulf War 2.0
+[33:07] broke out but uh you can have them both
+[33:09] and the US does recognize it but just if
+[33:11] you do travel abroad I traveled out on
+[33:14] my Canadian passport and I should have
+[33:15] had my American passport to come back in
+[33:17] uh they'll want to see that they say why
+[33:19] do you deserve to come back into America
+[33:21] even though I had my driver's license
+[33:22] from a state um I had to kind of prove
+[33:25] it otherwise that's true actually I just
+[33:29] read that too Irish used to you any
+[33:31] Irish ancestry but they actually changed
+[33:32] it to Grand grandparents I think it was
+[33:34] not grandparents and I just want was
+[33:37] just an overview what you can do and the
+[33:39] Italian I I think I read about that too
+[33:40] actually it's a it's a book called that
+[33:43] it's called uh it's uh GH Wilson I think
+[33:46] the guy HG Wilson that made a book
+[33:48] called the passport report which is a
+[33:51] very interesting book to read actually
+[33:53] next question I have a problem that
+[33:55] affects approximately 5% of the
+[33:57] population I actually have no way to
+[34:00] prove what my nationality is because I'm
+[34:02] adopted what would be the burden of
+[34:04] proof to say that I'm Irish or
+[34:09] not well you know you there's a lot of
+[34:12] ways to fake yourself into anything
+[34:14] isn't it but the burden of proof I mean
+[34:17] they can probably man that's you had to
+[34:20] get some kind of proof showing it in
+[34:23] some shape or for I cannot answer that I
+[34:25] mean if you can show it I mean they're
+[34:27] not going to give it to you simp that's
+[34:28] as simple as it is well the problem like
+[34:30] where I'm in is the state of Michigan
+[34:32] it's almost impossible to find out what
+[34:34] your actual ancestry is much less any
+[34:36] other birth information that you have so
+[34:39] by the government by law is preventing
+[34:41] you from being able to do this in
+[34:43] violation of your rights the rule is
+[34:47] simple you give them the information
+[34:49] they want they give you the information
+[34:51] you
+[34:53] want very simple yeah just to comment
+[34:56] for that last speaker he may be able to
+[34:58] rely on his adoptive parents ancestry
+[35:01] because he may never disclose that fact
+[35:04] that he's been adopted to another nation
+[35:06] which is what it would involve I wanted
+[35:07] to point out that you had the camouflage
+[35:09] uh passports I didn't hear you mention
+[35:11] inserts in a lot of cases uh the places
+[35:14] you've been may be held against you as
+[35:16] you're traveling and so I just wanted to
+[35:18] point out there are ways to use a mobile
+[35:21] page within a passport and thus s thus
+[35:25] uh hide places you've been
+[35:27] for instance if you're traveling from
+[35:28] Arab Nations to Israel back and forth
+[35:30] things like that that may be of Aid to
+[35:32] you I just want to make that comment
+[35:38] okay all right thank
+[35:40] [Applause]
+[35:45] you

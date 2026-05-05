@@ -1,0 +1,74 @@
+
+COX'S PRIMITIVE:  ISSUER-TRUST LAUNDERING
+=========================================
+
+The fraud is not in the documents - every document is genuine.  It is in the
+issuance path.  Each issuer in a chain accepts the *output* of an earlier issuer
+as proof-of-identity, with no shared view of upstream issuance facts.  Trust
+laundered through one weak step becomes admissible everywhere downstream.
+
+THE CHAIN
+─────────
+conversational PII   (name, DOB, SSN, MMN, POB - the KBA quintuple)
+        │
+        ▼
+vital records / SSA  -> birth cert + SSN card        (mail, no in-person check)
+        │
+        ▼
+state DMV           -> driver's license              (the keystone credential)
+        │
+        ├───> banks, auto loans, secured credit, notary commission
+        ├───> US Department of State -> passport
+        ├───> 2nd state's DMV -> 2nd DL (uses 1st DL as primary ID)
+        └───> court -> legal name change (resets the paper trail)
+
+WHY IT COMPOUNDS
+────────────────
+- each new credential is admissible as primary ID at the next issuer
+- no issuer queries any other issuer's gallery (DMV, DoS, SSA all siloed)
+- the credential's authenticity (hologram, seal, MRZ) is genuine because the
+issuance was genuine - the falseness is in the binding to a person
+
+THE 7-DMV STACK  (the specific attack Cox ran against state DMVs)
+─────────────────────────────────────────────────────────────────
+Every state's DMV accepts another state's DL as primary ID for issuing a new
+DL, and in the early-2000s no DMV ran 1:N facial matching across either its
+own gallery or any other state's gallery.  So one keystone DL bootstraps a
+chain of fully legitimate licenses, all in the same name and on the same face:
+
+      AL DMV  ─[breeder docs]──>   Alabama DL    (Cox's face, identity #1)
+                                        │
+      GA DMV  ─[Alabama DL]────>   Georgia DL    (same face, same name)
+                                        │
+      FL DMV  ─[Georgia DL]────>   Florida DL    (same face, same name)
+                                        │
+                                       ...        ... 7 states deep
+
+Then repeat the whole stack under a different seed (Track A or Track B) and
+the same face is now bound to N parallel identities, each holding several
+state DLs.  Final scoreboard: 27 DLs across 7 states - one face on every one
+of them, and not a single forged document in the pile.
+
+The one signal that breaks this is 1:N face matching across DMV galleries.
+AAMVA's State-to-State program does exactly that today; the "Photo List"
+idea referenced in section 2 below is the same primitive applied to Persona's
+own gallery of inquiry selfies - any new inquiry whose selfie matches a face
+already issued under a different identity is the Cox-pattern fingerprint.
+
+TWO WAYS TO SEED THE CHAIN
+──────────────────────────
+Identity-theft seed             Synthetic seed
+(Track A, "homeless survey")    (Track B, child SSN or SSA-issued SSN)
+- real adult, dormant           - no real adult exists
+- residual collision risk       - ~zero collision risk
+- real birth cert               - fabricated birth cert (custom seal)
+
+WHY IT WORKED THEN, WHY IT WOULD STRUGGLE NOW
+─────────────────────────────────────────────
+paper-trust issuance + siloed verification = the loop closes only at the face,
+and nothing in 2003 looked at the face across issuers.  Modern mitigations
+(DMV 1:N facial dedup, AAMVA S2S, DoS passport gallery, mDL cryptographic
+signing, IAL2 selfie+liveness) all attack this exact gap.  The face becomes
+the cross-issuer anchor the documents never were.
+
+TOTALS THIS PRIMITIVE PRODUCED FOR COX:  50+ identities · 27 DLs / 7 states · ~24 passports.

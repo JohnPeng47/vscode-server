@@ -1,0 +1,43 @@
+2025-07-28T00:00-07:00 | Data Sovereignty vs. Data Residency: Key Factors in Privacy and Security
+
+URL: https://withpersona.com/blog/data-sovereignty-vs-data-residency
+
+ blog If your business collects and stores customer data, it’s important to consider both data residency and data sovereignty in your privacy and security policies.  PrivacyCompliance   Published July 28, 2025Last updated January 12, 2026Data sovereignty vs. data residency: Key factors in privacy and securityIf your business collects and stores customer data, it’s important to consider both data residency and data sovereignty in your privacy and security policies. Tim Stobierski     5 min 
+  .keytakeaway-swiper .swiper-slide-next {
+    opacity: 0.2;
+  }
+  Key takeaways    Data sovereignty is the idea that countries and regions can regulate data collection, storage, and use in their territory.   Data residency refers to the location where a company stores data.   Both concepts can influence your customer data policy, particularly if you operate across multiple jurisdictions.      BlogData sovereignty vs. data residency: Key factors in privacy and securityCopy link
+
+Link copied!
+ When it comes to designing your company’s customer data policy, there’s a lot to consider. In addition to factors like data retention — how long your business will keep customer data, either due to regulatory or business requirements — you’ll also need to ensure that your policy adequately considers data residency and data sovereignty requirements. Data residency and data sovereignty are two related concepts that are often discussed alongside each other. But there are key differences between the two. Below, we take a closer look at what data sovereignty and data residency actually are, including a brief overview of some of the laws and regulations that establish them. We also review the key differences between the two concepts and discuss how they can impact your customer data policy. What is data sovereignty?Data sovereignty is a framework that aims to determine who has the right to regulate customer data created, collected, or stored by a company. This tells us what laws the data is subject to, and which a company must comply with. Under this framework, a country may have sovereignty over data if that data was:Created or collected in the countryStored in the country
+   
+      Guide
+      The 2025 regulation guide for online platforms and marketplaces
+   
+   
+      Get the guide
+      
+         
+            
+         
+      
+   
+Data sovereignty lawsIn order for a country to claim sovereignty over data, it must first have a law (or laws) in place that would apply to said data. In addition to other types of regulations, this often includes laws related to data privacy and security. For example, in the United States, a few well-known examples at the federal level include:Children's Online Privacy Protection Act (COPPA)Executive Order 14117 / 28 CFR 202 (Preventing Access to US Sensitive Personal Data and Government-Related Data by Countries of Concern or Covered Persons)Health Insurance Portability and Accountability Act (HIPAA)Privacy Act of 1974USA PATRIOT ActAdditionally, around 20 states have consumer data privacy laws, and there’s pending legislation in others. Some of these laws include the:California Consumer Privacy Act (CCPA)Illinois Biometric Information Privacy Act (BIPA)Colorado Privacy Act (CPA)Connecticut Data Privacy Act (CDPA)Utah Consumer Privacy Act (UCPA)Virginia Consumer Data Protection Act (VCDPA)Outside the US, a few data privacy laws you might be familiar with include:EU’s General Data Protection Regulation (GDPR)UK’s Data Protection Act 2018Canada’s Personal Information Protection and Electronic Documents Act (PIPEDA)Australia’s Privacy Principles (APP)Complying with the regulations and requirements in every region where you collect, store, or process data is important. These requirements can dictate the types of data you can collect, where you can store it, how long you can retain it, and the security systems you must have in place. What is data residency?Data residency refers to where you store or process data. Data residency laws may require that any consumer data you collect be stored in the country, a concept known as data localization. The law may restrict the transfer of certain consumer data. For example, you might need to get the consumer’s consent first, or only transfer data to countries or regions with approved security measures.Many of the laws that establish a country’s claim of data sovereignty also establish data residency requirements. The EU’s GDPR, for example, requires companies that collect personal data about an EU subject to store the data within the EU unless the European Commission approves the receiving country’s safeguards and protections in place. Exceptions are allowed when a customer gives their explicit consent for their data to be transferred. Meanwhile, in the United States, the Protecting Americans' Data from Foreign Adversaries Act (PADFA) forbids data brokers from making personally identifiable sensitive data of a US individual available to foreign adversaries, and entities that a foreign adversary controls. Data sovereignty and data residency: differences and linksData sovereignty focuses on which country has the right to regulate data, while data residency refers to where you store the data.  The two concepts are linked because many countries claim sovereignty over data collected from their residents or within their borders. As a result, compliance can quickly get complicated when you want to collect and store data in different countries. Getting your company’s customer data policy right requires you to consider your data residency practices and the applicable laws. Additionally, you have to think through who you’re targeting or selling to, because some countries may claim data sovereignty if you offer goods or services to their residents. 
+   
+      Solution demo
+      Demo: fraud and ensure compliance for e-commerce and marketplaces
+   
+   
+      Watch now
+      
+         
+            
+         
+      
+   
+Choosing the right partner helpsIf you work with external partners to collect, process, or store customer data — for example, as a part of your identity verification (IDV), Know Your Customer (KYC), or Know Your Business (KYB) processes — it’s important to think about how those partners fit into the broader patchwork of data residency, privacy, and security laws. At Persona, we understand that data sovereignty, residency, and retention issues can quickly become incredibly complex, especially for businesses operating in multiple jurisdictions. That’s why we offer our customers a number of solutions to help get their data policies right the first time, including:Data centers in the United States and EU: Where available, customers can choose US or EU storage to ensure compliance with data residency requirements.Data processing agreements: In order to facilitate cross-border data transfers, customers can request a data processing agreement (DPA) to officially guide how customer data is collected, stored, and processed with Persona. A transparent privacy policy: Our privacy and security frameworks are based on and align with global standards to meet or exceed requirements. Ready to learn more about how Persona can help you get your customer data policy right? Start for free, or contact us for a demo today.  
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Tim StobierskiTim Stobierski is a writer and content strategist focused on the world of finance, investing, fintech, insurtech, and software. His friends know him as a bit of a nerd. He likes cats and coffee.Table of contentsWhat is data sovereignty?What is data residency?Data sovereignty and data residency: differences and linksChoosing the right partner helpsContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

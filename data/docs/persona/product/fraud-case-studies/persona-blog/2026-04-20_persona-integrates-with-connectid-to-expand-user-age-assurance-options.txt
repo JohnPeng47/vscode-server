@@ -1,0 +1,43 @@
+2026-04-20 | Persona Integrates With ConnectID to Expand Age Assurance
+
+URL: https://withpersona.com/blog/persona-integrates-with-connectid-to-expand-user-age-assurance-options
+
+ blog Persona's integration with ConnectID helps organizations comply with Australia's age assurance regulations while minimizing friction and privacy concerns. Age assuranceAnnouncements GamingSocial media Published April 20, 2026Last updated April 20, 2026Persona integrates with ConnectID to expand user age assurance optionsPersona's integration with ConnectID helps organizations comply with Australia's age assurance regulations while minimizing friction and privacy concerns.Brandon Chen     4 min 
+  .keytakeaway-swiper .swiper-slide-next {
+    opacity: 0.2;
+  }
+  Key takeaways    Australia's Social Media Minimum Age (SMMA) and Online Safety Act require many platforms to prevent Australians who are under 16 years old from creating or having accounts.   Persona offers different age assurance methods that platforms can use to verify, estimate, or infer users’ ages.   ConnectID’s bank-backed verification, a new option within Persona, can help companies meet compliance requirements while minimizing friction and privacy concerns for end users.         BlogPersona integrates with ConnectID to expand user age assurance optionsCopy link
+
+Link copied!
+ In Australia, the introduction of the Social Media Minimum Age Act increased the importance of gauging a user’s age without compromising their privacy. To help organizations navigate these requirements, Persona now supports an integration with ConnectID®, an Australian digital identity network.ConnectID drives higher participation while retaining privacyConnectID® is part of Australian Payments Plus (AP+) and acts as a secure bridge between a user’s financial institution and the platform requiring age verification. The partnership allows social media platforms to use ConnectID® as an age verification method via Persona with:Decreased sensitive data visibility: Neither Persona nor ConnectID® sees or stores any sensitive personal information. Only the specific, necessary age claims, such as an "Over 16" or "Over 18" confirmation, are passed back to the business.Expanded verification options: ConnectID® leverages several of Australia’s largest banks to offer millions of customers an alternative and potentially more privacy-preserving verification method to traditional ID-based solutions. ConnectID® is available to customers of CommBank, NAB, Westpac, and ANZ. Accredited privacy and security: ConnectID® is the only private identity exchange accredited by the Australian Government, meeting the strict rules and standards set for privacy and security. ConnectID® also participated in Australia’s Age Assurance Technology Trial, where it was assessed at the highest technology readiness level (TRL 9). Learn more about the end-user experience when using ConnectIDFeel confident meeting age assurance compliance with PersonaPersona’s integration with ConnectID® is a valuable addition to our identity verification and age assurance platform. Organizations also choose Persona for age assurance needs because they can:1. Increase completion rates with varied age assurance optionsNo single age assurance method is a guaranteed fit for every audience. Following the principle of successive validation, a layered "waterfall" approach recommended by Australia’s eSafety Commissioner, Persona allows you to surface the most appropriate methods based on your and your users’ risk profiles.Persona leads the industry in the number of supported age estimation, inference, and verification methods. And with Persona’s Dynamic Flow, you can automatically route users to lower- or higher-assurance methods based on the scenario and signals. 2. Maintain brand consistencyPersona’s platform includes no-code tools for building branded user flows without taxing your design or engineering teams. You can quickly customize each element to match your brand and test changes to optimize the next iteration. 
+   
+      Blog
+      Learn how to build bespoke age verification with Persona
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+3. Keep information private and securePrivacy and security are built into Persona’s data collection, transmission, and storage processes. With the ConnectID integration, neither party sees or stores sensitive personal information. For other age assurance methods, Persona can help customers minimize risk with:Default retention periods: Automatically delete data within a set period of time, typically under one week, after a final age assurance outcome is delivered.Automatic redactions: Redact PII, including text strings or images, for specified user groups immediately after submission.4. Prevent fraud and abusePersona helps prevent novice and sophisticated fraud attempts during the age assurance process. You can benefit from: Advanced AI detection: Behind the scenes, Persona utilizes ensemble models to detect sophisticated AI-driven fraud, including deepfaked selfies and AI-generated documents. Multi-layered defenses: Persona stacks active and passive signals to catch bad actors without adding unnecessary friction for your legitimate users. 
+   
+      Workbook
+      21 questions to ask when evaluating age assurance providers
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+5. Optimize compliance with our age assurance expertsPersona helps global platforms design age assurance strategies that balance regulatory requirements with business goals. You can rely on our:Proven success at scale: We’ve partnered with leading companies like Vimeo, CharacterAI, and Substack to implement scalable age assurance solutions for their global user bases.Regulatory alignment: We actively engage with regulatory bodies to ensure our technologies will help customers meet new and changing age compliance standards.Optimized conversion rates: We understand the critical need to maintain high conversion rates. Our team can help you configure age assurance flows that balance strict compliance with a seamless user experience to minimize drop-off.Ready to secure your Australian user base?Persona helps organizations like Reddit implement age assurance methods to address global regulations. Our age assurance technology is independently certified by several globally recognized auditors, including:iBeta (ISO 30107-3 Levels 1 & 2)Germany's KJM (Kommission für Jugendmedienschutz)UK's Age Check Certification Scheme (ACCS)We were also ranked top two in Australia's Age Assurance Technology Trial. These validations enable product teams to build compliant experiences while providing compliance teams with defensible audit trails for ISO 27566-1 and regulatory standards.We'd love to share how organizations across industries have implemented age-assurance methods tailored to their unique user bases, and how you can do the same for your users. Contact our team here 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Brandon ChenOriginally from Taiwan, Brandon Chen is a California resident who loves to go fishing. By day, he works on the product marketing team.Table of contentsConnectID drives higher participation while retaining privacyFeel confident meeting age assurance compliance with PersonaReady to secure your Australian user base?Continue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

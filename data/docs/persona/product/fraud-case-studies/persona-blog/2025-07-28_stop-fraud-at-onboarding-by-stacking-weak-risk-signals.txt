@@ -1,0 +1,100 @@
+2025-07-28T00:00-07:00 | Stack Weak Risk Signals to Stop Fraud | Persona
+
+URL: https://withpersona.com/blog/stop-fraud-at-onboarding-by-stacking-weak-risk-signals
+
+ blog Learn how to stop fraud at onboarding by stacking weak risk signals Fraud  Published July 28, 2025Last updated January 12, 2026Stop fraud at onboarding by stacking weak risk signalsLearn how to stop fraud at onboarding by stacking weak risk signalsLouis DeNicola     4 min BlogStop fraud at onboarding by stacking weak risk signalsCopy link
+
+Link copied!
+ Risk signals correlate with fraudulent activity, and they can help you separate good and bad actors. But most signals don’t definitively tell you if something is fraudulent on their own. For many platforms, stopping fraudsters from creating new accounts is a top priority. Even if you’re great at catching and removing bad accounts, you’ll always be overwhelmed if you can’t stem the inflow of new fraudulent accounts. Automating decisions based on one or two weak signals (we’ll explain “weak” below) is a recipe for false positives, or flagging legitimate activity as fraud. To separate good and bad actors more precisely, you can stack signals and adjust thresholds. Here’s how: 1. List weak signals that you can collect during onboarding In this context, weak or strong refers to how closely the signal corresponds to fraud. Weak signals are also sometimes called secondary signals or indicators. The specific signals you can use and their relative strength can depend on your tools, industry, products, and how your users onboard (e.g., via a mobile app or desktop). For example, an organization might consider the following signals to be weak signals while onboarding new customers through its mobile app. It doesn’t consider lower-risk results to be a sign of fraud, and it considers higher-risk results to be strong signals. 
+  
+    
+      Risk signals based on fraud or identity checks
+      Potential results
+      A weak signal when the result is
+    
+  
+  
+    
+      Verification attempts
+      Number of attempts
+      2–4
+    
+    
+      Risk label or score
+      Low/medium/high or 1–100
+      Low/medium or 1–65
+    
+    
+      Selfie liveness risk level
+      Low/medium/high
+      Low/medium
+    
+    
+      Similar background to previously submitted selfies
+      If yes, number of connections
+      Yes, 1–4
+    
+    
+      Device fingerprint is linked to fraudulent accounts
+      If yes, number of connections
+      Yes, <2
+    
+    
+      Distance between device and address on ID
+      Number of miles
+      Yes, if 50–100 miles
+    
+    
+      Incognito browser detected
+      Yes/no
+      Yes
+    
+    
+      Proxy detected
+      Yes/no
+      Yes
+    
+    
+      Distraction events
+      How many times the user left the verification flow
+      2–5
+    
+    
+      Shortcut usage (paste)
+      How many times the user used the paste shortcut
+      2–4
+    
+  
+
+In this example, one attempt isn't a risk signal when the organization considers the number of verification attempts. But two to four attempts is a weak signal. Five or more is a strong signal, and might be grounds for blocking additional attempts. 
+   
+      ebook
+      Learn how to use signals to stop deepfakes, automate user flows, and improve verifications
+   
+   
+      Get the ebook
+      
+         
+            
+         
+      
+   
+2. Review fraudulent accounts to uncover new patternsIt can be difficult to find patterns when fraud makes up a small percentage of your user population. But digging through edge cases is an essential part of the job. After all, if you’re onboarding 10,000 accounts daily, even a 0.75% fraud rate means 75 bad accounts, which can lead to significant losses. To start, narrow in on confirmed fraudulent accounts and find out:How frequently each of the weak signals appearHow many weak signals are triggered on average per fraudulent attempt“When you talk signals, you can have all the data you want. But if you don't know how to parse it into usable outcomes, you’re out of luck,” says Patrick Hall, product architect at Persona.  3. Set cumulative thresholdsUse the insights from your analysis to create a ballpark range for the signals and thresholds that can point to new fraudulent attempts. For example, you might hypothesize that you can flag a new user as fraudulent when at least eight of the 10 weak signals are triggered.Next, test your hypothesis by analyzing recently onboarded users based on your criteria. You’ll know that the signal stack works if you uncover false negatives — fraudsters you previously let through — while limiting (or eliminating) false positives. Note: Machine learning and other types of AI can help with fraud detection. However, siloed and incorrectly labeled data can limit their usefulness. Having an experienced fraud expert in the loop is important for investigating results and offering recommendations.4. Create new rules and user flows based on the resultsNext, you’ll need to decide what to do based on the results. For example, you could:Require step-up verifications when three to five out of 10 weak signals appearAutomatically block users when eight or more weak signals trigger If you can collect and decision on signals in real time, you can use these new rules to automate more decisions during onboarding. 5. Feed the results into step oneThis process is iterative, and you can regularly rerun it based on your recent findings. For example, you might discover that flagged accounts share a signal you hadn’t considered using before. You can add the new signal to your mix to monitor and decision on in the future. If you have a link analysis tool, look for connections to these confirmed fraud accounts to uncover and remove bad actors from your platform. You can also use links like shared selfies, IP addresses, or device fingerprints as a risk signal going forward. 
+   
+      Guide
+      50+ risk signals to add to your arsenal
+   
+   
+      Download now
+      
+         
+            
+         
+      
+   
+Collect and connect risk signals with PersonaPersona’s identity platform collects passive, behavioral, and active risk signals that you can use in real time throughout customer life cycles. You can also incorporate additional data from internal and third-party sources. Use signals and the no-code flow editor to create and automate decisions during onboarding or reverifications. Dynamically adjust flows to give legitimate users a low-friction experience while adding more checks to stop bad actors. Finally, feed all your signals and additional information into Cases, a customizable interface for compliance and risk investigations.  
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Louis DeNicolaLouis DeNicola is a content marketing manager at Persona who focuses on fraud and identity. You can often find him at the climbing gym, in the kitchen (cooking or snacking), or relaxing with his wife and cat in West Oakland.Table of contents1. List weak signals that you can collect during onboarding 2. Review fraudulent accounts to uncover new patterns3. Set cumulative thresholds4. Create new rules and user flows based on the results5. Feed the results into step oneCollect and connect risk signals with PersonaContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

@@ -1,0 +1,7 @@
+# anchor-text                                          code-ref                                                                            label
+SRTController                                           data/docs/research/drones/interception/learning/plan.txt:64                       plan §4 — SRT layer (individual rotor thrusts)
+mode="srt"                                              data/docs/research/drones/interception/learning/plan.txt:73                       plan §4 — SRT prediction model = simulator
+nlpsol                                                  data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — IPOPT NLP
+command_to_rotor_thrusts                                data/docs/research/drones/interception/learning/plan.txt:73                       plan §4 — SRT outputs rotor thrusts directly; this is just clipping
+_shift_warm_start                                       data/docs/research/drones/interception/learning/plan.txt:94                       plan §5 — receding horizon warm start
+horizon_steps                                           data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — N-step lookahead

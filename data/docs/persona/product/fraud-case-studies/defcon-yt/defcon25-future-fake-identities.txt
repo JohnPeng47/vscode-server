@@ -1,0 +1,865 @@
+[00:00] so our speaker is the chief technology
+[00:03] officer at an and Anatomy anonyme labs
+[00:09] I practice at about 20 times and I just
+[00:11] butchered it so the speaker is also from
+[00:15] Australia where the Prime Minister says
+[00:17] the laws on mathematics no longer
+[00:20] applies so it seems all of our pseudo
+[00:24] crypto only works outside of Australia
+[00:27] good thing you're here so here to
+[00:30] present on this talk the future is fake
+[00:32] identities
+[00:33] ladies and gentlemen Paul Ashley thank
+[00:42] you cuz that sound alright sound good so
+[00:47] this what I'm gonna talk today about is
+[00:49] some work we've been doing over the last
+[00:51] three years so anonyme labs is a startup
+[00:55] that was started just over three years
+[00:57] ago has an office in Australia in an
+[00:59] office in Salt Lake City as well and the
+[01:02] name anonyme and it is badly spelled but
+[01:05] that's really you know when we came up
+[01:08] with that name at the start like three
+[01:10] years ago it was because we were
+[01:11] thinking about anonymity right about
+[01:13] anonymity and so I thought anonyme labs
+[01:15] kind of sounds right but I'll kind of
+[01:18] give you a little bit of background of
+[01:19] why the company was started so if you
+[01:21] have a look at the way the Internet has
+[01:23] evolved over you know over the last I
+[01:26] guess 20 years there's a couple of sort
+[01:29] of major problems with it one of the
+[01:32] problems is is this kind of sense of
+[01:34] permanence permanence if you have a look
+[01:36] at you know if Harry and I can't have a
+[01:38] discussion we can each express express
+[01:40] opinions we can sit in the back and talk
+[01:42] and it's kind of ephemeral like that the
+[01:45] fact that that happened and the opinions
+[01:47] we gave sort of just disappears and
+[01:49] that's what the real world is you can
+[01:50] have conversations with different people
+[01:51] and no one's tracking it no one's like
+[01:54] keeping track of that but if you take it
+[01:56] to the Internet it's the exact opposite
+[01:57] everything you do online is kept
+[01:59] permanently and you know it's pretty
+[02:01] unfair to people so I even saw when I
+[02:03] arrived into the u.s. on Monday I saw
+[02:07] you know headline Republican congressman
+[02:10] please explain tweets from 1990 or knows
+[02:13] blow
+[02:13] a blob from 1990 and I thought well it's
+[02:15] pretty unfair because at that age is
+[02:17] probably 20 years old and is probably
+[02:18] drunk and you know who knows what else
+[02:20] was going on so their sense of
+[02:22] permanency is is I think a real problem
+[02:24] for people so everything you search on
+[02:26] every time you send messages every time
+[02:29] you go shopping or sell something you're
+[02:31] kind of leaving this digital exhaust
+[02:32] everywhere so I think that's a really
+[02:34] big problem the second problem is is the
+[02:38] problem that that there's a complete
+[02:40] imbalance right it's asymmetrical the
+[02:42] relationship between say yourself and
+[02:45] the data brokers do you think about the
+[02:46] big companies the Google's the
+[02:48] Facebook's data brokers is everything
+[02:53] okay
+[02:54] the data brokers there's an asymmetrical
+[02:57] relationship to the average person like
+[02:59] once you've gone online and done
+[03:00] something and they have your data you've
+[03:02] lost control of that data they can they
+[03:04] can do whatever they like with it they
+[03:06] can aggregate it they can sell it they
+[03:08] can advertise to you you really have no
+[03:10] control and you know there's there's a
+[03:13] couple of ways you know they've been
+[03:14] trying to address that government
+[03:16] regulation with privacy policies and all
+[03:18] that on websites but at the end of the
+[03:20] day let's face it anything you do online
+[03:22] that's captured by another organization
+[03:24] it's pretty much out of your hands so I
+[03:27] think we looked at the internet and said
+[03:29] well there's problems in two of those
+[03:30] spaces right it's permanency of the data
+[03:32] and the fact is that you can't control
+[03:34] your own data so so what's anonyme labs
+[03:39] all about I'll just bring all this up so
+[03:41] we're all about trying to give people
+[03:43] back control to say well I can decide
+[03:46] what about me is exposed in any
+[03:49] transaction I'm doing like if I'm
+[03:50] emailing if I'm texting if I'm calling
+[03:53] if I'm shopping or selling or dating or
+[03:55] whatever I'm gonna decide what it is
+[03:57] about me that's kind of made public and
+[04:00] this is the idea of you know anonymity
+[04:02] full anonymity means they have the you
+[04:05] know the the person at the other end or
+[04:06] the company other end knows nothing
+[04:07] about you and then there's kind of
+[04:09] different grades all the way down to
+[04:10] having full you know your full your full
+[04:14] data being exposed and depending on the
+[04:17] transaction you're going to be somewhere
+[04:18] in between so what we're trying to do so
+[04:20] we're effectively a software development
+[04:22] company and we're trying to build tools
+[04:24] to enable you to have anonymity
+[04:27] and to the level that you want to have
+[04:29] it and be able to control what of your
+[04:30] personal data is exposed out there so if
+[04:36] you have a look at the moment when we
+[04:37] when we started the company three years
+[04:39] ago the topic was pretty hot but it's
+[04:41] nowhere near as hot it is it is now like
+[04:43] literally every day you can see you know
+[04:46] different stories about either the
+[04:48] government or a big company you know
+[04:51] Facebook or whoever invading people's
+[04:53] privacy and or major hacks or anything
+[04:55] so this has become a really very hot
+[04:58] topic in kind of in normal people now
+[05:00] normal people understand that there's a
+[05:02] problem which even when we started the
+[05:04] company three years ago wasn't as
+[05:06] assured as that but you have a look at
+[05:08] some of these even if there's even
+[05:10] stories about things like signal if you
+[05:12] ever look at the signal app people
+[05:14] saying that's a great app look at the
+[05:15] security protocols and look at all that
+[05:17] but then people start to think well even
+[05:20] even that privacy app is asking for your
+[05:22] cell phone number right and if I've got
+[05:25] your cell phone number I can go to a
+[05:26] data broker and get 100 pieces of data
+[05:28] on you right they also we don't wanna
+[05:31] have access to your address book and
+[05:32] share it with other people so even
+[05:34] privacy apps are sort of starting to
+[05:36] come under a bit a question about
+[05:37] whether or not they're really doing the
+[05:39] right thing and obviously you know if
+[05:41] you're giving your data to Yahoo and you
+[05:43] know what they had 500 million user
+[05:45] accounts deleted so again you've lost
+[05:47] control of your data you don't even know
+[05:48] where it is and then you know this
+[05:51] happened yeah in the last six months and
+[05:52] and all of a sudden it went up higher
+[05:54] again or some people were starting to
+[05:56] think about end-to-end encryption all
+[05:57] this but I don't think anybody actually
+[05:59] knows whether it's going to be worse or
+[06:00] better like it was already pretty
+[06:02] terrible and now like when Trump comes
+[06:04] in is it going to be bad or is it going
+[06:06] to be worse so I don't think any of us
+[06:07] really know but I think the situation is
+[06:09] pretty much the same you still got you
+[06:11] all of us are in a really a spot of
+[06:13] weakness in that anything we do online
+[06:15] is captured and sold and and and traded
+[06:21] so this is you know this is kind of our
+[06:23] statement living your life online
+[06:24] shouldn't mean leaving it online so just
+[06:27] because you want to do all these things
+[06:28] online or even offline offline might be
+[06:30] I want to sell something on Craigslist
+[06:32] or I want to go dating or something it
+[06:34] doesn't matter what sort of interaction
+[06:36] you do you don't want to suffer all
+[06:38] those things on the right you know
+[06:39] identity theft you
+[06:41] want to be mind you don't want to suffer
+[06:42] credit card fraud and all those kind of
+[06:44] things so there's a bunch of things that
+[06:46] you want to protect yourself against so
+[06:50] how did we come up what did we come up
+[06:52] so that was kind of the why what about
+[06:53] the hell now how are we gonna do this so
+[06:56] so we're the bunch of us of you know I
+[06:59] hate to admit it but we've been working
+[07:00] in security more than 20 years and some
+[07:03] of us may be more like 25 and you know
+[07:07] if you think about computer security one
+[07:09] of the one of the fundamental
+[07:10] technologies that's used in computer
+[07:12] security is this idea of a proxy so
+[07:14] whether you're in government or whether
+[07:16] you're in a company or at a university
+[07:17] and you're sitting in your lab and the
+[07:19] university and going out to the Internet
+[07:21] odds are you going out through a proxy
+[07:23] server and the idea of that proxy
+[07:25] servers it can control the traffic
+[07:26] that's coming through it can look for
+[07:27] malware that's coming back and all that
+[07:29] and give your computer protection from
+[07:32] the internet so what we did is we've
+[07:34] applied the same concept to identity and
+[07:37] said well what you need is one or more
+[07:40] proxy identities right when you go out
+[07:42] to the internet don't go out with your
+[07:44] primary identity and by primary identity
+[07:46] it's like my name my home address my
+[07:48] cell phone number I email address maybe
+[07:50] my IP address all those things that
+[07:52] really identify me and our argument is
+[07:54] you should have one or more proxy
+[07:57] identities and do all your interactions
+[07:58] online and offline with a proxy identity
+[08:01] so in the same way the proxy identity is
+[08:04] protecting the primary identity from the
+[08:06] internet and all that all the people and
+[08:08] organizations that you're dealing with
+[08:11] so we have this we we use the term
+[08:14] pseudo I mean if we came up with the
+[08:16] word pseudo because of kind of
+[08:17] pseudonyms and and that kind of
+[08:18] technology but pseudo is what we call
+[08:21] this proxy identity and I've just got a
+[08:23] few examples here so we're where you
+[08:26] might want to use these proxy identities
+[08:27] so one example is I've got to go and
+[08:29] sign up to some sort of program on the
+[08:31] Internet
+[08:31] and I do this all the time it might be
+[08:33] that I'm signing up to download a white
+[08:34] paper or I'm signing up for something
+[08:36] that I you know that I want to get
+[08:38] points through and and then I make a
+[08:40] decision do I really need to give all my
+[08:42] details to that organization you know
+[08:44] every time you go to sign up for
+[08:45] anything they just want everything but
+[08:46] do I have to give my information why
+[08:49] don't I give them a proxy and from you
+[08:50] know my proxy identity information so
+[08:52] what I do depending on a situation I
+[08:53] either give my real name
+[08:54] I'll give a different name and I
+[08:56] certainly do never give out my cell
+[08:57] phone number never give out a personal
+[08:59] email address and so we give we have a
+[09:01] concept of you should give out your
+[09:02] pseudo details when you're doing that
+[09:04] sort of thing here another one Crayton
+[09:07] delete temporary phone numbers for
+[09:11] calling and texting strangers there's a
+[09:13] whole lot of different reasons why you
+[09:15] need to talk to strangers right you
+[09:16] might be dating when those online dating
+[09:18] you might be you know getting some work
+[09:20] done at house and you have to give a
+[09:22] number to a plumber and if there's a
+[09:25] stack of these situations you might be
+[09:26] on Craigslist and you need people to
+[09:27] call you to talk about what you're
+[09:29] trying to sell so all of these all of
+[09:31] these reasons is you need to give them a
+[09:32] phone number right so in that case I
+[09:34] might say well I'm still going to be
+[09:35] poor lashley but again I'm going to give
+[09:37] them a pseudo phone number so I'm going
+[09:38] to use my pseudo that I used for selling
+[09:41] for those interactions so that's another
+[09:43] example the old disaffected whatsapp
+[09:47] user so if you look at the history of
+[09:49] whatsapp this was a great example of a
+[09:50] privacy app gone bad
+[09:52] when whatsapp started it was a closed
+[09:54] community they went and had it all the
+[09:55] nice crypto and everything was great and
+[09:57] then and I had really good strong
+[09:59] privacy then Facebook came in and bought
+[10:01] them and Facebook said don't worry
+[10:02] everyone everything's going to remain
+[10:04] the same until like a year later when
+[10:06] Facebook said we're actually now we
+[10:08] decided we're going to mine all that
+[10:09] whatsapp data so now they know who or
+[10:11] the whatsapp users whose talking to each
+[10:12] other and as I said even though they
+[10:14] have n do any encrypting the metadata is
+[10:16] probably more valuable to Facebook then
+[10:18] and what's happening into messages even
+[10:19] if they can't look at those so there's a
+[10:21] kind of use case as well so one of the
+[10:23] things that makes us think about is if
+[10:25] we've got two people who want to
+[10:27] communicate they should be able to email
+[10:28] to each other end-to-end secured message
+[10:31] voice you know voice calling or video
+[10:33] calling to each other and everything
+[10:34] should be end-to-end encrypted and then
+[10:37] even purchasing so you want to be able
+[10:39] to purchase online I want to be able to
+[10:40] go on to a site and not use one of my
+[10:42] plastic credit cards so we thought about
+[10:44] that if we allow you to create a virtual
+[10:46] credit card completely anonymous has no
+[10:48] link back to you and then you can go and
+[10:49] use that when you're shopping so again
+[10:51] you've got that barrier between you and
+[10:53] who you're dealing with
+[10:55] searching the way we look at searching
+[10:58] is you should be able to search as and
+[11:00] as a proxy identity or as a pseudo what
+[11:02] that means what does compartmentalize
+[11:04] browsing means it means if I'm in pseudo
+[11:06] one and I'm in the browser then I'll
+[11:08] cookies and bookmarks and history and
+[11:10] all of that and then when I change over
+[11:12] to pseudo - all of that gets put away
+[11:14] you bring up the state for that pseudo
+[11:15] and now I'm browsing as that pseudo and
+[11:17] again I'll get cookies and all that and
+[11:18] then want to swap to the next one it's
+[11:20] compartmentalized again the idea is
+[11:22] there's no way that anyone could track
+[11:23] you across your browsing across your
+[11:26] identities great use case people use it
+[11:30] a lot for work so I'm at work and I need
+[11:32] to give phone numbers to all sorts of
+[11:33] strangers give again give a pseudo usual
+[11:35] pseudo work number for that good way to
+[11:39] protect children because you know you
+[11:40] can go and create accounts in a pseudo
+[11:42] name and email and all that and the kids
+[11:44] can go online without giving any
+[11:46] information about themselves and in
+[11:48] general I think the philosophy here is
+[11:50] never again go online with your real
+[11:52] information only go online with pseudo
+[11:54] information and that way your footprint
+[11:57] is being reduced and so the chances of
+[11:59] you having identity theft and all these
+[12:00] other problems has been reduced so we
+[12:04] have a a pretty important we caught what
+[12:07] we call our taxonomy which sort of
+[12:09] explains how we're doing is so imagine
+[12:11] you're at the top there and you've got a
+[12:13] real name and a cell phone number and
+[12:16] you've got your personal email address
+[12:17] and you've got a bunch of credit cards
+[12:18] that that person then creates a bunch of
+[12:21] these pseudos right and each of those
+[12:23] are either in the same name or a
+[12:25] different name they'll have different
+[12:26] phone numbers different email addresses
+[12:28] they'll each have different virtual
+[12:30] credit cards attached to them the idea
+[12:32] is is now you can go out with these
+[12:34] proxy identities and start to do all
+[12:36] these things so example I come to RSA
+[12:38] will come to blackhat right so I might
+[12:41] want to spit up a phone number an email
+[12:42] address for Def Con or blackhat
+[12:45] and I start to give it out to people and
+[12:47] I'll get I'll get their details and I'll
+[12:49] put it into my RSA address book and then
+[12:51] at the end of the at the end of the
+[12:52] conference I'll decide which of those
+[12:54] people I want to interact with to go
+[12:56] forward I might even then promote those
+[12:58] those address details up to a pseudo or
+[13:01] even up to my primary details and then
+[13:03] the rest of stuff I might just put away
+[13:04] and then I might just delete that email
+[13:05] and phone number so kind of that
+[13:07] relationship has stopped and then I
+[13:09] might have a different pseudo with
+[13:10] different details for work and parenting
+[13:12] so I have a son who plays soccer so all
+[13:15] my interaction with all the parents and
+[13:16] the club and all those things I do
+[13:18] through a pseudo so at the end of the
+[13:20] season right I can just stop that if I
+[13:22] and all the people I've interact with if
+[13:24] I can decide whether those people I want
+[13:25] to interact with in the future so it
+[13:28] gives you an idea of what we're trying
+[13:29] to do here and then shopping again that
+[13:30] you do it again you know in a
+[13:32] compartmentalized way and so if you look
+[13:35] at that my actions we want to be able to
+[13:37] browse as a pseudo call as a pseudo
+[13:39] message as a pseudo email purchase I
+[13:41] won't be able to mute them mute them
+[13:43] means you know even though I've used
+[13:45] this pseudo to sign up to shopping if
+[13:47] they send me any email or messages I
+[13:49] just kind of don't even be bothered with
+[13:50] that so it's got muting means filtering
+[13:53] means being able to look at all your
+[13:54] pseudos and see what's coming in I might
+[13:56] be able to delete a pseudo if you delete
+[13:58] a pseudo then everything's gone I might
+[14:00] want to reset or archive pseudo details
+[14:03] so these are all the kind of things that
+[14:04] you might want to do with the pseudo is
+[14:05] and the idea is everything offline and
+[14:08] online you're now doing with pseudos
+[14:10] rather than the real person and I think
+[14:12] that's a concept of the proxy identity
+[14:15] so just an example here so if you ever
+[14:18] look on the left there so that's me and
+[14:21] I've got all that all that primary
+[14:24] identity information then for each of my
+[14:27] pseudos I have an email phone even we
+[14:29] want to get to delivery address so you
+[14:30] can have a delivery address and you know
+[14:32] cross docking you know we might have a
+[14:34] separate address book for the pseudo
+[14:35] virtual credit cards and a separate
+[14:37] pseudo based browser so you imagine each
+[14:39] of your pseudos and personally I have
+[14:41] about five or six pseudos and each one
+[14:43] of those has all that information that's
+[14:45] different and then even you can even go
+[14:47] to a step further where you say when the
+[14:50] pseudos get to apply to different
+[14:51] accounts and situation I then want to be
+[14:54] able to do what we call with activities
+[14:56] is I want to be able to easily create an
+[14:58] account within a pseudo I want to store
+[15:00] that information so I know what pseudo
+[15:02] information I use for an account and
+[15:03] then again depending on a situation I
+[15:05] may want a separate email phone address
+[15:07] book virtual credit card depending on
+[15:09] the situation but the idea is is you can
+[15:11] apply these pseudo is very easy to the
+[15:13] real world and then we thought you know
+[15:16] what are the pseudo capabilities so this
+[15:19] is really everything that we're building
+[15:21] so if you look at pseudo management I
+[15:24] want to be able to create a pseudo I
+[15:25] want to be able to outfit a pseudo
+[15:27] outfitting means giving it a name giving
+[15:30] the pseudo an email address a phone
+[15:31] number all those sort of capabilities
+[15:33] having an activity feed so I can see
+[15:36] what
+[15:36] my Studios are doing and eventually be
+[15:38] able to delete a pseudo if I want to
+[15:39] some some pseudos you might keep for all
+[15:41] time
+[15:42] other pseudos you might create just for
+[15:43] a situation when it's finished you
+[15:45] delete that pseudo soiled tracer that's
+[15:47] gone and then we talk about in network
+[15:50] and outer network so if you've got your
+[15:51] pseudo I want to be able to call out of
+[15:53] network so I need to be able to call any
+[15:55] sort of number I want to be able to
+[15:56] sms/mms to that number want to be able
+[15:59] to email from that pseudo and then we've
+[16:01] got in network on the right there in
+[16:03] network means the other ends also got a
+[16:05] pseudo and you want to be able to
+[16:06] communicate so then we believe
+[16:08] everything should be n 2n encrypted so
+[16:09] into an encrypted messaging email voice
+[16:12] and video as well and then on the
+[16:15] payments side we want people to be able
+[16:17] to easily spin up virtual credit cards
+[16:19] that can have you know there could be
+[16:21] one-time moldable use reloadable cards
+[16:23] and be able to fund those through
+[16:25] multiple sources if you have a look at
+[16:27] like pseudo pay at the moment we allow
+[16:28] you just to buy a virtual credit card
+[16:30] with Apple pay alright and that keeps
+[16:32] you keeps you completely anonymous to
+[16:34] the place that you're purchasing from
+[16:35] and then browser again I talked about
+[16:38] compartmentalize browsing on top of that
+[16:40] you need to do an address protection so
+[16:42] you're going to need either a VPN or a
+[16:44] proxy or tor or something to go with
+[16:46] that when you're doing that browsing so
+[16:48] they can't track you through the network
+[16:49] and then you need to be able to do
+[16:51] things like block ads block trackers
+[16:53] stop fingerprinting and all that and the
+[16:54] idea here is to make it really difficult
+[16:56] for an organization to track you between
+[16:59] different pseudos and the my activities
+[17:01] is what I talked about is we want you to
+[17:03] really easily be able to create a pseudo
+[17:05] based account somewhere store that
+[17:07] information away and be able to launch
+[17:08] into that account as that pseudo at any
+[17:10] time so it's kind of the thing and you
+[17:12] have a look at the platforms iOS you if
+[17:15] you have a look at iOS you can go to the
+[17:16] App Store and you'll see sudo you'll see
+[17:18] pseudo pay with sort of finishing
+[17:21] Android at the moment we're just about
+[17:22] released a web version and we're going
+[17:24] to do desktop stuff as well so something
+[17:27] that's really important to us is that we
+[17:31] don't know who you are like if we're
+[17:33] really going to provide a level of
+[17:35] anonymity to you then we can't even know
+[17:38] who you are right so the idea is is we
+[17:40] have no idea who you are and then hence
+[17:42] when you're interacting with our pseudos
+[17:44] out there there's no way they can
+[17:45] somehow use us to try to find that out
+[17:47] so here's all the things that we don't
+[17:49] do
+[17:50] and and and it's actually different if
+[17:52] you have a look at most of the other
+[17:53] security apps you know if you look at
+[17:55] telegrams and the signals and the
+[17:56] whatsapp and all that they don't do
+[17:57] these things so this is one thing that
+[17:59] makes it a little bit different so the
+[18:01] first thing is we never ask the user to
+[18:02] a register an account right you'll never
+[18:04] see in our apps you're doing any
+[18:05] registration we don't ask for phone
+[18:06] number we don't ask for email address so
+[18:08] we don't ask for your cell phone number
+[18:10] we don't ask to get access to your
+[18:12] contacts so that we can share with
+[18:13] everyone we don't never ask for put any
+[18:16] of your personal information so there is
+[18:19] no personal information that we are
+[18:21] capturing on any of our users we don't
+[18:23] track any IP address information so
+[18:25] anything that we do see we make sure
+[18:26] that's gone we delete that so if any if
+[18:28] we do see any you're coming in through
+[18:30] an IP address we make sure that's
+[18:31] deleted so if anyone comes in later to
+[18:34] our back-end and says I want to find out
+[18:36] what's going on we literally don't have
+[18:37] any information about you and we don't
+[18:40] sell any of the users information to
+[18:41] third parties like data brokers
+[18:43] advertisers or anything like that and we
+[18:47] never hold cryptographic keys if you
+[18:48] have a look at a lot of technologies and
+[18:50] you've seen it a few examples especially
+[18:52] around kind of some of the secure emails
+[18:54] they hold the users cryptographic keys
+[18:56] so we make sure that we never hold your
+[18:58] keys so the only way that someone can
+[19:01] attack you in this system
+[19:02] is they've got to get access to your
+[19:04] device like your iPhone or your Android
+[19:06] phone and get access to that so what
+[19:08] we've tried to do is make the attack
+[19:09] surface very very small and a lot of the
+[19:14] lot of our philosophy than that there's
+[19:16] actually a podcast that's really good
+[19:17] called the privacy and security podcast
+[19:19] and a lot of the concepts that we've
+[19:21] tried to implement they talked about on
+[19:23] that podcast so it's something that I
+[19:25] would recommend so what are the apps
+[19:28] we've got we've got one app called sudo
+[19:30] app which is a basically a communication
+[19:33] app for your identities for your proxy
+[19:35] identities so you can you can spin them
+[19:37] up you can see this person's got about
+[19:38] five identities you can call you can
+[19:40] text you can email all of that from your
+[19:42] identities we also have another app
+[19:45] called pseudo pay which is really about
+[19:47] you creating virtual credit cards so you
+[19:49] can go anytime and create a virtual
+[19:52] credit card and it happens just to the
+[19:55] right time then I've finished ready for
+[19:57] questions that's okay I think I'd like
+[20:00] to open up for questions
+[20:03] come out if you can come out to the
+[20:05] microphone every gray that's perfect
+[20:16] that's what I want to give people time
+[20:18] yeah the the pseudo pay can you comment
+[20:27] more about how that actually works
+[20:30] what sort of dollar values or or
+[20:32] currencies can be used could I use this
+[20:35] to launder money you know things like
+[20:36] that okay so there few different
+[20:38] questions there so in terms of
+[20:42] requesting a virtual card I think at the
+[20:44] moment we allow virtual cards up to
+[20:46] about five hundred dollars I think and
+[20:48] at the moment it's only US currency but
+[20:51] we're going to be adding like Canadian
+[20:52] currency EU currency and other countries
+[20:55] that currencies go along but at the
+[20:58] moment the way the way you buy a virtual
+[21:00] credit card is if you pick if you
+[21:02] download pseudo pay an iOS app it just
+[21:05] says you want a card what's the value
+[21:07] let's say it's $200 and then we get you
+[21:08] to buy it from us using Apple pay a new
+[21:12] idea is is we've not captured any credit
+[21:14] card information the only thing that's
+[21:15] gone to the payment processor is like
+[21:17] this Apple token and we tried to create
+[21:19] this level of distance between you and
+[21:21] the virtual card and then the virtual
+[21:23] card to where you're going to use it I
+[21:24] think the idea is like what we're trying
+[21:26] to achieve with that virtual card is if
+[21:28] you go and use a card somewhere so I'm
+[21:30] going down to an online bike store I
+[21:31] want to use the card you don't have to
+[21:33] give any of your information because
+[21:35] that card can't be linked back to you
+[21:37] and in fact it gives you kind of that
+[21:38] protection of your credit cards because
+[21:40] even if that site gets hacked you know
+[21:43] you'll have used that credit card and
+[21:44] maybe there's a little bit of balance
+[21:45] left on it but this you're not exposed
+[21:47] by normally the idea is you get a card
+[21:49] you purchase something and then we just
+[21:51] refund the balance whatever you got left
+[21:52] on there so that's how it works what
+[21:55] about money laundering and so I think
+[21:56] money laundering is a problem but it's
+[21:59] it there's a lot of protections in the
+[22:01] system against money laundering so
+[22:04] there's a whole bunch of places that you
+[22:07] can't use pseudo pay cards that the
+[22:09] banks won't let you use pseudo pay cards
+[22:11] so for example you can't use pseudo K
+[22:12] cards to go online and buy other
+[22:16] the cards so there's a lot of
+[22:17] protections already into kind of the
+[22:19] banking system for that sort of and we
+[22:21] have a bunch of kind of algorithms
+[22:23] running an hour back in that we can try
+[22:25] to detect when people are trying to do
+[22:26] it main reason thing people want to try
+[22:29] to use it for is money laundering right
+[22:30] if they can use it for money laundering
+[22:31] so we put protections in our backend
+[22:33] we've been kind of taught a lot about
+[22:35] how to put protections in and the
+[22:36] banking system already has a lot of
+[22:38] those protections so they usually can
+[22:39] pick up money laundering by behavior
+[22:41] even if they don't know who the person
+[22:42] is they can say this card is being used
+[22:45] in a suspicious way great talk I think
+[22:49] many of us probably have done this on an
+[22:50] amateur level for ourselves trying to do
+[22:52] it I love the way you've done it so you
+[22:54] have a dashboard you can manage your yes
+[22:56] these remember them coming questions for
+[22:58] you so I'm assuming because you don't
+[23:00] know anything about us when Facebook
+[23:01] buys you it doesn't matter because you
+[23:03] don't know who you are I can tell you
+[23:05] now we will not be bought by Facebook or
+[23:07] Google or one of the big data brokers
+[23:09] like it's not going to happen
+[23:10] but yeah so do you think that because of
+[23:14] you mentioned my laundering do you think
+[23:16] for other reasons the intelligence
+[23:18] services others would become very
+[23:19] interested in kind of pushing you to
+[23:22] some different information yes yes so
+[23:24] the question is about will other
+[23:26] organizations be interested probably you
+[23:28] know police forces government things
+[23:30] like that and I think the answer is I
+[23:32] suspect yes but I mean the way we do is
+[23:35] like we're not anti-government we're not
+[23:37] anti police we're nothing like that
+[23:38] we're not we're not we're not trying to
+[23:40] be you know anti-government you know
+[23:42] special what would what we do do is if
+[23:45] we get requested for information like
+[23:49] lawfully we will respond into that
+[23:51] lawful request right the the answer
+[23:54] though in probably just about every
+[23:56] occasion is we probably don't have very
+[23:58] much that can help someone because we're
+[24:00] not keeping data we don't know who you
+[24:02] are we've never asked for your cell
+[24:03] phone number we're never asked for an
+[24:04] address or an email or anything so it's
+[24:06] the amount of information that we have
+[24:08] then maybe there's some breadcrumbs that
+[24:10] will this is what we've got but it's
+[24:12] pretty minimal my last question for now
+[24:14] um so if you thought about inventing a
+[24:16] time machine because right now you from
+[24:18] this day forth people can use you right
+[24:20] but they've got a bread crumbs on the
+[24:22] internet from before and all the things
+[24:23] they've done which you know I'm sure the
+[24:25] various ways to come get it
+[24:27] have you thought about how you can help
+[24:28] your clean
+[24:29] that past as opposed to just going
+[24:31] forward no no we really we've thought
+[24:33] about a lot about that but I'm not sure
+[24:35] that where we're going to try to do that
+[24:36] what we're going to try to do so give
+[24:38] you an example let's say you have an
+[24:40] account in your name somewhere what we
+[24:42] would say is delete that account go and
+[24:44] create a fresh account under a pseudonym
+[24:46] and with your sudo with a phone number
+[24:49] email address perhaps a different name
+[24:50] maybe even the same name you depends
+[24:52] what you want to do but it's like we're
+[24:54] saying replace it I know personally I've
+[24:57] been using sudo for probably 18 months
+[25:00] it's been out in the App Store since
+[25:01] January last year and I think I've
+[25:03] pretty much replaced every single
+[25:05] account not to ever use my cell phone
+[25:07] number home address email address or
+[25:10] anything like that again so it does take
+[25:12] a little bit of time to clean up all the
+[25:14] things all the mistakes you've already
+[25:15] made thank you two questions one in
+[25:20] relation to data removal given that you
+[25:25] will eventually have users from the you
+[25:28] what is GDP our compliance look like for
+[25:32] a tournament sorry anonymity for sorry
+[25:36] for the company for your company and the
+[25:39] second question is what's the company's
+[25:41] business model given that you're not
+[25:43] Hawking data for money so in terms of it
+[25:46] it's a GDP art I've got a right GPA our
+[25:50] expert is here our chief security
+[25:51] officer whose balloon allergy GDP our
+[25:54] work also set well as the other part our
+[25:57] business models so so how do we make
+[25:59] money so even even if you go into sudo
+[26:01] app now what you'll find is you can spin
+[26:04] up pseudos for free and you can get some
+[26:06] certain amount of phone number but
+[26:08] there's a limit to that and once you go
+[26:09] over that limit then you'll start paying
+[26:11] like a question $0.99 to reset a number
+[26:13] if you're calling to kind of an
+[26:15] expensive location you've got to buy
+[26:17] credits in the app so there is there is
+[26:19] parts places in the app where you can do
+[26:20] it because we we want to get to a place
+[26:22] where those we can recover our costs
+[26:25] through some of those things that people
+[26:26] going ok want to spin up a new number
+[26:28] will charge $0.99 and that might cost us
+[26:30] 30 cents to spin it up or whatever so
+[26:32] there is parts in the app where we can
+[26:34] already get revenue but there's quite a
+[26:37] bit already free in the app in that you
+[26:38] can get like 9 pseudos now with phone
+[26:41] numbers but it's after that way you'll
+[26:43] to get charged and depending on who you
+[26:44] calling and stuff like that GDP are I
+[26:47] guess you could take it offline with
+[26:49] Neil because he'd be much better to
+[26:50] answer that question or I could get him
+[26:52] up here but I may be able to go to the
+[26:54] next one yeah why did you choose Apple
+[26:57] pay as your like payment process so this
+[27:01] was an our initial version we're going
+[27:02] to be adding other funding sources our
+[27:04] first funding source there's this
+[27:07] there's kind of a couple of reasons one
+[27:09] is you so if you're going to get a $200
+[27:12] virtual card off of us we need to get
+[27:14] $200 off you and so we thought about how
+[27:16] could we do that one way and and we
+[27:19] wanted to do that without having to know
+[27:20] who you are so one way is we can try to
+[27:22] capture a credit card detail in the app
+[27:25] and and then pass it down to our payment
+[27:28] processor to do that and we're like a
+[27:29] couple of problems we're getting a
+[27:31] credit card one is it sort of gives us a
+[27:33] breadcrumb to who you are and the second
+[27:35] thing is it kind of opens us up a little
+[27:37] bit more to fraud so I can steal your
+[27:38] number and buy a pseudo pay card etc so
+[27:40] we went with Apple pay because it sort
+[27:42] of gives us both protections it protects
+[27:44] us a lot from fraud because the user
+[27:46] will pay to buy something you've got to
+[27:47] put it into your Apple and it checks
+[27:49] with the bank account does all that and
+[27:50] at the same time it gives us complete
+[27:53] protection because we don't have any
+[27:54] personal information we've not had to
+[27:56] capture a credit card we don't know
+[27:57] anything all we get when you do an Apple
+[27:59] pay is like this long Apple pay token
+[28:01] it's like this long and we pass it off
+[28:03] to the payment process and they know how
+[28:05] to process that so so protects us in
+[28:08] that we haven't haven't had to get your
+[28:09] credit card information so we're not
+[28:11] exposed to fraud but it also it kind of
+[28:13] fits our philosophy of not knowing
+[28:15] anything about you and just one last
+[28:17] question um what kind of analytics do
+[28:20] you store on the back end so like what
+[28:21] kind of metadata or analytics kind of
+[28:23] algorithms like what aggregation would
+[28:26] you be doing on your back end so on the
+[28:27] back end I mean we do we are interested
+[28:30] in a couple of things right one is we
+[28:34] use Mixpanel in the app itself to
+[28:36] understand what features people are
+[28:38] using now that doesn't tell us anything
+[28:39] about the user we just know that no
+[28:42] one's using this or someone's using this
+[28:43] so we kind of understand things like
+[28:46] people got you know five screens into
+[28:48] onboarding and dropped out or something
+[28:49] like that so that's the Mixpanel side
+[28:51] but we again we're not capturing it
+[28:52] we're very very sensitive about not
+[28:54] catching anything about the user and
+[28:56] the backend it sort of this general
+[28:58] things we want to know so we don't we
+[29:00] don't capture any phone number or
+[29:01] anything like that but we need to know
+[29:02] things like in general like what do what
+[29:06] are the top email domains that people
+[29:08] are using because that kind of tells us
+[29:09] how people are using it so if you have a
+[29:11] look at the moment we know that out of
+[29:13] our users Craig's List is like the
+[29:14] highest like if you could if you think
+[29:16] about what you might use pseudo
+[29:18] identities for it actually exactly
+[29:19] matches up what people use it for so
+[29:21] they use it for dating they use it for
+[29:22] shopping they use it for selling I think
+[29:26] that's kind of and so if you haven't we
+[29:27] kind of want to understand what are the
+[29:29] top female domains because that tells us
+[29:30] where people are using it so we're not
+[29:32] we're not using analytics we're using
+[29:34] Analects just a little bit to understand
+[29:36] how our customers are having problems in
+[29:38] the app and things like that so there's
+[29:40] always want to capture a little bit of
+[29:41] that data anyway if you know it's got
+[29:44] questions you have to come up here oh
+[29:45] they're right ahead time okay sorry
+[29:52] [Applause]

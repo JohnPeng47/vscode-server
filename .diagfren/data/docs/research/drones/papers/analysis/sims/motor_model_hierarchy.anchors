@@ -1,0 +1,12 @@
+# anchor-text            code-ref                                    label
+runMotors()                       data/docs/research/drones/simulations/flightmare/flightlib/src/objects/quadrotor.cpp:118-131  Flightmare first-order motor lag (exact discrete filter, τ=0.05s)
+motor_tau_up/down                 data/docs/research/drones/simulations/quad-swarm-rl/gym_art/quadrotor_multi/quadrotor_dynamics.py:63-64  QuadSwarm asymmetric motor spin-up/spin-down time constants
+rotor_group.forward()             data/docs/research/drones/simulations/omnidrones/omni_drones/actuators/rotor_group.py:54-66  OmniDrones throttle smoothing (raw blending factor tau=0.43, dt-independent)
+rotor_group (fixed)               data/docs/research/drones/simulations/simpleflight/omni_drones/actuators/rotor_group.py:55-70  SimpleFlight corrected motor lag (tau=dt/time_constant, T=25ms)
+quad_race_env.py                  data/docs/research/drones/simulations/optimal-quad-control/quad_race_env.py:54-72  Ferede nonlinear steady-state RPM map + first-order lag
+hovering.py                       data/docs/research/drones/simulations/airgym/airgym/envs/base/hovering.py:256-281  AirGym instantaneous thrust (cmd*9.59, DR disabled with 0.0 multiplier)
+BaseAviary.py                     data/docs/research/drones/simulations/gym-pybullet-drones/gym_pybullet_drones/envs/BaseAviary.py:693-694  gym-pybullet-drones instantaneous quadratic thrust (rpm²*KF)
+rollout_generator.py              data/docs/research/drones/simulations/sousvide/src/sousvide/synthesize/rollout_generator.py:199  SOUS VIDE FiGS simulator call (dynamics in external figs package)
+quadrotor_dynamics                data/docs/research/drones/simulations/grad-nav/envs/assets/quadrotor_dynamics_advanced.py:1-60  GRaD-Nav differentiable quadrotor dynamics (PD rate ctrl, quadratic drag)
+drone_dynamics()                  data/docs/research/drones/simulations/falcongym/scripts/drone_dynamics.py:23  FalconGym point-mass dynamics (pos+vel+yaw, no rotational model)
+rlPx4                             data/docs/research/drones/simulations/airgym/airgym/envs/base/hovering.py:44-123  AirGym rlPx4Controller PID cascade (pos/vel/atti/rate/prop modes)

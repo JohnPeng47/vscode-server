@@ -1,0 +1,6 @@
+# anchor-text                                          code-ref                                                                            label
+EvaderPolicy                                            data/docs/research/drones/interception/learning/plan.txt:1-6                      plan §1 — pursuer/evader interception problem
+StationaryEvader                                        data/docs/research/drones/interception/learning/plan.txt:120-136                  plan §7 — easiest scenario; bottom of the build-up ordering
+ConstantVelocityEvader                                  data/docs/research/drones/interception/learning/plan.txt:120-136                  plan §7 — kinematic baseline scenario
+ReactiveEvader                                          data/docs/research/drones/interception/learning/plan.txt:135-136                  plan §7 — reactive evader is intentionally last (closes feedback loop with pursuer)
+predict_positions                                       data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — MPC peeks at this to build the N-step target trajectory

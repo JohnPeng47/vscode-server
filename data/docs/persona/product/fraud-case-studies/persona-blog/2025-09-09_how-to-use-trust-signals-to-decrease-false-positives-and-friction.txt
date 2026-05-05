@@ -1,0 +1,52 @@
+2025-09-09T00:00-07:00 | How to Use Trust Signals to Decrease False Positives and Friction
+
+URL: https://withpersona.com/blog/how-to-use-trust-signals-to-decrease-false-positives-and-friction
+
+ blog Learn how to use trust signals to decrease friction and false positives while fighting fraud.  Fraud  Published September 09, 2025Last updated January 12, 2026How to use trust signals to decrease false positives and friction“Signals go in both directions. They help us find fraud, but they can also be very valuable in helping us find good users,” Patrick Farley, a fraud product analyst at Persona.Louis DeNicola     6 min BlogHow to use trust signals to decrease false positives and frictionCopy link
+
+Link copied!
+ You’re missing out if you only use risk signals to fight fraud. Risk signals are undoubtedly a great resource for fraud teams. You can use different signals to stop bad actors from onboarding, uncover fraud rings, and spot account takeovers. But you can also use risk signals to identify trusted users. “We’re so focused on how we use signals to find fraud, but the inverse is also true,” says Patrick Farley, a fraud product analyst at Persona. “If there’s a robust enough signal in the positive for any given user interaction, you can start creating profiles that avoid friction experiences.”Want to reduce false positives and remove friction for good users? Start by answering the three questions below, then take a few simple steps.
+   
+      On-demand webinar
+      Get more insights on using signals from our live discussion with fraud experts.
+   
+   
+      Watch now
+      
+         
+            
+         
+      
+   
+Start with these three questionsEvery effective signals strategy relies on good data collection, organization, and analysis. Try to answer the following questions to set yourself up for success:When can you collect signals?Which signals can you collect? How do you determine when signals correlate with trust?1. When can you collect signals?Identify the points in your user journey when you’ll want to collect and analyze risk signals. These can depend on your products, types of users (such as buyers and sellers in a marketplace), and different events during the user life cycle. Some potential examples include during or before:OnboardingPromotionsAccount changesLarge transactionsSupport callsSignal strength can vary based on context, which can make this exercise important even if you have tools to collect signals at any time. 2. Which signals can you collect?Identify the signals you can collect, which may vary depending on your in-house and third-party tools and how a user interacts with your products or services. Prioritize passive trust signalsPassive signals are risk signals that can be collected without adding friction, making them ideal for improving the experience of low-risk users. They can come from data you collected for other purposes, such as the email address a user enters when creating an account. Passive signals can also come from observations about the user’s device, connection, and behavior. For example, the user’s device fingerprint, IP address, or how often they use keyboard shortcuts when filling out a form. Incorporate active trust signals as neededActive signals can increase assurance, but they also add friction for users. For example, you might ask users to submit a photo of their government ID or take a selfie. You can analyze these submissions to uncover active signals, such as liveness detection, database verifications, virtual camera detection, and a selfie-to-ID comparison. Many organizations already rely on these types of verifications for compliance or fraud prevention purposes. If that’s not the case for you, you’ll need to consider which active signals will give you enough assurance to make a confident decision, and when you’ll add those verification checks. Need inspiration? Explore our curated lists of risk signalsIf you’re looking for more specific examples of potential signals, check out our Google Sheet, which includes over 25 categorized signals. We explain why each one matters, identify what types of fraud it might be associated with, and link to additional resources. You can also download a more comprehensive list with 50 risk signals from individual identity and verification checks and 24 signals for assessing the risk (or trust) of a business entity.  3. How do you determine when signals correlate with trust?A signal’s correlation with risk or trust can vary depending on your user demographics, products, and services. However, you can look for potentially useful signals by going through an iterative process to:Identify signals that your trusted users share.Determine the thresholds for these signals that align with trusted activity.Combine multiple trust signals to increase the fidelity of your predictions. Review how well the combination of signals identifies trusted users based on historical data. We describe most of these steps in more detail in a separate post on stacking weak risk signals to stop fraud at onboarding. 
+   
+      ebook
+      Learn how to use signals to stop deepfakes, automate user flows, and improve verifications.
+   
+   
+      Get the ebook
+      
+         
+            
+         
+      
+   
+Put your trust signals to work Next, take the results from these three questions to:Remove friction for good users: Segment users or transactions based on trust signals and tailor verification requirements for each segment. Many teams focus on adding friction when there are risk signals, but you can also create rules that allow trusted user segments to go through a no- or low-friction experience. Reduce false positives: Adding exclusions for trusted users to existing and new rules can decrease false positives. In a fraud context, false positives occur when you add friction or block a legitimate user or transaction. They can reduce revenue, hinder growth, and decrease customer satisfaction. And, in turn, a high false positive rate may anger product, growth, and leadership teams. In practice, this works best if you can collect risk signals and dynamically adjust the verification requirements in real time. The flowchart shows a common setup for risk-based onboarding and reverification flows. Path 1: Users with strong trust signals have the least friction. For example, “a lot of times, as part of the reverification flow, you can look for a trusted device,” says Patrick. You don't need to add additional verifications if you can also rule out device spoofing. Path 2: If you can’t collect enough trust signals initially, you might require a government ID check. You can collect new active signals and additional passive signals when the user takes and uploads a picture of their ID. Path 3: When there are only a few trust signals, but you don’t want to block the user outright, you could also require a selfie and database check. These can help increase the assurance that the person is who they say they are. You can use a similar approach to decrease friction for trusted users at other points, such as when they’re trying to change their account password or initiate a large transaction. Continually analyze and refine your signals strategy“In the world of fraud, there is no set and forget because there’s too much evolution on the fraudster side,” says Patrick. “We know the value of signals can fluctuate.”With this in mind, you’ll need to regularly rethink your strategy and process to ensure your signals and rules aren’t letting bad actors through or causing unnecessary friction. 
+   
+      On-demand webinar
+      Get more insights on using signals from our live discussion with fraud experts.
+   
+   
+      Watch now
+      
+         
+            
+         
+      
+   
+How Persona can helpPersona’s identity platform offers everything you need to collect and decision on risk signals for individuals and business entities. You can use Persona’s native signals, add your proprietary signals, and use signals from third-party vendors via the Persona Marketplace throughout the user life cycle.  Choose from a library of verification methods and quickly launch custom, risk-based onboarding or reverification flows with the no-code editor. Brand the experience and optimize your rules to increase conversions. Look for a lack of connections to fraudulent activity to help confirm the user’s legitimacy.Resurface the signals during manual reviews to help investigators quickly resolve their cases. Ready to get started? Talk to one of Persona’s fraud experts or request a demo today. 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Louis DeNicolaLouis DeNicola is a content marketing manager at Persona who focuses on fraud and identity. You can often find him at the climbing gym, in the kitchen (cooking or snacking), or relaxing with his wife and cat in West Oakland.Table of contentsStart with these three questions1. When can you collect signals?2. Which signals can you collect?3. How do you determine when signals correlate with trust?Put your trust signals to work Continually analyze and refine your signals strategyHow Persona can helpContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

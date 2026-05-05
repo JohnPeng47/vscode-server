@@ -1,0 +1,1178 @@
+[00:01] hey everyone and welcome to identity
+[00:03] crisis
+[00:04] the mad rise of online account opening
+[00:06] fraud
+[00:07] my name is yuri and i'm chief cyber
+[00:09] officer and co-founder
+[00:11] at biocatch we are at
+[00:14] an identity crisis point um
+[00:17] if you were asking credit card companies
+[00:20] and banks a few years ago
+[00:23] about account opening fraud they would
+[00:25] say yeah it's kind of a minor
+[00:26] inconvenience
+[00:28] that's not their reaction nowadays uh
+[00:30] it's getting to be
+[00:32] a tidal wave um this is from gartner a
+[00:35] few years ago
+[00:36] um you can see things like account
+[00:38] takeover fraud
+[00:39] payment fraud these are the main areas
+[00:42] of concern
+[00:43] for risk and security management
+[00:46] but there's one thing that tops all of
+[00:49] these
+[00:50] concerns and that's new account
+[00:52] synthetic or stolen
+[00:54] identity fraud so it is becoming the
+[00:57] number one concern
+[00:58] um regarding fraud in financial
+[01:02] institutions
+[01:03] um another interesting trend is to see
+[01:06] what sort of information
+[01:08] um financial criminals are
+[01:11] stealing these days it used to be credit
+[01:14] card information that was the top
+[01:15] priority for financial
+[01:17] cyber criminals but now the number one
+[01:20] data element is social security number
+[01:23] which is
+[01:24] an identity element and in fact
+[01:27] identity is becoming a commodity it's
+[01:30] traded in the dark web
+[01:32] um and everyone every american
+[01:35] uh citizens records uh have already been
+[01:38] stolen
+[01:39] several times over um if we can look at
+[01:42] this list for example you know it shows
+[01:44] all sorts of data breaches um
+[01:47] many of those are related to identity
+[01:51] um specifically if we talk about the big
+[01:53] credit
+[01:54] reference agencies the big credit
+[01:55] bureaus
+[01:58] data aggregators that have been hacked
+[02:00] over the years
+[02:01] and this fuels this economy of account
+[02:04] opening fraud
+[02:06] now the industry is fighting back uh
+[02:08] realizing that
+[02:09] you know good old kyc know your customer
+[02:12] is basically dead uh and long live next
+[02:15] generation data
+[02:17] so it used to be about what you know and
+[02:19] matching all of the information about
+[02:21] the user you know looking at
+[02:24] the data that the user provides and
+[02:25] seeing that it all stacks
+[02:27] and it's what the records show
+[02:32] but now we have additional data to look
+[02:34] at for example what you have which is
+[02:36] user resources what you do which is your
+[02:39] digital footprint
+[02:41] and what you are user behavior that
+[02:43] behavior biometrics
+[02:45] so a couple of examples for each of
+[02:46] those categories
+[02:48] again historically this would be kyc
+[02:51] data
+[02:52] residence license information credit
+[02:54] history
+[02:55] uh information um those type of data
+[02:59] points
+[02:59] are already in the wrong hands and uh
+[03:02] when someone a
+[03:03] criminal is doing account opening fraud
+[03:05] they have access to all of this
+[03:08] um so therefore a lot of
+[03:11] financial institutions and other related
+[03:14] industries
+[03:15] have started to untap additional
+[03:18] lines of defense starting with device
+[03:20] this has been
+[03:22] something that the industry started to
+[03:24] adopt
+[03:25] about 10 years ago 15 years ago um
+[03:28] what sort of device are you coming from
+[03:30] what's the reputation of that device
+[03:32] information about your location uh
+[03:35] information about your phone
+[03:36] and phone line um more recently
+[03:40] what are you doing so what's your
+[03:42] digital footprint any kind of social
+[03:44] media reputation that you have email
+[03:45] reputation
+[03:47] open source analysis on your identity
+[03:49] and more recently
+[03:51] we have a biometrics these are
+[03:54] different types of analysis for example
+[03:57] if you're opening an account you should
+[03:59] be familiar
+[04:00] with the data that you're providing it's
+[04:02] your own personal information
+[04:04] you should not be familiar with the
+[04:05] process of account opening because hey
+[04:07] you just open an account
+[04:09] a criminal is going to be the opposite
+[04:10] they're going to be very familiar with
+[04:12] the process
+[04:13] but not familiar with the data and
+[04:15] that's the sort of sort of
+[04:16] analysis that behavioral metrics is now
+[04:19] providing
+[04:21] so um we have biometrics you kind of
+[04:24] heard about blood metrics before
+[04:26] but more in the context of profiling so
+[04:29] the idea of behavioral biometrics
+[04:31] when it actually started was to create a
+[04:34] profile
+[04:35] of a regular user behavior and then
+[04:37] watch for anomalies
+[04:39] this is a classic example and you see
+[04:41] someone
+[04:42] that logs in and then interacts with
+[04:45] your online banking application
+[04:46] what you see on the screen is the
+[04:48] person's mouse motion
+[04:50] in you know these are several sessions
+[04:52] several pages but the mouse motion is
+[04:54] basically the same
+[04:55] so that's how you create a profile of
+[04:58] the regular user
+[04:59] behavior you can use a keyboard analysis
+[05:02] you can
+[05:03] analyze mouse motion if the user is
+[05:06] operating on a mobile device you're
+[05:07] going to look at accelerometer
+[05:09] gyro and dutch data the idea is to
+[05:11] create
+[05:12] a baseline and then watch for anomalies
+[05:15] like
+[05:15] in this specific case this account was
+[05:18] compromised the user provided the
+[05:19] credentials to a criminal
+[05:21] and now the criminal is accessing the
+[05:22] account you're going to see
+[05:24] a very different type of behavior so
+[05:27] now it's not the same mouse motion
+[05:30] there's a strange bump in the center of
+[05:31] the motion
+[05:32] and essentially this is a way for the
+[05:35] financial institution for example to say
+[05:37] hey
+[05:37] we do see an anomaly based on the
+[05:40] profile based on the
+[05:42] baseline that was created another use of
+[05:44] brb
+[05:45] metrics is to look for threats for
+[05:47] example
+[05:48] remote access this is a mobile device
+[05:51] user is interacting on a mobile device
+[05:54] you can see this
+[05:55] swipe motions these are not going to be
+[05:57] straight lines
+[05:58] even if you think that you move straight
+[06:01] in a straight line on your mobile device
+[06:02] here you actually have a small arc
+[06:04] um then you see the tabs now the tabs
+[06:08] are surrounded you know the dot is
+[06:10] surrounded by a blue circle that's your
+[06:11] finger pressing
+[06:13] on the actual touch screen that's a
+[06:15] normal situation for this account
+[06:17] and now this account was compromised
+[06:19] with the help desk scam
+[06:20] hey were the help desk there's something
+[06:22] wrong with your account your bank
+[06:24] account your mobile device something
+[06:26] like that
+[06:26] uh we're here you know to help you you
+[06:29] just have to install something
+[06:31] allowing us remote assistance people
+[06:34] fall for that and then
+[06:35] install some sort of remote assistant
+[06:38] tools
+[06:39] a tool or maybe like a rogue application
+[06:43] and then the attacker has remote access
+[06:45] on their device
+[06:46] this does not look the same um typically
+[06:49] the attacker
+[06:50] is going to control that device using a
+[06:53] mouse and keyboard and essentially
+[06:55] you're going to see
+[06:56] these long lines that's mouse motion not
+[06:59] someone actually physically
+[07:01] scrolling up and down on the device and
+[07:03] all of the dots
+[07:04] you don't see the blue circle around
+[07:06] them because no one's actually touching
+[07:07] the screen it's all
+[07:08] you know mouse clicks beyond that
+[07:11] because of the remote access there's
+[07:12] going to be some latency
+[07:14] the latency creates some disruptions to
+[07:16] hand eye coordination
+[07:18] and if you have the right system you can
+[07:19] actually spot that and say okay we now
+[07:21] know
+[07:22] that this mobile device is being
+[07:24] remotely controlled
+[07:25] right now if we talk about account
+[07:28] opening though
+[07:29] what's the use of behavioral biometrics
+[07:31] you cannot really profile anyone
+[07:33] uh they're just establishing the account
+[07:36] right
+[07:37] um but if you actually look at the way
+[07:40] criminals behave
+[07:41] um you can now analyze second by second
+[07:45] what they're doing uh we're going to
+[07:47] start with a very interesting
+[07:49] uh case from one of the top five credit
+[07:52] card issuers in the us
+[07:54] um they basically give you a credit card
+[07:57] online within 30 seconds you
+[07:59] go to the website you select a credit
+[08:00] card you click apply now
+[08:02] and then you start filling this online
+[08:05] phone
+[08:06] providing you know your name email
+[08:08] address date of birth mobile phone
+[08:10] number
+[08:11] address social duty number and other
+[08:13] data points
+[08:15] essentially uh that's what regular users
+[08:18] will go through but also what criminals
+[08:20] will go through so let's actually look
+[08:22] at
+[08:22] a specific application um
+[08:26] the session timeline here every vertical
+[08:28] bar is an interaction like the user
+[08:31] typed something
+[08:32] or interacted with the form it took one
+[08:35] minute and 34 seconds to complete that
+[08:37] and the interesting thing is that the
+[08:39] first name was pasted
+[08:41] three seconds into the session um
+[08:44] that's actually pretty incriminating you
+[08:47] know
+[08:47] why are you pasting your first name
+[08:50] you're supposed to be familiar with it
+[08:52] and the other thing is how come it's so
+[08:54] fast there's actually a video
+[08:56] that will show us how fast it was
+[08:59] so three seconds into the session
+[09:01] already we see
+[09:02] control v it's not autofilled by the way
+[09:05] someone actually was ready before the
+[09:09] application started
+[09:11] phone started it went to the application
+[09:14] flow
+[09:15] and then use control v to base something
+[09:17] that's
+[09:18] criminal behavior um another thing that
+[09:21] was pasted was the social security
+[09:23] number
+[09:23] uh their birth was also pasted you know
+[09:26] all of these suggest that whoever is
+[09:28] doing this
+[09:29] are not really familiar with um you know
+[09:31] the personal information but they're
+[09:33] also quite familiar with the process
+[09:35] right three seconds
+[09:36] and they're beginning to interact um
+[09:40] if we look at deposit fraud that's
+[09:42] another interesting
+[09:43] uh trend so we talked about credit card
+[09:45] account opening of course
+[09:46] a criminal will be interested in that to
+[09:48] just get a credit card or a loan
+[09:50] or some sort of instant credit but also
+[09:53] deposit fraud
+[09:55] uh is another lucrative type of business
+[09:58] because what you do there
+[09:59] is you open a new account and then you
+[10:02] move money from a compromise account
+[10:04] that you have uh so let's say that you
+[10:06] have money
+[10:07] uh an account that you have compromised
+[10:09] in bank a
+[10:10] you open an account in bank b and say
+[10:12] hey i'm the user
+[10:14] i want to open an account i want to
+[10:15] deposit something from bank a
+[10:18] typically bank b will send some small
+[10:20] transaction to bank
+[10:22] a to prove you know that you know once
+[10:25] you provide that
+[10:26] specific amount to prove that you own
+[10:28] that account you access that account
+[10:30] and you can provide that information and
+[10:32] of course they're going to do all of the
+[10:34] regular kyc checks but of course if you
+[10:37] own that account if you actually
+[10:39] not own but control that account um
+[10:43] you can provide all of that kyc
+[10:45] information because you've
+[10:46] er you have access to the again the
+[10:49] information and you also control the
+[10:51] account in bank a you can just open an
+[10:54] account in bank b
+[10:55] and move all of the money from account a
+[10:57] to account b
+[10:58] the thing is that bank b is now
+[11:01] responsible for
+[11:02] the fraud loss let's call deposit fraud
+[11:04] and let's actually see someone open an
+[11:06] account
+[11:07] um they're pasting a lot of information
+[11:10] um
+[11:10] in this case they're pasting the
+[11:13] routing code the account number user id
+[11:16] password
+[11:18] when they do the actual
+[11:22] you know payment and then
+[11:27] the interesting thing here is you know
+[11:28] all of this is happening
+[11:30] quite fast and what you can see is they
+[11:33] completed
+[11:33] the funding now they completed opening
+[11:35] the account
+[11:37] and look at the analysis showing
+[11:42] genuine users versus criminals about two
+[11:45] percent of on an account opening
+[11:46] sessions will have this behavior
+[11:49] where we see a paste from a different
+[11:51] application so essentially an alt tab
+[11:53] to a different tab and then paste the
+[11:56] information from that
+[11:57] tab that's two percent of the users for
+[12:00] criminals with 25 percent
+[12:02] you know this is pretty you know
+[12:04] significant so it's quite informative
+[12:06] seeing that at the same time we also
+[12:08] understand that you cannot really
+[12:10] incriminate two percent of the
+[12:11] population
+[12:12] or you know we need more information
+[12:14] because 25 percent
+[12:16] is not going to be a good detection rate
+[12:19] if you want to detect those sort of
+[12:20] fraud cases so in any case that's like
+[12:22] you know one type of analysis
+[12:25] uh obviously you need much more than
+[12:27] that but deposit fraud
+[12:28] is another type of account opening fraud
+[12:31] that is skyrocketing these days
+[12:33] um so we talked about you know pacing
+[12:35] information we talked about
+[12:37] um you know typing information now let's
+[12:40] look at
+[12:41] the difference between good users and
+[12:43] bad users um
+[12:44] criminals are gonna type off a list so
+[12:47] if they choose not to
+[12:49] you know populate the field
+[12:50] automatically with some sort of bot
+[12:52] or to use a pasting which you know
+[12:55] you've seen that it's only 25
+[12:56] of the cases they will typically type of
+[12:59] a list they have a
+[13:00] list of victims um thing is that shorter
+[13:03] memory is limited to just seven
+[13:05] characters
+[13:06] or items so think about someone typing a
+[13:09] social security number that does not
+[13:10] belong to them
+[13:11] it will be very mechanical right um
+[13:14] so we see someone typing uh you know the
+[13:17] social security number
+[13:19] it takes them quite like you know like
+[13:22] nine seconds to complete the ssn
+[13:24] typically it's going to be
+[13:26] something like four seconds for an ssn
+[13:29] um
+[13:30] date of birth it's like you know two
+[13:32] digits
+[13:33] i'm looking at the list i'm going back
+[13:35] okay another two digits
+[13:36] and okay i know the year it's gonna be
+[13:38] 19 something okay what's the number
+[13:41] again going to the list going back this
+[13:43] is a very mechanical process typing off
+[13:45] the list is something that you can also
+[13:47] understand criminals do um they want to
+[13:50] be efficient they have a list
+[13:52] but essentially that's the way for them
+[13:54] to
+[13:55] uh you know show the the fact that they
+[13:58] are not familiar with that information
+[14:00] it's not top of their mind
+[14:02] um as opposed to something that we're
+[14:04] going to see right now sometimes the
+[14:06] neurocustomer checks actually conflict
+[14:09] with the next generation analysis there
+[14:10] was a specific
+[14:11] case with one of the big card companies
+[14:14] that
+[14:15] essentially said hey we're going to
+[14:16] decline an application because
+[14:18] it's definitely fraud you know 96 chance
+[14:21] of
+[14:21] something being fraud but when we looked
+[14:24] at the data
+[14:25] it was interesting um the session
+[14:27] timeline again is all of the activities
+[14:29] that the user is doing
+[14:31] and what you can see is that the social
+[14:32] security number
+[14:34] is typed continuously and by the way
+[14:36] behavior metric is not interested in the
+[14:38] data itself you're gonna see it's all
+[14:39] you know one one ones
+[14:41] when we actually look at it again the
+[14:43] typing is quite
+[14:44] confident you know you don't see the
+[14:47] same thing like typing off a list
+[14:49] certainly you don't see any pasting
+[14:51] it's not autofilled whoever is typing
+[14:54] this information is quite familiar with
+[14:56] the social security number suggesting
+[14:58] it's their own social security number
+[15:00] long-term memory is a very strong
+[15:01] inheritance field
+[15:02] the other interesting thing here look at
+[15:04] the timeline
+[15:06] uh there's a 58-second pause why
+[15:09] because in this specific case it's a
+[15:12] hotel
+[15:13] credit card so in order to open the
+[15:15] account you need to provide your hotel
+[15:17] loyalty number
+[15:18] and you probably have some hotel loyalty
+[15:20] numbers but no one remembers them
+[15:22] and it takes you a minute or two to
+[15:24] fetch them maybe from your inbox
+[15:26] or something like that maybe it's in
+[15:27] your wallet um
+[15:29] so about one minute is is the norm and
+[15:32] we do see that this user also
+[15:34] you know pause for about one minute to
+[15:37] fetch that number and then continue with
+[15:38] the application
+[15:40] this is a very very positive sign right
+[15:43] this person behaves like everyone else
+[15:46] criminals are not gonna bother
+[15:48] with waiting for one minute because they
+[15:49] need this information they have this
+[15:51] information it's all ready for them
+[15:53] it's going to be right along you know
+[15:54] the name their birth and social security
+[15:56] number
+[15:57] because they needed to open the account
+[16:00] uh whereas you know
+[16:01] real users there's going to be some type
+[16:04] of information that you're going to be
+[16:05] very familiar with if
+[16:06] it's etched in your long-term memory but
+[16:09] other types of information you have to
+[16:11] research you have to
+[16:12] fetch um and that's essentially
+[16:15] analyzing the way a genuine user will
+[16:18] behave
+[16:19] so what do we have here we have here a
+[16:21] kind of a conflict because
+[16:23] and the analysis suggests the next
+[16:24] generation analysis suggests that
+[16:26] it's a good user right familiar with the
+[16:28] social security number behaves like
+[16:29] everyone else
+[16:31] but the card company said hey that's bad
+[16:34] um
+[16:34] we were actually curious about that we
+[16:36] asked the credit card company hey
+[16:37] guys what do you you know why you think
+[16:39] this is gonna be a fraudulent
+[16:41] application
+[16:42] he said well we like you very much guys
+[16:44] but it has to be fraud
+[16:46] because the guy is dead he's been dead
+[16:48] for 10 years you know we checked the
+[16:50] social security number it belongs to a
+[16:52] dead person
+[16:54] well that was bad um i mean we were so
+[16:57] sure that this is
+[16:58] a you know an actual genuine person
+[17:01] and you know we ask the issuer can you
+[17:04] actually
+[17:05] call the user you know to try and find
+[17:07] out what went on here because
+[17:09] you know it looks so real like it's a
+[17:11] real genuine person
+[17:13] they said they're dead we're not gonna
+[17:15] call them with a bit of an argument
+[17:17] and eventually they caved in and said
+[17:18] okay we're gonna call them let's see
+[17:20] what happens
+[17:21] um so the front operations team
+[17:24] now calls the user it was a miracle he
+[17:27] picked up the phone he was not dead
+[17:29] um ended up that he had a typo
+[17:32] in the social security number he just
+[17:34] had a mistake let's see it again
+[17:36] you know typed very confidently but with
+[17:39] a typo that the user did not realize
+[17:42] this actually matched to a totally
+[17:43] different person the name was wrong the
+[17:45] social security
+[17:46] was belonging to someone that died um
+[17:49] so sometimes the data is going to
+[17:51] suggest that this is a bad application
+[17:54] but some of the next generation analysis
+[17:56] don't really care about the data
+[17:58] it cares about the way you behave it
+[18:01] cares about you know your device your
+[18:03] you know other elements and therefore
+[18:07] sometimes it's more trustworthy than
+[18:08] actually you know looking at the data
+[18:10] itself
+[18:12] let's move to synthetic identity and
+[18:14] today that it is a very interesting
+[18:16] new problem uh in the u.s relatively new
+[18:18] it's uh
+[18:19] it has been around for over a decade but
+[18:22] it's becoming more and more of a problem
+[18:24] um this is from idea analytics and what
+[18:27] you can see is
+[18:28] you know social security belonging to
+[18:31] you know one identity
+[18:33] a name is invented or you know belonging
+[18:35] to a different identity
+[18:37] yet of birth etc etc it's like combining
+[18:40] a kind of uh you know
+[18:44] sort of digital
+[18:47] identity that does not really belong to
+[18:48] any specific person because it's a
+[18:51] mashup of various identities um
+[18:54] now then what do they do with this
+[18:56] identity because that identity obviously
+[18:58] cannot open a credit card right they
+[19:00] don't have
+[19:01] a any kind of credit history no one's
+[19:03] gonna give them a loan
+[19:04] so the idea is to create a synthetic
+[19:06] identity and then through some collusion
+[19:09] with rogue lenders begin to apply for
+[19:13] loans
+[19:14] and then build credit history by
+[19:16] returning the loan
+[19:18] so it's reported as a positive thing
+[19:20] another trick is to
+[19:21] attach this identity to someone who has
+[19:25] a perfect fico score
+[19:26] like a credit card account order as a
+[19:28] secondary
+[19:30] user in that account that's another
+[19:32] thing that you can do to
+[19:33] essentially get the tenure of a good
+[19:36] user
+[19:37] um so whether you focus on building a
+[19:40] credit history or
+[19:41] just you know a very good tenure um the
+[19:44] idea is to create this identity and then
+[19:47] um you know create a great history and
+[19:50] you know good credit for that person who
+[19:52] does not exist of course
+[19:54] and then launching your attack you know
+[19:55] you you know just go to
+[19:57] a credit card company you open a credit
+[20:00] card
+[20:00] account you maybe apply for a loan a
+[20:03] mortgage even
+[20:04] etc um one enforced intelligent entities
+[20:08] are actually using
+[20:09] child's social security numbers and the
+[20:11] you know trafficking in
+[20:13] child social security number in the dark
+[20:14] web has increased dramatically
+[20:16] um a lot of these are coming from
+[20:19] healthcare breaches
+[20:20] um so that's a very interesting trend
+[20:22] and of course not something that
+[20:24] we want to see you know in the industry
+[20:27] the reaction of the industry was to
+[20:29] start suspecting lots of people
+[20:32] um so let's actually see um one example
+[20:36] we see someone who um is 31 years old
+[20:41] no driver's license very thin credit
+[20:44] history
+[20:45] and the social security was issued
+[20:46] recently just a few years ago
+[20:48] obviously highly suspicious they were
+[20:50] asked to provide you know government
+[20:52] records tax
+[20:53] records and then they never submitted a
+[20:55] record so the transaction was cancelled
+[20:57] the application was cancelled
+[20:59] let's see the way they apply this is
+[21:01] from an iphone
+[21:02] so they're applying via an iphone
+[21:04] they're providing
+[21:05] right now their email um
+[21:09] they're providing date of birth
+[21:12] they had a typo in the layer of birth so
+[21:15] they corrected it and just continued
+[21:16] well it's all natural and very confident
+[21:18] this is the phone number
+[21:20] um little pause before annual income
+[21:23] they kind of thought about it and then
+[21:24] they
+[21:24] provided the annual income and then went
+[21:27] to
+[21:28] tie the social security and again you
+[21:30] can see it's all very natural no
+[21:32] positive this is not someone typing off
+[21:33] a list
+[21:34] not someone passing information they're
+[21:36] familiar with all of their
+[21:37] personal uh data fields another
+[21:40] interesting thing is
+[21:41] they also looked at the rates and fees
+[21:44] for
+[21:45] 90 seconds before even starting the
+[21:47] application
+[21:48] now if you kind of look at all of these
+[21:50] together
+[21:51] this is not going to be a synthetic
+[21:53] identity this may be a suspect
+[21:56] but it looks like a genuine person and
+[21:58] when the credit uh
+[21:59] issuer you know that had this level of
+[22:02] analysis
+[22:03] uh investigated further what they found
+[22:06] was
+[22:07] it's an immigrant it kind of explains
+[22:09] everything you know the ssn
+[22:11] and the theme file um this is someone
+[22:14] who works for a big tech firm
+[22:16] in san francisco uh area they're
+[22:19] actually a great candidate
+[22:20] a great acquisition target so you know
+[22:24] blaming them and pointing the finger and
+[22:26] saying hey you you're probably some sort
+[22:28] of
+[22:28] uh synthetic identity you have to prove
+[22:30] yourself um
+[22:31] that was something that uh almost killed
+[22:34] that specific application and of course
+[22:36] um that's not what banks and issuers
+[22:39] would like to do
+[22:41] um let's see the opposite now let's see
+[22:43] someone who is too familiar with the
+[22:45] process
+[22:46] uh you know before we saw someone that
+[22:48] was not familiar went to see the terms
+[22:50] and conditions and stuff like that but
+[22:52] this is someone who is too familiar uh
+[22:54] income source right when you
+[22:56] click on the income source when you open
+[22:57] an account um there's this window that
+[23:00] says okay employed retired self-employed
+[23:02] unemployed military etc it takes you
+[23:04] maybe like four seconds five seconds
+[23:06] to read through and say okay well
+[23:07] unemployed so let's click employ
+[23:10] um and then uh if we look at a specific
+[23:13] cyber grant again that was
+[23:15] attacking one of the banks uh it was
+[23:17] less than a second i mean they
+[23:19] they knew what's going to happen they
+[23:22] have been there before they are opening
+[23:24] you know
+[23:24] lots of accounts so they're not stuck on
+[23:27] this
+[23:28] screen they know what to select it takes
+[23:30] them less than a second to select
+[23:32] something and then
+[23:33] proceed this is someone too familiar
+[23:35] with the process
+[23:36] so if you think about all of the
+[23:37] criminals i mean they have the data
+[23:39] um they're attacking the same target you
+[23:42] know
+[23:42] again and again because they know the
+[23:45] specific controls
+[23:46] in that specific target uh they know
+[23:48] they're not gonna be
+[23:49] a caught uh so therefore they're gonna
+[23:52] be very familiar with the process
+[23:54] they're not gonna be familiar with the
+[23:55] data uh and that's
+[23:57] essentially what we see here another
+[24:00] interesting
+[24:00] uh trend is looking at the age of the
+[24:04] user
+[24:05] reflected in their behavior uh and this
+[24:08] is another a fascinating example
+[24:10] this specific user uh applying for a
+[24:13] credit card
+[24:14] was born in 1918. you kind of
+[24:17] remember the year right because world
+[24:19] war one
+[24:20] ended and also the spanish flu that was
+[24:22] also 1918
+[24:24] let's see someone who is over 100 years
+[24:27] old applying for a credit card so
+[24:29] extremely rapid mouse motion uh
+[24:32] extensive use of tab and mouse wheel you
+[24:35] know
+[24:36] this is not typical for someone who is
+[24:38] over 100 years old and of course
+[24:41] it's all around statistics and
+[24:42] probabilities but it's highly unlikely
+[24:45] that this person is um you know
+[24:48] such an elderly you know
+[24:52] citizen um the bottom line is that when
+[24:55] you look at
+[24:56] criminals and a lot of the behavior that
+[24:59] they will display
+[25:00] uh is not going to be in line with
+[25:02] genuine users with the
+[25:04] claimed age of the user or the known age
+[25:06] of the user
+[25:07] uh etc um
+[25:10] another interesting uh thing is
+[25:15] the fact that sometimes even without
+[25:18] seeing
+[25:18] any of the data uh you do know
+[25:21] that something is wrong um
+[25:25] and this is called the curious case of
+[25:27] the straw company
+[25:29] um let me explain this is a straw
+[25:31] company
+[25:32] um the name of the company we kind of
+[25:36] changed it's not the last row but
+[25:38] and it's a company based in san diego
+[25:41] it provides quality paper straws
+[25:45] as you know in california you know it's
+[25:47] the law you have to
+[25:49] provide your customers with paper straws
+[25:51] and
+[25:52] so people can buy those packs if you're
+[25:55] a restaurant you buy a crate you know
+[25:57] full of straws
+[25:58] um there was a sizeable order
+[26:01] of 62 crates
+[26:04] 740 000 straws costing
+[26:08] 15 000 dollars plus ten thousand dollars
+[26:12] for urgent shipping to tuvalu
+[26:14] what's tuvalu welcome to tuvalu it's an
+[26:18] island
+[26:18] in the pacific ocean 11 000 people they
+[26:21] don't need that many straws
+[26:22] so this is all curious um however
+[26:27] in this specific case even without
+[26:30] knowing
+[26:30] any of this data you know not the fact
+[26:33] that it's a straw company you know
+[26:35] selling straws
+[26:36] not the fact that it's a very big order
+[26:38] the number of straws the payment for the
+[26:39] straws the
+[26:40] you know ten thousand dollars for the
+[26:42] urgent shipping you know the location
+[26:44] in the middle of the pacific ocean
+[26:46] without seeing any of this data
+[26:49] you could know that this is fraud simply
+[26:51] based on the way
+[26:53] um the information was provided and
+[26:56] again let's see a quick video this is
+[26:58] uh someone pasting the credit card
+[27:02] number
+[27:03] uh and the cv 2
+[27:07] typing the expiration and
+[27:10] pasting the postal code think about your
+[27:12] postal code
+[27:14] did you ever paste your postal code it's
+[27:16] easier to type your postal code you know
+[27:18] your zip code
+[27:20] then to type it you know easier to
+[27:23] type in them to paste it you know people
+[27:25] don't paste the the zip code
+[27:27] in fact when you look at the statistics
+[27:29] it's about 99.9 percent of the users
+[27:32] they never paste the zip code um
+[27:35] this is by the way one small fact but
+[27:36] there are you know dozens of features
+[27:39] you know around each of those fields
+[27:42] uh another interesting thing about zip
+[27:45] code is how fast you begin typing your
+[27:47] zip code
+[27:48] uh because you're familiar with it you
+[27:50] have some muscle memory that
+[27:52] immediately starts uh you know going
+[27:54] into action and almost like
+[27:56] automatically
+[27:56] typing your zip code if you go through
+[28:00] some sort of online form um bottom line
+[28:03] is this person
+[28:05] is not familiar with their own zip code
+[28:09] now this was a curious case because
+[28:12] you can say okay fine we shouldn't trust
+[28:16] this transaction you know
+[28:17] it looks very very suspicious but but
+[28:21] why would a fraudster
+[28:23] go through all of the trouble of buying
+[28:26] 62 crates
+[28:27] okay all of these straws and ship them
+[28:30] urgently to tuvalu what's the point
+[28:33] what are they trying to achieve i mean
+[28:34] are they trying to you know
+[28:36] take the goods and then sell them in
+[28:38] tuvalu what for
+[28:40] you know you might think of all sorts of
+[28:43] creative ideas i mean maybe they
+[28:46] maybe they need the straws to buy some
+[28:48] you know to to build some
+[28:49] some hats or you know tuvadu is actually
+[28:52] having uh
+[28:54] water level issues i mean the the circle
+[28:56] you know the surface
+[28:58] uh uh water level is rising all the time
+[29:01] maybe they need the straws for emergency
+[29:02] or something
+[29:03] no it wasn't something like that and the
+[29:06] interesting thing about this specific
+[29:07] fraud was the amount
+[29:09] for the shipping 000 the entire thing
+[29:13] was built to inflate the amount
+[29:16] it's an urgent shipping to the middle of
+[29:18] the pacific ocean
+[29:20] 62 crates it will have to cost a fortune
+[29:23] so what actually happened here was the
+[29:25] following uh after making the payment
+[29:28] go through right so you know using a
+[29:30] corporate credit card
+[29:32] uh one of the usa banks
+[29:35] um the you know user
+[29:38] called the merchant and said hey i have
+[29:42] made a terrible mistake i didn't realize
+[29:44] it's so expensive you know ten thousand
+[29:46] dollars
+[29:47] you know your shipping company is crazy
+[29:50] they charge ten thousand dollars for
+[29:51] this i have another shipping company
+[29:53] that i prefer
+[29:54] using and they only charge two thousand
+[29:56] dollars can you do me a favor
+[29:57] because i already paid you ten thousand
+[29:59] dollars can you move
+[30:01] ten thousand dollars to that shipping
+[30:03] company and then they'll use it for this
+[30:05] shipping and then additional shipping
+[30:06] that i'll have
+[30:07] in the future you know like like
+[30:09] crediting me um
+[30:10] and the merchant says are you sure i
+[30:12] mean there's lots of crates here
+[30:14] yeah they're fantastic we work with them
+[30:16] all the time they're very cheap you
+[30:17] should you know use them for all of your
+[30:19] shipping
+[30:20] um and of course it wasn't a real uh
+[30:24] you know shipping company it was an
+[30:25] account created or opened
+[30:27] by the criminal the bottom line is when
+[30:30] you think about account opening
+[30:31] you know even e-commerce fraud any kind
+[30:33] of case and scenario where you have a
+[30:35] new user
+[30:36] you don't have any kind of profile on
+[30:38] the user prior behavior to look at
+[30:41] transaction monitoring to look at and
+[30:42] things like that
+[30:44] you know that kyc is dead but you do
+[30:47] have
+[30:48] more and more capabilities device
+[30:50] reputation
+[30:51] location analysis this sort of analysis
+[30:53] called behavior biometrics
+[30:55] to tell you hey something is either very
+[30:58] good
+[30:59] about this or something is terribly
+[31:01] wrong about this
+[31:04] another interesting uh thing to note is
+[31:06] that the ao fraud
+[31:08] is really changing the ecosystem um this
+[31:11] is
+[31:11] from california and
+[31:15] there was a new digital bank that was
+[31:17] opened
+[31:18] and when you actually look at number of
+[31:21] new users on a daily basis you know it's
+[31:24] around 100
+[31:25] people on a daily basis and
+[31:28] all of the sudden it jumped to about 700
+[31:31] people
+[31:33] so this is crazy i mean they said hey
+[31:35] finally the marketing team is doing
+[31:36] something
+[31:38] no they're not it's an attack
+[31:41] you have 100 good users and 600
+[31:45] bad users every day okay
+[31:48] and essentially the bank did have device
+[31:51] reputation
+[31:53] and email reputation meaning you know
+[31:55] what do we know about this email
+[31:57] how does it relate to the device and the
+[31:58] phone and other elements
+[32:00] this was allowing them to stop about 50
+[32:03] of the attack but there were still 300
+[32:05] people
+[32:06] okay that were registering every day
+[32:10] as opposed to something like 100 good
+[32:12] users
+[32:13] this is not sustainable the bank will
+[32:15] have to either you know
+[32:17] stop receiving new customers or allow
+[32:19] them in but then
+[32:20] don't allow them to make you know any
+[32:22] kind of money transfers or move money
+[32:24] out
+[32:24] until they sort out you know who's a
+[32:26] good user and who's a bad user
+[32:28] and that's difficult because the chromos
+[32:30] will know everything about the good
+[32:31] users
+[32:33] um initially when i looked at that i
+[32:35] thought that it may be like a bot that
+[32:37] is opening all of these accounts
+[32:38] no it wasn't it was a human being and in
+[32:41] fact
+[32:42] it was a specific person that was
+[32:44] opening all of these hundreds of
+[32:45] accounts
+[32:46] they were doing it very mechanically
+[32:48] they were very familiar with the
+[32:49] onboarding process
+[32:51] they were totally unfamiliar with the
+[32:52] with the data okay shorter memory typing
+[32:55] mechanically working off a list
+[32:57] not pasting any information they were
+[32:58] just typing or you know all day long
+[33:01] um so that's essentially one of the
+[33:04] risks that
+[33:06] banks and fintech companies are facing
+[33:09] these days whenever you launch a new
+[33:11] digital product
+[33:12] and you just open it to you know
+[33:15] the entire world to register if you
+[33:18] don't have the right
+[33:20] capabilities to detect those sort of
+[33:21] attacks you can go down
+[33:24] you you can really suffer from a massive
+[33:26] campaign like this
+[33:27] not the bots campaign not the ddos
+[33:29] attack nothing like that
+[33:31] just you know opening a lot of fake
+[33:34] accounts
+[33:34] that belong to real people and not
+[33:36] synthetic identities
+[33:38] right just identity theft because the
+[33:39] data is there
+[33:41] and then it's going to be very very uh
+[33:43] you know problematic
+[33:45] to handle the situation so new digital
+[33:47] banks
+[33:48] you know good luck with that uh make
+[33:50] sure that you have these sort of
+[33:52] defenses in place another impact of
+[33:54] account opening fraud on the economy
+[33:57] is a new uh service in the u.s called
+[34:01] zell and i'm sure most of you know zell
+[34:03] it's a great service it allows you to
+[34:05] pay from your
+[34:06] account um you know i think that in the
+[34:09] uk you'll have similar
+[34:11] uh similar types of uh
+[34:15] money motion money movement capabilities
+[34:18] you basically can
+[34:19] send money to anyone in your contact
+[34:21] list uh you can send my
+[34:23] money to an email account you know
+[34:24] things like that uh this is in the us
+[34:27] and um because of the
+[34:30] ease of account opening and the ease of
+[34:33] compromising email accounts
+[34:35] uh the whole zeld industry
+[34:38] uh is uh is essentially shaking because
+[34:43] this is you know a single story but it
+[34:45] kind of reflects the
+[34:47] underground you know underlying problem
+[34:49] of the whole
+[34:50] system so in this case frost has
+[34:53] randomly compromised the business
+[34:54] owner's email account right so
+[34:57] just a regular you know gmail yahoo
+[35:00] whatever sort of a account belonging to
+[35:04] a person they
+[35:08] saw that this person was interacting
+[35:11] with the renters of their property
+[35:15] and saying hey if you want to move money
+[35:18] why don't you use zell
+[35:19] you can you can you can send me the rent
+[35:21] money using zell
+[35:23] so what the criminal did was open a fake
+[35:26] account
+[35:27] okay using the same
+[35:30] information uh at a top five bank
+[35:34] and then enrolling for zell at that bank
+[35:37] using the compromised email now the
+[35:40] thing is that once you use
+[35:42] the email of the user that new bank
+[35:44] account is now
+[35:46] attached to that email right the bank
+[35:49] will obviously
+[35:50] send something to the email like a
+[35:52] one-time code that you have to repeat so
+[35:54] it basically proves that you control
+[35:56] that email
+[35:58] but if that email is compromised okay
+[36:00] this check
+[36:01] doesn't mean anything so essentially you
+[36:04] know beating the kyc
+[36:05] checks and then beating the uh email
+[36:08] email check of uh
+[36:11] a new uh registration um attaching that
+[36:15] new bank account to that email
+[36:17] and the bank said okay but this email
+[36:20] address is already linked to another
+[36:21] account at another bank
+[36:23] do you want to change it to our bank and
+[36:25] the process says yeah
+[36:27] and the bank simply enrolled the
+[36:28] processor in zell
+[36:30] you know because now this email account
+[36:34] um you know basically is attached to
+[36:37] this
+[36:37] a new account um and
+[36:42] basically at that point it's a game over
+[36:44] because
+[36:45] any money any money movement that will
+[36:48] go to this
+[36:49] email account will automatically go to
+[36:51] the froster's new account
+[36:52] at this top five bank
+[36:56] all right so the renter send the money
+[36:57] to the sale email address
+[36:59] as normal but now going to a newly open
+[37:01] account controlled by the criminal
+[37:03] rather than the real user game over so
+[37:06] essentially
+[37:07] um the fact that account opening
+[37:11] uh software was not top priority for
+[37:14] banks credit card companies etc
+[37:16] and it's changing the industry right you
+[37:19] have all of these
+[37:20] cases it doesn't have to be fraud it can
+[37:23] also be money laundering
+[37:25] it can be new accounts let's actually
+[37:26] talk about mules because
+[37:28] um there is an implication of a high
+[37:32] account opening fraud world um this is
+[37:34] like a diagram
+[37:36] a very crude one showing um you know a
+[37:39] typical
+[37:41] uh fraud supply chain uh
+[37:44] obviously it's not a single person that
+[37:46] can do everything
+[37:47] as a fraudster you typically choose
+[37:50] between
+[37:51] you know am i going to harvest
+[37:52] information you break into
+[37:54] accounts and break into databases or
+[37:57] you know do phishing projects etc
+[37:59] collect the information
+[38:00] or am i going to use that stolen
+[38:02] information to cash out
+[38:04] you know typically people make that
+[38:05] choice um
+[38:07] you know the harvesting process would
+[38:08] use tools and hosting and delivery
+[38:10] mechanisms
+[38:11] to you know infect more people or send
+[38:13] them phishing emails and stuff like that
+[38:15] or just break into a database uh the
+[38:19] cashier process will be the ones that
+[38:21] are tasked with
+[38:22] emptying all of these accounts they
+[38:24] understand everything about the specific
+[38:26] bank defenses the credit card defenses
+[38:28] they know how to
+[38:29] move money they know what sort of
+[38:30] controls are in place and
+[38:32] they also need to send the money
+[38:34] obviously not to themselves
+[38:36] but to some sort of collaboration
+[38:38] account
+[38:40] and for many years those were new
+[38:41] accounts because it was very difficult
+[38:43] to open an account
+[38:45] let's say locally if you're a criminal
+[38:47] outside of the uk
+[38:48] to use an account in the uk if you're
+[38:50] outside of the us using an account in
+[38:52] u.s so you always recruited
+[38:54] local collaborators some of them
+[38:56] knowingly
+[38:57] some of them unknowingly um i mean in
+[39:00] australia for example there was a case
+[39:02] where
+[39:02] um the criminals went to high schools
+[39:06] and said hey you have like
+[39:07] like a teenager account uh we are
+[39:11] kind of a charity company uh
+[39:14] charity you know big charity and don't
+[39:16] donors
+[39:18] people that have you know lots of money
+[39:19] will uh
+[39:21] you know send money to your account um
+[39:23] you're gonna pass it to us where the
+[39:25] charity
+[39:25] in east europe and you're going to get a
+[39:28] commission so
+[39:29] the the the tears didn't really realize
+[39:31] they're actually collaborating with this
+[39:33] sort of
+[39:33] uh scheme so sometimes the mules
+[39:36] know that they're mule sometimes they
+[39:38] don't know that their mules are being
+[39:39] recruited
+[39:40] um use have been
+[39:43] you know a very important part of that
+[39:45] ecosystem
+[39:47] but now you don't need them you can be
+[39:49] your own mule you can just
+[39:51] open an account online it's so easy
+[39:53] these days
+[39:54] and just send money you know from your
+[39:56] compromise account to your newly
+[39:58] established account saving the need to
+[40:01] work with muse uh it's saving you a lot
+[40:04] of money
+[40:04] opening an account is free you don't
+[40:06] have to pay anyone and once the money is
+[40:08] in your new account
+[40:09] you can just you know do whatever you
+[40:10] want with it you can send it anywhere
+[40:12] you can buy
+[40:13] things whatever so this is changing a
+[40:16] lot of the
+[40:17] you know economics of uh online fraud
+[40:22] all right so let's actually summarize um
+[40:24] what have we learned today
+[40:26] identity is totally broken criminals
+[40:30] behave differently and one in doubt
+[40:33] call the dead guy
+[40:37] um i hope you enjoyed the presentation
+[40:39] and let's see if you have any questions

@@ -1,0 +1,83 @@
+DEF CON Talks vs. Matthew Cox — Combined Exploit/Prevention Analysis
+====================================================================
+
+┌─────────────────────────────────┬──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┐
+│ Cox's Method                    │ DEF CON Talk                                 │ Overlap                                                              │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Stolen SSNs from homeless       │ DC14: SSN enumeration + lookup services;     │ Same core exploit — targeting SSNs with no active monitoring.         │
+│ people (dormant 10+ years)      │ DCSM: synthetic identity using children's    │ Cox used homeless, DC14 describes services selling any SSN for $50,   │
+│                                 │ SSNs                                         │ DCSM describes children's SSNs from healthcare breaches. All exploit  │
+│                                 │                                              │ the same gap: dormant SSNs have no one watching.                     │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Stolen SSNs from loan clients   │ DCSM: stolen identity paste-based            │ Cox stole from his own mortgage clients. DCSM describes dark web PII │
+│ (active credit)                 │ applications; DC16: medical records as PII   │ markets. DC16 shows medical records contain full financial PII.       │
+│                                 │ source                                       │ Different sourcing, same result — real SSN + real person's data.      │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Real DMV-issued IDs with his    │ DC14: fake DL → birth cert → passport        │ Cox is the advanced version. DC14 describes the layering chain. DC23  │
+│ face                            │ chain; DC23: shelf baby → real SSN → real    │ describes creating entirely new identities with real documents. Cox   │
+│                                 │ docs                                         │ actually got real DMV-issued licenses by going to DMVs in different   │
+│                                 │                                              │ states — he didn't need fakes.                                       │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ 27 DLs across 7 states          │ DC14: exploit that DMVs don't cross-check    │ DC14 explicitly notes you should avoid the victim's home-state DMV.   │
+│                                 │ between states                               │ Cox did exactly this — he went to states where the real person had    │
+│                                 │                                              │ no license on file.                                                  │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Virtual offices for fake        │ DCSM: mule account elimination via easy      │ Cox used HQ (virtual office) addresses for his shell mortgage        │
+│ businesses                      │ digital account opening                      │ companies. DCSM describes how frictionless digital account opening   │
+│                                 │                                              │ has replaced the need for physical mules. Same concept — fake        │
+│                                 │                                              │ business infrastructure.                                             │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Burner phones                   │ DC25: disposable pseudo phone numbers via    │ Cox used burner phones. DC25 describes commercial tools that create   │
+│                                 │ Sudo app                                     │ unlimited disposable VoIP numbers. Same exploit, commercialized.      │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Legal name changes on victims   │ DC23: death registration + birth             │ Cox changed victims' names to match his aliases. DC23 shows you can   │
+│                                 │ registration to create/destroy identities    │ go further — kill or birth people entirely on paper. Cox was          │
+│                                 │                                              │ manipulating living identities; DC23 describes creating/destroying    │
+│                                 │                                              │ them from scratch.                                                   │
+├─────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Forged mortgage satisfactions   │ (No overlap — county records exploitation    │ This is Cox's most unique technique. None of the DEF CON talks       │
+│                                 │ is unique to Cox)                            │ cover county clerk/recorder fraud.                                   │
+└─────────────────────────────────┴──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+
+Key convergence points
+----------------------
+
+1. The dormant SSN problem is universal.
+
+Cox, DC14, DC23, and DCSM all independently identify the same vulnerability:
+SSNs that aren't being actively used by anyone are the easiest to steal. Cox
+targeted homeless people. DC23 describes creating "shelf babies" with fresh
+SSNs. DCSM describes using children's SSNs from healthcare breaches. Database
+Standard's dormancy detection is the single check that catches all of these.
+
+2. Real documents beat fake documents.
+
+Cox didn't use novelty IDs (DC14's $100 fakes). He got real, state-issued
+licenses from actual DMVs. DC23's shelf baby also produces real documents. This
+is why Gov ID verification alone isn't enough — the documents ARE authentic.
+You need the database corroboration layer behind it.
+
+3. Serial identity creation is a pattern.
+
+Cox created 27 identities. DC23's shelf baby framework creates unlimited
+identities. DCSM's serial account opener created 700/day. Graph queries and
+face lists are the only thing that catches the 2nd+ attempt. The first one may
+pass — but the pattern detection kicks in after that.
+
+What Cox did that NO talk covers
+---------------------------------
+
+- Forged mortgage satisfactions — fabricating county recorder documents to
+  clear liens. This is entirely outside digital identity verification scope.
+
+- Insider access to victim PII — Cox was a licensed mortgage broker with
+  legitimate access to clients' SSNs. DC16 covers insider threats in healthcare
+  but not in financial services.
+
+- Social manipulation of DMV staff — Cox charmed his way through in-person DMV
+  visits. The DEF CON talks focus on digital/system exploits, not in-person
+  social engineering at government offices.
+
+These gaps reinforce why the matthew_cox.md design includes the "out of scope"
+note for county records fraud — Persona can't catch everything, but it catches
+the identity verification layer comprehensively.

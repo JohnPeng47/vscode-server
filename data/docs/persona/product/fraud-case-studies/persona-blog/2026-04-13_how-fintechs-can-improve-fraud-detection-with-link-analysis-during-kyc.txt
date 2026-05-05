@@ -1,0 +1,52 @@
+2026-04-13 | How Fintechs Can Improve Fraud Detection With Link Analysis During KYC
+
+URL: https://withpersona.com/blog/how-fintechs-can-improve-fraud-detection-with-link-analysis-during-kyc
+
+ blog Adding link analysis to onboarding fraud detection and KYC flows can help stop bad actors from opening accounts at fintechs.  Fraud Finance/fintech Published April 13, 2026Last updated April 13, 2026How fintechs can improve fraud detection with link analysis during KYCLink analysis can help catch sophisticated fraudsters and fraud rings that other checks might miss. Charlie Sellers     3 min BlogHow fintechs can improve fraud detection with link analysis during KYCCopy link
+
+Link copied!
+ KYC checks are a regulatory requirement, and they can help prevent fraudsters and other bad actors from accessing your platform. But they're not designed to catch every type of fraud. That’s why many fintechs add additional identity verification and fraud checks. However, some overlook link analysis, which is an increasingly important layer for detecting fraud rings and AI-driven attacks. You already collect the data you needLink analysis is a data analysis technique for identifying, evaluating, and understanding complex relationships. It can help you uncover new insights from the information you gather during KYC checks, including the user’s address and tax identification number. You can improve results by gathering and analyzing additional risk signals during identity verification, such as device fingerprints, IP addresses, and user-submitted images. Link analysis can strengthen fraud detection during onboarding by: Adding a layer to your defenses: Without real-time link analysis, some KYC and fraud checks might miss the most advanced attacks, such as fraudsters using high-quality deepfakes, synthetic identities, or identity mules. Stopping scaling attacks: If you can run link analysis in real time during an onboarding flow, you can quickly detect whether users are repeatedly creating accounts using the same device, information, or technique.Improving automation: More precise risk assessments allow you to segment a larger portion of your trusted and risky users. In turn, this can increase the number of users you automatically approve or block and decrease the burden on your manual review team. 
+   
+      Blog post
+      Branch automates 98% of its identity verification process with Persona
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+Link analysis can fill an important gap that other checks missIn some cases, basic matching rules can offer similarly helpful results. However, link analysis goes further faster. Rather than asking whether a new user shares a device with a known fraudster, you can quickly detect indirect connections (Account A shares a device with Account B, which shares an SSN with Account C). As bad actors build sophisticated operations, improve spoofing techniques, and create realistic deepfakes and images, running “multi-hop” searches becomes increasingly important for fraud fighters. For instance, even when fraud rings use unique devices, rotate residential IPs, and create synthetic identities with genuine information, you might be able to detect the fraudulent activity by tying accounts together based on similar image submissions. Link analysis for perpetual KYCTraditionally, companies conducted KYC to verify customers’ identities during onboarding, and only reverified users at certain points afterward. With perpetual KYC, organizations can flag worrisome interactions and continuously reverify customers.Finding accounts that are multiple degrees of separation away from a flagged account can help create and maintain a secure environment. If a fraudster logs in from a flagged device, you can quickly block the account (or an entire ring of fraudulent accounts) and add new attributes associated with the fraudster to your next investigation. You can also feed these insights back to the onboarding checks to automatically block or flag new fraud attempts. 
+   
+      Blog post
+      When fraud strikes: the 3 most vulnerable moments in the fintech customer life cycle
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+Persona’s approach to KYC and link analysisPersona’s verified identity platform offers the tools you need to build, customize, and automate digital KYC and onboarding processes. Create branded user flows with our no-code editor, and then adjust checks and thresholds to manage risk without sacrificing user experience. And with Graph, Persona’s link analysis tool, you can add real-time link analysis checks and results to onboarding, reverification, and investigations. Learn more about how we help fintechs, fraud fighters, and compliance teams. Or contact us for a custom demo of Graph. 
+   
+      Guide
+     How do top teams use link analysis? Find out in The fraud leader's guide to link analysis
+   
+   
+      Download now
+      
+         
+            
+         
+      
+   
+ 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Charlie SellersCharlie Sellers is a marketing associate at Persona who focuses on demand generation. You can often find him at record stores across the Bay Area or riding his bike in the city.Table of contentsYou already collect the data you needLink analysis can fill an important gap that other checks missLink analysis for perpetual KYCPersona’s approach to KYC and link analysisContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

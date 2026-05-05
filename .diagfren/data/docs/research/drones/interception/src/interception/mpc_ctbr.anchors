@@ -1,0 +1,10 @@
+# anchor-text                                          code-ref                                                                            label
+CTBRController                                          data/docs/research/drones/interception/learning/plan.txt:60                       plan §4 — CTBR layer (collective thrust + body rates)
+mode="ctbr"                                             data/docs/research/drones/interception/learning/plan.txt:75-82                    plan §4 — CTBR prediction model
+tau_attitude                                            data/docs/research/drones/interception/learning/plan.txt:75-82                    plan §4 — first-order rate-tracking time constant
+nlpsol                                                  data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — IPOPT solves the receding-horizon NLP
+BodyRateController                                      data/docs/research/drones/interception/learning/plan2.txt:240-270                 plan2 §7 — the rate_controller (NEW) block, now realized
+self.rate_controller                                    data/docs/research/drones/interception/learning/plan2.txt:52-83                   plan2 §2 — inner-loop body-rate controller below CTBR
+command_to_rotor_thrusts                                data/docs/research/drones/interception/learning/plan2.txt:52-83                   plan2 §2 — translation from CTBR command to rotor thrusts
+horizon_steps                                           data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — N-step lookahead in MPC
+_shift_warm_start                                       data/docs/research/drones/interception/learning/plan.txt:94                       plan §5 — receding horizon: reuse previous solution

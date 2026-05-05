@@ -1,0 +1,153 @@
+2026-04-02 | Mexico's Customs Law 2026: Four Changes Every Importer and Exporter Needs to Know
+
+URL: https://withpersona.com/blog/mexico-customs-law-2026
+
+ blog Learn how Mexico’s 2026 Ley Aduanera reform impacts importers and exporters: more documentation, new KYC rules, shared liability, and increased fines. Compliance International  Published April 02, 2026Last updated April 02, 2026Mexico's Customs Law 2026: What importers, exporters, and customs brokers need to knowLearn how Mexico’s 2026 Ley Aduanera reform impacts importers and exporters with new documentation requirements, KYC rules, shared liability, and increased fines.Rachell LeeKerwell Liao     13 min 
+  .keytakeaway-swiper .swiper-slide-next {
+    opacity: 0.2;
+  }
+  Key takeaways    Mexico's Ley Aduanera 2026 reform took effect January 1, 2026. It’s the most significant overhaul of Mexican customs law in 30 years.   Organizations that fail to comply with the new requirements face fines of up to 300% of goods’ value, seizures, and criminal charges.  Every import and export transaction now requires a comprehensive Expediente Electrónico (electronic file) documenting a full paper trail behind each shipment.      BlogMexico's Customs Law 2026: What importers, exporters, and customs brokers need to knowCopy link
+
+Link copied!
+ Effective January 1, 2026, Mexico’s Ley Aduanera (Customs Law) has dramatically increased documentation requirements for anyone importing or exporting through Mexico. If you move goods through Mexico, the increased documentation requirements can become a compliance risk if you’re not set up to both collect and verify the validity of documents.The new reform introduced expanded electronic documentation, formalized Know Your Customer (KYC) requirements for customs brokers, and expanded shared liability between importers and their agents. For a single shipment, that can mean collecting and validating multiple supporting documents in addition to the customs declaration itself. Meanwhile, customs brokerages are now required to maintain current, verified identification files for every client. If you’re wondering how to handle these new requirements, this guide explains what the law requires, who is affected, what the penalties are, and what your team needs to do to comply.Key translations to know for Mexico’s Customs Law in 2026El Servicio de Administración Tributaria (SAT): the Mexican Tax Administration Service Agentes Aduanales: Customs brokerEmbargo precautorio: Precautionary seizurePedimento: Customs declarationAgencia Nacional de Aduanas de México (ANAM): National Customs Agency of MexicoCódigo Fiscal de la Federación: Federal Fiscal CodeDespacho aduanero: Customs clearanceResponsabilidad solidaria: Jointly and severally liableConstancia de Situación Fiscal: Tax Status CertificateActa Constitutiva: Articles of IncorporationComprobante de Domicilio: Proof of AddressEncargo Conferido: Letter of AuthorizationComprobante Fiscal Digital por Internet (CFDI): Digital tax receiptReglas Generales de Comercio Exterior: General Rules for Foreign TradeWhat is Mexico's Customs Law 2026 (Ley Aduanera)?Mexico's Ley Aduanera is the federal law governing all customs activity in Mexico. It covers the import and export of goods, customs clearance (despacho aduanero), and every party involved in Mexico’s international trade operations. Published in the Official Journal of the Federation (DOF/Diario Oficial de la Federación) on November 19, 2025, the law is administered by the Mexican Tax Administration Service (SAT/Servicio de Administración Tributaria) and the National Customs Agency of Mexico (ANAM/Agencia Nacional de Aduanas de México). Who does Mexico's 2026 customs reform impact?The 2026 reform affects every party involved in moving goods into Mexico by expanding compliance responsibilities across the entire supply chain. Here’s a quick overview of who the law applies to and how it impacts them:
+  
+    
+      Who the law applies to
+      How it affects them
+    
+  
+  
+    
+      US and foreign exporters to Mexico
+      Must ensure all required documentation (contracts, payment proof, value manifests) is complete before goods clear Mexican customs. Incomplete documentation on the exporter's side creates shared exposure for their customs broker.
+    
+    
+      Mexican importers
+      Must maintain an Expediente Electrónico for every transaction and remain current on all SAT registries. Joint liability for taxes means documentation accuracy is a financial obligation.
+    
+    
+      Customs brokers (Agentes Aduanales)
+      Must collect and maintain client identification files; carry joint and several liability for tax and duty accuracy; new grounds for patent suspension if client ID obligations are missed.
+    
+    
+      Customs agencies (Agencias Aduanales)
+      Same obligations as individual brokers, with partners bearing proportional solidary liability for their share of agency capital.
+    
+    
+      Manufacturers (IMMEX/maquiladora programs)
+      Must document proof of actual production processes with technical and accounting records; IMMEX program violations are criminally equivalent to smuggling.
+    
+    
+      Logistics and freight companies
+      All domestic transport of foreign goods requires a CFDI with Carta Porte supplement; failure triggers precautionary seizure and potential criminal exposure.
+    
+    
+      Supply chain managers and compliance teams
+      Responsible for operationalizing new document collection workflows, expiry tracking, and audit readiness across hundreds or thousands of transactions.
+    
+  
+Four new changes to the Ley Aduanera 2026It can be overwhelming to keep up with all the specific changes that apply to you, but there are four main changes to the 2026 reform that everyone in the Mexican trade industry should know:Electronic documentation standards: An expansion of records you must collect, maintain, and produceClient identity documentation: New KYC requirements for customs agencies or brokers to compile documentation verifying their clients’ identitiesExpanded liability rules: Shared liability rules between importers and customs brokers Stronger penalties and enforcement: New triggers for administrative fines and criminal penalties We’ll discuss four of the most important changes to the law as they relate to expanded document requirements in greater detail.1. Mandatory comprehensive electronic file (Expediente Electrónico) for every transactionEvery customs transaction (pedimento) must be backed by a documented electronic file called the Expediente Electrónico. It contains documentation that proves how you financed and executed each shipment transaction. This Expediente Electrónico isn’t a new filing for customs. The requirement to maintain and produce this electronic file on demand during an SAT or ANAM audit has existed since 2018. Companies were already required to retain key documents like the customs declaration (pedimento), compliance standard certificates (NOM/Norma Oficial Mexicana), and transport records.What’s new is that the 2026 Ley Aduanera reform introduced eight new categories of documentation for the electronic file. We’ve mapped out specific documents your team must collect and maintain for each new category.
+  
+    
+      Documentation type
+      What this covers
+      Examples of required documents
+    
+  
+  
+    
+      Guarantees (garantías)
+      Proof that financial obligations tied to the shipment are secured
+      Customs guarantees, bonds (if applicable)
+    
+    
+      Digital tax receipts (CFDI)
+      Official tax documentation validating the transaction and movement of goods
+      CFDI (electronic invoice), CFDI with Carta Porte (for transport)
+    
+    
+      Commercial invoices
+      The declared value and details of the goods being traded
+      Supplier invoices, itemized commercial invoices
+    
+    
+      Electronic payment transfers
+      Evidence of how you funded the transaction
+      Bank transfers, SWIFT confirmations, letters of credit, bank statements
+    
+    
+      Transport expenses and insurance
+      Costs and risk coverage of moving goods
+      Bill of lading, airway bill, freight manifests, insurance policies
+    
+    
+      Commercial contracts
+      Legal agreements governing the transaction
+      Purchase orders, sales contracts, supplier agreements
+    
+    
+      Assets acquired/imported
+      What goods were actually purchased or imported
+      Product descriptions, inventory or asset records
+    
+    
+      Supplier import/export operations
+      Evidence that your supplier is a legitimate trading entity
+      Supplier transaction history, prior import/export records, supporting compliance
+    
+  
+Who does the Expediente Electrónico apply to?If you’re a broker, agency, importer, exporter, or a proxy, the new electronic file requirements apply to you. Under the General Rules of Foreign Trade (Reglas Generales De Comercio Exterior): You must retain this electronic file for at least five years from the tax return filing date (or when it should have been filed)You’ll need to submit the file using electronic signature technology, or e.firmaAs an example, let’s say your company supports 500 customs transactions annually. You’ll need to maintain 500 electronic files containing thousands of documents on an ongoing basis.What are the CFDI and Carta Porte?While not required for the Expediente Electrónico specifically, two additional documents are critical for compliance if you transport any goods within Mexico:CFDI (Comprobante Fiscal Digital por Internet) is Mexico's official electronic tax invoice. It serves as the legal proof of a transaction and must be transmitted in real time to the government.Carta Porte is a supplement added to the CFDI when goods are being transported. It shows legal proof that the goods in transport are properly documented.The Carta Porte is separate from the electronic file requirement, but it’s used to prove that you’re properly documenting the authorization of transported goods within Mexico.Even though it’s not formally a part of the Expediente Electrónico, you should retain the CFDI and Carta Porte for the same five-year period in your electronic file for audit and compliance purposes. 2. Customs brokers must formally verify every client’s identity (Expediente de identificación del cliente)If you’re a customs broker or a customs agency, you’re now legally required to fully identify (plenamente identificados) every client you work with. Before processing any customs operation, customs brokers and agencies must verify every clients’ identities, operational capacity, ties to taxpayer blacklists, and compliance history. Each client must have a documented identification file called the Expediente de identificación del Cliente, including:Current tax status certificate (Constancia de Situación Fiscal): Confirmation of the clients active registration with SAT and current on tax obligationsArticles of incorporation (Acta Constitutiva): Documentation of the client's legal existence and corporate structureProof of address (Comprobante de Domicilio): The physical business locationInfrastructure documentation: Photographs, lease agreements, or property records demonstrating physical and operational capacity proportional to declared trade volumeLegal representative (Representación Legal): Documentation confirming the person acting on behalf of the company is authorized to do soLetter of authorization (Encargo Conferido): A letter authorizing the customs broker to act on the client's behalf for customs operationsEvidence of financial capacity: Bank statements or financial records showing the client can fund their declared operationsSworn client declaration: A statement made under oath confirming the truthfulness of all information providedSAT’s Article 69-B blacklist check: Confirmation that the client does not appear on SAT's blacklist list of taxpayers flagged for issuing invoices for non-existent operations, or a lack of assets, personnel, or infrastructureFor example, let’s say you oversee a brokerage managing 80 active accounts. Under Ley Aduanera’s new KYC rule, you now need to maintain individual client files for all 80 accounts. That includes tracking document validity, fiscal status, and blacklist standing continuously. If a client has a lapsed tax status or another client is on the taxpayer blacklist, both you and the client are responsible for catching that.The stakes are pretty high, especially if you’re a customs broker. If you process a transaction using client data that turns out to be false or nonexistent, you might face permanent patent cancellation. This applies whether or not you knew the data was false or forgot to verify the client’s documents. That's why simply collecting documents isn't enough. You need to verify that the data in those documents is accurate, current, and matches what your client claims.3. Shared liability between importers and customs brokersOne of the most important updates in the 2026 Mexico customs law reform is how importers and customs brokers share liability. Importers, customs agents (agentes aduanales), and customs agencies (agencias aduanales) can now be held jointly and severally liable (responsabilidad solidaria) for unpaid duties, taxes, and compensatory quotas (cuotas compensatorias). This means that SAT can pursue either party for the full amount owed, not just the party that made the mistake. You’ll share financial liability as a customs broker or an importer. If you’re a customs broker and the importer provides inaccurate information or fails to pay taxes, you may still be held responsible for the unpaid amount. And vice versa. There are only two exceptions to these rules: Administrative fines are not shared. These fines only apply to the party that committed the violation.Transport-related infractions fall on the transport company owners or operators, not the customs broker or the importer.4. Steeper penalties for non-compliance with the Ley AduaneraLey Aduanera has always enforced penalties, but the 2026 reform adds new triggers for how violations can escalate under the Federal Tax Code (CFF/Código Fiscal de la Federación). We’ve outlined the penalties below: 
+  
+    
+      Violation
+      Consequences
+    
+  
+  
+    
+      Prohibited imports/exports or non-compliance with non-tariff regulations
+      Fines of 250–300% of the commercial value of the goods
+    
+    
+      Lack of proper documentation, false declarations, or NOM violations
+      Precautionary seizure of goods and transport vehicles (embargo precautorio), with a response window (typically 10 business days) (Arts. 150–151)
+    
+    
+      Non-compliance with client identification obligations (customs brokers)
+      Suspension of customs agent patent
+    
+    
+      Unpaid duties, handling prohibited goods, or use of false documentation
+      Criminal penalties under the CFF, including imprisonment from 3 months to 9 years (depending on the amount involved)
+    
+    
+      Transporting foreign goods without valid CFDI + Carta Porte
+      Subject to criminal prosecution and imprisonment; treated as equivalent to smuggling
+    
+    
+  IMMEX (Manufacturing, Maquiladora and Export Service Industry) program misuse (e.g., selling temporarily imported goods domestically)
+  Subject to criminal prosecution and imprisonment; treated as equivalent to smuggling
+
+  
+These enhanced penalties matter because you can be prosecuted for smuggling-related offenses for a simple operational or documentation mistake. And because of the shared liability rules, both importers and customs brokers need to be aware of these costly financial and legal penalties. How to comply with Mexico's Ley Aduanera requirements in five stepsExpanding documentation requirements comes with increased operational burden on your team, especially if you’re collecting documents manually. More documentation also opens the door for more forged, tampered, or recycled documents to enter your files undetected. If your company processes hundreds or thousands of customs transactions annually, manually collecting documents and verifying their validity isn’t realistic at scale. Follow these five steps to help you adapt to these new requirements:Centralize and automate document collection and storage: Avoid relying on email or messaging apps to collect documents. Use a structured intake system that automatically links each document to the right client file or transaction record.Automate document expiry tracking: Many documents like the Tax Status Certificate (Constancia de Situación Fiscal) have defined validity periods. Set up automated workflows that flag document expirations and send renewal reminders early.Verify documents after collecting them: You need to verify all your documents to avoid potential fines or worse, like permanent patent cancellation. Use tools that can automatically check authenticity markers, validate digital signatures like the e.firma signatures, verify QR codes on tax documents, and flag signs of document tampering or inconsistencies.Build an audit trail from day one: Track when each document was received, who submitted it, and what verification checks were performed to create a compliant audit trail.Prepare for regulatory changes: SAT's implementing rules (Reglas Generales de Comercio Exterior) update annually. Build flexible compliance workflows so you can add new document requirements or adjust validation rules easily. How Persona can helpIf preparing a complete, audit-ready Expediente Electrónico feels difficult to scale, you’re not alone. The 2026 reform expands documentation requirements and introduces a new level of verification, traceability, and ongoing maintenance that can get overwhelming. At Persona, we help companies operationalize these requirements. Our Document AI product automates information collection across the compliance documents now required under the 2026 Ley Aduanera reform. In 2025, we helped companies like Twilio, Wealthsimple, Travelex, and DolarApp process millions of supplemental documents. Instead of chasing documents across email and spreadsheets, you can use Document AI to:Automatically extract document dataCross-check for inconsistenciesFlag signs of tampering before you submit your documents for an SAT or ANAM auditAs SAT rules evolve, you can configure Persona’s workflows to adapt quickly. And with Enhanced Fraud Detection, Document AI can also help prevent document tampering, forgeries, generative AI documents, and more, even as you collect more documents.If you’re evaluating how to adapt your current process, we can walk you through how other companies are approaching document collection, verification, and audit readiness.Talk to our team to see how Persona’s identity infrastructure supports Ley Aduanera compliance workflows in practice. 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+FAQs   Does the 2026 Ley Aduanera apply to US companies exporting to Mexico?  Toggle description visibility         
+        .toggle-text {
+          display: none;
+        }
+        Yes. If your goods enter Mexico, Ley Aduanera’s new documentation requirements apply to them. If you’re a US exporter working with a Mexican customs broker, gaps in your paperwork can delay your shipment and create direct compliance exposure for your broker, who’s jointly responsible for taxes and duties owed on the transaction. Many Mexican brokers are now requiring US exporters to provide more complete commercial documentation before accepting a shipment.     Yes. If your goods enter Mexico, Ley Aduanera’s new documentation requirements apply to them. If you’re a US exporter working with a Mexican customs broker, gaps in your paperwork can delay your shipment and create direct compliance exposure for your broker, who’s jointly responsible for taxes and duties owed on the transaction. Many Mexican brokers are now requiring US exporters to provide more complete commercial documentation before accepting a shipment.     What is shared liability between importers and customs brokers?  Toggle description visibility         
+        .toggle-text {
+          display: none;
+        }
+        Shared liability (responsabilidad solidaria) between importers and customs brokers means both parties are financially responsible for taxes, duties, and compensatory quotas every time an importer hires a customs broker to clear a shipment through Mexico. If an importer fails to pay import taxes or files an inaccurate customs declaration, SAT can pursue the customs broker for the same unpaid amounts. And vice versa. 
+
+One important exception: administrative fines (multas) are excluded from shared liability and are  assessed only against the specific party who committed the violation.     Shared liability (responsabilidad solidaria) between importers and customs brokers means both parties are financially responsible for taxes, duties, and compensatory quotas every time an importer hires a customs broker to clear a shipment through Mexico. If an importer fails to pay import taxes or files an inaccurate customs declaration, SAT can pursue the customs broker for the same unpaid amounts. And vice versa. 
+
+One important exception: administrative fines (multas) are excluded from shared liability and are  assessed only against the specific party who committed the violation.     How can companies automate compliance with Mexico's customs law?  Toggle description visibility         
+        .toggle-text {
+          display: none;
+        }
+        Companies can automate Ley Aduanera compliance by centralizing document intake, automating expiration alerts for documents like the Tax Status Certificate (Constancia de Situación Fiscal), and validating document authenticity. Tools like Persona's Document AI are designed for this: automating the collection, verification, and audit trail of Mexican compliance documents so your team can scale compliance operations with ease.      Companies can automate Ley Aduanera compliance by centralizing document intake, automating expiration alerts for documents like the Tax Status Certificate (Constancia de Situación Fiscal), and validating document authenticity. Tools like Persona's Document AI are designed for this: automating the collection, verification, and audit trail of Mexican compliance documents so your team can scale compliance operations with ease.   Rachell LeeContent Marketing Manager at Persona. Chronically fueled by matcha lattes and enjoys doing pottery. Confirmed human, verified storyteller, not a bot.  Kerwell LiaoKerwell is a product marketing manager focused on Persona’s identity verification solutions. He enjoys watching basketball and exploring the world with his German Shepherd.Table of contentsWhat is Mexico's Customs Law 2026 (Ley Aduanera)?Who does Mexico's 2026 customs reform impact?Four new changes to the Ley Aduanera 20261. Mandatory comprehensive electronic file (Expediente Electrónico) for every transaction2. Customs brokers must formally verify every client’s identity (Expediente de identificación del cliente)3. Shared liability between importers and customs brokers4. Steeper penalties for non-compliance with the Ley AduaneraHow to comply with Mexico's Ley Aduanera requirements in five stepsHow Persona can helpContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

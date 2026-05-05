@@ -1,0 +1,8 @@
+# anchor-text                                          code-ref                                                                            label
+BodyRateController                                      data/docs/research/drones/interception/learning/plan2.txt:240-270                 plan2 §7 — the rate_controller (NEW) block
+proportional_gains                                      data/docs/research/drones/interception/learning/plan2.txt:113-117                 plan2 §3 — Kp in u = Kp · e + Ki · ∫e dt
+integral_gains                                          data/docs/research/drones/interception/learning/plan2.txt:113-117                 plan2 §3 — Ki in u = Kp · e + Ki · ∫e dt
+integral_limit                                          data/docs/research/drones/interception/learning/plan2.txt:146-160                 plan2 §4 — anti-windup clamp on the integral term
+integral_error                                          data/docs/research/drones/interception/learning/plan2.txt:120-124                 plan2 §3 — persistent integrator state
+compute_torque_command                                  data/docs/research/drones/interception/learning/plan2.txt:131-138                 plan2 §3 — the agent's recommended PI form: τ = Kp·e + Ki·I
+rate_error                                              data/docs/research/drones/interception/learning/plan2.txt:108-110                 plan2 §3 — e_ω = ω_des − ω

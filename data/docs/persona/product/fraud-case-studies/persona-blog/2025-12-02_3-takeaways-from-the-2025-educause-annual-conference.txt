@@ -1,0 +1,57 @@
+2025-12-02 | 3 Takeaways From the 2025 EDUCAUSE Annual Conference | Persona
+
+URL: https://withpersona.com/blog/3-takeaways-from-the-2025-educause-annual-conference
+
+ blog The 2025 EDUCAUSE annual conference brought together leaders from IT, security, enrollment, and student services. Here are three takeaways to remember.  Fraud Education Published December 02, 2025Last updated January 21, 20263 takeaways from the 2025 EDUCAUSE annual conferenceThe 2025 EDUCAUSE annual conference brought together leaders from IT, security, enrollment, and student services. Here are three takeaways to remember. Sam Breitbach     4 min 
+  .keytakeaway-swiper .swiper-slide-next {
+    opacity: 0.2;
+  }
+  Key takeaways    Improving security requires a focus on cybersecurity systems and campus culture. You need to make sure everyone is bought in and able to easily use the tools that will keep them safe.   Schools are continually on the defensive as fraudsters create ghost students to steal financial aid. Many schools are comparing identity verification systems and looking for solutions that can detect the latest attacks, including realistic deepfakes, while also creating a low-friction experience for legitimate students.   Help desks are bearing the brunt of attacks from bad actors who try to take over faculty and student accounts. Coordinating regular meetings and information sharing between help desk and security teams is becoming more important.       Blog3 takeaways from the 2025 EDUCAUSE annual conferenceCopy link
+
+Link copied!
+ This year's EDUCAUSE brought together leaders from IT, security, enrollment, and student services. The theme, “Restoring Trust,” reflects the challenges that higher education institutions and professionals are facing. Fraudsters are using new tools and techniques to target faculty and students. Whether they’re trying to gain access to sensitive information or steal student aid, the potential danger is real. But higher education's culture of openness and academic freedom directly opposes traditional security approaches of locking everything down. Two Personerds, Brooke Lancaster and Maggie Larsen, attended the conference. Below, they share three takeaways from their time in Nashville. 1. Security teams need to balance cybersecurity and accessibilityThe big challenge on everyone’s mind was addressing cybersecurity risks. EDUCAUSE’s top 10 also puts “collaborative cybersecurity” as the number one issue right now. The institutions seeing success are investing in cybersecurity tools and systems. Those are undoubtedly important, but attendees and speakers also emphasized the importance of getting buy-in from everyone: IT teams, faculty, and students. Achieving this can require a shift in technology and culture:  Embed security into existing workflows: Building security into the tools that students and staff already use makes compliance easier for everyone. Design for accessibility: Providing mobile- and web-friendly flows, support for international IDs, and clear instructions ensures security doesn't become a barrier.Make security human: Transforming security teams into visible and approachable allies, instead of faceless gatekeepers, will encourage students and staff to raise concerns and ask questions. 
+   
+      Blog
+      Persona named a Leader in the 2025 Gartner® Magic Quadrant™ for Identity Verification
+   
+   
+      See the results
+      
+         
+            
+         
+      
+   
+2. Schools are investing in new verification systemsAcross multiple sessions, admissions teams, financial aid offices, and security groups described the same unsettling reality: fraud techniques are evolving faster than most institutions can respond. Some of the key concerns and trends that were discussed are:Fraudsters are still creating ghost students and enrolling in online and continuing education programs to steal student aid. They use stolen documents, create synthetic identities, and generate deepfakes to test different attacks and figure out what works.Fraudsters are also trying to take over student and faculty accounts. They often use social engineering tactics to trick staff into giving them access to an account. Or, to trick the account owner into sharing access.  Teams need stronger, multi-layered identity verification to effectively stop bad actors. Multifactor authentication and manual processes, like video chats, can offer some assurance, but they still miss some attacks, create friction, and are hard to scale. Identity verification systems that use different types of risk signals and automatically adjust requirements based on risk levels are more effective at stopping bad actors. Institutions are replacing slow, consensus-driven fraud reviews with dedicated response teams empowered to freeze accounts, block transactions, and escalate threats without waiting for executive approval.One admissions director described discovering an entire cohort of “students” in their online MBA program with fabricated transcripts, stolen Social Security numbers, and carefully crafted personas.As a result of increased fraud, many schools are forming or expanding fraud teams for the first time. Others are partnering more closely with internal data science groups to identify unusual patterns in applicant or student behavior.
+   
+      Blog
+      How to detect ghost students and prevent student aid fraud
+
+   
+   
+      Learn more
+      
+         
+            
+         
+      
+   
+3. Bad actors are targeting university help desks One of the biggest takeaways from conversations this year is that help desks are feeling the pressure of becoming security checkpoints. Often, bad actors will call with an urgent-sounding demand in an attempt to reset a password and take over an account. They might claim that they need access to their account because they’re starting a lecture in five minutes or have to submit their grant funding request. Or, they pretend to be someone with authority, such as dean, in an attempt to get help desk staff to act quickly without thinking. Many institutions still rely on manual methods, such as conducting video calls, evaluating emailed photos, or asking knowledge-based security questions. Implementing more effective verification methods is part of the solution. Additionally, schools can focus on cross-team collaboration or training with security and help desk teams.  
+   
+      Blog
+      No one wants to call the help desk: Account recovery for Gen Z
+   
+   
+      Read now
+      
+         
+            
+         
+      
+   
+How Persona can helpThe challenges and trends discussed at EDUCAUSE are exactly what Persona was built to address. Large universities and private organizations trust Persona to verify identities across their global communities, catching fraud while maintaining fast and simple verification processes. The Persona verified identity platform:Offers flexible verification methods. Choose from ID, selfie, database, phone, email, and document checks that help you meet IAL2 standards without disrupting legitimate users.Allows you to adjust friction based on user risk levels. Use the no-code workflow creator to build and adjust user flows based on your specific risk profile and goals. Reduces manual burden on IT and admissions. Automate information collection, verification, and decisioning to support students at scale while reducing manual burden on staff.Embeds verification into existing systems. Seamlessly integrate Persona into existing and future systems, automate data sharing across platforms, and increase workflow efficiencies.Stays ahead of evolving fraud patterns. Detect and prevent bad actors with a holistic set of risk signals and granular results that go beyond pass/fail suggestions.Want to see how automated identity verification can help your institution prevent fraud without sacrificing a good faculty or student experience? Get a personalized demo today. 
+The information provided is not intended to constitute legal advice; all information
+                provided is for general informational purposes only and may not constitute the most
+                up-to-date information. Any links to other third-party websites are only for the
+                convenience of the reader.
+Sam BreitbachSam Breitbach is a PMM based out of San Francisco focused on platform integrations, KYB, and Persona's AI strategy. She loves to be active and explore her favorite city.Table of contents1. Security teams need to balance cybersecurity and accessibility2. Schools are investing in new verification systems3. Bad actors are targeting university help desks How Persona can helpContinue reading(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();

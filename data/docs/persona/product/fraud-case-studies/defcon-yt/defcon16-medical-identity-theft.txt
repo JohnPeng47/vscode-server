@@ -1,0 +1,1357 @@
+[00:00] all right well hey everybody thanks for
+[00:01] coming out last talk of the first day
+[00:03] everyone have a good time at defcon
+[00:05] so far yeah all right cool
+[00:07] um
+[00:08] so great thanks thanks for coming out my
+[00:10] name is eric smith and i am the
+[00:12] assistant director for information
+[00:13] security and networking at bucknell
+[00:15] university in pennsylvania and with me
+[00:17] today but not on stage is dr shannon
+[00:20] dardane stand up say hi
+[00:24] she is the assistant professor of
+[00:26] information systems at susquehanna
+[00:27] university john just down the street
+[00:29] from us in pennsylvania so we're going
+[00:32] to talk to you today about medical
+[00:33] identity theft
+[00:35] so here's the agenda for our talk we're
+[00:37] going to give a little bit of background
+[00:39] talk about what is medical identity
+[00:40] theft and what's actually going on in
+[00:43] the world of medical identity theft
+[00:46] we're going to talk a little bit about
+[00:48] hipaa and how hipaa is designed to stop
+[00:51] what's going on even though it's not
+[00:53] actually stopping what's going on
+[00:55] and then we'll look at
+[00:57] what we can do to fix it okay
+[01:00] so let's get started talk a little bit
+[01:02] about the background
+[01:05] so what is medical identity theft what
+[01:08] is an electronic medical record well
+[01:09] here's a typical example of something
+[01:11] that your doctor is probably already
+[01:12] using
+[01:13] this is an electronic protective health
+[01:15] information system electronic medical
+[01:17] records system and this is just a
+[01:19] picture we found out wikipedia that's
+[01:21] pretty typical of what
+[01:23] nurses and doctors and whatnot are using
+[01:25] today
+[01:26] and basically it stores all of your
+[01:28] medical records in some easy to use way
+[01:30] that non-technical people such as
+[01:32] doctors and nurses and
+[01:34] you know billing managers and whatnot at
+[01:36] your hospital
+[01:37] can have full access to your medical
+[01:38] record so things it contains are you
+[01:41] know
+[01:43] comments about your medical record
+[01:44] itself your lab results lab tests that
+[01:46] sort of thing pretty much everything
+[01:48] about you that the hospital or the
+[01:49] doctor knows is being stored
+[01:51] electronically in a system like this
+[01:53] okay what's interesting is that these
+[01:54] systems are also storing your billing
+[01:56] information so it knows your home
+[01:58] address so we know your phone number
+[01:59] your social security number your health
+[02:01] insurance information it's all in here
+[02:07] so how many people are using these
+[02:08] unfortunately the latest statistics we
+[02:10] could find for this were from 2006 but
+[02:12] it gives you a good idea um in 2006 29.2
+[02:16] percent of all physicians were using
+[02:19] electronic medical records systems and
+[02:23] 25.9 percent of all practices were using
+[02:26] them so
+[02:27] within the last two years it's certainly
+[02:29] gone up it's about 10 increase per year
+[02:31] and the reason for this is obvious it's
+[02:33] a cost savings for the for the hospitals
+[02:35] to do this they don't have to go pull
+[02:36] paper records to find out what shots you
+[02:39] need or
+[02:40] or or what's wrong with you so it's it's
+[02:43] financially beneficial for your health
+[02:46] care provider to use an electronic
+[02:47] medical record
+[02:51] so what is medical identity theft well
+[02:53] you've probably all figured out what
+[02:54] medical identity theft is it's
+[02:57] like financial financial identity theft
+[02:59] except someone's stealing your medical
+[03:00] identity so somebody wants to go to the
+[03:03] doctor and they don't have health
+[03:04] insurance or somebody wants to go and
+[03:06] get a prescription for oxycontin but
+[03:08] they don't want it on their record
+[03:10] or somebody needs to go get treated
+[03:11] because
+[03:12] they can't live lift 50 pounds and their
+[03:15] job requirement as a laser printer
+[03:16] technician says you have to be able to
+[03:18] lift 50 pounds there's something that
+[03:19] you know they want to be
+[03:21] that a person may want to have kept out
+[03:24] of their medical record that may affect
+[03:25] their ability to get or keep a job
+[03:29] so these are some of the reasons
+[03:30] that people might be doing medical
+[03:31] identity theft
+[03:33] and we'll talk a little bit more of that
+[03:34] here in a slide
+[03:36] all right so you're a victim of medical
+[03:38] identity theft someone's come along and
+[03:39] stolen your medical identity
+[03:42] unfortunately a lot of people say well i
+[03:43] don't care i have insurance it's not my
+[03:45] money well it turns out it really can
+[03:47] affect you and it really can ruin your
+[03:48] life and here are just a few examples of
+[03:50] of why this is a horribly bad thing
+[03:53] you could receive the wrong medical
+[03:54] treatment if somebody pulls up your
+[03:55] medical record and there's an entry in
+[03:57] there saying well you were seen last
+[03:59] week for problem x and when it was
+[04:01] somebody else that could definitely
+[04:03] affect the kind of treatment that you
+[04:04] get
+[04:05] you could find that when you actually
+[04:06] need to use your own insurance that
+[04:08] you've
+[04:09] you've run out your copay for the year
+[04:10] and you're
+[04:11] you're no longer covered for your actual
+[04:13] symptoms so someone else has you know
+[04:14] used your insurance up and you have
+[04:16] nothing left for yourself
+[04:19] like i mentioned with the laser printer
+[04:20] that's just one typical example but
+[04:24] if there's items in your medical history
+[04:26] that could affect your ability to get or
+[04:28] keep your job you know the results of a
+[04:30] drug test for example obviously that's
+[04:32] going to be a problem for you
+[04:35] same sort of thing could cause you to
+[04:36] fail a physical if somebody looks in
+[04:37] your medical record and says well you
+[04:39] have poor eyesight and your job is to
+[04:41] drive a forklift or something like that
+[04:42] that might affect your ability to keep
+[04:44] your job
+[04:45] based on failing a physical exam
+[04:48] and of course there's a financial aspect
+[04:49] of it all
+[04:51] you're going to get billed for co-pays
+[04:53] you're going to get billed for
+[04:55] anything that the insurance doesn't
+[04:56] cover that someone who's stolen your
+[04:57] medical identity
+[04:59] has received
+[05:03] so
+[05:04] we've kind of already gone over this so
+[05:06] why would somebody want to steal your
+[05:07] medical identity well most of what's
+[05:09] going on today most of the actual
+[05:10] medical identity theft cases
+[05:12] are
+[05:14] as a mechanism to get the financial
+[05:15] identity theft i mentioned earlier that
+[05:17] earlier that the electronic health
+[05:19] records contain not only your medical
+[05:21] information but your financial
+[05:22] information your billing information
+[05:24] so a lot of the medical identity theft
+[05:27] cases now where people are stealing
+[05:28] medical records that's being done simply
+[05:30] to get credit cards and open credit in
+[05:32] your name based on the billing side of
+[05:34] those records
+[05:36] so again you know you could have access
+[05:39] to health care and health insurance
+[05:41] you can access
+[05:42] narcotics you can go to the doctor
+[05:45] convince them that you need some sort of
+[05:46] you know prescription drug that is hard
+[05:48] to get on the street or you might be
+[05:50] getting just to sell it that sort of
+[05:51] thing
+[05:52] and again covering up health records and
+[05:54] hiding things that you don't want to
+[05:55] have
+[05:56] in your permanent record that might
+[05:58] follow you around
+[06:04] what's really interesting is that the
+[06:06] identity theft perpetrators are taking
+[06:09] note to this and and realize that
+[06:11] healthcare facilities are really prime
+[06:13] juicy targets for identity theft not
+[06:15] only medical identity theft but also
+[06:17] financial medical theft
+[06:18] here's a quote from the healthcare
+[06:20] information and management systems
+[06:21] society
+[06:23] to address this basically it says that
+[06:24] the data stored in hospitals and
+[06:26] healthcare facilities contains more data
+[06:28] in one record than any other source so
+[06:31] instead of going up to a bank or going
+[06:32] after a school we go after your medical
+[06:34] record because we're going to get all of
+[06:36] your financial information all of your
+[06:37] medical information and this is and
+[06:39] these records are stored in institutions
+[06:41] that typically haven't been targeted for
+[06:43] this sort of thing
+[06:44] banks know that people are coming after
+[06:46] you hospitals maybe not so much
+[06:53] so is this is this real is this actually
+[06:55] happening or am i just making this up so
+[06:56] i could talk at defcon well
+[06:58] it is actually happening so here's some
+[07:00] numbers this is these are from the uh
+[07:02] identity theft resource council so in
+[07:04] 2007
+[07:06] they estimate that these are the
+[07:08] breaches that they know about so
+[07:10] obviously there's a lot of breaches that
+[07:11] happen that get covered up these are the
+[07:13] ones that have been published
+[07:14] so 2007 there were 65 about 4 million
+[07:17] records exposed and so far in 2008
+[07:21] there are 59 breaches and about 6
+[07:24] million
+[07:25] records exposed
+[07:27] now these are not necessarily malicious
+[07:28] attacks a lot of these are stolen backup
+[07:31] tapes
+[07:32] letters sent to people with the wrong
+[07:33] addresses on them that sort of thing but
+[07:35] there are some actual malicious attacks
+[07:36] going on here as well
+[07:45] i do not know i have to check the file
+[07:51] okay
+[07:53] well then i would probably say no it
+[07:54] doesn't contain that
+[08:01] so you know do the math this number is
+[08:03] is based on up to august first so
+[08:05] if the trend continues by the end of the
+[08:07] year we're looking at about eight
+[08:08] million medical records lost yes
+[08:16] almost none
+[08:18] a lot of this is is things like backup
+[08:20] tapes were stolen um printed
+[08:23] printed records were
+[08:25] you know were stored in a uh
+[08:27] in a storage facility and then they
+[08:29] forgot that they forgot to renew the
+[08:31] lease and
+[08:32] it got sold at auction that sort of
+[08:33] thing most of it is just sort of
+[08:35] sloppiness in the care of the health
+[08:36] care provider
+[08:38] now
+[08:38] okay so i think we're gonna we're gonna
+[08:40] talk a little bit about where this is
+[08:41] with where this is trending but so far a
+[08:43] lot of this is just sloppiness on the on
+[08:45] the side of the healthcare provider
+[08:53] oh we're going to talk to hippa to death
+[08:54] trust me
+[08:59] so everyone's been to the doctor they've
+[09:00] given you one of these everyone's gotten
+[09:01] one of these right
+[09:03] this is the warm and fuzzy we care about
+[09:05] your privacy document that they're
+[09:07] required to give you and the doctor here
+[09:09] he looks really happy he's confident
+[09:11] that they're taking good care of your
+[09:12] medical records and
+[09:15] we'll see that that may not actually be
+[09:16] the case
+[09:18] question
+[09:22] i i can i can tell you based on my own
+[09:24] imperial empirical study of one data
+[09:27] point of me
+[09:28] i read mine but so i would say 100 then
+[09:37] okay so here's hipaa and this is hipaa
+[09:40] is the health insurance portability and
+[09:41] accountability act of 96.
+[09:43] okay it's 2008. so this is kind of old
+[09:47] but this covers a wide range of issues
+[09:50] related to the electronic processing of
+[09:52] medical records and billing information
+[09:54] so since we only have an hour today
+[09:55] we're going to really zoom in and just
+[09:56] focus on one tiny little subsection of
+[09:58] this we're going to focus on the
+[10:00] technical safeguards under the security
+[10:02] section under the administrative
+[10:03] simplification section of title ii of
+[10:05] hipaa so if if it's not clear that this
+[10:07] thing did not come from our government
+[10:09] then you know there you go so like i
+[10:11] said we're going to focus on just the
+[10:13] technical safeguards and and see where
+[10:15] we're at
+[10:19] okay so moving on in our agenda we're
+[10:21] looking at section two hipaa security
+[10:23] requirements
+[10:25] so this is the entire text of hipaa
+[10:28] that relates to the technical measures
+[10:29] that must be taken by a healthcare
+[10:31] provider
+[10:32] to protect your medical identity it's
+[10:34] about a half a page double spaced
+[10:36] okay
+[10:38] give this a comparison anyone here you
+[10:39] know work with pci compliance probably a
+[10:42] lot of people
+[10:43] that's 17 pages
+[10:48] yeah
+[10:50] okay so the question was does the does
+[10:51] that include the cover sheet so no there
+[10:54] is no cover sheet on the hipaa section
+[10:55] so okay it's okay we'll say it's 16
+[10:58] pages thank you
+[11:01] but it's still considerably more
+[11:02] detailed than what we would find in
+[11:04] hipaa
+[11:07] so let's compare hipaa to p to pci while
+[11:10] we're on the topic and what are the
+[11:13] penalties for not being in compliance
+[11:14] with the rules and we'll talk about the
+[11:15] rules here in a minute but i just wanted
+[11:16] to to frame this
+[11:18] and compare hipaa versus pci so what are
+[11:20] the differences between
+[11:24] failing to comply with securing medical
+[11:26] records to failing to comply with
+[11:28] securing credit card information so
+[11:30] under hipaa
+[11:32] if an entity is blatantly out of
+[11:34] compliance on a requirement they're
+[11:36] fined a hundred dollars
+[11:38] and if they don't fix it they can be 500
+[11:41] over and over up to a maximum of twenty
+[11:42] five thousand dollars a year okay
+[11:46] under pci
+[11:47] pci is not a government standard it's uh
+[11:50] negotiated with the
+[11:52] credit card companies themselves and the
+[11:55] fines can vary based on your own
+[11:56] merchant agreement with the credit card
+[11:58] companies but the fines can be huge and
+[12:00] can be
+[12:01] assessed monthly basically trying to
+[12:04] force you to get into compliance
+[12:12] it's a hundred dollars
+[12:13] every time they catch you doing
+[12:15] something
+[12:16] maximum of 25 000 a year if you keep
+[12:18] doing that same thing
+[12:23] say for example one of the requirements
+[12:25] on your hip and we'll get to this is
+[12:27] that everybody who accesses a medical
+[12:28] record has a unique username and
+[12:30] password okay
+[12:32] say there's a hospital somewhere that
+[12:34] has a terminal that's logged in 24 7 and
+[12:36] all the nurses use it and somebody
+[12:38] complains and they get cited
+[12:40] every time they complain somebody
+[12:41] complains they have to pay the hundred
+[12:42] dollars up to a maximum of twenty five
+[12:44] thousand dollars a year so obviously in
+[12:46] a lot of these cases
+[12:48] it's going to be cheaper to pay the fine
+[12:49] than to fix it
+[13:04] well when it defines a person a person
+[13:06] an entity can be a person
+[13:07] yeah yeah there's actually a definition
+[13:09] of a person in the hipaa language a
+[13:11] government document so
+[13:13] we have to define person
+[13:19] okay so here's a table this is basically
+[13:21] just the distillation of the half page
+[13:23] technical requirements and we're going
+[13:24] to run through this a little bit but
+[13:26] what's interesting to note is that of
+[13:27] all these technical requirements in
+[13:29] hipaa
+[13:30] they're not even all required there's
+[13:32] requirements that are not required so
+[13:34] we're going to look at these and the r's
+[13:36] are required and the a's are addressable
+[13:38] and we're going to talk about what that
+[13:39] means here in a second so let's just
+[13:41] look at the required ones first
+[13:43] here are the required implementation
+[13:44] specifics and you'll notice that half of
+[13:46] them have no implementation details it
+[13:47] says you have to do this
+[13:49] but we're not going to tell you anything
+[13:50] about it
+[13:53] so one of them is unique user
+[13:54] identification so basically what
+[13:57] we looked at hipaa we talked about the
+[13:59] half page document and then there was a
+[14:00] series in the federal register that went
+[14:02] into more detail because people were
+[14:04] saying well you know you gave me a half
+[14:05] a sentence what does that mean
+[14:07] so they elaborated on a lot of these
+[14:09] points in that document and that's where
+[14:11] this information comes from so for
+[14:12] example for unique user identification
+[14:15] basically it says that
+[14:17] an entity can use any appropriate access
+[14:19] control mechanism that's allowed
+[14:22] and they gave some ideas basically what
+[14:24] it comes down to is that if you're a
+[14:26] hospital you can come up with whatever
+[14:27] you want for unique user identification
+[14:29] you can have single digi single digit
+[14:32] usernames fine you can have that sort of
+[14:34] thing as long as everyone has their own
+[14:36] in the initial draft of hipaa
+[14:39] it required things like you know key
+[14:40] fobs and you know
+[14:42] multi-factor authentication but people
+[14:44] complained so they took it out
+[14:49] there's a requirement for emergency
+[14:50] access basically what this means is we
+[14:53] need to get into your medical record
+[14:55] all the nurses are on vacation what do
+[14:57] we do
+[14:58] but it doesn't tell you anything about
+[14:59] how you do this so it's completely up to
+[15:01] the hospital and i keep saying hospital
+[15:03] it's any medical institution but we're
+[15:05] just gonna i'm just gonna use hospital
+[15:07] any medical institution to do this
+[15:09] um
+[15:10] just has to come up with some policy and
+[15:11] that policy could be okay we wrote the
+[15:14] root password of the server in sharpie
+[15:15] marker under the keyboard
+[15:17] and that would be perfectly acceptable
+[15:19] in hipaa you just have to document that
+[15:21] as your procedure
+[15:24] and i don't suggest using sharpie
+[15:26] because if you change you have to cross
+[15:27] it out
+[15:28] you might want to use post-it note
+[15:32] another requirement is the audit control
+[15:34] so so the initial draft was really
+[15:36] looking to say okay
+[15:38] who's accessing these medical records
+[15:39] when and why
+[15:41] completely got taken out and it's up to
+[15:45] the uh entity to determine what sort of
+[15:47] audit controls if any are required so
+[15:49] there's no specifics about how long we
+[15:51] have to keep logs what kind of logs you
+[15:52] have to keep it just says you need to
+[15:54] have some sort of audit controls write
+[15:55] down what they are good to go and that's
+[15:58] hipaa compliant
+[16:03] and then person or entity authentication
+[16:06] um person or entity meaning an employee
+[16:09] or a business partner that sort of thing
+[16:11] there must be some system in place to
+[16:12] identify who they are
+[16:14] and the initial draft of this had lots
+[16:16] of language in about you know using
+[16:17] multi-factor authentication certificates
+[16:19] what not
+[16:20] people complained so they didn't want to
+[16:21] do that so they basically said
+[16:23] okay well
+[16:25] it actually says whatever is reasonable
+[16:26] and appropriate is fine so you again
+[16:28] come up with whatever you think
+[16:30] um
+[16:31] and you're in so
+[16:33] if you want to just assign username to
+[16:34] passwords that's completely sufficient
+[16:37] under hipaa and that's what most people
+[16:38] are doing
+[16:47] well actually most most of what happened
+[16:49] was they had the initial draft of hippa
+[16:51] out
+[16:52] he said where did most of the complaints
+[16:54] come from and he just asked if they came
+[16:56] from the ama and actually no it was
+[16:59] mostly just individual entities doctors
+[17:01] hospitals that sort of thing they opened
+[17:02] it up for public review they collected
+[17:04] it was like 2600 comments they distilled
+[17:06] them down into a bunch of categories or
+[17:08] many similar questions and
+[17:11] basically if enough people said we don't
+[17:13] want to do x
+[17:14] what they did was say
+[17:16] all right you don't see that and they
+[17:17] took it out
+[17:24] so those are those are the required
+[17:27] implementation specifics and you can see
+[17:28] that the required ones have really have
+[17:30] no teeth
+[17:31] and it gets even better because there
+[17:32] are more that aren't even required and
+[17:34] these are the ones that you would think
+[17:35] are really important like encryption
+[17:38] totally not required so what does it
+[17:39] mean to be addressable it basically
+[17:41] means
+[17:42] you should probably do this
+[17:44] but if you don't that's okay just write
+[17:46] down why you can't do it
+[17:54] so let's talk about encryption this is
+[17:56] one of my favorites so in the federal
+[17:59] register it asks there are a lot of
+[18:00] questions in the initial review about
+[18:01] encryption people were asking
+[18:03] what sort of encryption strengths should
+[18:04] we use where should we use encryption
+[18:06] why should we use encryption so at the
+[18:09] end of the day what it came down to they
+[18:10] actually said that the use of encryption
+[18:11] in the transmission process is an
+[18:13] addressable implementation specification
+[18:15] meaning you don't actually have to do it
+[18:18] so covered entities you know your
+[18:19] hospital your healthcare provider are
+[18:21] encouraged to consider the use of
+[18:23] encryption for transmitting your ephi
+[18:26] over the internet so they you have to
+[18:28] encrypt your medical information when
+[18:29] it's sent over the internet plain text
+[18:32] ftp
+[18:33] fine so long as they have an item
+[18:35] written down somewhere that says
+[18:37] we can't do this because
+[18:39] our system doesn't support it
+[18:40] fine hipaa compliant
+[18:46] no there are there are absolutely no
+[18:49] specific specifications of what type
+[18:51] what level what kind of encryption needs
+[18:53] to be used it just says encryption and
+[18:55] they actually went on to say that they
+[18:57] didn't want to specify details because
+[19:00] certain entities may not be able to do
+[19:02] ssl what if this entity wants to do rot
+[19:04] 13 you know that's encryption that's
+[19:06] fine
+[19:14] the question was what about doctors
+[19:16] keeping their lab results on
+[19:17] blackberries um
+[19:19] in essence in the current version of the
+[19:21] law you could do whatever you want so
+[19:22] long as you write something up to
+[19:23] justify what you're doing
+[19:26] so if you said well blackberry it's not
+[19:27] a system we don't own we don't want to
+[19:29] back into it it's a third party and
+[19:31] they've assured us that you know they're
+[19:33] using encryption and the data is safe
+[19:36] you're fine so if something was to
+[19:37] happen as long as they said
+[19:39] they had a document like that in place
+[19:40] they couldn't be cited for that
+[19:42] okay
+[19:45] data integrity this is another great one
+[19:46] the initial version of the draft talked
+[19:48] about data integrity this is
+[19:50] really addressing things like you know
+[19:52] database journaling to make sure no
+[19:53] one's coming in on the back end and
+[19:55] mucking with your medical records
+[19:57] again people complain so what they
+[19:59] turned it into was that if you use
+[20:01] things like crc32 or you know a checksum
+[20:04] on your file system that's good enough
+[20:07] so it really took out any sort of
+[20:08] malicious attack
+[20:10] vector and just turned it into random
+[20:12] data corruption
+[20:13] and it kind of took all the teeth out of
+[20:15] it
+[20:19] so as you can see one of the big issues
+[20:21] with hipaa is that it's really up to the
+[20:22] healthcare provider to determine what it
+[20:25] means to be hypocompliant they can come
+[20:26] up with whatever they want and it's
+[20:28] hipaa compliant
+[20:29] and so here's a quote from the
+[20:30] healthcare information management system
+[20:32] society again and they have lots of good
+[20:34] information and basically says that you
+[20:36] know it allows the healthcare provider
+[20:38] the latitude to do whatever they want
+[20:40] and say it's compliant and that's good
+[20:42] enough
+[20:47] so there's hipaa
+[20:48] in a nutshell just the technical
+[20:50] specifications there's lots lots more
+[20:51] but we only have an hour so uh just
+[20:54] focusing on the technical specifications
+[20:56] we were curious what what does it really
+[20:58] mean in the real world what does it mean
+[21:00] to have a healthcare provider be
+[21:02] hypocompliant have an actual there's you
+[21:05] know companies out there that are coming
+[21:06] in and doing audits to say yes you're
+[21:07] hipaa compliant
+[21:10] so
+[21:11] we we had an agreement with a healthcare
+[21:13] provider to come in and do a penetration
+[21:15] test right after they had a hipaa
+[21:17] compliance audit done so they got you
+[21:19] know high marks is a really high class
+[21:20] place
+[21:21] um doing a really good job and so they
+[21:24] contracted with with us for a
+[21:25] penetration test and so we went in and
+[21:28] we decided to see what could happen
+[21:30] so i think it was 23 minutes that it
+[21:33] took us to completely dump their
+[21:34] database
+[21:36] something like that so
+[21:38] we were able to completely pull all the
+[21:39] medical records hipaa compliant and
+[21:42] everything that we did during this
+[21:44] penetration test
+[21:45] we never used a vector that
+[21:48] was there because of them being out of
+[21:49] compliance everything that they did was
+[21:51] hipaa compliant and yet we're still able
+[21:53] to get in and dump everything out
+[21:58] yes
+[22:01] the question was how do we do the
+[22:02] penetration test and i i can't talk
+[22:04] about that
+[22:10] the question was could you speak as to
+[22:12] whether a hacker could have gotten the
+[22:13] information
+[22:14] well i could have put on my black hat
+[22:16] that day and had been a hacker so i got
+[22:18] the information so
+[22:19] okay
+[22:24] i'm sorry
+[22:27] i have no idea any ideas guys no
+[22:31] i he asked about hipaa too i'm not
+[22:33] familiar with hipaa too so it's it's is
+[22:35] it a draft
+[22:37] yeah
+[22:38] i'd have to look at it but it's it's not
+[22:40] anything that's in place right now so we
+[22:41] don't look at that
+[22:43] okay
+[22:44] gonna move on okay so
+[22:47] we decided to summarize what we found
+[22:50] into a couple of slides here to talk
+[22:52] about some really common attack factors
+[22:54] that are completely permitted by hipaa
+[22:56] things that hipaa says
+[22:59] you're good to go
+[23:00] but are really common in a lot of
+[23:01] medical institutions so i want to talk
+[23:03] about that here today i want to talk
+[23:04] about a new kind of wireless attack and
+[23:06] everyone here has heard
+[23:08] you know all these boring talks about
+[23:10] various wireless stacks sorry i should
+[23:12] say boring they're very exciting but um
+[23:15] a different twist on a wireless attack
+[23:17] and
+[23:18] we'll talk about that here in a second
+[23:20] so um hospital networks what's special
+[23:23] about a hospital network
+[23:26] well hospitals are open to the public
+[23:28] you can walk in off the street 24 hours
+[23:29] a day okay
+[23:31] the security staff at a hospital are
+[23:33] used to random people coming in off the
+[23:36] street 24 hours a day people are coming
+[23:38] in because they're sick people are
+[23:38] coming in the visit people are in the
+[23:40] hospital
+[23:41] what have you so they're used to having
+[23:42] random people mulling about
+[23:45] and recently because most hospitals are
+[23:47] putting in wireless networks which have
+[23:49] an ssid for the public use for patient
+[23:51] use or for visitor use or whatnot it's
+[23:54] pretty common these days to walk in and
+[23:55] see somebody sitting in the er waiting a
+[23:57] room on their laptop you know updating
+[23:59] their myspace profile whatever so it's
+[24:01] pretty easy to come into a hospital sit
+[24:04] down and blend in and see what you can
+[24:05] find okay
+[24:08] so physical attacks against wireless
+[24:10] networks we're going to talk about now
+[24:12] so we're going to look at a couple of
+[24:13] different standard wireless network
+[24:15] implementations i'm guessing a lot of
+[24:16] you
+[24:17] are you know dealing with one or both of
+[24:19] these types of networks on a day-to-day
+[24:21] basis
+[24:22] so first we're going to talk about the
+[24:24] old style decentralized wireless network
+[24:26] and i'm going to talk about cisco stuff
+[24:28] because that's what i use
+[24:30] but this applies to aruba or whoever
+[24:32] else you might be using so in a
+[24:34] decentralized wireless network
+[24:36] the access points themselves are the
+[24:38] devices that make the decisions about
+[24:39] who gets on the network and what network
+[24:41] they get on
+[24:42] and what types of encryption are used
+[24:44] and what kind of authentication is used
+[24:46] so a wireless client comes along here's
+[24:48] a pretty typical example of what you'd
+[24:49] find in a hospital there's an ssid for
+[24:53] the doctors and nurses to use with their
+[24:55] laptops or pdas that has access into the
+[24:58] core access into the the juicy back end
+[25:02] there's often a wireless voice network
+[25:04] for voip phones
+[25:06] and like i said earlier there's often a
+[25:08] network for
+[25:10] guests
+[25:12] because
+[25:13] the access points themselves are the
+[25:15] ones making the decisions about who gets
+[25:16] on the network and how they get on
+[25:18] they have to have access to those
+[25:20] networks at the access point so how's
+[25:22] this done usually done with an 802.12
+[25:24] trunk right into the access point so you
+[25:26] have a bunch of access points they're
+[25:28] all trunked they're all out there
+[25:30] so
+[25:31] what happens if you have a facility
+[25:33] where your access points are sort of out
+[25:34] in the public and you can just walk up
+[25:36] to one of them
+[25:37] well an attacker can
+[25:39] tap into the uplink of one of these
+[25:40] access points
+[25:43] establishing 802 on 802.12 trunk into
+[25:46] the network itself
+[25:48] establish the correct vlan interfaces on
+[25:50] their machine
+[25:52] start launching attacks so now you've
+[25:53] effectively for example say we're
+[25:55] getting on vlan 100 right here where's
+[25:57] my mouse
+[25:58] uh which is using tls and we've issued
+[26:01] you know certificates of both ends you
+[26:02] know top shelf wireless encryption we
+[26:04] totally bypassed it by just plugging
+[26:06] into the uplink to an access point so
+[26:07] now we're in
+[26:09] we can attack the wireless clients
+[26:12] we could attack the access points
+[26:13] themselves we could attack the network
+[26:15] infrastructure and we can of course go
+[26:17] after the back end
+[26:22] so
+[26:23] how hard is this to do realistically you
+[26:25] know you're thinking of your own
+[26:26] networks now you're thinking of where
+[26:27] your access points are hanging up you're
+[26:29] thinking okay i would notice that
+[26:30] somebody did this i would notice that
+[26:32] somebody plugged into one of my access
+[26:33] points
+[26:34] um but we walked around a number of
+[26:36] institutions and found pretty much this
+[26:38] in every place you go down take the
+[26:40] elevator down to like lower level two
+[26:41] maintenance where they're washing the
+[26:43] sheets or something like that and uh
+[26:45] there's some access point just in some
+[26:46] random hallway
+[26:48] nobody around nobody watching you and
+[26:50] you can plug right into it and and do
+[26:52] your thing so this totally works
+[27:01] okay can i talk about centralized
+[27:03] networking in this centralized wireless
+[27:05] networks for example lwap
+[27:06] how many people here using some sort of
+[27:08] centralized network lap system lot hands
+[27:11] nobody
+[27:12] one guy okay great
+[27:15] in an lab a centralized network
+[27:17] basically what happens is that the
+[27:18] 802.1q trunk
+[27:20] goes to a centralized controller in the
+[27:22] back room somewhere in your machine room
+[27:25] and then what happens is each of the
+[27:26] access points is connected to the
+[27:27] network using a regular access vlan
+[27:30] so they boot up
+[27:32] and what they do is they tunnel the
+[27:34] traffic from the wireless clients the
+[27:35] whole way back to the wireless lan
+[27:36] controller
+[27:38] so this sounds great this is much better
+[27:40] you don't have to have trunks to the
+[27:42] access points you can just have access
+[27:44] view lanes you can acclimate so the only
+[27:45] thing that that network can get to is a
+[27:46] wireless lane controller
+[27:48] you have a lot more security options
+[27:50] available to you than you did before
+[27:53] but you can still do all sorts of nasty
+[27:55] things
+[27:56] so what happens if we tap into this okay
+[27:58] we're going to tap in
+[28:00] we're going to connect our machine to
+[28:01] this
+[28:02] uplinked port
+[28:04] we're going to get on the network
+[28:06] and in this scenario what we're going to
+[28:08] do is we're going to launch an arp spoof
+[28:09] attack against all the access points in
+[28:11] this vlan
+[28:12] typically when this is deployed you have
+[28:14] a wireless access point vlan you put a
+[28:17] bunch of aps in it
+[28:19] they're all available on that vlan
+[28:21] so we can redirect the traffic from the
+[28:23] wireless access points through our
+[28:25] machine dump it off the disk
+[28:27] and play around with it later
+[28:30] but i said earlier that it's tunneled so
+[28:33] it's not terribly useful in its native
+[28:34] form so this is what this is what the
+[28:36] data looks like if you open it up in
+[28:37] wireshark
+[28:39] wireshark correctly identifies it as as
+[28:41] wireless l-wet packets but it doesn't
+[28:44] really you can't really do anything with
+[28:45] it
+[28:46] you can't run it through d sniff or
+[28:48] anything like that because it's not
+[28:49] native packets it's lwap packets with
+[28:52] the data encapsulated in the end
+[28:55] so that's boring
+[28:57] so here's the complete text of a perl
+[28:59] script i wrote to take that file and
+[29:02] turn it into a regular pcap file so you
+[29:04] can grab the yellow packets on the back
+[29:06] end run through this script and get your
+[29:08] regular p cap on the other side and now
+[29:10] you actually have a pcap of anything the
+[29:13] wireless clients were doing so
+[29:15] if you want to copy this script
+[29:17] you can download the powerpoint and copy
+[29:18] and paste right there
+[29:22] so i'm going to show you how this works
+[29:23] with a voiceover ip demo
+[29:26] and hopefully this works
+[29:36] so i just have a few p caps here that
+[29:38] we're going to look at
+[29:53] so this is going to look a lot like the
+[29:55] screenshot that you saw earlier
+[29:58] wireshark being very cool it knows what
+[30:00] all these are it sees them as triple e
+[30:02] packets
+[30:03] but again you can't really do anything
+[30:04] with them you can't do any any sort of
+[30:06] forensics on these directly you can't
+[30:07] use any other pcapp tools on them
+[30:10] it's it's kind of anticlimactic so what
+[30:12] happens when we run it through
+[30:14] through the decryption the decoder
+[30:16] script i apologize for saying decryption
+[30:18] because it's not encrypted it's just
+[30:19] encapsulated
+[30:23] so we run it through the script
+[30:26] turns it into regular old pcap files so
+[30:27] now we have direct packet dumps of
+[30:29] whatever the wireless client was doing
+[30:31] in this case it was a wireless iphone
+[30:33] that we grabbed the data from scroll
+[30:36] down here at the bottom we'll see and
+[30:37] there are other clients associated on
+[30:38] here at the same time you see some
+[30:39] random broadcasts and whatnot
+[30:43] wireshark being very cool it knows all
+[30:45] about rtp
+[30:47] so we can
+[30:48] ask it to analyze that for us and if
+[30:51] anybody was at our shmukon presentation
+[30:52] last year you've already seen this we
+[30:54] did this when we were talking about
+[30:55] attacking bondage adapters so apologies
+[30:58] if this is the second time for some of
+[30:59] you seeing this
+[31:01] so like i said wireshark is is very cool
+[31:04] can pull these audio streams out
+[31:16] and we can save the payload out
+[31:24] hopefully this works
+[31:30] hospital operator
+[31:32] how may i direct your call
+[31:34] okay so
+[31:36] just an example of
+[31:37] your ability to completely intercept any
+[31:39] data that's going on
+[31:40] on the wireless side that you've now
+[31:42] been able to bypass if it's wireless
+[31:43] phone is probably leap you've been able
+[31:45] to bypass sleep just by tapping into the
+[31:47] ap question
+[31:53] you can't do gre tunnels from an l web
+[31:55] access point
+[32:06] but if you're doing if you're doing
+[32:07] wisem and you're booting up your aps
+[32:09] in native lap
+[32:11] you don't have that option it's it's
+[32:12] lwab that's what you get
+[32:16] yeah so so to do what you're saying you
+[32:17] basically have to put another device
+[32:19] between the between the ap and the
+[32:20] network and then on the on the back end
+[32:21] do the same thing again
+[32:23] so i mean that's typically done if you
+[32:25] have a remote office and you want to put
+[32:26] up an access point you'd have a
+[32:27] point-to-point vpn solution in place so
+[32:30] you couldn't capture these off the
+[32:31] internet in that scenario
+[32:32] okay
+[32:34] okay
+[32:42] okay so i'm going to try to do this live
+[32:44] and this is just sort of asking for
+[32:46] trouble we're going to give it a shot
+[32:47] because i need to do some stuff on
+[32:48] wireless and you guys are probably like
+[32:50] going to de-authenticate me but we're
+[32:52] going to try it
+[32:53] so so here's what we're going to try i
+[32:55] have a test rig set up here on the on
+[32:57] the bench top that gives me a tunnel
+[32:59] from the the con network back to the
+[33:02] wireless lane controller that's set up
+[33:03] in my office back in pennsylvania
+[33:05] and there's an ap set up here
+[33:16] that ap is booted doing lwap the whole
+[33:18] way back through the tunnel to the
+[33:19] wireless lan controller back in my
+[33:20] office at bucknell
+[33:22] and basically what we're going to do is
+[33:23] do an automated art spoof attack against
+[33:25] this ap try to collect the packets and
+[33:27] then
+[33:28] while that's running we're going to go
+[33:30] log into an erp system do some sort of
+[33:31] medical query something similar to what
+[33:33] might happen in a hospital
+[33:35] and see what happens so
+[33:37] nobody de-authenticate me please
+[33:40] so here's i'll already show you part of
+[33:42] the rig what we're going to do we have
+[33:43] the cisco ap on the left that's
+[33:46] connected to a wrt 54g running open work
+[33:49] and openvpn
+[33:51] creates the tunnel
+[33:52] and then we have the
+[33:54] attack software running on this
+[33:56] second wrt 54g and again if you were at
+[33:59] our shmukon talk we we talked about the
+[34:00] sipinator same software just we gave it
+[34:03] a different mac address prefix to attack
+[34:06] but otherwise it's pretty much the same
+[34:07] as what we did before
+[34:09] so
+[34:10] we're going to try this and let's hope
+[34:12] it works
+[34:18] okay so this is a serial console into
+[34:20] the
+[34:22] um
+[34:23] wrt 54g that'll do the automated arp
+[34:25] spoofs so
+[34:26] we're just going to start this up and
+[34:28] hope it finds it
+[34:30] got a dhcp lease from the tunnel access
+[34:33] point and it's looking in the address
+[34:35] space to see if it can find any lwap
+[34:37] access points
+[34:40] and we found one
+[34:42] so
+[34:43] it's targeting it it's now
+[34:45] our smoothing it dumping the data to
+[34:47] local flash and then it updates dumps
+[34:49] that file to
+[34:51] a remote host in the background
+[34:53] so
+[35:00] now you're all going to see my totally
+[35:01] not as 400 skills
+[35:13] and this could be any sort of back end
+[35:14] system that's being used
+[35:16] and we're going to go run a sql query
+[35:18] here and of course this would you know
+[35:20] in a real world you would have some sort
+[35:22] of nice front-end you're not generally
+[35:23] having nurses running sql queries but
+[35:27] at least in the hospitals that i've been
+[35:28] at okay so
+[35:31] we're going to do a very
+[35:32] efficient sql statement here to
+[35:35] select the records that we want
+[35:37] and not create any undue stress on our
+[35:39] database system
+[35:42] so we're gonna dump every record
+[35:45] okay so
+[35:46] this is just some fake data of course so
+[35:48] i'm not actually revealing any real data
+[35:49] but this is really typical of what would
+[35:50] be going on in a wireless network in a
+[35:52] hospital inquiring back-end pulling up
+[35:54] somebody's medical records and whatnot
+[35:56] so
+[35:58] let's see if this worked
+[36:04] so this is a
+[36:06] linux box i have back home that's the
+[36:08] file is being uploaded too
+[36:10] okay so
+[36:13] and yes i am using z modem
+[36:18] i'm gonna pull that down to my local
+[36:19] machine
+[36:24] okay
+[36:30] and again this is going to look a lot
+[36:31] like what we've seen already just you
+[36:32] know it's this lap
+[36:34] encapsulated pack it's not very exciting
+[36:40] i sure hope my session's in there
+[36:42] okay
+[36:44] so we're gonna
+[36:50] strip this stuff out
+[36:54] okay so we got 657 packets decoded
+[36:58] so that's a good sign
+[37:01] i'm gonna send the on
+[37:04] the decoded version down here so we can
+[37:05] take a look at what's in there
+[37:10] okay
+[37:17] okay that looks a lot
+[37:19] a lot more like regular apparently
+[37:20] machine was doing something there i was
+[37:23] doing this
+[37:24] okay
+[37:26] okay so there's the tcp stream anybody
+[37:28] know why i can't read that any any 400
+[37:30] people in the in the room
+[37:32] yeah
+[37:32] what's that
+[37:34] episodic all right if i had a prize i'd
+[37:36] give it to you so the bid order is all
+[37:38] wrong of course so we just switch it
+[37:39] around but there you go so um good
+[37:42] example of
+[37:43] you know data being leaked out from a
+[37:45] completely hipaa compliant facility and
+[37:47] that will work
+[37:48] pretty much everywhere if you can get
+[37:50] physical access to one of the aps okay
+[38:06] okay the question was um when he's
+[38:08] worked with some lwap access points it's
+[38:10] there's been some
+[38:11] issues with digital certificates uh
+[38:13] that's true when you
+[38:15] work with l app aps there is a digital
+[38:17] certificate in place that's used to
+[38:19] encrypt just the headers of the packets
+[38:21] but the the payloads are not encrypted
+[38:23] so the control structure in lwap is
+[38:25] encrypted but the payload is not
+[38:33] okay
+[38:36] all right so going back to some non-demo
+[38:38] more powerpoint-ish stuff here um so
+[38:41] people are starting to notice that that
+[38:42] there's a problem with hipaa there's a
+[38:44] problem with medical identity
+[38:46] information leaking and getting out so
+[38:49] here's some information from a harris
+[38:50] survey approximately nine million
+[38:52] americans believe that they or a family
+[38:54] member have had medical information lost
+[38:56] or stolen and 69 of those same people
+[38:59] polled
+[39:00] have heard of a specific incident
+[39:02] involving medical record leaking or
+[39:04] being stolen
+[39:06] the graph here shows the hipaa
+[39:08] complaints that come into health and
+[39:10] human services for 2008 and you can see
+[39:12] that's definitely trending up
+[39:16] so we talked earlier about the 59
+[39:18] breaches i want to talk a little bit
+[39:19] about some of the specifics
+[39:21] so this map shows where those 59
+[39:23] breaches occurred and you can see this
+[39:24] is not specifically a big city problem
+[39:26] this is happening all over the country
+[39:28] in big cities small towns wherever
+[39:30] medical information is being stored
+[39:33] that's what makes it a little more
+[39:34] unique than like pci is that pci you
+[39:37] generally find that you know people who
+[39:38] are processing credit card numbers are
+[39:40] more concentrated in certain areas but
+[39:42] turns out people everywhere need to go
+[39:43] to the doctor so
+[39:45] this is going to happen no matter where
+[39:47] you might be questioned
+[39:54] violations the question was is there any
+[39:56] way to look up violations about a
+[39:58] particular practitioner i haven't found
+[40:00] anything but i don't know you would
+[40:01] think it would be public information but
+[40:03] i haven't seen anything on it yeah
+[40:05] that would be nice yeah
+[40:08] okay so i want to look at a couple of
+[40:09] these and and take a look and see what's
+[40:11] actually been going on with these
+[40:12] breaches um this is a pretty good one in
+[40:14] april at the ucla medical center um
+[40:18] an employee was fired and then later
+[40:20] charged
+[40:21] for snooping through the medical records
+[40:23] of a number of celebrities including
+[40:25] including britney spears farrah fawcett
+[40:27] and maria shriver
+[40:29] there are 33 celebrities involved they
+[40:31] only ever released those three names
+[40:33] and basically she was accused of selling
+[40:35] that to a national media outlet they
+[40:38] never said who it was
+[40:40] but
+[40:40] coincidentally the next day there was an
+[40:42] item in the national enquirer about
+[40:44] pharaoh fosse's farrah fawcett's cancer
+[40:46] coming back so you can piece that
+[40:48] together for yourself
+[40:51] what's interesting about this case is
+[40:52] that she was actually charged under
+[40:54] hipaa
+[40:55] uh
+[40:56] for
+[40:58] accessing medical records with the
+[40:59] intent to sell them for you know evil
+[41:01] doing and that carries a pretty heavy
+[41:03] penalty it's up to 10 years in prison
+[41:04] and 250 000 in fines but what's
+[41:07] interesting is that the hospital who
+[41:08] allowed this low level like front desk
+[41:10] employee complete access to their
+[41:12] database
+[41:13] it faced no penalties whatsoever
+[41:16] question uh
+[41:23] the question was have i seen anything
+[41:24] where hipaa compliance shield someone
+[41:26] from civil litigation
+[41:27] um i haven't seen that yet but i bet i
+[41:29] bet that would work
+[41:31] you know because this is oh this is all
+[41:32] they're required to do under the law so
+[41:34] they can't really be held unless it's
+[41:35] like you know they're grossly negligent
+[41:37] or something like that but if they're
+[41:38] compliant that's all the law says they
+[41:40] have to be so i'm going to hold these
+[41:42] questions to the end because we're kind
+[41:43] of running out of time okay
+[41:45] uh here's another case this is kind of
+[41:46] interesting some poor sysadmin whose job
+[41:50] involved taking the backup tapes home
+[41:52] because that was their disaster recovery
+[41:54] plan
+[41:55] had the tapes stolen out of his minivan
+[41:57] parked in his driveway and it was a full
+[42:00] backup of their erp system and it
+[42:01] contained all the medical records about
+[42:03] uh on 365 000 patients
+[42:06] um
+[42:08] so that was that was a big deal but the
+[42:11] theory is that whoever stole it was just
+[42:13] looking to steal his laptop for drug
+[42:15] money and there were no incidents of
+[42:17] this information being used
+[42:19] inappropriately so most likely it wasn't
+[42:21] leaked
+[42:23] it wasn't used for identity theft
+[42:24] financial or medical however this is the
+[42:26] first case where health and human
+[42:28] services actually find a hospital find a
+[42:31] health care system and it wasn't
+[42:32] actually a fine they called it an
+[42:33] agreement
+[42:34] and they got their agreement was to pay
+[42:36] a hundred thousand dollars and to
+[42:39] change their policies and procedures to
+[42:40] prevent this from happening again
+[42:42] healthcare system of course said
+[42:45] accepted no wrongdoing for this and said
+[42:46] well it's an unfortunate accident
+[42:51] and this one is is one of my favorites
+[42:53] this is
+[42:54] real medical identity theft
+[42:56] this woman was arrested for receiving
+[42:59] nearly 180 000 worth of medical care and
+[43:01] prescription drugs
+[43:03] by impersonating
+[43:04] someone else by using her medicare
+[43:06] insurance cards and whatnot
+[43:08] it was a low level low tech attack she
+[43:11] was living with this woman at the
+[43:12] homeless shelter and just stole her
+[43:14] medical information out of her wallet or
+[43:16] whatever it was um but what what
+[43:18] interested me in this was the amount of
+[43:20] money this one person was able to get
+[43:22] from one record so if you're thinking of
+[43:25] you know organized crime looking for new
+[43:26] sources of revenue if one inept person
+[43:29] can get 180 000 worth of oxycontin out
+[43:32] of one medical id then i think this is
+[43:34] something that we're really going to be
+[43:35] worried about
+[43:37] and there's a great quote here too it
+[43:38] says that
+[43:39] that she became skillful at presenting
+[43:41] doctors with symptoms that would lead it
+[43:42] that would result in prescriptions for
+[43:44] narcotics so she knew how to go in and
+[43:46] you know make them give her
+[43:47] prescriptions for the drugs that she
+[43:49] wanted
+[43:52] all right so we're rapidly running out
+[43:54] of time here
+[43:55] so now now what can we do to make this
+[43:57] better so i think we've pretty well
+[44:00] established that the current rules on
+[44:01] your hip are insufficient
+[44:07] the breaches are still too easy even in
+[44:08] a hipaa compliant environment we've
+[44:09] already talked about that
+[44:11] uh the emphasis that the healthcare
+[44:13] providers are putting is on
+[44:16] compliance not on security they're doing
+[44:18] this because they have to not because
+[44:19] they want to
+[44:23] so obviously there's too many
+[44:24] addressable implementation specifics the
+[44:26] healthcare providers can come up with
+[44:27] that whatever
+[44:29] they want
+[44:30] in order to meet the requirements and
+[44:33] they can just decide not to meet the
+[44:35] ones that aren't even required so
+[44:37] there's a lot of play there and uh and
+[44:39] they can do pretty much whatever they
+[44:40] want when it comes to these things
+[44:43] way too much emphasis on the phrase of
+[44:45] uh reasonable and appropriate again
+[44:47] giving the end user the entity
+[44:49] healthcare provider covered entity
+[44:53] the job of figuring out what it means
+[44:54] for them to be compliant
+[44:58] and of course there are not enough
+[44:59] details in the implementation specific
+[45:02] so even if encryption was required which
+[45:04] is not
+[45:05] we don't even tell you what kind of
+[45:06] encryption to use
+[45:10] if you read through some of the federal
+[45:11] register stuff there's a lot of talk in
+[45:13] there about why they didn't want to do
+[45:14] that that they need to be technology
+[45:16] neutral they don't want to specify any
+[45:17] particular implementations
+[45:19] they won't even go as far to say like
+[45:21] what size keys you need to use if you're
+[45:23] using like aes or something like that so
+[45:25] there's absolutely nothing in there
+[45:28] so
+[45:29] so what's happening
+[45:30] what's happening is really interesting
+[45:31] we're kind of coming full circle hipaa
+[45:33] came in to address the fact that there
+[45:35] was no central uh clearinghouse of okay
+[45:37] this is what it means to be secure so
+[45:39] hipaa comes in place says we're going to
+[45:40] be this is you know these are new rules
+[45:42] here we're all hipaa compliant
+[45:44] but a lot of states are realizing that
+[45:46] that's not enough now they're coming up
+[45:47] with their own laws so we're kind of
+[45:49] back to where we started where it's
+[45:50] going to be a hodgepodge you know if
+[45:51] you're in california you have a
+[45:52] different set of requirements and if
+[45:53] you're in another state so
+[45:55] this is just in 2007 there are over 250
+[45:58] health information technology bills
+[46:01] introduced 74 of them passed so it's
+[46:03] going to get even more scattered than
+[46:05] things are now
+[46:08] trade groups are lobbying for increased
+[46:10] legislation
+[46:12] obviously they probably just want to
+[46:13] sell more hardware but they're still
+[46:14] lobbying for it
+[46:17] all right so
+[46:19] that's my talk um if anybody has any
+[46:21] questions we drive like one minute now
+[46:23] um and then we'll be somewhere i don't
+[46:26] know where we're going to be for the q a
+[46:28] but we'll take some questions
+[46:36] oh yeah tons of them yeah a lot of
+[46:37] breaches happen at third party yeah
+[46:39] definitely smaller entities or even
+[46:40] larger energies are outsourcing their
+[46:42] processing and then you know the guy who
+[46:44] loses the tapes happens to work for the
+[46:46] the third party instead of for the
+[46:47] hospital yeah
+[46:50] yeah if you look through the slides if
+[46:51] you want to look at the uh
+[46:53] the references on the page you actually
+[46:55] full details of all the breaches that we
+[46:56] talked about today
+[47:09] one
+[47:10] just that providence was the only one
+[47:12] that i know about yet yeah
+[47:15] if you look through the details a lot of
+[47:16] them will a lot of the details of the
+[47:18] complaints most of the resolutions say
+[47:20] you know we talk to the provider and
+[47:21] they're going to change their practice
+[47:23] and they're not being fined
+[47:35] not until we told them no
+[47:40] the gentleman's standing up from
+[47:49] oh yeah thank you i hadn't thought of
+[47:51] checking google
+[47:56] yes sir
+[48:17] take that
+[48:32] okay we're getting booted out so we're
+[48:33] going to go over to room 106 anybody who
+[48:35] wants to
+[48:36] ask us further questions or
+[48:38] tell us they didn't like our
+[48:39] presentation we'll be over room 106.

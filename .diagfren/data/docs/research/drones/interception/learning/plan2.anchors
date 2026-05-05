@@ -1,0 +1,19 @@
+# anchor-text                                          code-ref                                                                            label
+# --- the literal file:line pointers in §7 ---
+src/interception/dynamics.py:127                         data/docs/research/drones/interception/src/interception/dynamics.py:127-137     ctbr_command_to_rotor_thrusts — the algebraic inverse the agent flagged
+src/interception/mpc_ctbr.py:240                         data/docs/research/drones/interception/src/interception/mpc_ctbr.py:240-242     CTBRController.command_to_rotor_thrusts — call site that delegates to dynamics.py
+# --- the §7 before/after diagram symbols ---
+MPC_CTBR                                                 data/docs/research/drones/interception/src/interception/mpc_ctbr.py:35-242      CTBRController class — the MPC half of the diagram
+invert_lag()                                             data/docs/research/drones/interception/src/interception/dynamics.py:127-137     What "invert_lag" actually is in code today: ctbr_command_to_rotor_thrusts
+PI_rate_ctrl                                             data/docs/research/drones/interception/learning/ctbr_inner_loop.txt:30-50      The proposed rate-controller block — see ctbr_inner_loop diagram
+# --- the lag equation, both occurrences ---
+ω̇ = (ω_des - ω) / τ_attitude                            data/docs/research/drones/interception/src/interception/dynamics.py:280         The actual one-line lag equation inside the CTBR prediction model (CasADi)
+# --- the line the user flagged: §0 thesis ---
+in the prediction model inside the MPC optimizer         data/docs/research/drones/interception/src/interception/dynamics.py:276-281     The CasADi ctbr branch — this IS the prediction model inside the MPC optimizer
+one-line lag equation                                    data/docs/research/drones/interception/src/interception/dynamics.py:280         The "one-line lag equation" literally — body_rates_dot = (desired_body_rates - body_rates) / tau_attitude
+# --- cross-references to plan.txt sections ---
+plan.txt section 2                                       data/docs/research/drones/interception/learning/plan.txt:7-32                  plan.txt §2 — Quadrotor as a physical system (Newton-Euler equations)
+plan.txt section 3                                       data/docs/research/drones/interception/learning/plan.txt:34-46                 plan.txt §3 — where F_body and τ_body come from (the mixer)
+plan.txt section 4                                       data/docs/research/drones/interception/learning/plan.txt:48-82                 plan.txt §4 — the control hierarchy (CTBR/SRT layers)
+plan.txt section 6                                       data/docs/research/drones/interception/learning/plan.txt:98-118                plan.txt §6 — the actual research question, SRT vs CTBR comparison
+Newton-Euler                                             data/docs/research/drones/interception/learning/plan.txt:21-32                 Newton-Euler equations as written out in plan.txt §2

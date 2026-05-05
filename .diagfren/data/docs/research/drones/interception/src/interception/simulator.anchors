@@ -1,0 +1,8 @@
+# anchor-text                                          code-ref                                                                            label
+run_episode                                             data/docs/research/drones/interception/learning/plan.txt:98-118                   plan §6 — closed-loop pursuer/evader episode
+controller.solve                                        data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — MPC step (apply only u_0)
+controller.command_to_rotor_thrusts                     data/docs/research/drones/interception/learning/plan2.txt:52-83                   plan2 §2 — inner-loop boundary (rate controller for CTBR, no-op for SRT)
+_integrate_segment                                      data/docs/research/drones/interception/learning/plan.txt:21-32                    plan §2 — Newton-Euler ground-truth integration
+"mode": "srt"                                           data/docs/research/drones/interception/learning/plan2.txt:24-50                   plan2 §1 — simulator always runs the full physics, regardless of controller
+controller_rate_hz                                      data/docs/research/drones/interception/learning/plan.txt:48-67                    plan §4 — outer-loop control rate in the hierarchy
+build_target_trajectory                                 data/docs/research/drones/interception/learning/plan.txt:84-96                    plan §5 — target preview fed to the MPC cost

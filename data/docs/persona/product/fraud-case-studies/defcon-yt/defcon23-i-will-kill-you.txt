@@ -1,0 +1,692 @@
+[00:00] so it's time for our second um short
+[00:02] format talk uh before we get started you
+[00:04] might be wondering surprise nobody's
+[00:06] asked why is there this gigantic super
+[00:08] computer sitting next to me
+[00:10] they tell me it's for a talk that's
+[00:11] going to go on tomorrow which sounds
+[00:13] awesome because they're going to talk
+[00:14] about what's actually in this cabinet
+[00:15] either that or they're planning on
+[00:17] replacing me next year with this
+[00:19] computer and it's learning as it goes
+[00:21] I'm not sure I hope I'm back next year
+[00:23] right yes computer yes all right
+[00:28] so uh when I was going through the
+[00:30] schedule trying to trying to see what
+[00:31] speakers we were going to be watching I
+[00:34] saw this description as I'm guessing a
+[00:36] lot of you did and said oh yeah I gotta
+[00:38] come check this out
+[00:40] um and no it is it is this is not it's
+[00:42] not doubled this is still Chris Rock and
+[00:45] uh he's going to uh
+[00:47] talk to us a little bit about messing
+[00:49] with identity
+[00:51] let's give him a big hand
+[00:53] [Applause]
+[01:06] okay guys uh my name
+[01:14] is that better
+[01:16] go
+[01:17] okay guys my name is Chris Rock
+[01:20] um I'm not the black comedian
+[01:23] but it will explain the big audience
+[01:25] that we have
+[01:28] today I'm going to talk to you about the
+[01:30] deck industry a morbid subject I know
+[01:32] but I'll make it a little bit lighter
+[01:34] and we'll talk about the birth industry
+[01:36] uh and then we'll make a little bit more
+[01:38] gloomy again and I'll talk to you about
+[01:40] how you can combine both of those at
+[01:43] both death and the birth to look at the
+[01:45] vulnerabilities to actually make some
+[01:46] money out of virtual people
+[01:50] okay this is a global problem that we
+[01:52] have this is not an American problem
+[01:55] this is not an Australian problem
+[01:57] I originally did my research on the
+[01:59] Australian system obviously adapted this
+[02:02] presentation for American audience
+[02:04] but it also works in other countries
+[02:07] I refer to this as an end of life
+[02:09] vulnerability
+[02:12] it's not so much a vulnerability it's
+[02:14] just a [ __ ] up
+[02:17] and it's a global [ __ ] up
+[02:20] okay anyone with this knowledge can kill
+[02:22] another person
+[02:24] multiple people or even yourself
+[02:28] I have not contacted any vendor for
+[02:30] fixes
+[02:32] this is a this is a definition of
+[02:34] irresponsible disclosure
+[02:39] so why did I research the death industry
+[02:43] I was watching the news one night and I
+[02:46] noticed that a hospital in Melbourne
+[02:47] Victoria Australia where I'm from
+[02:49] announced the death of 200 patients they
+[02:52] sent out 200 death notices instead of
+[02:54] 200 discharge notices
+[02:57] I thought how could that possibly happen
+[03:00] they've obviously moved into the
+[03:01] internet world where you can kill 200
+[03:03] off very quickly with a tick of the
+[03:06] button on a mouse
+[03:08] so I then started looking into the deck
+[03:10] industry in Australia
+[03:13] here is a global view of the death
+[03:15] process where when step one someone dies
+[03:18] the doctor fills out in America called a
+[03:21] certificate of death they have 24 hours
+[03:23] to fill out their certificate this
+[03:25] certificate contains details such as the
+[03:27] cause of death name of the victim and
+[03:29] next of kin that document then passes
+[03:32] down to the funeral director
+[03:34] the funeral director then has seven days
+[03:36] to dispose of the body
+[03:39] this is the same document in America
+[03:42] in Australia it's two separate documents
+[03:45] once those documents have been completed
+[03:47] it passes on to the registrar or burst s
+[03:50] and marriages Department
+[03:51] then they will issue the death
+[03:53] certificate
+[03:54] to the next of kin
+[03:56] so we're looking at the in terms of a
+[03:58] security process we can see that we need
+[04:00] really need to compromise step two and
+[04:02] step three
+[04:06] so first step we're going to do is have
+[04:07] a look at the doctor's component
+[04:10] here's a traditional certificate of debt
+[04:12] this is what you guys use in the states
+[04:15] the top part of the form is filled out
+[04:16] by the funeral director includes where
+[04:19] the person's actually buried and the
+[04:20] details of the victim and the bit that
+[04:22] we're looking at at the moment is down
+[04:24] the bottom of the document which is the
+[04:25] medical practitioner
+[04:27] the medical practitioner will fill out
+[04:28] the details such as cause of death
+[04:32] in Australia we've moved to an online
+[04:33] system here's a snapshot of an Internet
+[04:36] accessible portal that doctors can use
+[04:39] you can see the doctor needs to put
+[04:40] their name first name last name license
+[04:42] number and where they're from and submit
+[04:45] once they submit that form and then all
+[04:47] the details that form will be available
+[04:49] to the doctor
+[04:52] in America you're using a system called
+[04:54] edrs electronic death registration
+[04:56] system it was rolled out in 2005 and
+[04:59] it's nearly rolled out to all states
+[05:01] so you're now moved online as well
+[05:05] when a doctor logs on now to fill a
+[05:08] certificate of death not paper-based
+[05:09] anymore they'll get a portal like this
+[05:11] here's an example of the Californian
+[05:13] etrs you can see there's some security
+[05:15] protections there where there's a
+[05:16] username and password applied for the
+[05:18] doctor
+[05:20] here's an example of what adrs looks
+[05:22] like once the doctor's logged on and you
+[05:25] can see the sort of drop down boxes
+[05:26] which are pretty easy to fill out such
+[05:28] as autopsy details place of death next
+[05:31] of kin details
+[05:32] this is a snapshot of the Californian
+[05:34] system
+[05:40] one thing to note there you'll see was
+[05:41] an autopsy performed
+[05:44] it's important to note that because when
+[05:46] we talk about killing people later on
+[05:48] down the track and if you've selected
+[05:50] life insurance policy are you a smoker
+[05:53] probably not a good idea in a life
+[05:55] insurance policy put on a smoker and
+[05:56] then die of like a lung cancer stuff
+[05:59] you're not going to get your pay out
+[06:00] they'll actually refuse to pay it out
+[06:04] okay edrs is actually used for I'll just
+[06:07] use the acronym meat RS is used for mass
+[06:10] mortality surveillance so here's an
+[06:12] example of Hurricane Sandy in 2011 and
+[06:15] you can see actually where the deaths
+[06:17] occurred
+[06:18] obviously from drowning
+[06:20] edrs is the government love edrs because
+[06:23] it has the ability to get accurate death
+[06:25] records quickly so instead of waiting
+[06:27] for a doctor to fill out that
+[06:28] paper-based system with a signature they
+[06:30] can get death records very quickly it
+[06:33] also shows what the person died of so
+[06:35] this is important for when the
+[06:36] government's planning resources whether
+[06:38] it be anti-cancer whether it's kids
+[06:41] wearing bike helmets is to do search
+[06:43] lookups to make it easier to uh to fix
+[06:48] how does a doctor get access to edrs or
+[06:51] how does a hacker get access to edrs
+[06:54] here's a form that the doctor will fill
+[06:55] out with the the obvious details such as
+[06:58] first line first name last name email
+[07:00] address
+[07:01] you'll also see things like license
+[07:03] numbers
+[07:06] this is a paper-based form obviously
+[07:08] this just gets sent into the department
+[07:10] now they've also moved on to a DIY
+[07:13] registration this dates using DOI
+[07:15] registration again first name last name
+[07:17] license number issuing State and all
+[07:20] these personal details this is what the
+[07:22] doctor would use to first time register
+[07:24] now not all doctors use ers
+[07:27] when somebody dies in a hospital that
+[07:29] job is done by the medical examiner when
+[07:32] someone dies in for example a prison or
+[07:34] in a hospital the medical examiner takes
+[07:36] for that or if it's not a natural death
+[07:38] then the medical examiner will look
+[07:40] after that but a doctor such as a doctor
+[07:42] looks after old age patients where dying
+[07:45] is normal then they will use the edrs
+[07:47] system
+[07:52] you can see here that some of the
+[07:53] questions aren't another state space
+[07:56] system where it's asking you for those
+[07:57] details again you can see the doctor can
+[07:59] choose their own username and password
+[08:01] they can also choose the phone number
+[08:04] and address details now when you use
+[08:07] this system it will do a lookup against
+[08:09] the license details and as long as every
+[08:12] detail matches except for the email
+[08:13] address and phone number you can then
+[08:14] reduce yourself as a doctor
+[08:18] that's not good
+[08:20] so how do you get these details well
+[08:22] lucky enough there's a system in place
+[08:24] to find out whether your doctor is real
+[08:26] or fake
+[08:27] so if you want to go find a doctor use
+[08:29] Google Doctor database
+[08:31] and you will find one for every country
+[08:32] and that'll give you all the license
+[08:34] details and office details
+[08:37] I've just put some examples up there
+[08:43] as I said I'm not cheating on the US I'm
+[08:45] here to I'm happy to [ __ ] on Canada when
+[08:47] I go to Canada as well
+[08:52] okay now
+[08:53] these are quite difficult to fill out
+[08:55] for a hacker or someone malicious
+[08:57] obviously doctors have had six years of
+[08:58] study and we may have not maybe in
+[09:00] different areas so you can see here from
+[09:02] the uh the cause of death certificate
+[09:05] here we've actually got from a to d the
+[09:07] actual cause of death so in this example
+[09:09] the actual a is what the person actually
+[09:12] end up dying off so pulmonary embolism
+[09:15] now down the bottom is the uh Dr speak
+[09:18] for liver cancer
+[09:20] and then acute havocatic failure so I
+[09:22] could even say it is libopharia and then
+[09:26] thrombosis and left thigh is just a
+[09:27] blood clot and then the last one is
+[09:29] blood clot in the lung
+[09:34] as I said the important detail to look
+[09:36] for is down the bottom here on 33 was an
+[09:38] autopsy performed and we'll talk about
+[09:40] that in a minute
+[09:42] if you guys don't know what that means
+[09:44] if a doctor thinks it's an unnatural
+[09:46] death it has to get referred to a
+[09:47] coroner or medical examiner
+[09:50] there's Guides Online on how to fill
+[09:52] those documents out with 44 use case
+[09:54] examples on how to actually finish
+[09:57] somebody off
+[09:58] it's produced by the CDC
+[10:02] so you can learn doctor speak really
+[10:03] quick
+[10:07] okay the role of the medical examiner or
+[10:09] coroner a medical examiner for people
+[10:11] who don't know is a doctor with a maybe
+[10:13] a few more qualifications such as
+[10:14] forensics or pathology a coroner is a
+[10:17] word for representative of the crown
+[10:19] they may necessarily not have any
+[10:21] medical skills at all they actually
+[10:22] elected into the role
+[10:24] it's very important that we look at this
+[10:26] chart here when you're actually filling
+[10:27] out a cause of death because you don't
+[10:29] want that case then to go to coroner
+[10:31] so for example as I talked about before
+[10:33] using this flowchart you can see which
+[10:35] cases go to the coroner or medical
+[10:36] examiner so dying in a hospital dying in
+[10:39] a prison
+[10:40] [Music]
+[10:41] and also an unnatural death so if
+[10:43] somebody died on the street from a like
+[10:45] a gunshot wound
+[10:47] another important thing to look out for
+[10:48] is what we call a reviewable death in
+[10:51] this Orange Box over here if more than
+[10:54] one child dies from a single parent
+[10:56] then you will go to the coroner in other
+[10:59] words if you're going to kill your kids
+[11:01] off when we talk about that later on I
+[11:03] don't mean real kids I mean virtual kids
+[11:05] don't be greedy and kill up more than
+[11:07] one
+[11:15] okay so that's the doctor bit of the
+[11:17] edrs facility that's how to get access
+[11:19] and that's how to fill out the form
+[11:21] the next phase is the funeral director
+[11:23] so once that the doctors filled out
+[11:25] their components of edrs the funeral
+[11:27] director takes over so this would be
+[11:28] like the next of King for example for
+[11:30] choosing a funeral director the funeral
+[11:31] director will log on to edrs and
+[11:33] complete that fall
+[11:38] again here's an example of the the death
+[11:39] certificate and I've also for the
+[11:41] Australians I've actually included a
+[11:43] separate document called DRS or death
+[11:45] registration system Australians use two
+[11:46] separate documents not a single one
+[11:48] so what we're looking at now is that top
+[11:50] section of the document the funeral
+[11:51] director component
+[11:54] how does a funeral director get access
+[11:56] it's this very same it's the same as the
+[11:58] doctor so they'll fill out all their
+[12:00] details license number again
+[12:03] first name last name desired username
+[12:05] and of course they have DIY registration
+[12:07] as well
+[12:12] and this is an example of registering a
+[12:14] new user as a more tissury practitioner
+[12:17] now where are you going to get the
+[12:18] details of a licensed funeral director
+[12:21] again they're online as well
+[12:24] just do a Google search on Funeral
+[12:26] Directors in each state and will give
+[12:27] you details such as license numbers
+[12:29] office address which is what you need to
+[12:30] get edrs registration access
+[12:34] once the funeral director gets access
+[12:35] onto edrs
+[12:37] they can do things like obviously check
+[12:39] the doctor's details that they submitted
+[12:40] they can work with the next of kin
+[12:43] and also apply for burial permits
+[12:49] and if you have difficulty filling these
+[12:51] out there's a idiot's guide for Funeral
+[12:52] Directors as well
+[12:59] okay yeah as instead of doing the
+[13:02] fraudulent case of a funeral director I
+[13:04] actually thought it would be fun to find
+[13:06] out
+[13:07] to be a become a funeral director myself
+[13:11] I've always had this interest in the
+[13:12] death industry
+[13:14] so I set up a website
+[13:16] the name of my company and just funerals
+[13:18] at the end of it
+[13:19] stuck up some caskets and some flowers
+[13:24] I then I applied online to become a
+[13:26] funeral director
+[13:32] all right
+[13:34] three days later I got an automated
+[13:35] response
+[13:45] that I was a funeral director
+[13:47] no phone calls nothing
+[13:51] okay so now I can register this
+[13:56] so in this case for example I was a
+[13:58] little bit cheeky and I thought I'll
+[13:59] kill Hugh Jackman off
+[14:04] you can see at the top of the box there
+[14:06] these the deceased particulars parents
+[14:08] and sibling relations with all that goes
+[14:10] up the top
+[14:13] now
+[14:15] if you're like me and you're a little
+[14:15] bit lazy
+[14:17] you can kill multiple people off
+[14:21] this has an advantage when you want to
+[14:24] kill a lot of people off really quickly
+[14:30] okay that's the australian-based system
+[14:32] there's no point me talking about
+[14:33] australian-based system to American
+[14:34] audience so here's some research on
+[14:36] becoming a funeral director in the US
+[14:39] California for example you need an arts
+[14:41] degree
+[14:43] in Colorado you need nothing
+[14:47] in Nevada it's 375 bucks then you set an
+[14:49] exam
+[14:51] now you might think why would I go
+[14:53] through all this process or headache
+[14:55] when I could just use edrs for debt
+[14:56] registration
+[14:57] the reason is if you want to commit
+[14:59] insurance fraud it's easier if there's a
+[15:01] tombstone sticking out of the ground so
+[15:03] you have that death insurance policy if
+[15:05] there's an audit
+[15:09] in the UK there's no licensing
+[15:11] requirements either so it's just as easy
+[15:12] to kill somebody off in the UK
+[15:19] so that completes the two parts of fraud
+[15:22] to get the death certificate
+[15:24] once those documents are complete or the
+[15:26] online license is complete the register
+[15:28] then just issues the death certificate
+[15:31] they'll then then send that certificate
+[15:33] to the next of kin
+[15:37] and you might ask how am I going to get
+[15:38] that certificate if I've killed somebody
+[15:39] off you're filling out the form you can
+[15:41] put on anyone you want as next of kin
+[15:48] now I know it's I know it's not in good
+[15:51] spirit to kill a house
+[15:54] but there's a death certificate of Jeff
+[15:55] Moss
+[15:57] he doesn't know he's dead he's walking
+[15:59] around
+[16:00] but on paper he's dead now that's going
+[16:02] to be a problem for him when he travels
+[16:07] and it's just a general pain in the ass
+[16:15] okay Jeff's dead
+[16:18] that was fun but I know just a lot of
+[16:21] money so I want some of it
+[16:24] what do I need to do now I have a death
+[16:26] certificate I fill out a will online
+[16:34] now to be ready to be recognized as an
+[16:37] executor of a will you need to do
+[16:39] something called probate petition so
+[16:41] that's saying to the court I have a
+[16:43] death certificate
+[16:44] I have a will I want access to Jeff's
+[16:47] accounts
+[16:49] it's just a document you send into the
+[16:51] courts to say that I have the rights to
+[16:52] shut this person down
+[16:57] you then use a company letters like what
+[16:59] I've just put up there it's just a
+[17:01] straight standard template free website
+[17:02] where I'm writing to the bank to say
+[17:05] shut him down
+[17:06] the bank then will give me the prices
+[17:07] the money now normal a normal executor
+[17:10] of a will will do what they're supposed
+[17:11] to do they'll shut the victim down so
+[17:13] they'll pay out their debts give the
+[17:15] money to the next of kin all that sort
+[17:16] of stuff but if you if you wanted to do
+[17:18] it maliciously you just take all the
+[17:19] money and run
+[17:21] of course that system's now moving
+[17:23] online as well
+[17:25] you can now petition do a petition for
+[17:27] probate online
+[17:28] the beauty of that is it's completely
+[17:30] removed
+[17:33] you don't have to go to court
+[17:35] okay why would you want to kill somebody
+[17:40] Financial
+[17:41] killing yourself
+[17:43] so I want to enjoy your life insurance
+[17:44] money while you're alive
+[17:53] the other one is to kill your parents
+[17:57] parents are not dying as quick as they
+[17:59] used to
+[18:02] and they're handing out money very
+[18:03] slowly
+[18:05] better off killing them taking their
+[18:07] funds and do a runner
+[18:10] okay Revenge
+[18:13] revenge on your ex-wife girlfriend
+[18:15] partner the beauty is they're dead and
+[18:18] they don't even know it
+[18:20] so there's one of those silent things
+[18:21] where you're just going
+[18:24] don't shut their bank accounts done just
+[18:27] your password or their new license oops
+[18:31] kill your boss he's an [ __ ]
+[18:34] [Laughter]
+[18:38] okay hinder
+[18:39] if you're under investigation
+[18:52] did people find it difficult to travel
+[18:56] if you're also committing this sort of a
+[18:58] crime against somebody they're more
+[18:59] interested in protecting their own lives
+[19:01] in terms of getting their financial
+[19:02] history about in track than chasing you
+[19:06] kill your opposing lawyer or the judge
+[19:13] okay
+[19:15] this is a bit of a problem for the law
+[19:17] because the law is not really really
+[19:18] ready for this stuff here there's a case
+[19:21] in 2013
+[19:23] where illegally illegally dead man must
+[19:26] laid dead even though he's alive
+[19:29] Donald Miller was declared dead in 1994
+[19:31] deadbeat dad skipped out on his family
+[19:36] thank you
+[19:37] he was declared dead after missing for
+[19:39] five years
+[19:40] obviously his wife wanted to move on
+[19:42] he's not coming home
+[19:45] now the 61 year old has come back he
+[19:47] wants to be reinstated
+[19:48] the judge said too late I have a
+[19:51] three-year window
+[19:53] to bring you back to life
+[19:58] the judge said even though you're
+[19:59] sitting in my courtroom in front of me
+[20:02] I can see you alive
+[20:04] there's nothing I can do you're dead
+[20:08] so you heard of someone being stateless
+[20:10] this one is bodyless
+[20:14] okay
+[20:16] hopefully that plays alright
+[20:19] I put a video together of my first kill
+[20:21] it wasn't a clean kill
+[20:25] it's a bit like Dexter Morgan and Harry
+[20:27] I didn't have Harry in the back of my
+[20:28] head saying you got to kill this certain
+[20:29] way
+[20:30] this is an australian-based kill
+[20:33] I'm a bit worried it's going to play off
+[20:34] to the side so let's just have a look
+[20:36] it is too oh here we go
+[20:39] [Music]
+[20:59] foreign
+[21:01] Melbourne hospital has mistakenly
+[21:03] announced the deaths of more than 200
+[21:06] patients
+[25:02] thank you
+[25:05] okay
+[25:08] I've been giving the wrap up so I've got
+[25:09] to go through this quickly sorry guys so
+[25:11] now that we've killed somebody what
+[25:12] about birthing
+[25:14] it's not the exactly the same process
+[25:16] it's actually easier we don't need a
+[25:17] funeral director so we only need to
+[25:19] commit fraud on one side
+[25:21] so step one baby is born step two the
+[25:24] doctor and midwife fill out a form
+[25:26] and step three is where the parents fill
+[25:28] out their details
+[25:30] again it goes to the registry and a
+[25:31] birth certificate is issued
+[25:33] here's a traditional paper-based
+[25:35] certificate half brought out by the
+[25:36] doctor uh filled out by the parents
+[25:40] that's moving on line two referred to as
+[25:42] EBR or electronic birth registration
+[25:45] I've got an example of a Canadian one
+[25:47] and an Australian one as well
+[25:49] as a us one at the bottom of their link
+[25:54] okay again for online birth registration
+[25:56] in the US it's the same as death you
+[25:58] just need to register yourself as a
+[25:59] doctor or Midwife using those online
+[26:01] databases
+[26:04] again it's the same database
+[26:08] once you log on as the Midwife or doctor
+[26:12] it's just a matter of putting in the
+[26:13] baby's details of where they're born
+[26:19] this is not identity theft for actually
+[26:20] creating a new ID so why the government
+[26:22] make birth certificate stronger that's
+[26:24] actually better in our case we're
+[26:25] actually using a real birth certificate
+[26:27] this is not identity theft
+[26:31] so then I got the idea of now I can kill
+[26:33] someone now that I can actually born
+[26:34] somebody or burst somebody can I combine
+[26:37] the two together to make some money
+[26:40] I assume you guys know what a shell
+[26:42] company is for those who don't an entity
+[26:44] that actually doesn't do any business
+[26:45] but actually is a illegal or accounting
+[26:48] term used
+[26:49] to protect assets or identities of an
+[26:52] owner I saw an episode of The Blacklist
+[26:54] where the concept of something called a
+[26:57] shelf company came up which took that
+[26:58] shell company a little bit further where
+[27:00] the show company actually pays taxes
+[27:03] files annual returns
+[27:05] and builds up a credit writing why would
+[27:07] you want to do this is to get get around
+[27:09] heuristics
+[27:11] use for money laundering or terrorist
+[27:13] financing
+[27:15] so I thought why could why can't I do
+[27:16] the same with my baby
+[27:19] so I'll create a baby
+[27:21] good for a clean SSN a social security
+[27:23] number tax benefits
+[27:25] or take it a little bit further I call
+[27:27] it the virtual
+[27:29] the virtual will be able to have Home
+[27:31] Loans pay taxes multiple life insurances
+[27:34] social media pages and also do stock
+[27:37] trading
+[27:38] why would you want to do all this
+[27:42] you can borrow millions of dollars of
+[27:44] money and then not pay it back
+[27:47] the most important one I do over
+[27:49] identification so if you really [ __ ] up
+[27:53] get a new ID not a fake ID a real ID
+[27:59] again life insurance policies do an
+[28:01] online life insurance policy when you've
+[28:03] had enough of that baby just kill it off
+[28:04] and take the money
+[28:07] the one that I've really done some
+[28:08] research in is by leverage derivatives
+[28:12] so for those who who've done currency
+[28:15] trading before you borrow lots of money
+[28:16] you bet the US dollar is going to go up
+[28:18] well the euro is going to go up
+[28:20] if it goes up you're rich if it goes
+[28:22] down you're poor so use two virtuals
+[28:24] one's going to be a winner one's going
+[28:25] to be a loser the loser you're bankrupt
+[28:28] being put back on the Shelf who cares
+[28:33] also obtaining Firearms or getting drugs
+[28:35] don't do it with your own ID that's
+[28:37] stupid do it with a virtual
+[28:40] it's just an extra layer of anonymity so
+[28:43] we all know how we protect ourselves for
+[28:44] IP payments and Company one step further
+[28:47] protect yourself and use a virtual ID
+[28:54] okay why is it so vulnerable
+[28:57] obviously the doctor Midwife you saw the
+[28:59] DIY portal that's just [ __ ] at least you
+[29:02] guys have a portal we don't even have
+[29:03] one of those
+[29:05] birth registration is exactly the same
+[29:07] they're a little bit behind on the EBR
+[29:08] but they're getting the same same way as
+[29:11] the edrs also having the physician's
+[29:13] medical license numbers online they need
+[29:16] it because if you're a doctor and you're
+[29:18] getting a job at another hospital you
+[29:19] need that information to check whether
+[29:21] you're actually a registered doctor or
+[29:22] not but not using those as their
+[29:24] identifiers
+[29:25] the funeral director as you've seen
+[29:27] there's no licensing or basic funeral
+[29:29] licensing around the world and again
+[29:31] they're using DIY service portals
+[29:35] okay why is it Swiss cheese
+[29:38] the government want accurate centralized
+[29:40] birth and death records believe it or
+[29:42] not there's Birthright and death records
+[29:43] have actually been lost in in smaller
+[29:45] Registries through fire or flood idios
+[29:48] fixes all this
+[29:50] as centralized and you don't have to put
+[29:52] up with doctor's handwriting everything
+[29:53] is accurate
+[29:55] okay the governor is struggling to have
+[29:57] believe it or not babies being
+[29:59] registered we're at my hometown about
+[30:01] two and a half percent of all babies are
+[30:02] not registered for whatever reason
+[30:04] whether they be remote people or
+[30:06] disadvantaged people or on drugs
+[30:10] they get this estimate of the 2.5
+[30:12] percent based on when a kid starts cool
+[30:15] at age five they need a birth
+[30:17] certificate so they do a retrospective
+[30:19] birth certificate and you might think
+[30:21] who cares it's important to note that
+[30:23] you can take five years off your shelf
+[30:24] baby
+[30:26] by registering a bit later in online in
+[30:28] life
+[30:32] the government historically based the
+[30:34] fact that you needed two parties in
+[30:36] collusion the doctor and the funeral
+[30:37] director to bury somebody to get rid of
+[30:40] the body but you can see here from the
+[30:42] poor you can become both those persons
+[30:43] I'd advise you if you're going to do any
+[30:45] of this stuff and I'd advise you don't
+[30:47] but if you did use a virtual don't use
+[30:49] your own ID
+[30:53] and moving from a paper-based system to
+[30:56] an online system is obviously fraught
+[30:57] with a danger
+[31:00] now I've written a book on this topic
+[31:01] for more information I've done a use
+[31:02] where the research in this and thought
+[31:04] I'd put into a book on how to raise your
+[31:05] virtual how to use the stock market to
+[31:07] your advantage how to kill your baby off
+[31:09] bankrupt your baby
+[31:11] and if you want to get that you can buy
+[31:13] that on Amazon
+[31:14] thanks for your time guys that's it
+[31:16] [Applause]
+[31:22] thank you all right thanks mate
+[31:26] [Applause]

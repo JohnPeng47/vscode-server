@@ -1,0 +1,9 @@
+# anchor-text                                          code-ref                                                                            label
+mixer                                                   data/docs/research/drones/interception/learning/plan.txt:34-46                    plan §3 — 4×4 mixer mapping [f_1..f_4] → [T, τ_x, τ_y, τ_z]
+motor_time_constant                                     data/docs/research/drones/interception/learning/plan.txt:26                       plan §2 — motor lag ḟ = (f_cmd − f) / τ_motor
+inertia                                                 data/docs/research/drones/interception/learning/plan.txt:24                       plan §2 — J in the rotational equation J · ω̇
+gravity                                                 data/docs/research/drones/interception/learning/plan.txt:23                       plan §2 — translational equation: m · v̇ = R · F + m · g
+rotor_positions                                         data/docs/research/drones/interception/learning/plan.txt:34-46                    plan §3 — lever arms used in the mixer
+force_constants                                         data/docs/research/drones/interception/learning/plan.txt:36-37                    plan §3 — c_l in f_i = c_l · ω_i²
+moment_constants                                        data/docs/research/drones/interception/learning/plan.txt:38                       plan §3 — c_d in τ_drag = c_d · ω_i² · σ_i
+rotor_directions                                        data/docs/research/drones/interception/learning/plan.txt:43                       plan §3 — σ_i = ±1 (opposite rotors counter-rotate to cancel yaw at hover)

@@ -1,0 +1,261 @@
+DEF CON YouTube Transcripts — Exploit / Prevention Summary
+==========================================================
+Actionable insights for Persona-based identity verification
+
+Sources:
+  1. DEF CON 14 — Johan Hybinette: How to Create an Anonymous Identity
+  2. DEF CON 16 — Eric Smith & Dr. Shana Dardan: Medical Identity Theft
+  3. DEF CON 25 — Paul Ashley: The Future is Fake Identities
+  4. DEF CON 23 — Chris Rock: I Will Kill You
+  5. DEF CON Safe Mode — Uri Rivner: Identity Crisis — Online Account Opening Fraud
+
+================================================================================
+1. SSN ENUMERATION & THEFT
+================================================================================
+
+EXPLOIT:
+  - Last 4 digits of SSN obtained via mailbox camping / dumpster diving
+    (credit card statements, bills show last 4)                    [DC14 08:01]
+  - First 3 digits derived from state of birth registration
+    (published SSA area numbers)                                   [DC14 09:08]
+  - Middle 2 digits (group number) brute-forced against online
+    SSN verification services (employer tax verification portals)  [DC14 10:15]
+  - Social engineering: caller poses as bank, asks victim
+    to "verify" last 4 SSN + mother's maiden name                 [DC14 11:23]
+  - Online SSN lookup services sell SSNs for ~$50                  [DC14 12:43]
+  - SSNs now the #1 stolen data element on dark web,
+    every American's records already breached multiple times       [DCSM 01:20]
+
+PREVENTION (Persona):
+  - eCBSV Verification: validates SSN + Name + DOB against SSA database.
+    Stolen SSN won't match the fraudster's face/name from Gov ID step.
+  - Database Standard Verification: cross-references SSN against credit
+    bureau headers. Dormant SSN (no recent activity) flags immediately.
+  - Selfie + Gov ID: even with a valid SSN, fraudster must produce a
+    face that matches the ID photo — SSN alone is not enough.
+  - Phone number verification + Phone report: social engineering victim
+    may give away SSN, but Persona requires OTP to the real phone.
+
+================================================================================
+2. FAKE / FRAUDULENT DRIVER LICENSES
+================================================================================
+
+EXPLOIT:
+  - Overseas services produce realistic novelty DLs with working
+    barcodes for $100-$200                                        [DC14 15:46]
+  - Fraudster avoids the real owner's DMV state to dodge
+    photo-on-file checks                                          [DC14 14:04]
+  - Used as breeder documents to obtain birth certificates,
+    passports, and other genuine docs                             [DC14 16:42]
+
+PREVENTION (Persona):
+  - Gov ID Verification: authenticity checks, tamper detection,
+    electronic replica detection, barcode validation, fabrication
+    detection. Catches novelty/counterfeit IDs.
+  - AAMVA Verification (if enabled): validates DL number against
+    actual DMV database — fake DL number won't match.
+  - Selfie liveness: even if the physical card looks real,
+    the face-to-ID comparison requires a live person matching
+    the photo on the document.
+
+================================================================================
+3. IDENTITY LAYERING (SSN → DL → BIRTH CERT → PASSPORT)
+================================================================================
+
+EXPLOIT:
+  - Chain: steal SSN → get fake DL → use DL copy to request real
+    birth certificate → use birth cert to get real passport        [DC14 16:42]
+  - Exploit ancestry loopholes (Irish, Italian, Israeli citizenship)
+    to get foreign passport in stolen identity, then re-enter US
+    with completely new identity                                   [DC14 27:38]
+  - Foreign passport + name change = fully anonymous identity      [DC14 28:07]
+
+PREVENTION (Persona):
+  - Database Standard: checks whether the claimed identity has
+    any real-world activity (credit history, address history).
+    A freshly-layered identity has no depth.
+  - Graph queries: same face appearing with different SSNs or
+    across multiple states detected on 2nd+ attempt.
+  - Face list: once caught, biometric blocklist prevents all
+    future attempts regardless of which documents are used.
+
+================================================================================
+4. DEATH REGISTRATION FRAUD
+================================================================================
+
+EXPLOIT:
+  - EDRS (Electronic Death Registration System) uses doctor
+    license number + name as credentials. Doctor databases
+    are publicly searchable online.                               [DC23 06:54]
+  - Attacker registers as doctor on EDRS using public license info,
+    files fraudulent death certificate for a living person         [DC23 07:57]
+  - Funeral director licensing is trivial or nonexistent
+    (Colorado: nothing, Nevada: $375 + exam, UK: nothing)         [DC23 14:39]
+  - Speaker became a licensed funeral director in 3 days
+    with zero verification — automated approval                   [DC23 13:34]
+  - Combine doctor + funeral director access to kill someone
+    on paper, then claim life insurance / assets via
+    forged will + probate petition                                [DC23 16:26]
+  - Victim is legally dead — extremely hard to reverse
+    (case: judge ruled man must remain dead despite being
+    alive in courtroom, past 3-year reversal window)              [DC23 19:48]
+
+PREVENTION (Persona):
+  - NOT directly in scope for Persona (this attacks government
+    vital records systems, not financial onboarding).
+  - However, Persona CAN detect downstream effects:
+    - Database Standard: SSN flagged as belonging to deceased
+      person in credit bureau records.
+    - eCBSV: SSA database will show SSN as deceased.
+    - If attacker tries to use the "dead" person's identity
+      for account opening, both checks will hard-fail.
+
+================================================================================
+5. VIRTUAL / SYNTHETIC IDENTITY CREATION (BIRTH FRAUD)
+================================================================================
+
+EXPLOIT:
+  - EBR (Electronic Birth Registration) has same DIY portal
+    weakness as EDRS — register as doctor/midwife, create
+    a baby that never existed                                     [DC23 25:14]
+  - "Shelf baby": register fake birth → get clean SSN →
+    build credit history over years → use for loans,
+    insurance fraud, stock trading, money laundering              [DC23 27:19]
+  - Kill the virtual when done (file death cert) →
+    collect life insurance, bankrupt the identity                 [DC23 28:01]
+  - Synthetic identities now #1 fraud concern for banks,
+    surpassing account takeover and payment fraud                 [DCSM 00:50]
+
+PREVENTION (Persona):
+  - Database Standard: synthetic identity will have thin/no
+    credit file. No address history, no prior activity.
+  - Selfie + Gov ID: synthetic identity needs a real face.
+    If using AI-generated photos, liveness detection
+    (anti-deepfake, anti-injection) catches it.
+  - Graph queries: synthetic identities often share device
+    fingerprints, IP addresses, or phone numbers with
+    the fraudster's real identity or other synthetics.
+  - Phone report: phone-type = VOIP or PREPAID, risk score
+    elevated, SIM swap risk — synthetic identities use
+    disposable phones.
+  - Address report: CMRA (virtual office), vacant, or
+    non-residential address flags.
+
+================================================================================
+6. MEDICAL IDENTITY THEFT
+================================================================================
+
+EXPLOIT:
+  - Medical records contain MORE personal data than any
+    other single source (SSN, DOB, address, insurance,
+    financial info, medical history — all in one record)          [DC16 06:06]
+  - Healthcare facilities historically not targeted, so
+    security is weak. HIPAA technical requirements are
+    half a page with no specifics.                                [DC16 10:25]
+  - Penalties trivial: $100 per violation, max $25K/year.
+    Cheaper to pay fine than fix security.                        [DC16 12:00]
+  - Stolen medical records used as source material for
+    financial identity theft (SSN + address + DOB +
+    insurance = everything needed for account opening)            [DC16 05:04]
+  - Insiders (hospital staff) are a major threat vector           [DC16 07:00]
+
+PREVENTION (Persona):
+  - Persona doesn't protect the medical system itself, but
+    it defends downstream account opening:
+  - eCBSV: validates SSN belongs to the person presenting it.
+  - Selfie + Gov ID: stolen medical records don't give you
+    the victim's face. Biometric match required.
+  - Database Standard: cross-references address history.
+    Fraudster's claimed address won't match victim's
+    credit bureau records.
+  - Phone verification: OTP to the real phone number,
+    not one controlled by the attacker.
+
+================================================================================
+7. PROXY / PSEUDO IDENTITIES
+================================================================================
+
+EXPLOIT:
+  - Privacy tools (Sudo app) let users create multiple proxy
+    identities with separate phone numbers, email addresses,
+    virtual credit cards, compartmentalized browsing              [DC25 07:34]
+  - Each pseudo has no link back to real identity                 [DC25 08:01]
+  - Virtual credit cards purchased anonymously via Apple Pay,
+    up to $500, no personal info captured                         [DC25 20:58]
+  - Legitimate privacy use cases, but same tooling is
+    available to fraudsters for account opening                   [DC25 09:01]
+
+PREVENTION (Persona):
+  - Gov ID + Selfie: regardless of what email/phone/payment
+    method is used, the person must present a real government
+    ID and match it with their live face.
+  - Phone report: pseudo phone numbers are VOIP — detected
+    by phone-type check.
+  - Address report: proxy delivery addresses flagged as
+    CMRA or non-residential.
+  - Graph queries: same device fingerprint across multiple
+    pseudo identities links them together.
+  - This is exactly the layer that Persona adds on top of
+    "anyone can create an account with fake details" —
+    it forces a real-world identity anchor.
+
+================================================================================
+8. ACCOUNT OPENING FRAUD AT SCALE
+================================================================================
+
+EXPLOIT:
+  - Identity is now a commodity traded on dark web                [DCSM 01:24]
+  - Fraudsters open accounts using stolen PII (SSN + DOB +
+    name from breaches) without needing physical documents        [DCSM 00:50]
+  - Synthetic identity fraud: combine real SSN (often from
+    child, elderly, or deceased) with fake name/DOB to
+    create a new identity that passes credit checks               [DCSM 00:52]
+  - Application fraud is now #1 concern above account
+    takeover and payment fraud for financial institutions         [DCSM 00:43]
+
+PREVENTION (Persona):
+  - Full inquiry flow (Gov ID + Selfie + Phone) forces
+    physical presence and biometric anchor.
+  - Database Standard: thin-file or mismatched SSN/name/DOB
+    combinations fail corroboration checks.
+  - eCBSV: SSN + Name + DOB must match SSA records exactly.
+  - Watchlist report: sanctions and PEP screening.
+  - Graph queries + face lists: catch repeat offenders
+    across multiple synthetic identities.
+  - Workflow automation: hard fail → auto-decline + case
+    creation. Soft fail → tag + mark for review.
+
+================================================================================
+COVERAGE MATRIX
+================================================================================
+
+  Exploit                        | Gov ID | Selfie | DB Std | eCBSV | Phone | Address | Graph | Lists
+  -------------------------------|--------|--------|--------|-------|-------|---------|-------|------
+  SSN theft/enumeration          |        |   ✓    |   ✓    |  ✓    |  ✓    |         |       |
+  Fake driver license            |   ✓    |   ✓    |        |       |       |         |       |
+  Identity layering              |   ✓    |   ✓    |   ✓    |       |       |         |  ✓    |  ✓
+  Death registration fraud       |        |        |   ✓    |  ✓    |       |         |       |
+  Synthetic identity (birth)     |   ✓    |   ✓    |   ✓    |       |  ✓    |   ✓     |  ✓    |
+  Medical record theft           |        |   ✓    |   ✓    |  ✓    |  ✓    |         |       |
+  Proxy/pseudo identities        |   ✓    |   ✓    |        |       |  ✓    |   ✓     |  ✓    |
+  Account opening at scale       |   ✓    |   ✓    |   ✓    |  ✓    |  ✓    |   ✓     |  ✓    |  ✓
+
+================================================================================
+KEY INSIGHT
+================================================================================
+
+Every exploit above shares one weakness: the attacker cannot produce
+a live face that matches the identity they're claiming. Whether the
+SSN is stolen, the DL is fake, the identity is synthetic, or the
+person is "dead" on paper — Persona's Gov ID + Selfie liveness
+verification is the single hardest step to defeat.
+
+The database checks (Standard + eCBSV) add the second critical
+layer: even if someone has a real stolen ID with their own face
+somehow attached (e.g., Matthew Cox's DMV-issued licenses), the
+backend data won't match because the SSN is dormant, the address
+history doesn't correlate, or the SSA records show a different
+name/DOB.
+
+Together, biometric anchor + database corroboration defeats both
+document-based fraud AND data-based fraud.
